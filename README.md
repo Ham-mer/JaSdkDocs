@@ -1,2 +1,2 @@
 # JaSdkDocs
-AdLime Integration Ja Docs...
+AdLime SDK Integration Ja Docs.
