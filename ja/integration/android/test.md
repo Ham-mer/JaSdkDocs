@@ -13,8 +13,13 @@ SDK をインポートして、まずはテスト用の広告枠 ID を設定し
     | インセンティブ     | 5568ac9e-be1e-48d6-90f4-726d2f71bc94   |
     | ネイティブ         | 5a28316a-0798-44d1-817e-119998c53643   |
     | 動画リワード       | 9c9509b3-b4cf-4354-a515-1e754657ef6e   |
-    | MixViewAd         | 43e3423b-b841-4e9f-96a8-d7e0783362d3   |
-    | MixFullScreenAd   | e21882d5-820b-4844-a428-48ba84b5ac32   |
+    | MixView   バナー 320*50| 7ca5421d-4524-4ab8-85e6-bf10fd4c2b6a  |
+    | MixView   バナー 300*250| 1de5608f-aa0a-4626-854e-c387155aedf8 |
+    | MixView    ネイティブ      | 32bd14c7-c835-41aa-b6ad-31cfe7324236   |
+    | MixFullScreen バナー 320*50| dabbcc43-128f-450a-a50b-484ebae51eb6   |
+    | MixFullScreen バナー 300*250| 109d4dd9-4f7c-4226-a148-ff5f810edc41   |
+    | MixFullScreen  ネイティブ   | 03deadef-72bc-4876-a260-5a10dfa34369   |
+    | MixFullScreen  インセンティブ    | d1ad5508-cf3b-4623-9662-87cff5049af4   |
 
 ## 広告ネットワークのテスト
 上記のテスト用広告ユニット ID は、SDK が正しくインポートされているかを確認するためのものです。
@@ -45,6 +50,13 @@ SDK をインポートして、まずはテスト用の広告枠 ID を設定し
 | インセンティブ     | 49d0e6fa-e527-42f0-9b1b-770a5b333beb   |
 | ネイティブ         | 304af8d5-8f88-4b3c-a783-aaf3d7d88db4   |
 | 動画リワード       | 199ad96c-2ab1-43f3-8f7a-c00c99b5f224   |
+| MixView   バナー 320*50| cb28be5f-89ac-47e8-b8be-cbd495f225ec  |
+| MixView   バナー 300*250| 3a432270-3d78-4dca-ab76-ae007e2c974b  |
+| MixView    ネイティブ      | 71b95bbb-cc6c-48cf-810b-b7a532d1fdfc   |
+| MixFullScreen バナー 320*50| 284050a4-865a-42ab-8e60-1a0f72c00fd3   |
+| MixFullScreen バナー 300*250| ff33ce05-4a98-416c-88ff-d7cdf4e39ecb   |
+| MixFullScreen  ネイティブ   | 30860251-6c32-4d32-8c01-1fc828d92e73   |
+| MixFullScreen  インセンティブ    | 6b8ed887-75fb-432b-b240-13d701e54a31   |  
 
 ### Amazon
 
@@ -70,6 +82,13 @@ AndroidManifest の設定：
 | インセンティブ     | 63d5dbd8-b9ab-4a7a-86d9-406826953da8   |
 | ネイティブ         | 5816ab14-be45-4fb4-a1c0-510d7395a1c5   |
 | 動画リワード       | b03099ed-ac2b-43d7-82ff-1a7b19d17de9   |
+| MixView   バナー 320*50| 280037d0-c206-410b-8dda-06a9da3b09b1  |
+| MixView   バナー 300*250| 378d85af-da2a-4e04-9d6d-35e574b7f596 |
+| MixView    ネイティブ      | 82c85014-dd96-4660-9260-b03ccd27bb89   |
+| MixFullScreen バナー 320*50| 086f40e9-dcf7-44d8-ae0e-ae45dd080727   |
+| MixFullScreen バナー 300*250| 02d30bab-0c4a-4847-8d40-405125470953   |
+| MixFullScreen  ネイティブ   | 7a824b84-f39c-4e06-a649-4290c1214374   |
+| MixFullScreen  インセンティブ    | 8bf8de24-972b-4c25-b8ec-38c48baabb6c   |  
 
 ### Chartboost
 
@@ -84,6 +103,12 @@ AndroidManifest の設定：
 |:----------------:|:--------------------------------------:|
 | バナー 320 × 50     | a57a4c37-bc7d-435b-921a-ed73f4413c86   |
 | バナー 300 × 250    | 51a2f6cd-bd97-40c9-9832-b7e9a01a9ac7   |
+|  インセンティブ     | 28643335-0fef-4268-a1c5-06ecc956a67f   |
+| mixView   バナー 320*50| e21c1352-cc5d-4fc6-8d1d-1ed88a1feaf6  |
+| mixView   バナー 300*250| ca6ea99d-47ed-4313-8740-10de42c570ce |
+| mixFullScreen  バナー 320*50| 0cb8cf8f-1703-42c2-a11d-2a65315029f3   |
+| mixFullScreen  バナー 300*250| 419c7160-8f8f-47ac-a66c-0d6d59b5a895   |
+| mixFullScreen  インセンティブ    | e05757d2-3070-4dc8-be11-22a3bd0e0ca1   |  
 
 ### DFP
 
@@ -94,6 +119,13 @@ AndroidManifest の設定：
 | インセンティブ     | d6426b6e-9e87-4e73-9634-2fae137fd128   |
 | ネイティブ         | ee27ab16-772d-43e1-acbb-96e87ee0f0c4   |
 | 動画リワード       | ebe8be54-0e95-49ff-9faf-aba17c43b548   |
+| MixView   バナー 320*50| c504e99c-1ac0-4a9a-9c35-9cdef0e53b65  |
+| MixView   バナー 300*250| 3cb9fc81-ceab-4e5a-aac2-4c37bf571877 |
+| MixView    ネイティブ      | adf15f3d-84c6-459d-8942-a8239cd6db9c   |
+| MixFullScreen バナー 320*50| 139020c6-c083-4d73-8b58-dc93def552dc   |
+| MixFullScreen バナー 300*250| 72d2c5c6-0247-4da6-987d-323cb72bfa97   |
+| MixFullScreen  ネイティブ   | c8ee76c1-58d8-44f9-a54e-0a62cdd8fee6   |
+| MixFullScreen  インセンティブ    | 747a72c2-1b34-4ddd-9cb4-61026ca2b8a9   |  
 
 ### Display.IO
 
@@ -119,6 +151,27 @@ AndroidManifest の設定：
 | インセンティブ     | e6467841-5c74-4fc7-8582-81b44e649dd7   |
 | ネイティブ         | 00ea7ad6-bb0a-442c-af30-023f08729fec   |
 | 動画リワード       | b90cada3-707e-47cc-9875-a39953824090   |
+| mixView   バナー 320*50| aa927a72-4487-4185-882c-330f6457803a  |
+| mixView   バナー 300*250| e8b17248-46a8-4410-871b-4347b090d85f |
+| mixView   ネイティブ      | d5274ee3-942b-4053-b65b-3ce68820621f   |
+| mixFullScreen バナー 320*50| 5d97fe06-14b3-4338-9a49-77dafa3d2123   |
+| mixFullScreen バナー 300*250| 54eab1cb-ff5e-4f8c-9dbf-ca75c6e9bc9e   |
+| mixFullScreen ネイティブ   | 9ae699c9-f97e-44af-a0c2-b52d286c941d   |
+| mixFullScreen インセンティブ    | c88fa743-3053-42d6-8d89-7efd8c777066   |    
+
+### Five
+
+| 広告タイプ          | AdUnit ID                              |
+|:----------------:|:--------------------------------------:|
+| バナー 320*50       | 31f2791d-fd12-4189-b64d-6de29693cb93   |
+| バナー 300*250      | 241b5c9b-fe13-4fea-8ea5-62e18b696bc8   |
+| インセンティブ            | e6ea6e49-9c23-403b-ad3d-20cca1d5259c   |
+| 動画リワード          | eea5bbe3-213e-40c2-93e9-93ead11b22c7   |
+| mixView   バナー 320*50| 7415e5c9-3d27-42cd-b123-4f3d2e5632ff  |
+| mixView   バナー 300*250| 9fe14b4c-f040-4eeb-b5e5-a4c9bacd9128 |
+| mixFullScreen バナー 320*50| fbc2ac52-a2b8-4efa-910b-ce4500c1f75f   |
+| mixFullScreen バナー 300*250| ff281bc3-6293-4f0c-a0f8-ccb3a78983df   |
+| mixFullScreen インセンティブ    | c357a361-d24e-4540-a389-aaa4bc845720   |  
 
 ### Flurry
 
@@ -164,6 +217,23 @@ AndroidManifest の設定：
 | インセンティブ     | baa759a1-06f3-42ef-86b2-0631b01fe47f   |
 | 動画リワード       | 0e0e2ce7-d255-4ea1-975a-754fed3671c4   |
 
+### MarketPlace
+
+| 广告类型          | AdUnit ID                              |
+|:----------------:|:--------------------------------------:|
+| バナー 320*50       | eca0c462-7758-4397-8812-f3536e3cbd37  |
+| バナー 300*250      | 5dd00e00-90d8-49e0-9183-2ad81818191c   |
+| インセンティブ       | 97da9199-8314-486c-a1ce-7949dfbc5c21   |
+| ネイティブ              | 594aee71-d2db-41a7-b4e2-49c508d8ae14   |
+| 動画リワード           | 89f7016e-ceae-4305-94fe-569c959ed8d4   |
+| mixView   バナー 320*50| 16892808-06c7-42e7-af56-0b3441dc4832  |
+| mixView   バナー 300*250| 2681ece9-657c-4b77-a518-2e77fca94ff9 |
+| mixView   ネイティブ      | 15677933-128c-4e67-bb2e-831230a34bce  |
+| mixFullScreen バナー 320*50| b1ce4e8b-45fc-4a36-9ef6-187f432d1cdb  |
+| mixFullScreen バナー 300*250| e659e4e8-876c-47c1-8eb1-4fc1c3a3cfd9  |
+| mixFullScreen ネイティブ   | 5db75f03-e6f4-4533-be52-bfe762c0e358  |
+| mixFullScreen インセンティブ    | 8b1c42c6-1082-4587-ac9d-447855e099f8 |  
+
 ### MoPub
 
 | 広告タイプ         | AdUnit ID                              |
@@ -173,6 +243,13 @@ AndroidManifest の設定：
 | インセンティブ     | a71f18ce-7d40-4a2f-b246-d1b60806a435   |
 | ネイティブ         | 96a02419-e2cb-4667-b506-3a15f7702439   |
 | 動画リワード       | 95b71076-87f7-4dcd-8b02-c19707f37083   |
+| mixView   バナー 320*50| a1253827-5930-45f3-b82c-3f55469204da  |
+| mixView   バナー 300*250| 69c3a864-2b58-4f1c-ba2a-566614b9616c |
+| mixView   ネイティブ      | 769594f5-f0b5-4f89-9e8c-e02a9fdff145   |
+| mixFullScreen バナー 320*50| c8b01909-1793-4e54-bddf-aaa91f7c06e5   |
+| mixFullScreen バナー 300*250| 0455426b-8734-4852-8c5d-5092efcfd61c   |
+| mixFullScreen ネイティブ   | 0f82f948-a9d2-4f96-8821-2d12d4cce637   |
+| mixFullScreen インセンティブ    | 81e4b065-8b3d-4718-92a3-80d42f5ed73e   |  
 
 ### Nend
 
@@ -183,6 +260,13 @@ AndroidManifest の設定：
 | インセンティブ     | 9d499190-911a-4b1a-8734-23c2de9a9613   |
 | ネイティブ         | 81d6e364-6d44-46c2-bbc9-539dbdc3bbfa   |
 | 動画リワード       | d794a8f0-b5a3-4bc2-9530-f40893a3f851   |
+| mixView   バナー 320*50| e870107d-22ba-4f52-aefd-0c51fe360976  |
+| mixView   バナー 300*250| 61e9945c-519b-4083-9bae-06d5a0b0334f |
+| mixView   ネイティブ      | e17a81e5-213d-4671-9eeb-ef6bd6d46d52   |
+| mixFullScreen バナー 320*50| 57872b7a-b4ae-4bd4-b855-ca40571af90b   |
+| mixFullScreen バナー 300*250| d6c43bd7-7b7b-4923-8672-3b1f300d2cd1   |
+| mixFullScreen ネイティブ   | 90304fa0-6694-49fc-8092-d6ee0e7a881d   |
+| mixFullScreen インセンティブ    | 8465b93f-3f17-4a37-9fad-8fdbb778f2c3   |  
 
 ### Tapjoy
 
@@ -199,6 +283,13 @@ AndroidManifest の設定：
 | インセンティブ     | c88b9ae1-81df-452e-ad86-40e8ba2dd8dc   |
 | ネイティブ         | 0e3227ac-6782-40c1-ada4-8970369a742c   |
 | 動画リワード       | 9cd47dd7-b5f3-4ab8-a74f-8f9c8c6ca39d   |
+| mixView   バナー 320*50| 6c2517e8-c61a-4d6b-b1f6-18eb9bffca56  |
+| mixView   バナー 300*250| e9a5ec8b-15b8-4791-8ded-d49aa9e7650e |
+| mixView   ネイティブ      | c633b368-f332-41ba-8cf8-7fb346f90780   |
+| mixFullScreen バナー 320*50| 8436f636-33d6-432b-ae6e-8fb8a217f052   |
+| mixFullScreen バナー 300*250| f777408a-7b0f-4080-859a-9511965cdadb   |
+| mixFullScreen ネイティブ   | 04968de3-fb55-42d9-a66f-b2a682659fd8   |
+| mixFullScreen インセンティブ    | 49381beb-b0e3-474c-bbd7-3fa6c32bf264   |  
 
 ### Unity Ads
 

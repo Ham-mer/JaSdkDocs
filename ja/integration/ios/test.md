@@ -70,7 +70,7 @@ SDK をインポートして、まずはテスト用の広告枠 ID を設定し
 
 info.plist に SDK key を追加してください：<br>
 Key：AppLovinSdkKey<br>
-Value：aqULsa4oR7H9uQJrVI4-hGyFMgAc_RwZFPv6-zvQ5AZzbup5At4t806UgH6fi1DzQ74O5zpA8N8kGyqRquIyuO
+Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR1136N8uhTlthKc
 
 | 広告タイプ         | AdUnit ID                              |
 |:----------------:|:--------------------------------------:|
