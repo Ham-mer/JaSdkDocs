@@ -191,6 +191,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | バナー 300 × 250  | 1bfc10aa-0d67-4da2-89e7-acc288e81998   |
 | インセンティブ     | dbf26e30-6cf0-4ada-b6d5-65aa0a53fb0b   |
 | 動画リワード       | 71f3d9b4-143d-4f96-8223-dda0d11d4362   |
+| mixView  バナー 320*50| 6eb7168a-7309-41c3-a76e-01f3a6350b14   |
+| mixView  バナー 300*250| 81f20493-75ae-41b5-8c56-c3b13e4b3515  |
+| mixFullScreenバナー 320*50| 710204af-2101-4e02-b60d-a9b59d16fdd7  |
+| mixFullScreenバナー 300*250| ec0438c9-635c-4368-934c-d516720a8f4e  |
+| mixFullScreen インセンティブ | 69bc9a61-a52a-41cc-a2cb-ba32206f93b8 |
 
 ### IronSource
 
@@ -280,4 +285,10 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 |:----------------:|:--------------------------------------:|
 | バナー 300 × 250  | 8a9ecfba-6e7c-4ce2-bdda-18fdd0e518ea   |
 | インセンティブ    | af65d340-1ae2-4f57-90cf-bf723bb78a34   |
+| ネイティブ        | b474e668-e8db-4353-9c5c-0ee7fe40905a   |
 | 動画リワード      | c6a9d2cd-aa6f-4125-9d5e-6ecbb04e6fbc   |
+| mixView  バナー 300*250| 8d60c382-029b-4d04-9c7b-8dc0f1f58ad9 |
+| mixView  ネイティブ |11c30fe4-3423-4f9b-bea8-cafa669b7382 |
+| mixFullScreenバナー 300*250| a98f821f-7df7-491b-a11c-2a35e36c5c40 |
+| mixFullScreen ネイティブ |750cddb6-03d5-49f6-8695-204da4d85d7c |
+| mixFullScreen インセンティブ  | 892ba842-29ed-4900-8ad4-ae6e5fa0fc3c |
