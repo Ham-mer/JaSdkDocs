@@ -190,6 +190,13 @@ AndroidManifest の設定：
 | バナー 300 × 250    | 0c5e4c29-223b-47f4-8174-ca99ed1e4156   |
 | インセンティブ     | 53810164-bcd2-4eed-945f-91c97e97bd9e   |
 | ネイティブ         | 256dbe9d-de6d-472e-9401-24a4c3840d30   |
+| mixView   バナー 320*50| fa537695-aec6-48e2-a2d1-db601a261369  |
+| mixView   バナー 300*250| 7f635ec3-b348-429b-8e16-25ae09bac429 |
+| mixView   ネイティブ      | e0f4de81-e739-4479-9acf-3d46886626e4  |
+| mixFullScreen バナー 320*50| 783bc4b9-dd1b-43a1-a4b4-5db53d30f804  |
+| mixFullScreen バナー 300*250| a6128105-a586-406c-abb3-7486bedecbcd  |
+| mixFullScreen ネイティブ   | 249fc6c1-3aa0-4d46-98fe-8f785030b786  |
+| mixFullScreen インセンティブ    | 44076747-ce16-4645-b2f8-92ca134be180 | 
 
 ### InMobi
 
@@ -306,3 +313,8 @@ AndroidManifest の設定：
 | バナー 300 × 250  | 3b748e88-11b4-4e81-bdf4-eb394794491e   |
 | インセンティブ    | 2d668f07-b84e-4868-bb68-5f06d8be8052   |
 | 動画リワード      | 35eaf388-83d9-45ce-bd3e-d2f781064c99   |
+| mixView   バナー 300*250| 6a9dea5f-43c2-4657-a69d-73a3a889c0e1 |
+| mixView   ネイティブ      | 7c258cee-b29d-4afc-9edb-05ab1cf2d6d3  |
+| mixFullScreen バナー 300*250| 476e975b-145e-4344-a125-89fb1d827658  |
+| mixFullScreen ネイティブ   | 15338a2f-70fc-4681-9de4-db7d937b35c2  |
+| mixFullScreen インセンティブ    | 46d437fa-95e0-4fab-9647-519c29c28b96 | 
