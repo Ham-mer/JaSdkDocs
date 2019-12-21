@@ -5,6 +5,10 @@
 ## サンプルコード
 AppDelegated の initWithAppId: メソッドを呼び出す方法を下記に示します。
 
+:::: tabs
+
+::: tab Objective-C
+
 ```objectivec
 @import AdLimeSdk;
 
@@ -20,6 +24,40 @@ AppDelegated の initWithAppId: メソッドを呼び出す方法を下記に示
 
 @end
 ```
+
+:::
+
+::: tab Swift
+
+```swift
+in YourApp-Bridging-Header.h
+
+#import <AdLimeSdk/AdLimeSdk.h>
+
+in AppDelegate.swift
+
+import UIKit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        ...
+        AdLime.initWithAppId:("YOUR APP ID")
+
+        ...
+        return true
+    }
+    ...
+
+}
+
+```
+
+:::
+
+:::: 
 
 ## テスト用の広告枠
 iOS の各広告フォーマットのテスト用広告ユニット ID は、以下の通りです。

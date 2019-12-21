@@ -23,20 +23,18 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [IASDKCore.framework](http://inneractive-assets.s3.amazonaws.com/sdk/files/InneractiveAdSDK-iOS-v7.4.1.zip)
-- [IASDKResources.bundle]
-- [IASDKMRAID.framework]
-- [IASDKNative.framework]
-- [IASDKVideo.framework]
-- [AdLimeMediation_Fyber.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Fyber/10.0.2.0.zip)
+- [IASDKCore.framework](http://inneractive-assets.s3.amazonaws.com/sdk/files/InneractiveAdSDK-iOS-v7.5.0.zip)
+- IASDKResources.bundle
+- IASDKMRAID.framework
+- IASDKVideo.framework
+- [AdLimeMediation_Fyber.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Fyber/7.5.0.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [IASDKCore.framework](http://inneractive-assets.s3.amazonaws.com/sdk/files/InneractiveAdSDK-iOS-v7.4.1.zip)
-- [IASDKResources.bundle]
-- [IASDKMRAID.framework]
-- [IASDKNative.framework]
-- [IASDKVideo.framework]
+- [IASDKCore.framework](http://inneractive-assets.s3.amazonaws.com/sdk/files/InneractiveAdSDK-iOS-v7.5.0.zip)
+- IASDKResources.bundle
+- IASDKMRAID.framework
+- IASDKVideo.framework
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -60,7 +58,7 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 ### 広告フォーマット
 |ネットワーク|バナー|インターステーシャル|リワード動画|ネイティブ|
 |:--------:|:----:|:----------:|:------:|:----:|
-|Fyber    | Y    | Y          |        | Y    |
+|Fyber    | Y    | Y           | Y       |     |
 
 ### バナーサイズ
 |ネットワーク|320*50  |300*250   |320*100  |468*60  |728*90  |スマート    |
@@ -82,9 +80,11 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Fyber バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
+| 7.5.0            | 7.5.0.0         |
 | 7.4.1            | 7.4.1.0         |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
+| 7.5.0.0         | 2019-12-18 | 1、Fyber 7.5.0  に対応             |
 | 7.4.1.0         | 2019-10-21 | 1、Fyber 7.4.1  に対応             |
