@@ -197,6 +197,22 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | mixFullScreenバナー 300*250| ec0438c9-635c-4368-934c-d516720a8f4e  |
 | mixFullScreen インセンティブ | 69bc9a61-a52a-41cc-a2cb-ba32206f93b8 |
 
+### i-mobile
+
+| 広告タイプ         | AdUnit ID                              |
+|:----------------:|:--------------------------------------:|
+| バナー 320 × 50   | 503ed4e2-e766-43cf-b96d-cc6a9ca8d936   |
+| バナー 300 × 250  | b72e1caa-5d94-4887-a134-4618d52aa459   |
+| インセンティブ     | 46c0936d-fa7d-40b0-bc4d-59eda44c9bc2   |
+| ネイティブ        | ac506365-ebf8-4f6b-b043-8dd73da89210   |
+| mixView  バナー 320*50| 32c60041-69e4-4166-b265-f2ac7edd7071 |
+| mixView  バナー 300*250| 40243724-e635-4a94-b640-d88642b7e40e |
+| mixView  ネイティブ     | b920e30a-d2ef-4d01-b323-205e044b0e57 |
+| mixFullScreenバナー 320*50| f82fc910-2bbf-49eb-8d2e-f8d8fe55e67c  |
+| mixFullScreenバナー 300*250| 19c98957-e767-4718-84c5-614c41395891 |
+| mixFullScreen ネイティブ   | 8fadda1a-8ebf-4cce-909b-c5e813010bd4 |
+| mixFullScreen インセンティブ | 9b1a25b7-f87d-436c-b764-5852a9575df3 |
+
 ### IronSource
 
 | 広告タイプ          | AdUnit ID                              |

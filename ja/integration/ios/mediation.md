@@ -41,11 +41,12 @@ AdLime で利用可能な広告ネットワーク一覧
 | 12  | [Five](./mediation_five.md)                | ◯      | ◯    | ◯        |        | 20191016 |
 | 13  | [Flurry](./mediation_flurry.md)            | ◯      | ◯    | ◯        | ◯      | 10.0.2   |
 | 14  | [Fyber](./mediation_fyber.md)              | ◯      | ◯    | ◯        |        | 7.4.1    |
-| 15  | [IronSource](./mediation_ironsource.md)    | ◯      | ◯    | ◯        |        | 6.10.0.0 |
-| 16  | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.4.8    |
-| 17  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.10.0   |
-| 18  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.3.0    |
-| 19  | [Tapjoy](./mediation_tapjoy.md)            |        | ◯    | ◯        |        | 12.3.4   |
-| 20  | [TikTok](./mediation_tiktok.md)            | ◯      | ◯    | ◯        | ◯      | 2.5.1.2  |
-| 21  | [Unity Ads](./mediation_unity_ads.md)      | ◯      | ◯    | ◯        |        | 3.3.0    |
-| 22  | [Vungle](./mediation_vungle.md)            | ◯      | ◯    | ◯        | ◯      | 6.4.5    |
+| 15  | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯       | 2.0.31 |
+| 16  | [IronSource](./mediation_ironsource.md)    | ◯      | ◯    | ◯        |        | 6.10.0.0 |
+| 17  | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.4.8    |
+| 18  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.10.0   |
+| 19  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.3.0    |
+| 20  | [Tapjoy](./mediation_tapjoy.md)            |        | ◯    | ◯        |        | 12.3.4   |
+| 21  | [TikTok](./mediation_tiktok.md)            | ◯      | ◯    | ◯        | ◯      | 2.5.1.5  |
+| 22  | [Unity Ads](./mediation_unity_ads.md)      | ◯      | ◯    | ◯        |        | 3.3.0    |
+| 23  | [Vungle](./mediation_vungle.md)            | ◯      | ◯    | ◯        | ◯      | 6.4.5    |

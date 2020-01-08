@@ -1,6 +1,6 @@
 # Fyber ドキュメント
 - [Fyber Webサイト](https://www.fyber.com/)
-- [Fyber 開発者ガイド](https://developer.inner-active.com/docs/new-vamp-ios)
+- [Fyber 開発者ガイド](https://marketplace-supply.fyber.com/docs/new-vamp-ios)
 
 ## 前提条件
 - ターゲットバージョンを iOS 8.0 以上に設定していること
