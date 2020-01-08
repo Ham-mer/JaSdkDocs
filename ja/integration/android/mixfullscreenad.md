@@ -1,106 +1,210 @@
 #  MixFullScreenAd
-インタースティシャル広告の場合に、普通のNetworkはインタースティシャル広告しか使えない。広告のfill率は低い場合に、広告は展示されない。MixFullScreenAdで広告をリクエストする時に、インタースティシャルだけではなく、バナー、ネイティブ、フィードリストもリクエストできる そうすると、広告容器のfill率とマネタイズ能力を高める。
+MixFullScreenAd はフルスクリーンで表示することができるインタースティシャル広告を拡張した機能です。また、インタースティシャル広告を表示するだけではなく、バナー広告やネイティブ広告なども同じ広告枠にフルスクリーン表示することができます。各ネットワークの提供する広告は、個別のフォーマットで独立した広告が提供されていました。この機能を実装することにより、1つの広告枠で表示できる広告の種類と数を増やし、より高い効率で収益を増やすことができます。
 
-MixFullScreenAdは今バナー、ネイティブ、フィードリスト、インタースティシャルをサポートする。MixFullScreenAdでフィードリストは一回しかリクエストしない。
-
-本ガイドは MixFullScreenAd広告をAndroid アプリに組み込むについて紹介する。
+MixFullScreenAd は[バナー広告](./banner.md)と[ネイティブ広告](./native.md)と[インタースティシャル広告](./Interstitial.md)をサポートしています。このガイドでは、MixFullScreenAd を Android のアプリに実装する方法を紹介します。
 
 ## 前提条件
-- AdLime SDKの導入
+- AdLime SDK が導入済みであること
 
-## 创建 MixFullScreenAd
-MixFullScreenAd はMixFullScreenAdのオブジェクトでリクエストと展示され 。まずはMixFullScreenAdを実例化してAdunit IDを設置する。
+## MixFullScreenAd の作成 
+`MixFullScreenAd` オブジェクトとして 広告ユニット ID を設定し、オブジェクトを作成します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 MixFullScreenAd mMixFullScreenAd = new MixFullScreenAd(context);
 mMixFullScreenAd.setAdUnitId("AdUnit_ID");
 ```
 
-::: tip
-もし広告枠にFlurry/Unity Adsのバナー広告がある場合にコンストラクタにActivityを送る必要がある。<br>
-もし広告枠にAdColony/Flurry/Unity Ads のインタースティシャル広告がある場合にコンストラクタにActivityを送る必要がある。。
 :::
 
-## 広告タイプの設置
-広告をロードする前に、ネイティブ、、フィードリストのレイアウトを設置する。。
+::: tab Kotlin
+
+```kotlin
+val mMixFullScreenAd = MixFullScreenAd(this)
+mMixFullScreenAd.setAdUnitId("AdUnit_ID")
+```
+
+:::
+
+::::
+
+::: tip
+広告枠に Flurry / Unity Ads のバナー広告がある場合は、コンストラクタの引数として Activity を設定する必要があります。<br>
+広告枠に AdColony / Flurry / Unity Ads のインタースティシャル広告がある場合は、コンストラクタの引数として Activity 設定する必要があります。
+:::
+
+
+## ネイティブ広告のレイアウト
+`MixFullScreenAd` オブジェクトを生成したら、広告をロードする前にネイティブ広告のレイアウトを設定しておきましょう。ネイティブ広告のレイアウトは AdLime SDK の`AdLimeNativeAdLayout`によって管理します。また、ネイティブ広告のレイアウトはカスタムで設定できます<br>。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 mMixFullScreenAd.setNativeAdLayout(NativeAdLayout.getFullLayout1());
 ```
 
-**NativeAdLayoutについて[NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できる。**
+:::
 
-## 広告ロード　
-MixFullScreenAd をロードするために， MixFullScreenAd のオブジェクトの loadAd() 方法を使ってください
+::: tab Kotlin
+
+```kotlin
+mMixFullScreenAd.setNativeAdLayout(NativeAdLayout.getFullLayout1())
+```
+
+:::
+
+::::
+
+** `NativeAdLayout` については、[NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90) で確認できます。**
+
+## 広告のロード
+広告をロードするためには、MixFullScreenAd オブジェクトの loadAd() を使用します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 mMixFullScreenAd.loadAd();
 ```
+:::
 
-## 広告展示
- MixFullScreenAdを展示するために，isReady() で広告のロードを確認して方 show()を調達する。
+::: tab Kotlin
+
+```kotlin
+mMixFullScreenAd.loadAd()
+```
+
+:::
+
+::::
+
+## 広告の表示
+広告をロードしたら広告を表示してみましょう。広告を表示する前に、広告がロード済みであるかを isReady で確認し show で表示します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 if (mMixFullScreenAd.isReady()) {
-    // パラメーターはbackボタンで広告を閉じることを許すかどうかを表する。
-    // true は許すと表する。
+    // 引数に true を設定すると、バックキーで広告を閉じる。
+    // 引数を設定しない場合は、バックキーで広告は閉じない。
     mMixFullScreenAd.show(true);
-
-    // パラメーターを送らないと許さないと表する。
-    // mMixFullScreenAd.show();
 }
 ```
 
-## 広告イベント
-さらに広告行為を定義するために、広告のライフサイクルに各イベントを追加できる。例えばロード、開く、閉じるなど。 AdListenerでモニターできる。
+:::
 
- MixViewAdでAdListenerを使うために， setAdListener() 方法を使ってください：
+::: tab Kotlin
+
+```kotlin
+if (mMixFullScreenAd.isReady) {
+    // 引数に true を設定すると、バックキーで広告を閉じる。
+    // 引数を設定しない場合は、バックキーで広告は閉じない。
+    mMixFullScreenAd.show(true)
+}
+```
+
+:::
+
+::::
+
+## 広告イベント
+AdListener を用いて、広告のロード完了のタイミングや、ユーザーがアプリを閉じたタイミングなどの、広告のライフサイクルで発生する様々なイベントを取得することができます。
+
+### MixFullScreenAd イベントを登録する
+MixFullScreenAd のイベントを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 mMixFullScreenAd.setAdListener(new SimpleAdListener() {
     @Override
     public void onAdLoaded() {
-        // ロード成功
+        // 広告のロード完了
     }
 
     @Override
     public void onAdFailedToLoad(AdError adError) {
-        // ロード失敗，adError はエラー情報
+        // 広告の読み込み失敗、エラー詳細は adError から取得
         Log.d(TAG, "onAdFailedToLoad: " + adError.toString());
     }
 
     @Override
     public void onAdShown() {
-        // 広告展示
+        // 広告を表示
     }
 
     @Override
     public void onAdClicked() {
-        // 広告クリック
+        // 広告をクリック
     }
 
     @Override
     public void onAdClosed() {
-        // 広告閉じる
+        // 広告を閉じる
     }
 });
 
 mMixFullScreenAd.loadAd();
 ```
 
-### エラー情報
-広告ロード失敗の時に、 AdListener の onAdFailedToLoad(AdError adError)はコールバックされる 。 adError.getCode()、adError.toString()でエラーコードとエラー情報を取得できる。
+:::
 
-エラーコードの定義は AdErrorにある：
+::: tab Kotlin
+
+```kotlin
+mMixFullScreenAd.setAdListener(object: SimpleAdListener() {
+    override fun onAdLoaded() {
+        // 広告のロード完了
+    }
+
+    override fun onAdFailedToLoad(adError: AdError?) {
+        //  広告の読み込み失敗、エラー詳細は adError から取得
+        print("onAdFailedToLoad: " + adError.toString())
+    }
+
+    override fun onAdShown() {
+        //  広告を表示
+    }
+
+    override fun onAdClicked() {
+        //  広告をクリック
+    }
+
+    override fun onAdClosed() {
+        //  広告を閉じる
+    }
+})
+
+mMixFullScreenAd.loadAd()
+```
+
+:::
+
+::::
+
+### エラー情報
+広告の読み込に失敗した場合は、AdListener の `onAdFailedToLoad(AdError adError)` が呼び出されます。その際に `adError.getCode()`、`adError.toString()` から、エラーコード、エラー情報が取得できます。
+
+AdError エラーコード一覧
 |定義                        |説明     |
 |:--------------------------|:--------|
 |ERROR_CODE_INTERNAL_ERROR  | 内部エラー |
-|ERROR_CODE_INVALID_REQUEST | 無効リクエスト |
-|ERROR_CODE_NETWORK_ERROR   | 网ネットエラー |
-|ERROR_CODE_NO_FILL         | no fill   |
-|ERROR_CODE_TIMEOUT         | リクエスト　タイムアウト |
+|ERROR_CODE_INVALID_REQUEST | リクエストが無効 |
+|ERROR_CODE_NETWORK_ERROR   | ネットワークエラー |
+|ERROR_CODE_NO_FILL         | 配信可能な広告がない   |
+|ERROR_CODE_TIMEOUT         | リクエスト タイムアウト |
 
-エラー情報は AdUnit 、Network、LineItem の情報を含める、例は下記通り：
+エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 ```
 ErrorCode is [3], Message is [No Fill]
 AdUnit is ...
@@ -109,6 +213,5 @@ LineItem is ...
 ```
 
 ## プリロードとキャッシュ
-プリロードで広告を事前に用意できて展示までの時間を短くする。<br>
-プリロードに問わず、広告をキャッシュすることはお勧め。りゆうとして、一つのAdUnitにいくつかのLineitemはロード成功される。同じ広告オブジェクトを重複しようすると展示率を高めて必要ではない広告リクエストも減らせる。
-自分の方法で広告をキャッシュできるし、 [AdLimeLoader](./adloader.md)で広告をキャッシュできる。
+事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
+また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeLoader](./adloader.md)で実現が可能です。

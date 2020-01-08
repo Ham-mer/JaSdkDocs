@@ -30,25 +30,31 @@ allprojects {
 次に、アプリレベルの build.gradle ファイルを開き、「dependencies」セクションを開きます。
 
 ### アプリレベルの build.gradle の例（抜粋）
-現在広告SDKを導入する方法は二つあります。デベロッパーは状況に応じていずれかの方法を自由に選ぶことができます。
+広告 SDK を導入する方法は、2通りあります。いずれかの方法を選択してください。
 
-#### 方法一
-デベロッパーはまずフレームSDKを導入してから、自分のニーズに応じて該当するメディエーションを導入します。メディエーションの導入方法についてはドキュメントをご参照ください。下記のリクエストを追加してください：
+#### 方法 ①
+
+###### AdLime SDK を導入
+アプリケーションレベルの build.gradle に、下記の依存関係を追加します。
 ```
 dependencies {
     implementation 'com.access_company.adlime:adlime:1.9.18'
 }
 ```
-この方法はお勧めです。
+その後、必要に応じてメディエーションを導入します。各メディエーションの導入方法については、ドキュメントの[メディエーション](./Interstitial.md)をご覧ください。
 
-#### 方法二
-この方法はAdMob・Facebook・DFP・ MoPub・TikTok・AppLovinという六つのメディエーションを統合します。デベロッパーは、上記の各メディエーションの導入に必要とされるリクエストを気にかける必要がなく、それぞれのメディエーション導入ドキュメントを閲覧する必要もありません。
+#### 方法 ②
+AdMob・Facebook・DFP・ MoPub・TikTok・AppLovin などの6つのメディエーションが含まれた SDK を導入します。各メディエーション SDK が不要となり、導入が簡単になります。
+
+##### AdLime All SDK を導入
+アプリケーションレベルの build.gradle に、下記の依存関係を追加します。
 ```
 dependencies {
     implementation 'com.access_company.adlime:adlime_all:1.7.9'
 }
 ```
-デベロッパーは、AndroidManifest.xmlに下記の情報を追加する必要があります：
+##### マニフェストファイルへの記述
+マニフェストファイル AndroidManifest.xml に必要情報を記述します。
 ```java
     <provider
         android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
@@ -58,10 +64,10 @@ dependencies {
         android:name="applovin.sdk.key"
         android:value="${applovin_value}" />
 ```
-ここの${applovin_value}はapplovinの申請を行う時のキーバリューです。導入しなかった場合、下記のフィールドをご記入ください： "qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR1136
-N8uhTlthKc"。 
+${applovin_value} は Applovin の SDK key です。今回は下記の値を設定します。 **"qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR1136
+N8uhTlthKc"**
 
-上記の太字の行（ AdLime SDK の最新バージョンを読み込むように Gradle に指示する行）を追加してください。作業が終わったらファイルを保存し、 Gradle の同期を行います。
+作業完了後に、Gradle の同期を行います。
 
 ## 広告のフォーマットを選択する
 

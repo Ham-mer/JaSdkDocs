@@ -1,4 +1,4 @@
-# バナー広告を導入する
+# バナー広告
 
 バナー広告とは、アプリのレイアウトにおいて特定の位置を占める矩形のイメージ広告またはテキスト広告です。この種の広告は、ユーザーがアプリを操作している間は画面に広告が残り、一定の時間が経過すると自動的に更新することが特徴です。モバイル広告を初めて掲載する場合は、まずバナー広告から始めることが最適です。
 
@@ -11,6 +11,10 @@
 
 バナー広告を表示するには、まず広告を表示する Activity か Fragment のレイアウトに BannerAdView を追加する必要があります。該当するコンテナのレイアウトファイルにそれを追加することはお勧めの方法です。
 
+:::: tabs
+
+::: tab Java
+
 ```java
 // 広告ユニットID の定義
 String bannerId = "47033ec3-5bf9-4865-a5d7-d1fbb9f7fbc8";
@@ -22,10 +26,32 @@ ViewGroup container = findViewById(R.id.banner_container);
 // コンテナに BannerAdView を追加する
 container.addView(mBannerAdView);
 ```
+:::
 
-## NetworkConfigsの設置
-NetworkConfigsを通じて，各NWの特殊な設置を満たせる。ここでの設置は[初期化](./init.md)の全体の設置をカバーする<br>
-[Mediation ドキュメント](./mediation.md)でNWにサポートされるNetworkConfigを確認できる。
+::: tab Kotlin
+
+```kotlin
+// 広告ユニット ID の定義
+val bannerId = "47033ec3-5bf9-4865-a5d7-d1fbb9f7fbc8"
+// BannerAdView を生成
+val mBannerAdView = BannerAdView(this)
+mBannerAdView.setAdUnitId(bannerId)
+// バナーのコンテナを取得
+val container = findViewById(R.id.banner_container)
+// コンテナに BannerAdView を追加する
+container.addView(mBannerAdView)
+```
+
+:::
+
+::::
+
+## NetworkConfigs の設置
+**特定の広告ネットワークに対しての設定を行います。この NetworkConfig の設定は必須ではありません。<br>[メディエーション](./mediation.md)で使用する広告ネットワークに、どのような設定が可能か確認ができます。**
+
+:::: tabs
+
+::: tab Java
 
 ```java
 mBannerAdView.setNetworkConfigs(NetworkConfigs.Builder()
@@ -34,26 +60,74 @@ mBannerAdView.setNetworkConfigs(NetworkConfigs.Builder()
                             .setAutoDestroy(false)
                             .build())
                     .addConfig(...)
-                    .build());
+                .build());
 ```
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+mBannerAdView.setNetworkConfigs(NetworkConfigs.Builder()
+                .addConfig(AppLovinBannerConfig.Builder()
+                            //  自動破棄の設定
+                            .setAutoDestroy(false)
+                            .build())
+                //  その他の広告ネットワークの設定を追加する
+                .addConfig(...)
+            .build())
+```
+
+:::
+
+::::
 
 ## 広告を読み込む
 
-BannerAdView を追加したら、次は広告の読み込みです。BannerAdView クラスの loadAd() メソッドで行うことができます。
+広告をロードするには、`BannerAdView` クラスの `loadAd()` を使用します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
-// 広告を読み込む
+// 広告のロード
 mBannerAdView.loadAd();
 ```
-これでアプリにバナー広告を表示できるようになりました。
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+// 広告のロード
+mBannerAdView.loadAd()
+
+```
+
+:::
+
+::::
+
+これでアプリにバナー広告が表示できるようになりました。
 
 ## 広告イベント
 広告の動作をより細かくカスタマイズするには、広告のライフサイクルで発生するイベント（読み込み、開始、終了など）を追加することができ、AdListener クラスを使い、これらのイベントを受け取ることができます。
 
-BannerAdView で AdListener を利用するには、 setAdListener() メソッドを呼び出してください。
+### BannerAdView イベントを登録する
+BannerAdView のイベントを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 mBannerAdView.setAdListener(new SimpleAdListener() {
+    @Override
+    public void onAdLoaded() {
+        // 広告のロード完了
+    }
+
     @Override
     public void onAdFailedToLoad(AdError adError) {
         // 広告の読み込み失敗、エラー詳細は adError から取得
@@ -61,14 +135,9 @@ mBannerAdView.setAdListener(new SimpleAdListener() {
     }
 
     @Override
-    public void onAdLoaded() {
-        // 広告のロード完了
-    }
-
-    @Override
-    public void onAdClosed() {
-        // 広告を閉じる
-        Log.d(TAG, "on BannerAd Closed");
+    public void onAdShown() {
+        // 広告を表示
+        Log.d(TAG, "on BannerAd Shown");
     }
 
     @Override
@@ -78,27 +147,63 @@ mBannerAdView.setAdListener(new SimpleAdListener() {
     }
 
     @Override
-    public void onAdShown() {
-        // 広告を表示
-        Log.d(TAG, "on BannerAd Shown");
+    public void onAdClosed() {
+        // 広告を閉じる
+        Log.d(TAG, "on BannerAd Closed");
     }
 });
 ```
 
-### エラー
-広告の読み込に失敗した場合は、AdListener の onAdFailedToLoad(AdError adError) が呼び出されます。その際に adError.getCode()、adError.toString() から、エラーコード、エラー情報が取得できます。
+:::
 
- AdError エラーコード一覧
+::: tab Kotlin
+
+```kotlin
+mNativeAd.setAdListener(object: SimpleAdListener() {
+    override fun onAdLoaded() {
+        // 広告のロード完了
+        print("on BannerAd Loaded")
+    }
+
+    override fun onAdFailedToLoad(adError: AdError?) {
+        //  広告の読み込み失敗、エラー詳細は adError から取得
+        print("onAdFailedToLoad: " + adError.toString())
+    }
+
+    override fun onAdShown() {
+        //  広告を表示
+        print("on BannerAd Shown")
+    }
+
+    override fun onAdClicked() {
+        //  広告をクリック
+        print("on BannerAd Clicked")
+    }
+
+    override fun onAdClosed() {
+        //  広告を閉じる
+        print("on BannerAd Closed")
+    }
+})
+```
+
+:::
+
+::::
+
+### エラー
+広告の読み込に失敗した場合は、AdListener の `onAdFailedToLoad(AdError adError)` が呼び出されます。その際に `adError.getCode()`、`adError.toString()` から、エラーコード、エラー情報が取得できます。
+
+AdError エラーコード一覧
 |定義                        |説明     |
 |:--------------------------|:--------|
 |ERROR_CODE_INTERNAL_ERROR  | 内部エラー |
 |ERROR_CODE_INVALID_REQUEST | リクエストが無効 |
 |ERROR_CODE_NETWORK_ERROR   | ネットワークエラー |
-|ERROR_CODE_NO_FILL         | 配信できる広告がない    |
-|ERROR_CODE_TIMEOUT         | リクエスト　タイムアウト |
+|ERROR_CODE_NO_FILL         | 配信可能な広告がない    |
+|ERROR_CODE_TIMEOUT         | リクエスト タイムアウト |
 
-エラーは AdUnit、ネットワーク、ラインアイテムの各情報が含まれています。
-
+エラーには、広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 ```
 ErrorCode is [3], Message is [No Fill]
 AdUnit is ...
@@ -126,6 +231,5 @@ LineItem is ...
 スマートバナーは、画面のサイズや向きにかかわらず、横幅いっぱいに広告が表示されます。現在は一部の広告プラットフォームのみに対応しています。
 
 ## プリロードとキャッシュ
-プリロードで事前に広告を用意して展示するまでの時間を短くする<br>
-広告をプリロードするかどうかにもかかわらず、広告をキャッシュすることはお勧め。理由としては一つのAdUnitに各LineItemはロードされるはずで、一つの広告インスタンスを繰り返して使うと、展示率を高めて必要ではないリクエストも減らせる。
-自ら広告キャッシュを実現できるし、[AdLimeLoader](./adloader.md)でも実現できる。
+事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
+また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeLoader](./adloader.md)で実現が可能です。
