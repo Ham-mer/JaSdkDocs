@@ -1,7 +1,5 @@
 # スタートガイド
-このガイドは、AdLime SDK を使用することによって iOS アプリをマネタイズすることをご希望の開発者様を対象としています。
-
-アプリに AdLime SDK を導入することは、広告を表示して収益を獲得するための第一歩です。 SDK を導入したら、広告フォーマット（ネイティブ広告や動画リワード広告など）を選び、該当する手順に従ってください。
+このガイドでは AdLime SDK を iOS アプリに組み込むことを目的とした開発者を対象としています。スタートガイドでは AdLime SDK を iOS アプリに組み込むための準備について説明します。SDK 導入後は希望の広告フォーマット（バナー広告、動画リワード広告など）を選択し、該当する手順に従ってください。
 
 ## 前提条件
 - Xcode 9.2 以上のバージョンを使用
@@ -9,12 +7,15 @@
 - AdLime アカウントを作成し、アプリが登録済み
 
 ## AdLime SDKを導入する
-ここで二種類のSDKを提供している。その一つはAdLimeSdkというSDK、このSDKは独立な広告マネタイズアクセスを提供していて、各[mediation](./mediation.md)SDKを結合して、他のネットワークの結合を実現することができる。もう一つはAdLimeSdk_AllというSDK、このSDKはAdLimeSdkとAdMob， DFP， FaceBook，Mopub，appLovin， TikTok等ののマネタイズプラットフォームのmediation SDKをパッキングすることで、他のmediationを単独的に結合する手順を省略することができる。アプリは自分の
-需要でSDKを選ぶことができる。
+私達は "AdLimeSdk" と "AdLimeSdk_All" の２種類の SDK を提供しています。これらの SDK の違いは主要なアドネットワークをデフォルトで提供しているかどうかです。
+
+アドネットワークをカスタムに設定することを希望する場合は "AdLimeSdk" を導入することをおすすめします。"AdLimeSdk" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望のアドネットワークを追加してください。 
+
+"AdLimeSdk_All" は AdLimeSdk と AdMob 、DFP、FaceBook、Mopub、AppLovin、TikTok のアドネットワークを標準でサポートしています．これらのアドネットワークの導入を希望する場合はこの SDK を組み込むことも選択肢の一つです。"AdLimeSdk_All" の SDK を導入することで各アドネットワークごとに必要な SDK を追加するなどの手順をいくらかスキップすることが可能です。
 
 ### AdLimeSdk
 #### CocoaPods（推奨）
-iOS プロジェクトに AdLime SDK を導入するための、最も簡単な方法は CocoaPods を使用することです。プロジェクトの Podfile を開き、下記のコードをアプリのターゲットに追加してください。
+iOS プロジェクトに AdLime SDK を導入するための最も簡単な方法は CocoaPods を使用することです。プロジェクトの Podfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
 pod 'AdLimeSdk'
 ```
@@ -41,7 +42,7 @@ github "Ham-mer/AdLimeSdk"
 ```
 
 コマンドラインから次のコマンドを実行してください:
-```objectivec
+```sh
 carthage update
 ```
 
@@ -53,7 +54,7 @@ pod 'AdLimeSdk-All'
 ```
 
 コマンドラインから次のコマンドを実行してください:
-```objectivec
+```sh
 pod install --repo-update
 ```
 
@@ -80,7 +81,7 @@ SDK フレームワークを直接ダウンロードして解凍し、下記の�
 ドラッグ & ドロップ完了後、Build Phases > Copy Bundle Resources に AdLimeSdk.bundle,  BUAdSDK.bundleが含まれていることを確認してください。
 
 ##### 他のフレームワークの追加
-Xcode上で、プロジェクトファイルを選択し、任意のターゲットの Build Phases > Link Binary With Libraries に以下の Tiktok フレームワークを追加します。
+Xcode 上で、プロジェクトファイルを選択し、任意のターゲットの Build Phases > Link Binary With Libraries に以下の Tiktok フレームワークを追加します。
 
 - AdSupport
 - AVFoundation
@@ -110,7 +111,7 @@ Info.plist を ソースコードとして開いて編集します。
 <key>GADApplicationIdentifier</key>
 <string>Your AdMob APP_ID</string>
 ```
-もしくは、プロパティリストエディタ で編集できます。
+もしくは、Xcodeで直接編集できます。
 <img src="./../images/ios/mediation_admob_app_id_plist.png" height="80" />
 
 #### Carthage
@@ -167,11 +168,11 @@ Info.plist を ソースコードとして開いて編集します。
 <key>GADApplicationIdentifier</key>
 <string>Your AdMob APP_ID</string>
 ```
-もしくは、プロパティリストエディタ で編集できます。
+もしくは、Xcodeで直接編集できます。
 <img src="./../images/ios/mediation_admob_app_id_plist.png" height="80" />
 
 ## Linker Flags の追加
-プロジェクトのビルド設定で、以下のように [Other Linker Flags] に -ObjC を追加します。
+プロジェクトのBuild Settingsで、以下のように [Other Linker Flags] に -ObjC を追加します。
 
 <img src="./../images/ios/begin_objc.png" height="140"/>
 
@@ -194,32 +195,32 @@ NSAllowsArbitraryLoads の例外をアプリの Info.plist ファイルに追加
 ```
 
 ## 広告フォーマットを選択する
-これで AdLime SDK の導入が完了し、広告を配信できるようになりました。AdLime には様々な広告フォーマットが用意されていますので、その中からアプリのユーザー エクスペリエンスに最適なものを選択できます。
+これで AdLime SDK の導入が完了し、広告を配信できるようになりました。AdLime には様々な広告フォーマットが用意されています。その中からアプリのユーザーエクスペリエンスに最適なものを選択できます。
 
 ### バナー
 
 <div class="clearfix cust-image-text">
 <img src="./../images/ad_icons/format-banner.png"  width="100px"  align=left />
-バナー広告とは、アプリのレイアウトにおいて特定の位置を占める矩形のイメージ広告、またはテキスト広告です。この種の広告は、ユーザーがアプリを操作している間にスマホ画面に残り、一定の時間が経過すると自動的に更新することが特徴です。モバイル広告を初めて掲載する場合は、まずバナー広告から始めることが最適です。
+バナー広告とは、アプリのレイアウトにおいて特定の位置を占める矩形のイメージまたはテキスト広告です。バナー広告は、一定時間が経過すると自動的に広告を更新することが特徴の一つです。モバイル広告を初めて掲載する場合は、まずバナー広告から始めてみましょう。
 </div>
 
 ### インタースティシャル
 
 <div class="clearfix cust-image-text">
 <img src="./../images/ad_icons/format-interstitial.png"  width="100px"  align=left />
-インタースティシャル広告とは、ユーザーが消すまで、アプリの上にオーバーレイで表示されるフルスクリーン広告です。ゲームのステージが変わる合間や一つのミッションが完了になった直後など、アプリの画面が切り替わるタイミングでの使用に適しています。
+インタースティシャル広告とは、アプリ上を覆うように表示されるフルスクリーン広告です。一般的にアプリの画面が切り替わるタイミング（アクティビティが切り替わるタイミングやゲームのステージが変わる合間）で用いられます。
 </div>
 
 ### ネイティブ
 
 <div class="clearfix cust-image-text">
 <img src="./../images/ad_icons/format-native.png"  width="100px"  align=left />
-ネイティブ広告とは、コンポーネントに基づくフォーマットで、クリエイティブ（タイトルやキャッチコピーなど）をアプリに表示する方法を自由にカスタマイズできる広告です。フォント・色・その他クリエイティブの詳細設定を行い、コンテンツの邪魔にならないように広告を表示し、ユーザーエクスペリエンスを向上させることができます。
+ネイティブ広告とは、広告のデザインをカスタマイズできるディスプレイ広告です。広告の配置やスタイルを自由にカスタマイズできるため、アプリのコンテンツに溶け込んだ広告を表示することができます。
 </div>
 
 ### 動画リワード
 
 <div class="clearfix cust-image-text">
 <img src="./../images/ad_icons/format-rewarded.png"  width="100px"  align=left />
-動画リワード広告とは、ユーザーが動画を視聴することと引き換えに、アプリ内で報酬（インセンティブ）を獲得できるフルスクリーン動画広告です。
+動画リワード広告とは、アプリ内で使用可能な報酬をユーザーに付与する代わりに、動画広告を最後までフルスクリーン表示する広告です。
 </div>

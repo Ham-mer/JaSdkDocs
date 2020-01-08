@@ -1,19 +1,25 @@
 # バナー広告
-バナー広告とは、アプリのレイアウトにおいて特定の位置を占める矩形のイメージまたはテキスト広告です。この種の広告は、ユーザーがアプリを操作している間にスマホ画面に残り、一定の時間が経過すると自動的に更新することが特徴です。モバイル広告を初めて掲載する場合は、まずバナー広告から始めることが最適です。
+バナー広告とは、アプリのレイアウトにおいて特定の位置を占める矩形のイメージまたはテキスト広告です。バナー広告は、一定時間が経過すると自動的に広告を更新することが特徴の一つです。モバイル広告を初めて掲載する場合は、まずバナー広告から始めてみましょう。
 
-このガイドは、AdLime バナー広告を iOS アプリに実装する方法について説明します。コードスニペットと設定方法のほか、バナー広告のサイズに関する情報も紹介します。
+このガイドでは バナー広告 を iOS のアプリに実装する方法を説明します
 
 ## 前提条件
 - AdLime SDK が導入済みであること
 
 ## AdLimeBannerView の作成
-バナー広告は AdLimeBannerView オブジェクトに表示されるため、バナー広告を取り組ませるために、まずビューに AdLimeBannerView を追加してください。この操作は、一般的にインターフェス ビルダーかプログラミングなどの方法によって行われます。
+バナー広告は `AdLimeBannerView` オブジェクト内に表示されます。バナー広告を表示するためにまずUIViewに `AdLimeBannerView` を追加してください。この追加方法は Interface Builder もしくはコードによって組み込むことができます。
+
 
 ### Interface Builder で作成する
 一般的なクラシックビューと同様に、 AdLimeBannerView をストーリーボードと xib ファイルに追加することができます。このメソッドを使用する場合、表示する広告のサイズに合わせて幅と高さの制限を設ける必要があります。例えば、320 x 50 のバナー広告を表示する場合、 320 ポイントの幅制約と 50 ポイントの高さ制約を設けてください。
 
 ### コードで作成する
 AdLimeBannerView を直接インスタンス化することもできます。以下のサンプルでは、AdLimeBannerView を生成して、画面に追加する例を示します。
+
+
+:::: tabs
+
+::: tab Objective-C
 
 ```objectivec
 @import AdLimeSdk;
@@ -38,8 +44,35 @@ AdLimeBannerView を直接インスタンス化することもできます。以
 @end
 ```
 
-## 広告を読み込む
-AdLimeBannerView を作成したら、次に広告を読み込みます。 AdLimeBannerView クラス の loadAd を実行してださい。
+:::
+
+::: tab Swift
+
+```swift
+import AdLimeSdk
+import UIKit
+
+class ViewController: UIViewController {
+    var bannerView: AdLimeBannerView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.bannerView = AdLimeBannerView.init(adUnitId: "AdUnit_ID")
+    }
+}
+```
+
+:::
+
+::::
+
+
+## 広告のロード
+`AdLimeBannerView` オブジェクトを生成したら次に広告をロードしてみましょう。 `AdLimeBannerView` クラス の `loadAd` を実行してださい。
+
+:::: tabs
+
+::: tab Objective-C
 
 ```objectivec
 - (void)viewDidLoad {
@@ -49,13 +82,33 @@ AdLimeBannerView を作成したら、次に広告を読み込みます。 AdLim
     [self.bannerView loadAd];
 }
 ```
-これでアプリにバナー広告を表示できるようになりました。
+
+:::
+
+::: tab Swift
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    ...
+    self.bannerView.loadAd()
+}
+```
+
+:::
+
+::::
+
 
 ## 広告イベント
-AdLimeBannerViewDelegate によって、広告が閉じられたとき、またユーザーがいつアプリから離れたときなどのライフサイクルイベントを受け取ることができます。
+`AdLimeBannerViewDelegate` を設定することで、広告のロード完了のタイミングやユーザーがアプリを閉じたタイミングなどの広告のライフサイクルイベントを取得することができます。
 
 ### バナー広告イベントを登録する
-バナー広告イベントを登録するには、AdLimeBannerView の AdLimeBannerViewDelegate プロパティを設定します。通常、バナー広告を実装するクラスがデリゲート クラスとしての役割を果たすので、 delegate プロパティを self に設定します。
+バナー広告のライフサイクルイベントを取得するためには `AdLimeBannerViewDelegate` を継承します。通常、`AdLimeBannerView`を実装するクラスがデリゲートクラスとなる場合が多いので、本ガイドでは `delegate` プロパティを `self` に設定します。
+
+:::: tabs
+
+::: tab Objective-C
 
 ```objectivec
 @import AdLimeSdk;
@@ -78,8 +131,34 @@ AdLimeBannerViewDelegate によって、広告が閉じられたとき、また�
 @end
 ```
 
+:::
+
+::: tab Swift
+
+```swift
+import AdLimeSdk
+class ViewController: UIViewController, AdLimeBannerViewDelegate {
+   var bannerView: AdLimeBannerView! 
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ...
+        self.bannerView.delegate = self
+    }
+}
+```
+
+:::
+
+::::
+
+
 ### バナー広告イベントを実装する
-AdLimeBannerViewDelegate メソッドを実装します。以下のサンプルでは、各メソッドでコンソールにメッセージを出力します。
+広告のイベントの制御は `AdLimeBannerViewDelegate` を用いて実現できます。以下のサンプルでは、各メソッドを実装し、コンソールにログを出力します。
+
+:::: tabs
+
+::: tab Objective-C
 
 ```objectivec
 /// Tells the delegate an ad request loaded an ad.
@@ -109,8 +188,43 @@ AdLimeBannerViewDelegate メソッドを実装します。以下のサンプル�
 }
 ```
 
-### エラー
-広告の読み込みに失敗した場合は、AdLimeBannerViewDelegate の adLimeBanner:didFailToReceiveAdWithError: がコールされます。 その際に adError.getCode、adError.description から、エラーコード、エラー情報が取得できます。
+:::
+
+::: tab Swift
+
+```swift
+// MARK: Banner広告に関するメソッド
+/// Tells the delegate an ad request loaded an ad.
+func adLimeBannerDidReceiveAd(_ bannerView: AdLimeBannerView!) {
+    print("adLimeBannerDidReceiveAd")
+}
+
+/// Tells the delegate an ad request failed.
+func adLimeBanner(_ bannerView: AdLimeBannerView!, didFailToReceiveAdWithError adError: AdLimeAdError!) {
+    print("adLimeBanner:didFailToReceiveAdWithError, errorCode is \(adError.getCode().rawValue), errorMessage is \(adError.description)")
+}
+
+/// Tells the delegate that a full-screen view will be presented in response to the user clicking on an ad.
+func adLimeBannerWillPresentScreen(_ bannerView: AdLimeBannerView!) {
+    print("adLimeBannerWillPresentScreen")
+}
+
+func adLimeBannerWillLeaveApplication(_ bannerView: AdLimeBannerView!) {
+    print("adLimeBannerWillLeaveApplication")
+}
+
+/// Tells the delegate that the full-screen view has been dismissed.
+func adLimeBannerDidDismissScreen(_ bannerView: AdLimeBannerView!) {
+    print("adLimeBannerDidDismissScreen")
+}
+```
+
+:::
+
+::::
+
+### エラー情報
+広告のロードに失敗した場合は、`AdLimeBannerViewDelegate` の  `adLimeBanner:didFailToReceiveAdWithError` が呼び出されます。`adError.getCode` 、`adError.description` を用いてエラーコードとエラー情報を取得できます。
 
 AdLimeAdErrorCode エラーコード一覧
 |定義                           |説明    |
@@ -121,7 +235,7 @@ AdLimeAdErrorCode エラーコード一覧
 |ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
 |ADLIME_ADERROR_TIMEOUT         | リクエスト　タイムアウト |
 
-エラーは AdUnit、ネットワーク、ラインアイテムの各情報が含まれています。
+エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 
 ```
 ErrorCode is [3], Message is [No Fill]
@@ -147,4 +261,4 @@ LineItem is ...
 ### スマートバナー
 スマートバナーは、画面のサイズや向きにかかわらず、横幅いっぱいに広告が表示されます。現在は一部の広告プラットフォームのみに対応しています。
 
-**注意：広告を配置するコンテナのサイズは、バナーのサイズと同じか、それ以上の大きさにする必要があります。コンテナにパディングがある場合は、それだけバナーを表示できるコンテナの領域が小さくなります。**
+**注意：広告を配置するコンテナのサイズは、バナーのサイズと同じにする必要があります。**

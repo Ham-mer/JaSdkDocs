@@ -1,9 +1,9 @@
 # 初期化
 
-広告を読み込む前に、AdLime の initWithAppId: メソッドを呼び出し、 AdLime SDK の初期化を行ってください。この処理は1回だけ実行します。アプリの起動時に実行することが望ましく、できるだけ早く呼び出す必要があります。
+広告のロード前に、AdLime の initWithAppId メソッドを呼び出し、 AdLime SDK の初期化を行ってください。この処理はアプリ起動後できるだけ早く実行する必要があり、アプリ起動時に実行することを強く推奨します。またこの処理は1回だけ実行してください。
 
 ## サンプルコード
-AppDelegated の initWithAppId: メソッドを呼び出す方法を下記に示します。
+AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示します。
 
 :::: tabs
 
@@ -30,12 +30,8 @@ AppDelegated の initWithAppId: メソッドを呼び出す方法を下記に示
 ::: tab Swift
 
 ```swift
-in YourApp-Bridging-Header.h
 
-#import <AdLimeSdk/AdLimeSdk.h>
-
-in AppDelegate.swift
-
+import AdLimeSdk
 import UIKit
 
 @UIApplicationMain
@@ -44,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ...
-        AdLime.initWithAppId:("YOUR APP ID")
+        AdLime.initWithAppId("YOUR APP ID")
 
         ...
         return true
