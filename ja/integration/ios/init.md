@@ -1,6 +1,27 @@
 # 初期化
 
-広告のロード前に、AdLime の initWithAppId メソッドを呼び出し、 AdLime SDK の初期化を行ってください。この処理はアプリ起動後できるだけ早く実行する必要があり、アプリ起動時に実行することを強く推奨します。またこの処理は1回だけ実行してください。
+広告のロード前に、`AdLime` の `initWithAppId` メソッドを呼び出し、 AdLime SDK の初期化を行ってください。この処理はアプリ起動後できるだけ早く実行する必要があり、アプリ起動時に実行することを強く推奨します。またこの処理は1回だけ実行してください。
+
+## テスト環境での実行方法
+テスト広告を利用する場合は `AdLime` の `setTestMode` を `YES` に設定してください。またAdLime SDK のデバッグログを確認する場合は `AdLime` の `setLogEnable` を `YES` に設定してください。広告のロードに失敗した場合、広告の詳細なエラーがデバッグログに出力されます。
+
+AdLimeAdErrorCode エラーコード一覧
+|定義                           |説明    |
+|:-----------------------------|:--------|
+|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
+|ADLIME_ADERROR_INVALID_REQUEST | リクエストが無効 |
+|ADLIME_ADERROR_NETWORK_ERROR   | ネットワークエラー |
+|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
+|ADLIME_ADERROR_TIMEOUT         | リクエスト　タイムアウト |
+
+エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
+
+```
+ErrorCode is [3], Message is [No Fill]
+AdUnit is ...
+Network is ...
+LineItem is ...
+```
 
 ## サンプルコード
 AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示します。
@@ -10,7 +31,10 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
 ::: tab Objective-C
 
 ```objectivec
+
 @import AdLimeSdk;
+// Facebookをテスト環境で利用する場合
+// @import FBAudienceNetwork;
 
 @implementation AppDelegate
 
@@ -18,6 +42,14 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [AdLime initWithAppId:@"YOUR APP ID"];
+
+    // テスト環境で用いる場合は以下をテストモードを設定してください 
+    [AdLime setTestMode: YES];
+     // デバッグログを表示する場合は以下を設定してください
+    [AdLime setLogEnable: YES];
+
+    // Facebookをテスト環境で利用する場合は以下を設定してください
+    // [FBAdSettings addTestDevice: [FBAdSettings testDeviceHash]];
 
     return YES;
 }
@@ -32,17 +64,24 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
 ```swift
 
 import AdLimeSdk
-import UIKit
+// Facebookをテスト環境で利用する場合
+// import FBAudienceNetwork
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         ...
         AdLime.initWithAppId("YOUR APP ID")
 
-        ...
+        // テスト環境で用いる場合は以下をテストモードを設定してください
+        AdLime.setTestMode(true)
+        // デバッグログを表示する場合は以下を設定してください
+        AdLime.setLogEnable(true)
+
+        // Facebookをテスト環境で利用する場合は以下を設定してください
+        // FBAdSettings.addTestDevice(FBAdSettings.testDeviceHash())
+
         return true
     }
     ...

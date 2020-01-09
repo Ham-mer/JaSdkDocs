@@ -41,6 +41,90 @@ carthage update
 
 完了後、Carthage フォルダの AdLimeMediation_Facebook > AdLimeMediation_Facebook.framework をプロジェクトにインポートします。
 
+## テスト環境での表示設定
+Facebook 広告をテスト環境で利用する場合にはいくつか準備をする必要があります。ここではその準備方法を紹介します。
+
+### 配信条件
+Facebook 広告が配信されるには以下のような条件を満たす必要があります。  
+
+1. Facebookアプリが端末にインストールしてあり、ログイン済みである。
+1. 端末側で広告ターゲッティングの制限をしない。  
+    - "設定" -> "プライバシー" -> "広告" で "追跡型広告を制限"をオフにする。
+
+
+### テストデバイス登録をしてください
+Facebook 広告は各デバイス、各 Facebook アカウントごとに発行されるデバイス ID によって Facebook アカウントを識別しています。テスト環境のアプリに広告を配信する場合にはデバイス ID を登録する必要があります。下記の手順によってテストデバイス登録することが可能です。
+
+:::: tabs
+
+::: tab Objective-C
+
+```objectivec
+
+@import AdLimeSdk;
+@import FBAudienceNetwork;
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AdLime initWithAppId:@"YOUR APP ID"];
+    // デバッグログ表示設定
+    [AdLime setLogEnable: YES];
+    ...
+    [FBAdSettings addTestDevice: [FBAdSettings testDeviceHash]];
+
+    return YES;
+}
+
+@end
+```
+
+:::
+
+::: tab Swift
+
+```swift
+
+import AdLimeSdk
+import FBAudienceNetwork
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AdLime.initWithAppId("YOUR APP ID")
+        // デバッグログ表示設定
+        AdLime.setLogEnable(true)
+        ...
+        FBAdSettings.addTestDevice(FBAdSettings.testDeviceHash())
+        return true
+    }
+    ...
+
+}
+
+```
+
+:::
+
+::::
+
+### 広告が配信されない場合には
+アプリ起動時に `AdLime` の `setLogEnable` を `YES` にしてデバッグログ表示設定をしてください。デバッグログを確認し、エラーメッセージを確認してください。
+```
+ad load failed, error is:
+ErrorCode is [3], Message is [No Fill]...
+```
+
+上記のようにエラーコード 3、エラーメッセージ No Fill の場合は以下が原因の可能性が高いです。 
+
+1. [配信条件](#配信条件)を満たしていない。
+1. Facebook 広告を短時間に多数リクエストをした。<br>
+    &rArr; しばらく時間をおいて再度リクエストしてください。
+1. Facebook がそのデバイスに配信できる広告がない。
+
+
 ## 利用可能な広告フォーマット
 
 ### 広告フォーマット

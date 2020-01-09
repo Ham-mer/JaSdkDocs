@@ -61,12 +61,12 @@ Info.plist を ソースコードとして開いて編集します。
 
 <img src="./../images/ios/mediation_admob_app_id_plist.png" height="80" />
 
-**Google Mobile Ads SDK 7.42.0 以降のバージョンにおいて、このプロシージャを実行する必要があります。 Info.plist ファイルに GADApplicationIdentifier キーがない場合、アプリがクラッシュする可能性があります。その際、下記のメッセージが表示されます："The Google Mobile Ads SDK was initialized incorrectly."**
+**Google Mobile Ads SDK 7.42.0 以降のバージョンでは、上記を追加する必要があります。 Info.plist ファイルに GADApplicationIdentifier キーがない場合、アプリがクラッシュする可能性があります。その際、下記のメッセージが表示されます："The Google Mobile Ads SDK was initialized incorrectly."**
 
 ## 利用可能な広告フォーマット
 
 ### 広告フォーマット
-|ネットワーク|バナー|インターステーシャル|リワード動画|ネイティブ|
+|ネットワーク|バナー|インターステーシャル|動画リワード|ネイティブ|
 |:-----:|:----:|:----------:|:------:|:----:|
 |AdMob  |◯     | ◯          |◯       |◯     |
 

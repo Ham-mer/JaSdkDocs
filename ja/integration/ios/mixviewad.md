@@ -270,7 +270,7 @@ func adLimeMixViewAdDidDismissScreen(_ mixViewAd: AdLimeMixViewAd!) {
 |ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
 |ADLIME_ADERROR_INVALID_REQUEST | 無効リクエスト |
 |ADLIME_ADERROR_NETWORK_ERROR   | ネットエラー |
-|ADLIME_ADERROR_NO_FILL         | no fill      |
+|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない      |
 |ADLIME_ADERROR_TIMEOUT         | タイムアウト |
 
 

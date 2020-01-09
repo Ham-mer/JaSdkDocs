@@ -46,6 +46,8 @@ github "Ham-mer/AdLimeSdk"
 carthage update
 ```
 
+`Carthage`フォルダを確認して、AdLimeSdk.frameworkとAdLimeSdk.bundleをXcodeプロジェクトに追加してください。ドラッグ & ドロップ完了後、Build Phases > Copy Bundle Resources に AdLimeSdk.bundle が含まれていることを確認してください。
+
 ### AdLimeSdk-All
 #### CocoaPods（推奨）
 iOS プロジェクトに AdLime SDK を導入するための、最も簡単な方法は CocoaPods を使用することです。プロジェクトの Podfile を開き、下記のコードをアプリのターゲットに追加してください。
@@ -137,6 +139,8 @@ github "Ham-mer/AdLime-iOS-Carthage"
 ```objectivec
 carthage update
 ```
+
+`Carthage`フォルダを確認して、すべてのフレームワークをXcodeプロジェクトに追加してください。ドラッグ & ドロップ完了後、Build Phases > Copy Bundle Resources に AdLimeSdk.bundle が含まれていることを確認してください。
 ##### 他のフレームワークの追加
 Xcode上で、プロジェクトファイルを選択し、任意のターゲットの Build Phases > Link Binary With Libraries に以下の Tiktok フレームワークを追加します。
 

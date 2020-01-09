@@ -1,5 +1,5 @@
 # ネイティブ広告
-ネイティブ広告とは、広告のデザインをカスタマイズできるディスプレイ広告です。広告の配置やスタイルをカスタマイズできるため、コンテンツに溶け込んだ広告を表示することができます。ネイティブ広告を表示するためには広告のコンポーネントを受け取り、デフォルトもしくはカスタムのUIデザインを指定することによって広告を表示することが可能になります。
+ネイティブ広告とは、広告のデザインをカスタマイズできるディスプレイ広告です。広告の配置やスタイルをカスタマイズできるため、コンテンツに溶け込んだ広告を表示することができます。広告のコンポーネントを受け取り、デフォルトもしくはカスタムのUIデザインを指定することによって広告を表示することが可能になります。
 
 このガイドでは、ネイティブ広告を iOS アプリに表示する方法と、その過程で考慮すべき重要なポイントについて説明します。
 
@@ -315,8 +315,8 @@ override func viewDidLoad() {
 ::: tab Objective-C
 
 ```objectivec
-if([self.nativeAd isReady]) {
-    UIView *adView = [nativeAd getAdView:layout];
+- (void)adLimeNativeAdDidReceiveAd:(AdLimeNativeAd *)nativeAd {
+    UIView *adView = nativeAd.getAdView;
     [self.view addSubview:adView];
 }
 ```
@@ -326,8 +326,8 @@ if([self.nativeAd isReady]) {
 ::: tab Swift
 
 ```swift
-if(self.nativeAd.isReady()) {
-    let adView = nativeAd.getView(layout)
+func adLimeNativeAdDidReceive(_ nativeAd: AdLimeNativeAd!) {
+    let adView = nativeAd.getView()
     self.view.addSubview(adView)
 }
 ```

@@ -53,16 +53,16 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 - JavaScriptCore.framework
 - MessageUI.framework
 - MobileCoreServices.framework
-- Social.framework (设置为Optional)
-- StoreKit.framework (设置为Optional)
+- Social.framework (Optional)
+- StoreKit.framework (Optional)
 - SystemConfiguration.framework
-- WatchConnectivity.framework (设置为Optional)
-- WebKit.framework (设置为Optional)
+- WatchConnectivity.framework (Optional)
+- WebKit.framework (Optional)
 
 ## 利用可能な広告フォーマット
 
 ### 広告フォーマット
-|ネットワーク|バナー|インターステーシャル|リワード動画|ネイティブ|
+|ネットワーク|バナー|インターステーシャル|動画リワード|ネイティブ|
 |:--------:|:----:|:--------------:|:--------:|:----:|
 |AdColony  | ◯    | ◯              |   ◯      |      |
 
