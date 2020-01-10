@@ -47,7 +47,7 @@ Dependencies.xml に、以下の依存関係を追加してください。
   <!-- Android -->
   <androidPackages>
     <!-- AdLimeSdk -->
-    <androidPackage spec="com.access_company.adlime:adlime:1.9.18">
+    <androidPackage spec="com.access_company.adlime:adlime:1.9.24">
         <repositories>
             <repository>https://dl.bintray.com/adlime/AdLime</repository>
         </repositories>
