@@ -1,4 +1,4 @@
-# 動画リワード広告を導入する
+# 動画リワード広告
 
 動画リワード広告とは、ユーザーが動画を最後まで視聴することと引き換えに、アプリ内で報酬を獲得できる動画広告です。このガイドは、動画リワード広告を AdLime から Android アプリに導入する方法について説明します。
 
@@ -187,7 +187,7 @@ mRewardedVideoAd.setAdListener(object : SimpleAdListener() {
                 //  広告を閉じる
             }
 
-            override fun onAdFailedToLoad(adError: AdError?) {
+            override fun onAdFailedToLoad(adError: AdError) {
                 //  広告の読み込み失敗、エラー詳細は adError から取得
                 print("onAdFailedToLoad: " + adError.toString())
             }

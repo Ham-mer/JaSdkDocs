@@ -13,27 +13,67 @@
 
 インタースティシャル広告は、InterstitialAd オブジェクトによってリクエストし、表示されます。まず InterstitialAd をインスタンス化し、その広告ユニットIDを設定してください。
 
+:::: tabs
+
+::: tab Java
+
 ```java
-// 広告ユニットID の定義
-String interstitial_test = "46dca932-2a10-4702-89fc-e5e87e00b09c";
+// 広告ユニット ID の定義
+String interstitialId = "46dca932-2a10-4702-89fc-e5e87e00b09c";
 // InterstitialAd を作成
 InterstitialAd mInterstitialAd = new InterstitialAd(context);
-mInterstitialAd.setAdUnitId(interstitial_test);
+mInterstitialAd.setAdUnitId(interstitialId);
 ```
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+// 広告ユニット ID の定義
+val interstitialId = "46dca932-2a10-4702-89fc-e5e87e00b09c"
+// InterstitialAd を作成
+val mInterstitialAd = InterstitialAd(this)
+mInterstitialAd.setAdUnitId(interstitialId)
+```
+
+:::
+
+::::
 
 ## 広告の読み込み
 
 インタースティシャル広告を読み込むには、 InterstitialAd オブジェクトの loadAd() メソッドを実行します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 // 広告の読み込み
 mInterstitialAd.loadAd();
 ```
 
+:::
+
+::: tab Kotlin
+
+```kotlin
+// 広告の読み込み
+mInterstitialAd.loadAd()
+```
+
+:::
+
+::::
+
 ## 広告を表示する
 
 インタースティシャル広告は、アプリの流れが一時的に中断する自然なタイミング（ゲームのステージが変わる合間や一つのミッションが完了になった直後など）で表示することが相応しい形です。インタースティシャル広告を表示するには、 isReady() メソッドで読み込みが完了したかどうかを確認し、 show() を呼び出してください。
 
+:::: tabs
+
+::: tab Java
 
 ```java
 if (mInterstitialAd.isReady()) {
@@ -42,13 +82,38 @@ if (mInterstitialAd.isReady()) {
 }
 ```
 
+:::
+
+::: tab Kotlin
+
+```kotlin
+if (mInterstitialAd.isReady) {
+    // 広告の表示
+    mInterstitialAd.show()
+}
+```
+
+:::
+
+::::
+
 ## 広告イベント
 広告の動作をより細かくカスタマイズするには、広告のライフサイクルで発生するイベント（読み込み、開始、終了など）を追加することができ、 AdListener クラスを使い、これらのイベントを受け取ることができます。
 
-InterstitialAd で AdListener を利用するには、 setAdListener() メソッドを呼び出してください。
+### InterstitialAd イベントを登録する
+InterstitialAd のイベントを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 mInterstitialAd.setAdListener(new SimpleAdListener() {
+   @Override
+    public void onAdLoaded() {
+        // 広告のロード完了
+    }
+
     @Override
     public void onAdFailedToLoad(AdError adError) {
         // 広告の読み込み失敗、エラー詳細は adError から取得
@@ -56,14 +121,9 @@ mInterstitialAd.setAdListener(new SimpleAdListener() {
     }
 
     @Override
-    public void onAdLoaded() {
-        // 広告のロード完了
-    }
-
-    @Override
-    public void onAdClosed() {
-        // 広告を閉じる
-        Log.d(TAG, "on BannerAd Closed");
+    public void onAdShown() {
+        // 広告を表示
+        Log.d(TAG, "on BannerAd Shown");
     }
 
     @Override
@@ -72,27 +132,64 @@ mInterstitialAd.setAdListener(new SimpleAdListener() {
         Log.d(TAG, "on BannerAd Clicked");
     }
 
-    @Override
-    public void onAdShown() {
-        // 広告を表示
-        Log.d(TAG, "on BannerAd Shown");
+     @Override
+    public void onAdClosed() {
+        // 広告を閉じる
+        Log.d(TAG, "on BannerAd Closed");
     }
 });
 ```
 
-### エラーの情報
-広告の読み込に失敗した場合は、AdListener の onAdFailedToLoad(AdError adError) が呼び出されます。その際に adError.getCode()、adError.toString() から、エラーコード、エラー情報が取得できます。
+:::
 
- AdError エラーコード一覧
+::: tab Kotlin
+
+```kotlin
+mInterstitialAd.setAdListener(object: SimpleAdListener() {
+    override fun onAdLoaded() {
+        // 広告のロード完了
+        print("on InterstitialAd Loaded")
+    }
+
+    override fun onAdFailedToLoad(adError: AdError?) {
+        //  広告の読み込み失敗、エラー詳細は adError から取得
+        print("onAdFailedToLoad: " + adError.toString())
+    }
+
+    override fun onAdShown() {
+        //  広告を表示
+        print("on InterstitialAd Shown")
+    }
+
+    override fun onAdClicked() {
+        //  広告をクリック
+        print("on InterstitialAd Clicked")
+    }
+
+    override fun onAdClosed() {
+        //  広告を閉じる
+        print("on InterstitialAd Closed")
+    }
+})
+```
+
+:::
+
+::::
+
+### エラーの情報
+広告の読み込に失敗した場合は、AdListener の `onAdFailedToLoad(AdError adError)` が呼び出されます。その際に `adError.getCode()`、`adError.toString()` から、エラーコード、エラー情報が取得できます。
+
+AdError エラーコード一覧
 |定義                        |説明     |
 |:--------------------------|:--------|
 |ERROR_CODE_INTERNAL_ERROR  | 内部エラー |
 |ERROR_CODE_INVALID_REQUEST | リクエストが無効 |
 |ERROR_CODE_NETWORK_ERROR   | ネットワークエラー |
-|ERROR_CODE_NO_FILL         | 配信できる広告がない    |
-|ERROR_CODE_TIMEOUT         | リクエスト　タイムアウト |
+|ERROR_CODE_NO_FILL         | 配信可能な広告がない    |
+|ERROR_CODE_TIMEOUT         | リクエスト タイムアウト |
 
-エラーは AdUnit、ネットワーク、ラインアイテムの各情報が含まれています。
+エラーには、広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 
 ```
 ErrorCode is [3], Message is [No Fill]

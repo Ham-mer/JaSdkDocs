@@ -7,10 +7,14 @@
         - setGdprConsent メソッドを呼び出し、 GDPR を設定します。<br> 
         - AdLimeConfiguration インスタンスを作成し、アプリ ID を設定後、 最後に initialize メソッド で初期化します。
 
-2. Activity のライフサイクル onBackPressed メソッドにおいて、SDK の onBackPressed メソッドを呼び出してください。
+2. Activity のライフサイクル onBackPressed メソッドにおいて、SDK の onBackPressed メソッドを呼び出してください。**任意**
 
 ## サンプルコード
-下記のコードをご参照ください。
+アクティビティで `initialize()' メソッドを実行し、AdLime SDK を初期化するサンプルです。
+
+:::: tabs
+
+::: tab Java
 
 ```java
 @Override
@@ -38,7 +42,56 @@ protected void onCreate(Bundle savedInstanceState) {
 ...
 
 ```
-*** Chartboost を使う場合、Chartboost 広告を表示するすべての Activity に下記のコードを追加する必要がある。***
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+    ...
+    AdLime.getDefault().setGdprConsent(true)
+
+    // AdLime SDKの設定を行う
+    AdLime.getDefault().setGlobalNetworkConfigs(
+                NetworkConfigs.Builder()
+                    .addConfig(AdMobGlobalConfig.Builder()
+                            .addTestDevice("テストデバイス ID") // 広告の表示テストを行う複数のデバイスの ID を設定する
+                            .build())
+                    .addConfig(AppLovinBannerConfig.Builder()
+                            .setAutoDestroy(true)
+                            .build())
+                    .addConfig(DFPGlobalConfig.Builder()
+                            .addTestDevice("テストデバイス ID") // 広告の表示テストを行う複数のデバイスの ID を設定する
+                            .build()
+                    ).addConfig(TikTokGlobalConfig.Builder()
+                            .setIsDebug(true)
+                            .setAllowShowNotify(true)
+                            .build()
+                    ).build()
+            )
+
+    val configuration = AdLimeConfiguration.Builder(applicationContext)
+                .appId("YOUR APP ID") // AdLime のコンソール画面で登録したアプリの App ID を設定する
+                .debug(true)
+                .build()
+    
+    AdLime.getDefault().initialize(applicationContext, configuration)
+    //  以下はデバック時に設定する
+    AdLime.setTestMode(true)
+    AdLime.setLogEnable(true)
+    ...
+```
+
+:::
+
+::::
+
+*** メディエーション時に Chartboost を使用する場合、Chartboost の広告を表示するすべての Activity に、下記のコードを追加する必要があります。***
+
+:::: tabs
+
+::: tab Java
+
 ```java
 @Override
 public void onBackPressed() {
@@ -48,9 +101,25 @@ public void onBackPressed() {
     ...
 }
 ```
+:::
+
+::: tab Kotlin
+
+```kotlin
+override fun onBackPressed() {
+    super.onBackPressed()
+    ...
+    AdLime.getDefault().onBackPressed(this)
+    ...
+}
+```
+
+:::
+
+::::
 
 ## テスト用の広告枠
-Android の各広告フォーマットの、テスト用広告ユニット ID は、以下の通りです。
+Android の各広告フォーマットの、テスト用の広告ユニット ID は、以下の通りです。
 
 テスト アプリ ID           : 14fac732-0853-4f1e-83a4-77db7915fc62
 

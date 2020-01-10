@@ -367,6 +367,8 @@ mNativeAd.setAdListener(object: SimpleAdListener() {
         }
     }
 })
+
+mNativeAd.loadAd()
 ```
 
 :::
