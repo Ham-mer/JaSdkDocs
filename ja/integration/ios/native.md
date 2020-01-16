@@ -7,7 +7,7 @@
 - AdLime SDK が導入済みであること
 
 ## ネイティブ広告の作成
-広告を表示するまでのサイクルは `AdLimeNativeAd` オブジェクトを用いて広告をリクエストし、その後広告を表示するためのViewを取得することです。広告を表示するための最初のステップとして AdUnit ID を設定した `AdLimeNativeAd` を生成します。
+広告を表示するまでのサイクルは `AdLimeNativeAd` オブジェクトを用いて広告をリクエストし、その後広告を表示するためのViewを取得することです。広告を表示するための最初のステップとして 広告枠 ID を設定した `AdLimeNativeAd` を生成します。
 
 :::: tabs
 
@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    nativeAd = [[AdLimeNativeAd alloc] initWithAdUnitId:@"AdUnit_ID"];
+    nativeAd = [[AdLimeNativeAd alloc] initWithAdUnitId:@"広告枠 ID"];
 }
 
 @end
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nativeAd = AdLimeNativeAd.init(adUnitId: "AdUnit_ID")
+        self.nativeAd = AdLimeNativeAd.init(adUnitId: "広告枠 ID")
     }
 }
 ```
@@ -59,26 +59,26 @@ class ViewController: UIViewController {
 
 ## 広告レイアウトの作成
 ネイティブ広告のデザインのカスタマイズやレイアウトは、コーディングによって行います。 AdLime SDK の `AdLimeNativeAdLayout` を使用し、レイアウトを組み込む方法を説明します。
-以下の表のように、 `AdLimeNativeAdLayout` は ネイティブ広告のための各 UIView が内包されています。
+以下の表のように、 `AdLimeNativeAdLayout` は ネイティブ広告のための各 `UIView` が内包されています。
 
 ### `AdLimeNativeAdLayout` 要素一覧
 | 要素               | タイプ     | 説明                           | 必須                         |
 | ----------------- | --------- | ------------------------------ | --------------------------- |
-| `rootView`          | `UIView`    | ルートビュー                     | 必須                         |
-| `titleLabel`        | `UILabel`   | タイトル                        | 必須                          |
-| `subTitleLabel`     | `UILabel`   | サブタイトル                     | 非必須                        |
-| `bodyLabel`         | `UILabel`   | 本文                            | 非必須                       |
-| `advertiserLabel`   | `UILabel`   | 広告主                          | 非必須                        |
-| `callToActionView`  | `UILabel`   | アクションボタン                       | 必須                         |
-| `mediaView`         | `UIView`    | 画像 / 動画                       | `mediaView` もしくは `iconView` どちらか1つ以上 |
-| `iconView`          | `UIView`    | サイト/アプリのロゴ            | `mediaView` もしくは `iconView` どちらか1つ以上 |
-| `adChoicesView`     | `UIView`    | 広告選択ビュー                        | 必須                          |
-| `ratingLabel`       | `UILabel`   | アプリストアでの評価レート（例：4.5）   |非必須                         |
-| `priceLabel`        | `UILabel`   | アプリストアの価格 （例：無料）    | 非必須                         |
-| `storeLabel`        | `UILabel`   | アプリストアラベル                     | 非必須                         |
-| `ratingCallback`    | `callback`  | 評価レートのカスタムコールバック     |非必須                         |
+| rootView          | UIView    | ルートビュー                     | 必須                         |
+| titleLabel        | UILabel   | タイトル                        | 必須                          |
+| subTitleLabel     | UILabel   | サブタイトル                     | 非必須                        |
+| bodyLabel         | UILabel   | 本文                            | 非必須                       |
+| advertiserLabel   | UILabel   | 広告主                          | 非必須                        |
+| callToActionView  | UILabel   | アクションボタン                       | 必須                         |
+| mediaView         | UIView    | 画像 / 動画                       | mediaView もしくは iconView どちらか1つ以上 |
+| iconView          | UIView    | サイト/アプリのロゴ            | mediaView もしくは iconView どちらか1つ以上 |
+| adChoicesView     | UIView    | 広告選択ビュー                        | 必須                          |
+| ratingLabel       | UILabel   | アプリストアでの評価レート（例：4.5）   |非必須                         |
+| priceLabel        | UILabel   | アプリストアの価格 （例：無料）    | 非必須                         |
+| storeLabel        | UILabel   | アプリストアラベル                     | 非必須                         |
+| ratingCallback    | callback  | 評価レートのカスタムコールバック     |非必須                         |
 
-`ratingCallback` は、アプリストアでのアプリ評価レビューのカスタマイズを行えます。
+ratingCallback は、アプリストアでのアプリ評価レビューのカスタマイズを行えます。
 
 ```objectivec
 typedef void (^ratingCallback)(double rating);
@@ -89,8 +89,8 @@ typedef void (^ratingCallback)(double rating);
 #### レイアウト作成のためのカスタム View の生成
  レイアウトを作成する最初のステップとして、 `UIView` を生成します。
 
-- Interface Builder で、任意の xib ファイル に UIView の追加を行う
-- もしくは、UIView のサブクラスをカスタマイズし生成する
+- Interface Builder で、任意の xib ファイル に `UIView` の追加を行う
+- もしくは、`UIView` のサブクラスをカスタマイズし生成する
 
 
 :::: tabs
@@ -131,7 +131,7 @@ override func viewDidLoad() {
 }
 ```
 
-// UIView のサブクラスをカスタマイズで生成する場合
+// `UIView` のサブクラスをカスタマイズで生成する場合
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -145,7 +145,7 @@ override func viewDidLoad() {
 ::::
 
 #### `AdLimeNativeAdLayout` の生成
-UIView の生成したら、`AdLimeNativeAdLayout` を生成し、要素となる各 UIView の生成と設定を行います。 `AdLimeNativeAdLayout` を `AdLimeNativeAd` の `NativeAdLayout` として設定します。
+`UIView` の生成したら、`AdLimeNativeAdLayout` を生成し、要素となる各 UIView の生成と設定を行います。 `AdLimeNativeAdLayout` を `AdLimeNativeAd` の `NativeAdLayout` として設定します。
 
 :::: tabs
 
@@ -308,7 +308,7 @@ override func viewDidLoad() {
 ::::
 
 ## 広告の表示
-広告をロード完了したら広告を表示してみましょう。`AdLimeNativeAd` の `getView` メソッドで、ロードした広告の UIView が取得できます。ここでは広告を表示する前に広告がロード済みかどうかを`isReady`メソッドを用いて確認しています。<br>
+広告をロード完了したら広告を表示してみましょう。`AdLimeNativeAd` の `getView` メソッドで、ロードした広告の `UIView` が取得できます。ここでは広告を表示する前に広告がロード済みかどうかを`isReady`メソッドを用いて確認しています。<br>
 
 :::: tabs
 
@@ -398,30 +398,25 @@ class ViewController: UIViewController, AdLimeNativeAdDelegate {
 ::: tab Objective-C
 
 ```objectivec
-/// A native ad has loaded, and can be displayed.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 - (void)adLimeNativeAdDidReceiveAd:(AdLimeNativeAd *)nativeAd {
     NSLog(@"adLimeNativeAdDidReceiveAd");
 }
 
-/// The native ad request failed, and a new request can be sent.
+/// 広告のロード失敗を通知するデリゲートメソッド
 - (void)adLimeNativeAd:(AdLimeNativeAd *)nativeAd didFailToReceiveAdWithError:(AdLimeAdError *)adError {
     NSLog(@"adLimeNativeAd:didFailToReceiveAdWithError, errorCode is %d, errorMessage is %@",
             adError.getCode, adError.description);
 }
 
-/// The native ad was shown.
+/// タップ可能な広告を表示されたことを通知するデリゲートメソッド
 - (void)adLimeNativeAdWillPresentScreen:(AdLimeNativeAd *)nativeAd {
     NSLog(@"adLimeNativeAdWillPresentScreen");
 }
 
-/// The native ad will cause the application to become inactive and open a new application.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 - (void)adLimeNativeAdWillLeaveApplication:(AdLimeNativeAd *)nativeAd {
     NSLog(@"adLimeNativeAdWillLeaveApplication");
-}
-
-/// The native ad did dismiss a full screen view.
-- (void)adLimeNativeAdDidDismissScreen:(AdLimeNativeAd *)nativeAd {
-    NSLog(@"adLimeNativeAdDidDismissScreen");
 }
 ```
 
@@ -430,29 +425,24 @@ class ViewController: UIViewController, AdLimeNativeAdDelegate {
 ::: tab Swift
 
 ```swift
-/// A native ad has loaded, and can be displayed.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 func adLimeNativeAdDidReceive(_ nativeAd: AdLimeNativeAd!) {
     print("adLimeNativeAdDidReceiveAd")
 }
 
-/// The native ad request failed, and a new request can be sent.
+/// 広告のロード失敗を通知するデリゲートメソッド
 func adLimeNativeAd(_ nativeAd: AdLimeNativeAd!, didFailToReceiveAdWithError adError: AdLimeAdError!) {
     print("adLimeNativeAd:didFailToReceiveAdWithError, errorCode is \(adError.getCode().rawValue), errorMessage is \(adError.description)")
 }
 
-/// The native ad was shown.
+/// タップ可能な広告を表示されたことを通知するデリゲートメソッド
 func adLimeNativeAdWillPresentScreen(_ nativeAd: AdLimeNativeAd!) {
     print("adLimeNativeAdWillPresentScreen")
 }
 
-/// The native ad will cause the application to become inactive and open a new application.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 func adLimeNativeAdWillLeaveApplication(_ nativeAd: AdLimeNativeAd!) {
     print("adLimeNativeAdWillLeaveApplication")
-}
-
-/// The native ad did dismiss a full screen view.
-func adLimeNativeAdDidDismissScreen(_ nativeAd: AdLimeNativeAd!) {
-    print("adLimeNativeAdDidDismissScreen")
 }
 ```
 
@@ -472,7 +462,7 @@ AdLimeAdErrorCode エラーコード一覧
 |ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
 |ADLIME_ADERROR_TIMEOUT         | リクエスト　タイムアウト |
 
-エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
+エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 ```
 ErrorCode is [3], Message is [No Fill]
 AdUnit is ...
@@ -611,3 +601,8 @@ rootViewの高さ：430
 ## プリロードとキャッシュ
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
 また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeAdLoader](./adloader.md)で実現が可能です。
+
+
+## 次へのステップ
+- 他の広告フォーマットを追加で利用したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOSアプリに実装しましょう。
+- 広告が正しく表示できるか確認したい場合は[iOSの広告表示テスト](./test.md)に従い、App ID と各アドネットワークに対応する広告フォーマットの広告枠 ID を設定して広告を表示してみましょう。

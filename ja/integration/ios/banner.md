@@ -11,10 +11,10 @@
 
 
 ### Interface Builder で作成する
-一般的なクラシックビューと同様に、 AdLimeBannerView をストーリーボードと xib ファイルに追加することができます。このメソッドを使用する場合、表示する広告のサイズに合わせて幅と高さの制限を設ける必要があります。例えば、320 x 50 のバナー広告を表示する場合、 320 ポイントの幅制約と 50 ポイントの高さ制約を設けてください。
+一般的なクラシックビューと同様に、 `AdLimeBannerView` をストーリーボードと xib ファイルに追加することができます。このメソッドを使用する場合、表示する広告のサイズに合わせて幅と高さの制限を設ける必要があります。例えば、320 x 50 のバナー広告を表示する場合、 320 ポイントの幅制約と 50 ポイントの高さ制約を設けてください。
 
 ### コードで作成する
-AdLimeBannerView を直接インスタンス化することもできます。以下のサンプルでは、AdLimeBannerView を生成して、画面に追加する例を示します。
+AdLimeBannerView を直接インスタンス化することもできます。以下のサンプルでは、`AdLimeBannerView` を生成して、画面に追加する例を示します。
 
 
 :::: tabs
@@ -36,7 +36,7 @@ AdLimeBannerView を直接インスタンス化することもできます。以
     [super viewDidLoad];
     
     // Instantiate the banner with AdUnitId and ViewController
-    self.bannerView = [[AdLimeBannerView alloc] initWithAdUnitId:@"AdUnit_ID" rootViewController:self];
+    self.bannerView = [[AdLimeBannerView alloc] initWithAdUnitId:@"広告枠 ID" rootViewController:self];
 
     [self.view addSubview:self.bannerView];
 }
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bannerView = AdLimeBannerView.init(adUnitId: "AdUnit_ID")
+        self.bannerView = AdLimeBannerView.init(adUnitId: "広告枠 ID")
     }
 }
 ```
@@ -161,30 +161,25 @@ class ViewController: UIViewController, AdLimeBannerViewDelegate {
 ::: tab Objective-C
 
 ```objectivec
-/// Tells the delegate an ad request loaded an ad.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド　
 - (void)adLimeBannerDidReceiveAd:(AdLimeBannerView *)bannerView {
     NSLog(@"adLimeBannerDidReceiveAd");
 }
 
-/// Tells the delegate an ad request failed.
+/// 広告のロード失敗を通知するデリゲートメソッド　
 - (void)adLimeBanner:(AdLimeBannerView *)bannerView didFailToReceiveAdWithError:(AdLimeAdError *)adError {
     NSLog(@"adLimeBanner:didFailToReceiveAdWithError, errorCode is %d, errorMessage is %@",
             adError.getCode, adError.description);
 }
 
-/// Tells the delegate that a full-screen view will be presented in response to the user clicking on an ad.
+/// タップ可能な広告を表示されたことを通知するデリゲートメソッド
 - (void)adLimeBannerWillPresentScreen:(AdLimeBannerView *)bannerView {
     NSLog(@"adLimeBannerWillPresentScreen");
 }
 
-/// Tells the delegate that a user click will open another app (such as the App Store), backgrounding the current app.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 - (void)adLimeBannerWillLeaveApplication:(AdLimeBannerView *)bannerView {
     NSLog(@"adLimeBannerWillLeaveApplication");
-}
-
-/// Tells the delegate that the full-screen view has been dismissed.
-- (void)adLimeBannerDidDismissScreen:(AdLimeBannerView *)bannerView {
-    NSLog(@"adLimeBannerDidDismissScreen");
 }
 ```
 
@@ -193,30 +188,26 @@ class ViewController: UIViewController, AdLimeBannerViewDelegate {
 ::: tab Swift
 
 ```swift
-// MARK: Banner広告に関するメソッド
-/// Tells the delegate an ad request loaded an ad.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 func adLimeBannerDidReceiveAd(_ bannerView: AdLimeBannerView!) {
     print("adLimeBannerDidReceiveAd")
 }
 
-/// Tells the delegate an ad request failed.
+/// 広告のロード失敗を通知するデリゲートメソッド
 func adLimeBanner(_ bannerView: AdLimeBannerView!, didFailToReceiveAdWithError adError: AdLimeAdError!) {
     print("adLimeBanner:didFailToReceiveAdWithError, errorCode is \(adError.getCode().rawValue), errorMessage is \(adError.description)")
 }
 
-/// Tells the delegate that a full-screen view will be presented in response to the user clicking on an ad.
+/// タップ可能な広告を表示されたことを通知するデリゲートメソッド
 func adLimeBannerWillPresentScreen(_ bannerView: AdLimeBannerView!) {
     print("adLimeBannerWillPresentScreen")
 }
 
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 func adLimeBannerWillLeaveApplication(_ bannerView: AdLimeBannerView!) {
     print("adLimeBannerWillLeaveApplication")
 }
 
-/// Tells the delegate that the full-screen view has been dismissed.
-func adLimeBannerDidDismissScreen(_ bannerView: AdLimeBannerView!) {
-    print("adLimeBannerDidDismissScreen")
-}
 ```
 
 :::
@@ -235,7 +226,7 @@ AdLimeAdErrorCode エラーコード一覧
 |ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
 |ADLIME_ADERROR_TIMEOUT         | リクエスト　タイムアウト |
 
-エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
+エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 
 ```
 ErrorCode is [3], Message is [No Fill]
@@ -266,3 +257,8 @@ LineItem is ...
 ## プリロードとキャッシュ
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
 また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeAdLoader](./adloader.md)で実現が可能です。
+
+## 次へのステップ
+- 他の広告フォーマットを追加で利用したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOSアプリに実装しましょう。
+- 広告が正しく表示できるか確認したい場合は[iOSの広告表示テスト](./test.md)に従い、App ID と各アドネットワークに対応する広告フォーマットの広告枠 ID を設定して広告を表示してみましょう。
+

@@ -51,6 +51,9 @@ carthage update
 |:-------------:|:------:|:--------:|:--------:|:------:|:------:|:-------:|
 |DU Ad Platform |◯       |         |           |        |        |         |
 
+## テスト広告の表示
+SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#DU-Ad-Platform) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
+
 ## 広告枠の設置
 AdLime を使って DU Ad Platform Audience Network の広告枠を配置する前に、DU Ad Platform Audience Network の管理画面上で広告枠を作成し、その広告枠の情報が必要になります。
 - Placement ID

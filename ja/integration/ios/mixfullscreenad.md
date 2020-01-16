@@ -8,7 +8,7 @@ MixFullScreenAd はフルスクリーンで表示することができるイン�
 - AdLime SDKの導入
 
 ## MixFullScreenAd の作成
-広告を表示するまでのサイクルは `AdLimeMixFullScreenAd` オブジェクトを用いて広告をリクエストし、広告を表示することです。広告を表示するための最初のステップとして AdUnit ID を設定した `MixFullScreeenAd` を生成します。
+広告を表示するまでのサイクルは `AdLimeMixFullScreenAd` オブジェクトを用いて広告をリクエストし、広告を表示することです。広告を表示するための最初のステップとして 広告枠 ID を設定した `MixFullScreeenAd` を生成します。
 
 :::: tabs
 
@@ -28,7 +28,7 @@ MixFullScreenAd はフルスクリーンで表示することができるイン�
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.mixFullScreenAd = [[AdLimeMixFullScreenAd alloc] initWithAdUnitId:@"AdUnit_ID"];
+    self.mixFullScreenAd = [[AdLimeMixFullScreenAd alloc] initWithAdUnitId:@"広告枠 ID"];
 }
 
 @end
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mixFullScreenAd = AdLimeMixFullScreenAd.init(adUnitId: "AdUnit_ID") 
+        self.mixFullScreenAd = AdLimeMixFullScreenAd.init(adUnitId: "広告枠 ID") 
     }
 }
 ```
@@ -199,28 +199,28 @@ class ViewController: UIViewController, AdLimeMixViewAdDelegate {
 ::: tab Objective-C
 
 ```objectivec
-/// A MixFullScreen ad has loaded, and can be displayed.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 - (void)adLimeMixFullScreenAdDidReceiveAd:(AdLimeMixFullScreenAd *)mixFullScreenAd {
     NSLog(@"AdLimeMixFullScreenAdDidReceiveAd");
 }
 
-/// The MixFullScreen ad request failed, and a new request can be sent.
+/// 広告のロード失敗を通知するデリゲートメソッド
 - (void)adLimeMixFullScreenAd:(AdLimeMixFullScreenAd *)mixFullScreenAd didFailToReceiveAdWithError:(AdLimeAdError *)adError {
     NSLog(@"AdLimeMixFullScreenAd:didFailToReceiveAdWithError, errorCode is %d, errorMessage is %@",
             adError.getCode, adError.description);
 }
 
-/// The MixFullScreen ad was shown.
+/// タップ可能なフルスクリーン広告が表示されたことを通知するデリゲートメソッド
 - (void)adLimeMixFullScreenAdWillPresentScreen:(AdLimeMixFullScreenAd *)mixFullScreenAd {
     NSLog(@"AdLimeMixFullScreenAdWillPresentScreen");
 }
 
-/// The MixFullScreen ad will cause the application to become inactive and open a new application.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 - (void)adLimeMixFullScreenAdWillLeaveApplication:(AdLimeMixFullScreenAd *)mixFullScreenAd {
     NSLog(@"AdLimeMixFullScreenAdWillLeaveApplication");
 }
 
-/// The MixView ad did dismiss a full screen view.
+/// MixFullScreenAdが閉じられたことを通知するデリゲートメソッド
 - (void)adLimeMixFullScreenAdDidDismissScreen:(AdLimeMixFullScreenAd *)mixFullScreenAd {
     NSLog(@"AdLimeMixFullScreenAdDidDismissScreen");
 }
@@ -231,23 +231,27 @@ class ViewController: UIViewController, AdLimeMixViewAdDelegate {
 ::: tab Swift
 
 ```swift
-/// A MixFullScreen ad has loaded, and can be displayed.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 func adLimeMixFullScreenAdDidReceive(_ mixFullScreenAd: AdLimeMixFullScreenAd!) {
     print("AdLimeMixFullScreenAdDidReceiveAd")
 }
-/// The MixFullScreen ad request failed, and a new request can be sent.
+
+/// 広告のロード失敗を通知するデリゲートメソッド
 func adLimeMixFullScreenAd(_ mixFullScreenAd: AdLimeMixFullScreenAd!, didFailToReceiveAdWithError adError: AdLimeAdError!) {
     print("adLimeMixFullScreenAd:didFailToReceiveAdWithError, errorCode is \(adError.getCode().rawValue), errorMessage is \(adError.description)")
 }
-/// The MixFullScreen ad was shown.
+
+/// タップ可能なフルスクリーン広告が表示されたことを通知するデリゲートメソッド
 func adLimeMixFullScreenAdWillPresentScreen(_ mixFullScreenAd: AdLimeMixFullScreenAd!) {
     print("AdLimeMixFullScreenAdWillPresentScreen")
 }
-/// The MixFullScreen ad will cause the application to become inactive and open a new application.
+
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 func adLimeMixFullScreenAdWillLeaveApplication(_ mixFullScreenAd: AdLimeMixFullScreenAd!) {
     print("AdLimeMixFullScreenAdWillLeaveApplication")
 }
-/// The MixView ad did dismiss a full screen view.
+
+/// MixFullScreenAdが閉じられたことを通知するデリゲートメソッド
 func adLimeMixFullScreenAdDidDismissScreen(_ mixFullScreenAd: AdLimeMixFullScreenAd!) {
     print("AdLimeMixFullScreenAdDidDismissScreen")
 }
@@ -270,7 +274,7 @@ func adLimeMixFullScreenAdDidDismissScreen(_ mixFullScreenAd: AdLimeMixFullScree
 |ADLIME_ADERROR_NO_FILL         | 配信できる広告がない   |
 |ADLIME_ADERROR_TIMEOUT         | タイムアウト |
 
-エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
+エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 ```
 ErrorCode is [3], Message is [No Fill]
 AdUnit is ...
@@ -313,4 +317,8 @@ if(self.mixFullScreenAd.isReady()) {
 ## プリロードとキャッシュ
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
 また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeAdLoader](./adloader.md)で実現が可能です。
+
+## 次へのステップ
+- 他の広告フォーマットを追加で利用したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOSアプリに実装しましょう。
+- 広告が正しく表示できるか確認したい場合は[iOSの広告表示テスト](./test.md)に従い、App ID と各アドネットワークに対応する広告フォーマットの広告枠 ID を設定して広告を表示してみましょう。
 
