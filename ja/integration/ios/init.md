@@ -1,9 +1,9 @@
-# AdLime SDKの導入
+# AdLime SDK の導入
 AdLime は "AdLimeSdk" と "AdLimeSdk_All" の２種類の SDK を提供しています。これらの SDK の違いは主要なアドネットワークをデフォルトで提供しているかどうかです。
 
 アドネットワークをカスタムに設定することを希望する場合は "AdLimeSdk" を導入することをおすすめします。"AdLimeSdk" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望のアドネットワークを追加してください。 
 
-"AdLimeSdk_All" は AdLimeSdk と AdMob、DFP、FaceBook、Mopub、AppLovin、TikTok のアドネットワークを標準でサポートしています．これらのアドネットワークの導入を希望する場合はこの SDK を組み込むことも選択肢の一つです。"AdLimeSdk_All" の SDK を導入することで各アドネットワークごとに必要な SDK を追加するなどの手順をいくらかスキップすることが可能です。
+"AdLimeSdk_All" は AdLimeSdk と AdMob・DFP・FaceBook・Mopub・AppLovin・TikTok のアドネットワークを標準でサポートしています．これらのアドネットワークの導入を希望する場合は、この SDK を組み込むことも選択肢の一つです。"AdLimeSdk_All" の SDK を導入することで、各広告ネットワークごとに必要な SDK を追加する手順などをスキップすることが可能です。
 
 ## 前提条件
 - Xcode 9.2 以上のバージョンを使用
@@ -45,7 +45,7 @@ carthage update
 
 Carthage フォルダを確認して、AdLimeSdk.frameworkとAdLimeSdk.bundleをXcodeプロジェクトに追加してください。ドラッグ & ドロップ完了後、Build Phases > Copy Bundle Resources に AdLimeSdk.bundle が含まれていることを確認してください。
 
-### AdLimeSdk-All
+## AdLimeSdk-All
 [AdLimeSdk-All の導入方法](./begin_adlimesdk_all.md)を参照してください。
 
 ## Linker Flags の追加
@@ -73,7 +73,7 @@ NSAllowsArbitraryLoads の例外をアプリの Info.plist ファイルに追加
 
 ## 初期化
 
-広告のロード前に、AdLime の initWithAppId メソッドを呼び出し、 AdLime SDK の初期化を行ってください。この処理はアプリ起動後できるだけ早く実行する必要があり、アプリ起動時に実行することを強く推奨します。またこの処理は1回だけ実行してください。
+広告のロード前に、AdLime の initWithAppId メソッドを呼び出し、 AdLime SDK の初期化を行います。この初期化の処理はできるだけ早く実行する必要があり、アプリ起動時に実行することを強く推奨します。また、この処理は1回だけ実行してください。
 
 ### テスト環境での実行方法
 テスト広告を利用する場合は AdLime の setTestMode を YES に設定してください。また AdLime SDK のデバッグログを確認する場合は AdLime の setLogEnable を YES に設定してください。広告のロードに失敗した場合、広告の詳細なエラーがデバッグログに出力されます。
@@ -168,11 +168,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 :::: 
 
 
-## SDK の例
-各広告の実装について、[SDKの例](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。
+## SDK の実装サンプル
+各広告の実装サンプルについて、[デモアプリ](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。
 
 ## 次へのステップ
-- 事前に導入予定のアドネットワークが決定している場合は[メディエーション機能の導入](./mediation.md)を確認し、各アドネットワークごとに必要な SDK の導入手順に従ってください。
-- アドネットワークを選択せず、広告を表示したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOSアプリに実装しましょう。
+- 事前に導入予定の広告ネットワークが決定している場合は[メディエーション機能の導入](./mediation.md)を確認し、各広告ネットワークごとに必要な SDK の導入手順に従ってください。
+- 広告ネットワークを選択せず、広告を表示したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOS アプリに実装しましょう。
 
 
