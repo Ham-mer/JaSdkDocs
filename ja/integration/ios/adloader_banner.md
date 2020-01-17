@@ -1,49 +1,148 @@
-# AdLimeAdLoader - 横幅广告
-AdLimeAdLoaderで広告をロード、展示する時、 AdUnit IDによって広告をキャッシュする，なので、各画面で広告のロードはできる。<br>
-一つのAdUnit IDでは，AdLimeAdLoaderは一つの対象をキャッシュする。<br>
-[AdLimeAdLoader destroyAd:@"Banner AdUnit ID"] で広告をデストロイすると，AdLimeAdLoaderで広告をロードする時は新な対象を作成する。
+# AdLimeAdLoader - バナー広告  
 
-AdLimeAdLoaderはバナー広告のキャッシュ、ロード、展示、デストロイをサポートする。
+AdLimeAdLoader は広告のキャッシュを管理、効率的に広告を表示する機能です。AdLimeAdLoader を用いることでロード済み広告のリサイクルが可能になったり、また広告ロードのタイミングの効率化に望むことができます。
 
-### 広告のロード
-```objectivec
-// 広告のロード
-[AdLimeAdLoader loadBanner:(NSString *)adUnitId  rootViewController: viewController];
-```
+このガイドでは AdLimeAdLoader を用いたバナー広告の実装方法について説明します。
 
-```objectivec
-// 広告のロードまたはイベント代理の設定
-[AdLimeAdLoader loadBanner:(NSString *)adUnitId rootViewController: (UIViewController *)viewController withDelegate:(id<AdLimeBannerViewDelegate> )delegate];
-```
+## AdLimeAdLoader による基本的な実装  
 
+AdLimeAdLoader は各広告枠 ID ごとに広告のキャッシュを識別しています。AdLimeAdLoader を使って広告のロードや表示をする場合は、広告枠 ID ごとに広告をリクエストする必要があります。また一つの広告枠 ID に一つの広告を管理するため、複数の広告を同時に表示する際は対応する数の広告枠 ID を発行してください。
 
-### 広告は用意できるかどうかの判断
-```objectivec
-BOOL isReady = [AdLimeAdLoader isBannerReady:"Banner AdUnit ID"];
-```
+## 広告のロード  
 
-### 広告の展示
-バナー広告はViewContainerで展示される。
+まず広告をロードしてみましょう。`AdLimeAdLoader`クラスの`loadBanner` を実行してください。
+
+:::: tabs
+
+::: tab Objective-C
 
 ```objectivec
-// 広告の展示
-[AdLimeAdLoader showBanner: (NSString *)adUnitId viewContainer: (UIView *)viewContainer];
+[AdLimeAdLoader loadBanner:@"広告枠 ID"  rootViewController: self];
 ```
+
+:::
+
+::: tab Swift
+
+```swift
+AdLimeAdLoader.loadBanner("広告枠 ID", rootViewController: self)
+```
+
+:::
+
+::::
+
+## 広告の表示  
+
+広告をロードしたら広告を表示してみましょう。広告を表示する前に広告がロード済みかどうかを `AdLimeAdLoader` の `isBannerReady` メソッドで確認してから `showBanner` メソッドで表示します。
+
+:::: tabs
+
+::: tab Objective-C
 
 ```objectivec
-// 広告の展示またはイベント代理の設定
-[AdLimeAdLoader showBanner: (NSString *)adUnitId viewContainer: (UIView *)viewContainer withDelegate:(_Nullable id<AdLimeBannerViewDelegate>)delegate];
+if ([AdLimeAdLoader isBannerReady:@"広告枠 ID"]) {
+    [AdLimeAdLoader showBanner:@"広告枠 ID" viewContainer: self]
+} else {
+    NSLog(@"Ad wasn't ready");
+}
 ```
 
-### 広告のデストロイ
+:::
+
+::: tab Swift
+
+```swift
+if(AdLimeAdLoader.isBannerReady("広告枠 ID")) {
+    AdLimeAdLoader.showBanner("広告枠 ID", viewContainer: viewContainer)
+}
+```
+
+:::
+
+::::
+
+## 広告のイベント  
+
+`AdLimeBannerViewDelegate` を設定することで、広告のロード完了のタイミングやユーザーがアプリを閉じたタイミングなどの広告のライフサイクルイベントを取得することができます。
+
+### バナー広告イベントを登録する  
+
+バナー広告のライフサイクルイベントを取得するためには `AdLimeBannerViewDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `loadBanner` メソッド及び `showBanner` メソッドの `withDelegate` で指定する必要があります。
+
+#### 広告のロード
+
+:::: tabs
+
+::: tab Objective-C
+
+```objectivec
+[AdLimeAdLoader loadBanner:@"広告枠 ID" rootViewController: self withDelegate: self];
+```
+
+:::
+
+::: tab Swift
+
+```swift
+AdLimeAdLoader.loadBanner("広告枠 ID", rootViewController: self, with: self)
+```
+
+:::
+
+::::
+
+#### 広告の表示
+
+:::: tabs
+
+::: tab Objective-C
+
+```objectivec
+[AdLimeAdLoader showBanner:@"広告枠 ID" viewContainer: viewContainer withDelegate: self]
+```
+
+:::
+
+::: tab Swift
+
+```swift
+AdLimeAdLoader.showBanner("広告枠 ID", viewContainer: viewContainer, with: self)
+```
+
+:::
+
+::::
+
+### バナー広告イベントを実装する
+広告イベントの制御は `AdLimeBannerViewDelegate` を用いて実現できます。実装方法は[バナー広告](./banner.md#バナー広告イベントを実装する)を確認してください
+
+
+<!-- ### 広告のデストロイ
 ```objectivec
 [AdLimeAdLoader destroyAd:@"Banner AdUnit ID"];
+``` -->
+
+## `AdLimeBannerView` オブジェクトの取得
+AdLimeAdLoader を用いて `AdLimeBannerView` オブジェクトを取得することができます。ただし、この方法を用いる広告のキャッシュができなくなります。この方法を用いる場合は広告を表示するタイミングで `AdLimeBannerView` を取得することを推奨します。`AdLimeBannerView`を用いた実装方法は[バナー広告](./banner.md)を参考にしてください。
+
+:::: tabs
+
+::: tab Objective-C
+
+```objectivec
+AdLimeBannerAdView *bannerAdView = [AdLimeAdLoader getBannerAdView:@"広告枠 ID" rootViewController: self];
 ```
 
-### バナー広告対象の取得
-AdLimeAdLoaderで広告対象を取得できる。<br>
-この対象で広告をロード、展示、上記のAdlimeAdloaderで提供される方法ではない。<br>
-[横幅广告]を参考(./banner.md)。
-```objectivec
-AdLimeBannerAdView *bannerAdView = [AdLimeAdLoader getBannerAdView:(NSString *)adUnitId rootViewController: (UIViewController *)viewController];
+:::
+
+::: tab Swift
+
+```swift
+AdLimeAdLoader.getBannerAdView("広告枠 ID", rootViewController: self)
 ```
+
+:::
+
+::::
+
