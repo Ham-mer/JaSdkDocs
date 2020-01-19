@@ -43,7 +43,7 @@ AdLimeLoader.loadBanner(context, "Banner AdUnit ID");
 ```
 
 ::: tip
-もし広告枠に Flurry/IronSource/Unity Adsがある場合に，loadBanner() に Activityを送らないといけない。
+もし広告枠に Flurry/IronSource/Unity Adsがある場合に，ContextのパラメーターにActivityを導入してください。
 :::
 
 ### 広告は準備完了かどうかの判断

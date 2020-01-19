@@ -68,8 +68,7 @@ AdLimeLoader.loadRewardedVideo(context, "RewardedVideo AdUnit ID");
 ```
 
 ::: tip
-もし広告枠に Chartboost/Flurry/IronSource/Maio/MoPub/Tapjoy/Unity Adsがある場合に，loadRewardedVideo()にActivityを送らいないといけない。<br>
-Nend/TikTokの場合に，loadRewardedVideo() にActivityを送らいないといけない、あるいはshowRewardedVideo(activity, ...)を使って広告を展示する。
+もし広告枠に Chartboost/Flurry/IronSource/Maio/MoPub/Tapjoy/Unity Adsがある場合に，ContextのパラメーターにActivityを導入してください。
 :::
 
 ### 広告は準備完了かどうかの判断
@@ -82,10 +81,6 @@ boolean isReady = AdLimeLoader.isRewardedVideoReady("RewardedVideo AdUnit ID");
 // 広告の展示
 AdLimeLoader.showRewardedVideo(activity, "RewardedVideo AdUnit ID");
 ```
-
-::: tip
- Nend/TikTokの場合に，loadRewardedVideo()にActivityを送らいないといけない、あるいはshowRewardedVideo(activity, ...)で広告を展示する。
-:::
 
 ### 広告のデストロイ
 ```java

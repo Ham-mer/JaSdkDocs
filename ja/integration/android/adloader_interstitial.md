@@ -43,7 +43,7 @@ AdLimeLoader.loadInterstitial(context, "Interstitial AdUnit ID");
 ```
 
 ::: tip
-もし広告枠に Chartboost/Flurry/IronSource/Maio/Tapjoy/Unity Adsがある場合に，loadInterstitial()に  Activityを送らないといけない。
+もし広告枠に Chartboost/Flurry/IronSource/Maio/Tapjoy/Unity Adsがある場合に，ContextのパラメーターにActivityを導入してください。
 :::
 
 ### 広告は準備完了かどうかの判断
@@ -56,10 +56,6 @@ boolean isReady = AdLimeLoader.isInterstitialReady("Interstitial AdUnit ID");
 // 広告の展示
 AdLimeLoader.showInterstitial(activity, "Interstitial AdUnit ID");
 ```
-
-::: tip
-Nend/TikTokの場合に，loadInterstitial()に  Activityを送らないといけない、あるいは  showInterstitial(activity, ...) を使う。
-:::
 
 ### 広告をデストロイする
 ```java

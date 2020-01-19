@@ -42,8 +42,8 @@ AdLimeLoader.loadMixFullScreenAd(context, "MixFullScreen AdUnit ID", nativeAdLay
 **NativeAdLayoutについての情報は[NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できる。**
 
 ::: tip
-もし広告枠にFlurry/Unity Adsのバナー広告がある場合にloadMixFullScreenAd()にActivityを送る必要がある。<br>
-もし広告枠にChartboost/Flurry/IronSource/Maio/Tapjoy/Unity Ads のインタースティシャル広告がある場合にloadMixFullScreenAd()にActivityを送る必要がある
+もし広告枠にFlurry/Unity Adsのバナー広告がある場合に，ContextのパラメーターにActivityを導入してください。<br>
+もし広告枠にChartboost/Flurry/IronSource/Maio/Tapjoy/Unity Ads のインタースティシャル広告がある場合に，ContextのパラメーターにActivityを導入してください。
 :::
 
 ### 広告の用意を確認
