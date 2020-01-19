@@ -38,7 +38,7 @@ allprojects {
 アプリケーションレベルの build.gradle に、下記の依存関係を追加します。
 ```
 dependencies {
-    implementation 'com.access_company.adlime:adlime:1.9.24'
+    implementation 'com.access_company.adlime:adlime:1.9.28'
 }
 ```
 その後、必要に応じてメディエーションを導入します。各メディエーションの導入方法については、ドキュメントの[メディエーション](./Interstitial.md)をご覧ください。
