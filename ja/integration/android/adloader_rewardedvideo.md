@@ -7,21 +7,64 @@ AdLimeLoaderは動画リワードのキャッシュ、ロード、展示、デ�
 
 ### 広告をロード
 ```java
-// 広告をロード
-AdLimeLoader.loadRewardedVideo(context, "RewardedVideo AdUnit ID");
-```
-
-```java
-// 広告をロードしてまた結果をモニターする
-AdLimeLoader.loadRewardedVideo(context, "RewardedVideo AdUnit ID", new SimpleRewardedVideoAdListener() {
+// ロード結果をモニターします
+AdLimeLoader.getRewardedVideo(this, "RewardedVideo AdUnit ID").setAdListener(new SimpleRewardedVideoAdListener() {
             @Override
             public void onAdLoaded() {
+                // 動画のロード完了
+                LogUtil.d(TAG, "onAdLoaded");
+            }
+
+            @Override
+            public void onAdShown() {
+                // 動画を表示
+                LogUtil.d(TAG, "onAdShown");
+            }
+
+            @Override
+            public void onAdClicked() {
+                // 動画をクリック
+                LogUtil.d(TAG, "onAdClicked");
+            }
+
+            @Override
+            public void onAdClosed() {
+                // 動画を閉じる
+                LogUtil.d(TAG, "onAdClosed");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
+                // 動画の読み込み失敗
+                LogUtil.d(TAG, "onAdFailedToLoad, " + adError);
+            }
+
+            @Override
+            public void onVideoStarted() {
+                // 動画の再生開始
+                LogUtil.d(TAG, "onVideoStarted");
+            }
+
+            @Override
+            public void onVideoCompleted() {
+                // 動画の再生完了
+                LogUtil.d(TAG, "onVideoCompleted");
+            }
+
+            @Override
+            public void onRewarded(RewardedVideoAd.RewardItem rewardItem) {
+                // リワードを獲得
+                LogUtil.d(TAG, "onRewarded, " + rewardItem);
+            }
+
+            @Override
+            public void onRewardFailed() {
+                // リワード獲得失敗
+                LogUtil.d(TAG, "onRewardFailed");
             }
         });
+// 広告をロード
+AdLimeLoader.loadRewardedVideo(context, "RewardedVideo AdUnit ID");
 ```
 
 ::: tip
@@ -37,24 +80,7 @@ boolean isReady = AdLimeLoader.isRewardedVideoReady("RewardedVideo AdUnit ID");
 ### 広告の展示
 ```java
 // 広告の展示
-AdLimeLoader.showRewardedVideo("RewardedVideo AdUnit ID");
-```
-
-```java
-// 広告をロードしてまた結果をモニターする
-AdLimeLoader.showRewardedVideo("RewardedVideo AdUnit ID", new SimpleRewardedVideoAdListener() {
-            @Override
-            public void onAdShown() {
-            }
-
-            @Override
-            public void onAdClicked() {
-            }
-
-            @Override
-            public void onAdClosed() {
-            }
-        });
+AdLimeLoader.showRewardedVideo(activity, "RewardedVideo AdUnit ID");
 ```
 
 ::: tip

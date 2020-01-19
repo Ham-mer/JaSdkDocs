@@ -2,7 +2,7 @@
 
 | バージョン| 日付     | 内容                                      |
 | :----- | :-------- | :--------------------------------------- |
-| 1.9.28 | 2020-1-19  | |
+| 1.9.28 | 2020-1-19  | - setLogEnableなどを含めて、Adlimeクラスのスタティックメソッドをインスタンスメソッドに変わります，initialize(Context context, AdLimeConfiguration config)メソッドを放棄して、 init(Context context, String appId)を使います[初期化](./init.md)を参考してください<br>- AdlimeLoaderにあるAdListenerメソッドを放棄します[AdLimeLoader](./adloader.md)を参考してください|
 | 1.9.24 | 2020-1-6   | okhttpのライブリーを削除して広告のリクエスト配置ロジックを改善する|
 | 1.9.18 | 2019-11-27 | - CreativeAds 動画リワードのサイズの調整<br> - CreativeAds 動画リワードの再生が完了後に、広告をクリックし外部ブラウザに遷移して、再びアプリに戻るとクラッシュする問題の対応<br>- MixViewAd、MixFullScreenAd の追加|
 | 1.9.14 | 2019-10-31 | - 管理画面でリワード発生時のプロパティをサポート<br> - バナー広告自動更新処理の改善<br> - 広告をロードした際のキャッシュ管理クラスをサポート [AdLimeLoader](./adloader)。|

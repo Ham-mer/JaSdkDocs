@@ -7,21 +7,39 @@ AdLimeLoaderはバナー広告のキャッシュ、ロード、展示、デス�
 
 ### 広告のロード
 ```java
-// 広告のロード
-AdLimeLoader.loadBanner(context, "Banner AdUnit ID");
-```
-
-```java
-// 広告をロードしてまた結果をモニターする
-AdLimeLoader.loadBanner(context, "Banner AdUnit ID", new SimpleAdListener() {
+// ロード結果をモニターします
+AdLimeLoader.getBanner(context, "Banner AdUnit ID").setAdListener(new SimpleAdListener() {
             @Override
             public void onAdLoaded() {
+                // 広告のロード完了
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
+                // 広告の読み込み失敗、エラー詳細は adError から取得
+                Log.d(TAG, "on BannerAd FailedToLoad err:" + adError.toString());
+            }
+
+            @Override
+            public void onAdShown() {
+                // 広告を表示
+                Log.d(TAG, "on BannerAd Shown");
+            }
+
+            @Override
+            public void onAdClicked() {
+                // 広告をクリック
+                Log.d(TAG, "on BannerAd Clicked");
+            }
+
+            @Override
+            public void onAdClosed() {
+                // 広告を閉じる
+                Log.d(TAG, "on BannerAd Closed");
             }
         });
+// 広告のロード
+AdLimeLoader.loadBanner(context, "Banner AdUnit ID");
 ```
 
 ::: tip
@@ -40,24 +58,6 @@ boolean isReady = AdLimeLoader.isBannerReady("Banner AdUnit ID");
 // 広告の展示
 viewGroup.removeAllViews();
 AdLimeLoader.showBanner("Banner AdUnit ID", viewGroup);
-```
-
-```java
-// 広告を展示してまた結果をモニターする
-viewGroup.removeAllViews();
-AdLimeLoader.showBanner("Banner AdUnit ID", viewGroup, new SimpleAdListener() {
-            @Override
-            public void onAdShown() {
-            }
-
-            @Override
-            public void onAdClicked() {
-            }
-
-            @Override
-            public void onAdClosed() {
-            }
-        });
 ```
 
 ### 広告をデストロイする

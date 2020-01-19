@@ -78,7 +78,7 @@ mInterstitialAd.loadAd()
 ```java
 if (mInterstitialAd.isReady()) {
     // 広告の表示
-    mInterstitialAd.show();
+    mInterstitialAd.show(activity);
 }
 ```
 
@@ -89,7 +89,7 @@ if (mInterstitialAd.isReady()) {
 ```kotlin
 if (mInterstitialAd.isReady) {
     // 広告の表示
-    mInterstitialAd.show()
+    mInterstitialAd.show(activity)
 }
 ```
 
@@ -109,7 +109,7 @@ InterstitialAd のイベントを取得するには、`SimpleAdListener` クラ�
 
 ```java
 mInterstitialAd.setAdListener(new SimpleAdListener() {
-   @Override
+    @Override
     public void onAdLoaded() {
         // 広告のロード完了
     }
@@ -132,7 +132,7 @@ mInterstitialAd.setAdListener(new SimpleAdListener() {
         Log.d(TAG, "on BannerAd Clicked");
     }
 
-     @Override
+    @Override
     public void onAdClosed() {
         // 広告を閉じる
         Log.d(TAG, "on BannerAd Closed");

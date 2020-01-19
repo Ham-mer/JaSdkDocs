@@ -7,21 +7,36 @@ AdLimeLoader はMixFullScreenAd のキャッシュ、ロード、展示、デス
 
 ### 広告のロード
 ```java
-// 広告のロード
-AdLimeLoader.loadMixFullScreenAd(context, "MixFullScreen AdUnit ID", nativeAdLayout);
-```
-
-```java
-// 広告をロードして結果をモニターする
-AdLimeLoader.loadMixFullScreenAd(context, "MixFullScreen AdUnit ID", nativeAdLayout, new SimpleAdListener() {
+// ロード結果をモニターします
+AdLimeLoader.getMixFullScreenAd(context, "MixFullScreen AdUnit ID").setAdListener(new SimpleAdListener() {
             @Override
             public void onAdLoaded() {
+                // 広告のロード完了
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
+                // 広告の読み込み失敗、エラー詳細は adError から取得
+                Log.d(TAG, "onAdFailedToLoad: " + adError.toString());
+            }
+
+            @Override
+            public void onAdShown() {
+                // 広告を表示
+            }
+
+            @Override
+            public void onAdClicked() {
+                // 広告をクリック
+            }
+
+            @Override
+            public void onAdClosed() {
+                // 広告を閉じる
             }
         });
+// 広告のロード
+AdLimeLoader.loadMixFullScreenAd(context, "MixFullScreen AdUnit ID", nativeAdLayout);
 ```
 
 **NativeAdLayoutについての情報は[NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できる。**
@@ -39,23 +54,6 @@ boolean isReady = AdLimeLoader.isMixFullScreenAdReady("MixFullScreen AdUnit ID")
 ### 広告の展示
 ```java
 AdLimeLoader.showMixFullScreenAd("MixFullScreen AdUnit ID");
-```
-
-```java
-// 広告を展示して結果をモニターする
-AdLimeLoader.showMixFullScreenAd("MixFullScreen AdUnit ID", new SimpleAdListener() {
-            @Override
-            public void onAdShown() {
-            }
-
-            @Override
-            public void onAdClicked() {
-            }
-
-            @Override
-            public void onAdClosed() {
-            }
-        });
 ```
 
 MixFullScreenAdは展示されると、backボタンをクリックするのは無効と黙認される。 showMixFullScreenAd(String adUnitId, boolean enableBack) を使える。
