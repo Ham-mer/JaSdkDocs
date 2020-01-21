@@ -7,13 +7,10 @@ AdLimeAdLoaderはインタースティシャ広告のキャッシュ、ロード
 
 ### 広告のロード
 ```objectivec
+// イベント代理の設置
+[AdLimeAdLoader getInterstitialAd:@"Interstitial AdUnit ID"].delegate = self;
 // 広告のロード
 [AdLimeAdLoader loadInterstitialAd:@"Interstitial AdUnit ID"];
-```
-
-```objectivec
-// 広告のロードまたはイベント代理の設定
-[AdLimeAdLoader.loadInterstitialAd:(NSString *)adUnitId withDelegate:( id<AdLimeInterstitialAdDelegate> )delegate];
 ```
 
 ### 広告は用意できるかどうかの判断
@@ -24,12 +21,7 @@ BOOL isReady = [AdLimeAdLoader isInterstitialAdReady:@"Interstitial AdUnit ID"];
 ### 広告の展示
 ```objectivec
 // 広告の展示
-[AdLimeAdLoader showInterstitialAd:@"Interstitial AdUnit ID"  viewController: (UIViewController *)viewController];
-```
-
-```objectivec
-// 広告の展示またはイベント代理の設定
-[AdLimeAdLoader showInterstitialAd:@"Interstitial AdUnit ID"  viewController: (UIViewController *)viewController withDelegate:(id<AdLimeInterstitialAdDelegate>)delegate];
+[AdLimeAdLoader showInterstitialAd:@"Interstitial AdUnit ID" viewController:self];
 ```
 
 ### 広告のデストロイ

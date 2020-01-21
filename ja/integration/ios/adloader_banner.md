@@ -7,19 +7,15 @@ AdLimeAdLoaderはバナー広告のキャッシュ、ロード、展示、デス
 
 ### 広告のロード
 ```objectivec
+// イベント代理の設置
+[AdLimeAdLoader getBannerAdView:@"Banner AdUnit ID" rootViewController:self].delegate = self;
 // 広告のロード
-[AdLimeAdLoader loadBanner:(NSString *)adUnitId  rootViewController: viewController];
+[AdLimeAdLoader loadBanner:@"Banner AdUnit ID" rootViewController:self];
 ```
-
-```objectivec
-// 広告のロードまたはイベント代理の設定
-[AdLimeAdLoader loadBanner:(NSString *)adUnitId rootViewController: (UIViewController *)viewController withDelegate:(id<AdLimeBannerViewDelegate> )delegate];
-```
-
 
 ### 広告は用意できるかどうかの判断
 ```objectivec
-BOOL isReady = [AdLimeAdLoader isBannerReady:"Banner AdUnit ID"];
+BOOL isReady = [AdLimeAdLoader isBannerReady:@"Banner AdUnit ID"];
 ```
 
 ### 広告の展示
@@ -27,12 +23,7 @@ BOOL isReady = [AdLimeAdLoader isBannerReady:"Banner AdUnit ID"];
 
 ```objectivec
 // 広告の展示
-[AdLimeAdLoader showBanner: (NSString *)adUnitId viewContainer: (UIView *)viewContainer];
-```
-
-```objectivec
-// 広告の展示またはイベント代理の設定
-[AdLimeAdLoader showBanner: (NSString *)adUnitId viewContainer: (UIView *)viewContainer withDelegate:(_Nullable id<AdLimeBannerViewDelegate>)delegate];
+[AdLimeAdLoader showBanner:@"Banner AdUnit ID" container:self.container];
 ```
 
 ### 広告のデストロイ
@@ -45,5 +36,5 @@ AdLimeAdLoaderで広告対象を取得できる。<br>
 この対象で広告をロード、展示、上記のAdlimeAdloaderで提供される方法ではない。<br>
 [横幅广告]を参考(./banner.md)。
 ```objectivec
-AdLimeBannerAdView *bannerAdView = [AdLimeAdLoader getBannerAdView:(NSString *)adUnitId rootViewController: (UIViewController *)viewController];
+AdLimeBannerAdView *bannerAdView = [AdLimeAdLoader getBannerAdView:@"Banner AdUnit ID" rootViewController:self];
 ```

@@ -7,13 +7,10 @@ AdLimeAdLoaderは動画リワードののキャッシュ、ロード、展示、
 
 ### 広告のロード
 ```objectivec
+// イベント代理の設置
+[AdLimeAdLoader getRewardedVideoAd:@"RewardedVideo AdUnit ID"].delegate = self;
 // 広告のロード
 [AdLimeAdLoader loadRewardedVideoAd:@"RewardedVideo AdUnit ID"];
-```
-
-```objectivec
-// 広告のロードまたはイベント代理の設定
-[AdLimeAdLoader.loadRewardedVideoAd:@"RewardedVideo AdUnit ID" withDelegate:(id<AdLimeRewardedVideoAdDelegate>)delegate];
 ```
 
 ### 広告は用意できるかどうかの判断
@@ -24,12 +21,7 @@ BOOL isReady = [AdLimeAdLoader isRewardedVideoAdReady:@"RewardedVideo AdUnit ID"
 ### 広告の展示
 ```objectivec
 // 広告の展示
-[AdLimeAdLoader showRewardedVideoAd:@"RewardedVideo AdUnit ID" viewController: (UIViewController *)viewController];
-```
-
-```objectivec
-// 広告の展示またはイベント代理の設定
-[AdLimeAdLoader showRewardedVideoAd:@"RewardedVideo AdUnit ID" viewController: (UIViewController *)viewController withDelegate:(id<AdLimeRewardedVideoAdDelegate>)delegate];
+[AdLimeAdLoader showRewardedVideoAd:@"RewardedVideo AdUnit ID" viewController:self];
 ```
 
 ### 広告のデストロイ

@@ -7,22 +7,13 @@ AdLimeAdLoader はMixFullScreenAdのキャッシュ、ロード、展示、デ�
 
 ### 広告のロード
 ```objectivec
+// イベント代理の設置
+[AdLimeAdLoader getMixFullScreenAd:@"MixFullScreen AdUnit ID"].delegate = self;
 // 広告のロード
-[AdLimeAdLoader loadMixFullScreenAd:@"MixFullScreen AdUnit ID"];
-```
-
-```objectivec
-// 広告のロードまたはレイアウトに導入
-[AdLimeAdLoader loadMixFullScreenAd:@"MixFullScreen AdUnit ID" withLayout:(AdLimeNativeAdLayout *)layout];
-```
-
-```objectivec
-// 広告の展示またはイベント代理の設定
-[AdLimeAdLoader loadMixFullScreenAd:@"MixFullScreen AdUnit ID" withLayout:(AdLimeNativeAdLayout *)layout andDelegate:(id<AdLimeMixFullScreenAdDelegate> )delegate];
+[AdLimeAdLoader loadMixFullScreenAd:@"MixFullScreen AdUnit ID" nativeAdLayout:self.layout];
 ```
 
 ** NativeAdLayoutについて[NativeAdLayout](https://www.adlime.net/docs/zh/integration/ios/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認ください。**
-
 
 ### 広告は用意できるかどうかの判断
 ```objectivec
@@ -31,12 +22,7 @@ BOOL isReady = [AdLimeAdLoader isMixFullScreenAdReady@"MixFullScreen AdUnit ID"]
 
 ### 広告の展示
 ```objectivec
-[AdLimeAdLoader showMixFullScreenAd:@"MixFullScreen AdUnit ID" viewController: (UIViewController *)viewController];
-```
-
-```objectivec
-// 広告の展示またはイベント代理の設定
-[AdLimeAdLoader showMixFullScreenAd:@"MixFullScreen AdUnit ID" viewController: (UIViewController *)viewController withLayout:(AdLimeNativeAdLayout *)layout andDelegate:(id<AdLimeMixFullScreenAdDelegate>)delegate];
+[AdLimeAdLoader showMixFullScreenAd:@"MixFullScreen AdUnit ID" viewController:self];
 ```
 
 ### 広告のデストロイ
