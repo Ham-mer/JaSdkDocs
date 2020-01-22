@@ -35,16 +35,13 @@ AdLime は様々な広告フォーマットをサポートしています。ア�
 
 ### [MixViewAd](./mixviewad.md)
 <div class="clearfix cust-image-text">
-<img src="./../images/ad_icons/format-banner.png"  width="100px"  align=left />
-<img src="./../images/ad_icons/format-native.png"  width="100px"  align=left />
+<img src="./../images/ad_icons/format-mixviewad.png"  width="100px"  align=left />
 MixViewAd とはバナー広告やネイティブ広告などの別種の広告を単一の View で表示ができる機能です。各ネットワークの提供する広告は、個別のフォーマットで独立した広告が提供されていました。この機能を実装することにより、1つの広告枠で表示できる広告の種類と数を増やし、より高い効率で収益を増やすことができます
 </div>
 
 ### [MixFullScreenAd](./mixfullscreenad.md)
 <div class="clearfix cust-image-text">
-<img src="./../images/ad_icons/format-banner.png"  width="100px"  align=left />
-<img src="./../images/ad_icons/format-native.png"  width="100px"  align=left />
-<img src="./../images/ad_icons/format-interstitial.png"  width="100px"  align=left />
+<img src="./../images/ad_icons/format-fullscreenviewad.png"  width="100px"  align=left />
 MixFullScreenAd はフルスクリーンで表示することができるインタースティシャル広告を拡張した機能です。また、インタースティシャル広告を表示するだけではなく、バナー広告やネイティブ広告なども同じ広告枠にフルスクリーン表示することができます。各ネットワークの提供する広告は、個別のフォーマットで独立した広告が提供されていました。この機能を実装することにより、1つの広告枠で表示できる広告の種類と数を増やし、より高い効率で収益を増やすことができます。
 </div>
 
