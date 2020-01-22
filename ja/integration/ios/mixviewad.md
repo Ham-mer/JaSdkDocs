@@ -109,14 +109,14 @@ self.mixViewAd.load()
 
 
 ## 広告の表示
-広告をロード完了したら広告を表示してみましょう。`AdLimeMixViewAd` の `getView` メソッドで、ロードした広告の UIView が取得できます。ここでは広告を表示する前に広告がロード済みかどうかを`isReady`メソッドを用いて確認しています。<br>
+広告をロード完了したら広告を表示してみましょう。`AdLimeMixViewAd` の `getView` メソッドで、ロードした広告の UIView が取得できます。また広告を表示する前に広告がロード済みかどうかを`isReady`メソッドを用いて確認できます。<br>
 
 :::: tabs
 
 ::: tab Objective-C
 
 ```objectivec
-if([self.mixViewAd isReady]) {
+- (void)adLimeMixViewAdDidReceiveAd:(AdLimeMixViewAd *)mixViewAd {
     UIView *adView = [mixViewAd getAdView:layout];
     [self.view addSubview:adView];
 }
@@ -127,7 +127,7 @@ if([self.mixViewAd isReady]) {
 ::: tab Swift
 
 ```swift
-if(self.mixViewAd.isReady()) {
+func adLimeMixViewAdDidReceive(_ mixViewAd: AdLimeMixViewAd!) {
     let mixView = mixViewAd.getView()
     self.view.addSubview(mixView)
 }
@@ -151,6 +151,7 @@ MixViewAd のライフサイクルイベントを取得するためには `AdLim
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController () <AdLimeMixViewAdDelegate>
 
@@ -255,26 +256,13 @@ func adLimeMixViewAdWillLeaveApplication(_ mixViewAd: AdLimeMixViewAd!) {
 ::::
 
 
-### エラー情報
-広告のロードに失敗した場合は、`AdLimeMixViewAdDelegate` の `adLimeMixViewAd:didFailToReceiveAdWithError` が呼び出されます。 `adError.getCode` 、`adError.description` を用いてエラーコードとエラー情報を取得できます。
+### 広告ロードエラーについて  
 
-エラーコードは `AdLimeAdErrorCode` に定義される：
-|定義                           |説明     |
-|:-----------------------------|:--------|
-|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
-|ADLIME_ADERROR_INVALID_REQUEST | 無効リクエスト |
-|ADLIME_ADERROR_NETWORK_ERROR   | ネットエラー |
-|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない      |
-|ADLIME_ADERROR_TIMEOUT         | タイムアウト |
+広告のロードに失敗した場合は、`AdLimeMixViewAdDelegate` の `adLimeMixViewAd:didFailToReceiveAdWithError` が呼び出されます。 `adError.getCode` 、`adError.description` を用いてエラーコードとエラーメッセージを取得できます。
 
+#### エラーコードとエラーメッセージについて
 
-エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## 広告レイアウト作成作成の遅延
 

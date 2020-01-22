@@ -78,23 +78,10 @@ NSAllowsArbitraryLoads の例外をアプリの Info.plist ファイルに追加
 ### テスト環境での実行方法
 テスト広告を利用する場合は AdLime の setTestMode を YES に設定してください。また AdLime SDK のデバッグログを確認する場合は AdLime の setLogEnable を YES に設定してください。広告のロードに失敗した場合、広告の詳細なエラーがデバッグログに出力されます。
 
-AdLimeAdErrorCode エラーコード一覧
-|定義                           |説明    |
-|:-----------------------------|:--------|
-|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
-|ADLIME_ADERROR_INVALID_REQUEST | リクエストが無効 |
-|ADLIME_ADERROR_NETWORK_ERROR   | ネットワークエラー |
-|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
-|ADLIME_ADERROR_TIMEOUT         | リクエスト　タイムアウト |
+#### エラーメッセージとエラーコードについて
 
-エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
+[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
 
 ### サンプルコード
 AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示します。

@@ -14,6 +14,7 @@
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController ()
 
@@ -150,6 +151,7 @@ class ViewController: UIViewController {
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController () <AdLimeRewardedVideoAdDelegate>
 
@@ -175,6 +177,8 @@ class ViewController: UIViewController {
 
 ```swift
 import AdLimeSdk
+import UIKit
+
 class ViewController: UIViewController, AdLimeRewardedVideoAdDelegate {
     var rewardedVideoAd: AdLimeRewardedVideoAd!
 
@@ -307,27 +311,13 @@ func adLimeRewardedVideoWillLeaveApplication(_ rewardedVideoAd: AdLimeRewardedVi
 ::::
 
 
-### エラー情報
+### 広告ロードエラーについて
 
-広告のロードに失敗した場合は、`AdLimeRewardedVideoAdDelegate` の  `adLimeRewardedVideo:didFailToReceiveAdWithError:` が呼び出されます。 `adError.getCode`、`adError.description` を用いてエラーコードとエラー情報を取得できます。
+広告のロードに失敗した場合は、`AdLimeRewardedVideoAdDelegate` の  `adLimeRewardedVideo:didFailToReceiveAdWithError:` が呼び出されます。 `adError.getCode`、`adError.description` を用いてエラーコードとエラーメッセージを取得できます。
 
-AdLimeAdErrorCode エラーコード一覧
-|定義                           |説明    |
-|:-----------------------------|:--------|
-|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
-|ADLIME_ADERROR_INVALID_REQUEST | リクエストが無効 |
-|ADLIME_ADERROR_NETWORK_ERROR   | ネットワークエラー |
-|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
-|ADLIME_ADERROR_TIMEOUT         | リクエスト タイムアウト |
+#### エラーコードとエラーメッセージについて
 
-エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ### リワード情報
 

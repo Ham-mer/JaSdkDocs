@@ -308,7 +308,7 @@ override func viewDidLoad() {
 ::::
 
 ## 広告の表示
-広告をロード完了したら広告を表示してみましょう。`AdLimeNativeAd` の `getView` メソッドで、ロードした広告の `UIView` が取得できます。ここでは広告を表示する前に広告がロード済みかどうかを`isReady`メソッドを用いて確認しています。<br>
+広告をロード完了したら広告を表示してみましょう。`AdLimeNativeAd` の `getView` メソッドで、ロードした広告の `UIView` が取得できます。また、広告を表示する前に広告がロード済みかどうかを`AdLimeNativeAd`の`isReady`メソッドを用いて確認できます。<br>
 
 :::: tabs
 
@@ -350,6 +350,7 @@ func adLimeNativeAdDidReceive(_ nativeAd: AdLimeNativeAd!) {
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController () <AdLimeNativeAdDelegate>
 
@@ -375,6 +376,8 @@ func adLimeNativeAdDidReceive(_ nativeAd: AdLimeNativeAd!) {
 
 ```swift
 import AdLimeSdk
+import UIKit
+
 class ViewController: UIViewController, AdLimeNativeAdDelegate {
     var nativeAd: AdLimeNativeAd!
 
@@ -450,25 +453,13 @@ func adLimeNativeAdWillLeaveApplication(_ nativeAd: AdLimeNativeAd!) {
 
 ::::
 
-### エラーの情報
-広告のロードに失敗した場合は、`AdLimeNativeAdDelegate` の `adLimeNativeAd:didFailToReceiveAdWithError` が呼び出されます。 `adError.getCode` 、`adError.description` を用いてエラーコードとエラー情報を取得できます。
+### 広告ロードエラーについて  
 
-AdLimeAdErrorCode エラーコード一覧
-|定義                           |説明    |
-|:-----------------------------|:--------|
-|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
-|ADLIME_ADERROR_INVALID_REQUEST | リクエストが無効 |
-|ADLIME_ADERROR_NETWORK_ERROR   | ネットワークエラー |
-|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
-|ADLIME_ADERROR_TIMEOUT         | リクエスト　タイムアウト |
+広告のロードに失敗した場合は、`AdLimeNativeAdDelegate` の `adLimeNativeAd:didFailToReceiveAdWithError` が呼び出されます。 `adError.getCode` 、`adError.description` を用いてエラーコードとエラーメッセージを取得できます。
 
-エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+#### エラーコードとエラーメッセージについて
+
+[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## 広告レイアウト作成の遅延
 

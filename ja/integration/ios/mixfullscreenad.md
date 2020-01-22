@@ -16,6 +16,7 @@ MixFullScreenAd はフルスクリーンで表示することができるイン�
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController ()
 
@@ -151,6 +152,7 @@ MixFullScreenAd のライフサイクルイベントを取得するためには 
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController () <AdLimeMixFullScreenAdDelegate>
 
@@ -175,6 +177,9 @@ MixFullScreenAd のライフサイクルイベントを取得するためには 
 ::: tab Swift
 
 ```swift
+import AdLimeSdk
+import UIKit
+
 class ViewController: UIViewController, AdLimeMixViewAdDelegate {
     var mixFullScreenAd: AdLimeMixFullScreenAd!
 
@@ -191,7 +196,7 @@ class ViewController: UIViewController, AdLimeMixViewAdDelegate {
 ::::
 
 
-### MixViewAd イベントを実装する
+### MixFullScreenAd イベントを実装する
 広告のイベントの制御は `AdLimeMixFullScreenAdDelegate` を用いて実現できます。以下のサンプルでは、各メソッドを実装し、コンソールにログを出力します。
 
 :::: tabs
@@ -262,25 +267,13 @@ func adLimeMixFullScreenAdDidDismissScreen(_ mixFullScreenAd: AdLimeMixFullScree
 ::::
 
 
-### エラー情報
-広告のロードに失敗した場合は、`AdLimeMixFullScreenAdDelegate` の `adLimeMixFullScreenAd:didFailToReceiveAdWithError` が呼び出されます。`adError.getCode` 、`adError.description` を用いてエラーコードとエラー情報を取得できます。
+### 広告ロードエラーについて  
 
-エラーコードは AdLimeAdErrorCode に定義される ：
-|定義                           |説明     |
-|:-----------------------------|:--------|
-|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
-|ADLIME_ADERROR_INVALID_REQUEST | 無効リクエスト |
-|ADLIME_ADERROR_NETWORK_ERROR   | ネットエラー |
-|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない   |
-|ADLIME_ADERROR_TIMEOUT         | タイムアウト |
+広告のロードに失敗した場合は、`AdLimeMixFullScreenAdDelegate` の `adLimeMixFullScreenAd:didFailToReceiveAdWithError` が呼び出されます。`adError.getCode` 、`adError.description` を用いてエラーコードとエラーメッセージを取得できます。
 
-エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+#### エラーコードとエラーメッセージについて
+
+[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## 広告レイアウト作成作成の遅延
 
