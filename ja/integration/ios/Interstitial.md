@@ -267,7 +267,7 @@ func adLimeInterstitialDidDismissScreen(_ interstitialAd: AdLimeInterstitialAd!)
 
 #### エラーコードとエラーメッセージについて
 
-[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
+[エラー情報](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## インタースティシャル広告を再リクエストする
 インタースティシャル広告を表示後、新たにインタースティシャル広告のリクエストするための適切なタイミングは表示しているインタースティシャル広告を閉じたタイミングです。具体的には `AdLimeInterstitialAdDelegate` の `adLimeInterstitialDidDismissScreen` メソッド内で次のインタースティシャル広告のロードを開始することができます。

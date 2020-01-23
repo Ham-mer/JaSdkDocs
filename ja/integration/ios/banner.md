@@ -224,7 +224,7 @@ func adLimeBannerWillLeaveApplication(_ bannerView: AdLimeBannerView!) {
 
 #### エラーコードとエラーメッセージについて
 
-[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
+[エラー情報](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## バナーのサイズ
 

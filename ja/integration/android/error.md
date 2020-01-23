@@ -21,7 +21,7 @@
 - [MixViewAd](./mixviewad.md#広告イベント)
 - [MixFullScreenAd](./mixfullscreenad.md#広告イベント)
 
-## デバッグログによるエラーの取得方法
+### デバッグログによるエラーの取得方法
 
 [AdLime SDK の導入](./init.md#初期化)を確認してください。
 
