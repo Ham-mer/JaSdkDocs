@@ -317,7 +317,7 @@ func adLimeRewardedVideoWillLeaveApplication(_ rewardedVideoAd: AdLimeRewardedVi
 
 #### エラーコードとエラーメッセージについて
 
-[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
+[エラー情報](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ### リワード情報
 

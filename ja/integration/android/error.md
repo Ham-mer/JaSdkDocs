@@ -17,11 +17,11 @@
 - [インタースティシャル広告](./Interstitial.md#広告イベント)
 - [動画リワード広告](./rewarded.md#広告イベント)
 
-### 複合型広告枠
+#### 複合型広告枠
 - [MixViewAd](./mixviewad.md#広告イベント)
 - [MixFullScreenAd](./mixfullscreenad.md#広告イベント)
 
-## デバッグログによるエラーの取得方法
+### デバッグログによるエラーの取得方法
 
 [AdLime SDK の導入](./init.md#初期化)を確認してください。
 

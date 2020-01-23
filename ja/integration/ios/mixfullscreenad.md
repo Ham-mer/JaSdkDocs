@@ -273,7 +273,7 @@ func adLimeMixFullScreenAdDidDismissScreen(_ mixFullScreenAd: AdLimeMixFullScree
 
 #### エラーコードとエラーメッセージについて
 
-[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
+[エラー情報](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## 広告レイアウト作成作成の遅延
 
