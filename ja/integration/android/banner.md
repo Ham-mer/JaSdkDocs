@@ -191,25 +191,12 @@ mNativeAd.setAdListener(object: SimpleAdListener() {
 
 ::::
 
-### エラー
+### 広告のロードのエラー
 広告の読み込に失敗した場合は、AdListener の `onAdFailedToLoad(AdError adError)` が呼び出されます。その際に `adError.getCode()`、`adError.toString()` から、エラーコード、エラー情報が取得できます。
 
-AdError エラーコード一覧
-|定義                        |説明     |
-|:--------------------------|:--------|
-|ERROR_CODE_INTERNAL_ERROR  | 内部エラー |
-|ERROR_CODE_INVALID_REQUEST | リクエストが無効 |
-|ERROR_CODE_NETWORK_ERROR   | ネットワークエラー |
-|ERROR_CODE_NO_FILL         | 配信可能な広告がない    |
-|ERROR_CODE_TIMEOUT         | リクエスト タイムアウト |
+#### エラーコードとエラーメッセージについて
 
-エラーには、広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+[エラー情報](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## バナーのサイズ
 
@@ -233,3 +220,8 @@ LineItem is ...
 ## プリロードとキャッシュ
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
 また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeLoader](./adloader.md)で実現が可能です。
+
+
+## 次へのステップ
+- 他の広告フォーマットを追加で利用したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、Android アプリに実装しましょう。
+- 広告が正しく表示できるか確認したい場合は、[広告表示テスト](./test.md)に従い App ID と各広告ネットワークに対応する広告枠 ID を設定して、広告を表示してみましょう。

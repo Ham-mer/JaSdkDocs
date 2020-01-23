@@ -192,25 +192,12 @@ mMixFullScreenAd.loadAd()
 
 ::::
 
-### エラー情報
+### 広告のロードエラーについて
 広告の読み込に失敗した場合は、AdListener の `onAdFailedToLoad(AdError adError)` が呼び出されます。その際に `adError.getCode()`、`adError.toString()` から、エラーコード、エラー情報が取得できます。
 
-AdError エラーコード一覧
-|定義                        |説明     |
-|:--------------------------|:--------|
-|ERROR_CODE_INTERNAL_ERROR  | 内部エラー |
-|ERROR_CODE_INVALID_REQUEST | リクエストが無効 |
-|ERROR_CODE_NETWORK_ERROR   | ネットワークエラー |
-|ERROR_CODE_NO_FILL         | 配信可能な広告がない   |
-|ERROR_CODE_TIMEOUT         | リクエスト タイムアウト |
+#### エラーコードとエラーメッセージについて
 
-エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+[エラー情報](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## プリロードとキャッシュ
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>

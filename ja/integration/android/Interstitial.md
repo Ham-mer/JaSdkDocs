@@ -177,26 +177,12 @@ mInterstitialAd.setAdListener(object: SimpleAdListener() {
 
 ::::
 
-### エラーの情報
+### 広告のロードエラーについて
 広告の読み込に失敗した場合は、AdListener の `onAdFailedToLoad(AdError adError)` が呼び出されます。その際に `adError.getCode()`、`adError.toString()` から、エラーコード、エラー情報が取得できます。
 
-AdError エラーコード一覧
-|定義                        |説明     |
-|:--------------------------|:--------|
-|ERROR_CODE_INTERNAL_ERROR  | 内部エラー |
-|ERROR_CODE_INVALID_REQUEST | リクエストが無効 |
-|ERROR_CODE_NETWORK_ERROR   | ネットワークエラー |
-|ERROR_CODE_NO_FILL         | 配信可能な広告がない    |
-|ERROR_CODE_TIMEOUT         | リクエスト タイムアウト |
+#### エラーコードとエラーメッセージについて
 
-エラーには、広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+[エラー情報](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## プリロードとキャッシュ
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
@@ -222,3 +208,7 @@ LineItem is ...
 ### 過度に広告を表示しないように注意してください。
 
 インタースティシャル広告の表示頻度を増やすことで収益の向上が見込めますが、それが原因でユーザー体験が損なわれ、クリック率の低下につながる可能性もあります。ユーザーがアプリでの体験を楽しめるように、適度な広告表示頻度に調節しましょう。
+
+## 次のステップ
+- 他の広告フォーマットを追加で利用したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、Android アプリに実装しましょう。
+- 広告が正しく表示できるか確認したい場合は、[広告表示テスト](./test.md)に従い アプリ ID と各広告ネットワークに対応する広告枠 ID を設定して、広告を表示してみましょう。
