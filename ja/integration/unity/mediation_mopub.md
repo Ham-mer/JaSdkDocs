@@ -50,7 +50,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
         <iosPods>
         
             <!-- MoPub -->
-            <iosPod name="AdLimeMediation_MoPub" version="~> 5.10.0.1">
+            <iosPod name="AdLimeMediation_MoPub" version="~> 5.10.0.3">
                 <sources>
                     <source>https://github.com/CocoaPods/Specs</source>
                 </sources>
@@ -65,7 +65,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     iOS プロジェクトで、 CocoaPods から SDK が ダウンロードできない場合は、 SDK を直接ダウンロードして解凍し、下記のフレームワークを Assets/Plugins/iOS に入れてください。
     
     [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.9.0/mopub-framework-5.10.0.zip)<br>
-    [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.10.0.1.zip)
+    [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.10.0.3.zip)
 
     MoPub SDKをダウンロードした後、mopub-framework-5.10.0/MoPubSDKFramework/universal にフレームワークファイルがあります。
 
@@ -144,7 +144,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - iOS
     | MoPub バージョン  | アダプタ バージョン |
     |:---------------|:----------------|
-    | 5.10.0         | 5.10.0.1         |
+    | 5.10.0         | 5.10.0.3        |
     | 5.9.0          | 5.9.0.0         |
     | 5.6.0          | 5.6.0.3         |
 
@@ -161,6 +161,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - iOS
     | バージョン        | 日付       | 更新内容                    |
     |-----------------|------------|----------------------------------|
+    | 5.10.0.3        | 2020-1-22  | 広告イベントのコールバックロジックの改善｜
     | 5.10.0.1        | 2019-11-19 | MoPub SDK 5.10.0 バナー に対応 |
     | 5.10.0.0        | 2019-10-14 | MoPub SDK 5.10.0 に対応 |
     | 5.9.0.0         | 2019-10-14 | MoPub SDK 5.9.0 に対応 |
