@@ -36,7 +36,7 @@ allprojects {
 アプリケーションレベルの build.gradle に、下記の依存関係を追加します。
 ```
 dependencies {
-    implementation 'com.access_company.adlime:adlime:1.9.18'
+    implementation 'com.access_company.adlime:adlime:1.9.28'
 }
 ```
 
@@ -97,11 +97,9 @@ protected void onCreate(Bundle savedInstanceState) {
                         .addConfig(...)
                         .build());
 
-    AdLimeConfiguration configuration = new AdLimeConfiguration.Builder(this)
-                .appId("YOUR APP ID") // AdLime のコンソール画面で登録したアプリの App ID を設定する
-                .build();
+    AdLime.getDefault().setLogEnable(true);
 
-    AdLime.getDefault().initialize(this, configuration);
+    AdLime.getDefault().init(this, "YOUR APP ID");
     ...
 }
 ...
@@ -135,15 +133,10 @@ protected void onCreate(Bundle savedInstanceState) {
                     ).build()
             )
 
-    val configuration = AdLimeConfiguration.Builder(applicationContext)
-                .appId("YOUR APP ID") // AdLime のコンソール画面で登録したアプリの App ID を設定する
-                .debug(true)
-                .build()
-    
-    AdLime.getDefault().initialize(applicationContext, configuration)
+    AdLime.getDefault().init(applicationContext, "YOUR APP ID")
     //  以下はデバック時に設定する
-    AdLime.setTestMode(true)
-    AdLime.setLogEnable(true)
+    AdLime.getDefault().setTestMode(true)
+    AdLime.getDefault().setLogEnable(true)
     ...
 ```
 

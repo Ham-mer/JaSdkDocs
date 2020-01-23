@@ -21,12 +21,12 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- TikTok -->
-        <androidPackage spec="com.access_company.adlime:mediation_toutiao:2.5.2.6.1">
+        <androidPackage spec="com.access_company.adlime:mediation_toutiao:2.5.3.2.2">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="com.access_company.adlime:toutiao_open_ad_sdk:2.5.2.6">
+        <androidPackage spec="com.access_company.adlime:toutiao_open_ad_sdk:2.5.3.2">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
@@ -156,6 +156,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - Android
     | TikTok Ads バージョン| アダプタ バージョン    |
     |:-----------------|:---------------|
+    | 2.5.3.2          | 2.5.3.2.2      |
     | 2.5.2.6          | 2.5.2.6.1      |
     | 2.2.0.2          | 2.2.0.2.1      |
     | 2.0.1.7          | 2.0.1.7.1      |
@@ -172,6 +173,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - Android
     | アダプタ バージョン | 日付         | 更新内容                   |
     |:-----------------|:------------|:----------------------------------|
+    | 2.5.3.2.2       | 2020-1-6    | TikTok SDK 2.5.3.2 に対応|
     | 2.5.2.6.1       | 2019-12-2   | TikTok SDK 2.5.2.6 に対応|
     | 2.2.0.2.1	      | 2019-8-6    | TikTok SDK 2.2.0.2 に対応        |
     | 2.0.1.7.1	      | 2019-7-16   | TikTok SDK 2.0.1.7 に対応        |

@@ -76,7 +76,7 @@ mRewardedVideoAd.loadAd()
 ```java
 if (mRewardedVideoAd.isReady()) {
     // 広告を表示
-    mRewardedVideoAd.show();
+    mRewardedVideoAd.show(activity);
 }
 ```
 :::
@@ -86,7 +86,7 @@ if (mRewardedVideoAd.isReady()) {
 ```kotlin
 if (mRewardedVideoAd.isReady()) {
     // 広告を表示
-    mRewardedVideoAd.show()
+    mRewardedVideoAd.show(activity)
 }
 ```
 

@@ -9,8 +9,8 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_toutiao:2.5.2.6.1"
-    implementation "com.access_company.adlime:toutiao_open_ad_sdk:2.5.2.6"
+    implementation "com.access_company.adlime:mediation_toutiao:2.5.3.2.2"
+    implementation "com.access_company.adlime:toutiao_open_ad_sdk:2.5.3.2"
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'  
     implementation 'com.android.support:support-v4:27.1.1'
 }
@@ -59,6 +59,7 @@ dependencies {
 ### リリースバージョン
 | TikTok バージョン  | アダプタ バージョン|
 |:-----------------|:-----------------|
+|2.5.3.2     |2.5.3.2.2      |
 |2.5.2.6     |2.5.2.6.1      |
 |2.3.0.7     |2.3.0.7.14     |
 |2.2.0.2     |2.2.0.2.1      |
@@ -66,6 +67,7 @@ dependencies {
 ### 更新履歴
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|--------------------------------------|
+| 2.5.3.2.2  | 2020-1-6   | TikTok SDK 2.5.3.2 に対応|
 | 2.5.2.6.1  | 2019/12/2  | TikTok SDK 2.5.2.6 に対応|
 | 2.3.0.7.14 | 2019/11/21 | デフォルトで位置情報の許可要求を無効化|
 | 2.3.0.7.8  | 2019/9/30  | TikTok SDK 2.3.0.7 に対応|

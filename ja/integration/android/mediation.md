@@ -48,8 +48,8 @@ AdLime で利用可能なアドネットワーク一覧
 | 17  | [Maio](./mediation_maio.md)              |        | ◯            | ◯        |        | 1.1.10         | 
 | 18  | [MoPub](./mediation_mopub.md)            | ◯      | ◯            | ◯        | ◯      | 5.8.0          |
 | 19  | [Nend](./mediation_nend.md)              | ◯      | ◯            | ◯        | ◯      | 5.1.1          | 
-| 20  | [Tapjoy](./mediation_tapjoy.md)          |        | ◯            | ◯        |        | 12.2.0         | 
-| 21  | [TikTok](./mediation_tiktok.md)          | ◯      | ◯            | ◯        | ◯      | 2.5.2.6        |
+| 20  | [Pangle](./mediation_pangle.md)          |        | ◯            | ◯        |        | 2.1.3.0        |
+| 21  | [Tapjoy](./mediation_tapjoy.md)          |        | ◯            | ◯        |        | 12.2.0         | 
 | 22  | [Unity Ads](./mediation_unity_ads.md)    | ◯      | ◯            | ◯        |        | 3.0.0          | 
 | 23  | [Vungle](./mediation_vungle.md)          | ◯      | ◯            | ◯        |        | 6.3.24         |
 

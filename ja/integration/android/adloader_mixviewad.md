@@ -7,21 +7,36 @@ AdLimeLoader はMixViewAd のキャッシュ、ロード、展示、デストロ
 
 ### 広告のロード
 ```java
-// 広告のロード
-AdLimeLoader.loadMixViewAd(context, "MixView AdUnit ID", nativeAdLayout);
-```
-
-```java
-// 広告をロードして結果をモニターする
-AdLimeLoader.loadMixViewAd(context, "MixView AdUnit ID", nativeAdLayout, new SimpleAdListener() {
+// ロード結果をモニターします
+AdLimeLoader.getMixViewAd(this, "MixView AdUnit ID").setAdListener(new SimpleAdListener() {
             @Override
             public void onAdLoaded() {
+                // 広告のロード完了
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
+                // 広告の読み込み失敗、エラー詳細は adError から取得
+                Log.d(TAG, "onAdFailedToLoad: " + adError.toString());
+            }
+
+            @Override
+            public void onAdShown() {
+                // 広告を表示
+            }
+
+            @Override
+            public void onAdClicked() {
+                // 広告をクリック
+            }
+
+            @Override
+            public void onAdClosed() {
+                // 広告を閉じる
             }
         });
+// 広告のロード
+AdLimeLoader.loadMixViewAd(context, "MixView AdUnit ID", nativeAdLayout);
 ```
 
 広告をロードする時に NativeAdLayoutのパラメーターがない loadMixViewAd()を調達する、広告を展示する時にNativeAdLayoutのパラメーターがない loadMixViewAd()を調達する。
@@ -29,8 +44,8 @@ AdLimeLoader.loadMixViewAd(context, "MixView AdUnit ID", nativeAdLayout, new Sim
 **NativeAdLayoutについての情報は[NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できる。**
 
 ::: tip
-もし広告枠に360/Flurry/Tencent Social Ads/Unity Adsのバナー広告がある場合にloadMixViewAd()にActivityを送る必要がある<br>
-もし広告枠に4399/Aligames/vivo のネイティブ広告がある場合にloadMixViewAd()にActivityを送る必要がある
+もし広告枠に360/Flurry/Tencent Social Ads/Unity Adsのバナー広告がある場合に，ContextのパラメーターにActivityを導入してください。<br>
+もし広告枠に4399/Aligames/vivo のネイティブ広告がある場合に，ContextのパラメーターにActivityを導入してください。
 :::
 
 ### 広告の用意を確認
@@ -44,24 +59,6 @@ MixViewAd は ViewGroupに展示される 。
 ```java
 viewGroup.removeAllViews();
 AdLimeLoader.showMixViewAd("MixView AdUnit ID", viewGroup);
-```
-
-```java
-// 広告を展示して結果をモニターする
-viewGroup.removeAllViews();
-AdLimeLoader.showMixViewAd("MixView AdUnit ID", viewGroup, new SimpleAdListener() {
-            @Override
-            public void onAdShown() {
-            }
-
-            @Override
-            public void onAdClicked() {
-            }
-
-            @Override
-            public void onAdClosed() {
-            }
-        });
 ```
 
 ### 広告のデストロイ

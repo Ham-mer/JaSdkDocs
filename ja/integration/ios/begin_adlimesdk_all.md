@@ -16,7 +16,7 @@ pod install --repo-update
 ## 手動ダウンロード
 SDK フレームワークを直接ダウンロードして解凍し、下記のフレームワークを Xcode プロジェクトに導入してください。
 
-- [AdLimeSdk.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeSdk/1.6.2.zip)
+- [AdLimeSdk.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeSdk/1.6.5.zip)
 - AdLimeSdk.bundle
 - [Google-Mobile-Ads-SDK.framework](https://developers.google.cn/admob/ios/download)
 - GoogleAppMeasurement.framework

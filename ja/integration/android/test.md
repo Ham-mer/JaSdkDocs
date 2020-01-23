@@ -267,28 +267,19 @@ AndroidManifest.xml に SDK key を設定してください。
 | mixFullScreen ネイティブ   | 90304fa0-6694-49fc-8092-d6ee0e7a881d   |
 | mixFullScreen インターステーシャル    | 8465b93f-3f17-4a37-9fad-8fdbb778f2c3   |  
 
+
+### [Pangle](./mediation_pangle.md)
+
+| 広告タイプ         | 広告枠 ID                              |
+|:----------------:|:--------------------------------------:|
+| インターステーシャル     | 2207389f-5fe4-4dca-9a8c-85c8897991fe   |
+| 動画リワード       | 3871e42d-0e5d-4bec-bfe9-de7d4ec7d6fb   | 
+
 ### [Tapjoy](./mediation_tapjoy.md)
 
 | 広告タイプ         | 広告枠 ID                              |
 |:----------------:|:--------------------------------------:|
 | 動画リワード       | 45d81515-0c07-430f-bce6-577951c4862c   |
-
-### [TikTok](./mediation_tiktok.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320 × 50     | a68f5be9-7b92-4436-9ca0-90291f66ba90   |
-| バナー 300 × 250    | ad9dde3d-7274-484e-bf78-31a487e8682b   |
-| インターステーシャル     | c88b9ae1-81df-452e-ad86-40e8ba2dd8dc   |
-| ネイティブ         | 0e3227ac-6782-40c1-ada4-8970369a742c   |
-| 動画リワード       | 9cd47dd7-b5f3-4ab8-a74f-8f9c8c6ca39d   |
-| mixView   バナー 320 × 50| 6c2517e8-c61a-4d6b-b1f6-18eb9bffca56  |
-| mixView   バナー 300 × 250| e9a5ec8b-15b8-4791-8ded-d49aa9e7650e |
-| mixView   ネイティブ      | c633b368-f332-41ba-8cf8-7fb346f90780   |
-| mixFullScreen バナー 320 × 50| 8436f636-33d6-432b-ae6e-8fb8a217f052   |
-| mixFullScreen バナー 300 × 250| f777408a-7b0f-4080-859a-9511965cdadb   |
-| mixFullScreen ネイティブ   | 04968de3-fb55-42d9-a66f-b2a682659fd8   |
-| mixFullScreen インターステーシャル    | 49381beb-b0e3-474c-bbd7-3fa6c32bf264   |  
 
 ### [Unity Ads](./mediation_unity_ads.md)
 
