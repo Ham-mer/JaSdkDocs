@@ -6,7 +6,7 @@
 
 ## AdLime のテスト  
 
-| 広告タイプ         | AdUnit ID                              |
+| 広告タイプ         | 広告枠 ID                              |
 |:----------------:|:--------------------------------------:|
 | バナー 320 × 50    | 52040363-01ed-44c3-b204-154e28cd0a4d   |
 | バナー 300 × 250   | 573c18f4-7472-4987-b718-c124b154675f   |
@@ -50,11 +50,11 @@ AdLime では、複数の広告ネットワークを管理、配信する[メデ
 | インタースティシャル     | 678a54de-746e-488a-b866-dac81d4eef89   |
 | ネイティブ         | f0d18ed5-1d72-4d3e-ba7e-87fec9081cd4   |
 | 動画リワード       | ff519879-da39-4223-86aa-e31592f26f09   |
-| mixView  バナー 320*50| 4f9c1a87-4bde-4c50-80ef-c4ca734348b3   |
-| mixView  バナー 300*250| 125f01f9-0ce0-4de2-8a94-25ebbbecfa8a   |
+| mixView  バナー 320 x 50| 4f9c1a87-4bde-4c50-80ef-c4ca734348b3   |
+| mixView  バナー 300 x 250| 125f01f9-0ce0-4de2-8a94-25ebbbecfa8a   |
 | mixView  ネイティブ      | aa6b3f0b-6068-49b2-970d-a3bf2c02adc8   |
-| mixFullScreenバナー 320*50| f3b3764a-1e10-431a-aa29-fd8c874e66e3   |
-| mixFullScreenバナー 300*250| fd028949-c283-4322-ab64-185046852d40   |
+| mixFullScreenバナー 320 x 50| f3b3764a-1e10-431a-aa29-fd8c874e66e3   |
+| mixFullScreenバナー 300 x 250| fd028949-c283-4322-ab64-185046852d40   |
 | mixFullScreenネイティブ   | 69e222c0-b213-4c71-a983-158cf35d4524   |
 | mixFullScreen インタースティシャル     | 241017d9-cae2-426b-8fe1-f4ad82d7b8b0   |
 
@@ -79,11 +79,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | インタースティシャル     | 8404f9d7-5a95-4ac2-88cf-7c7965f328a0   |
 | ネイティブ         | 660053f8-e3e6-4643-b887-9a2341eddd0b   |
 | 動画リワード       | 1deae870-5aee-4423-b535-4e38e7ffbeb6   |
-| mixView  バナー 320*50| 43875458-06e8-4007-b01b-99f0b3e01745   |
-| mixView  バナー 300*250| 3ead904a-39b9-4bbf-8b47-36c37738d0d2   |
+| mixView  バナー 320 x 50| 43875458-06e8-4007-b01b-99f0b3e01745   |
+| mixView  バナー 300 x 250| 3ead904a-39b9-4bbf-8b47-36c37738d0d2   |
 | mixView  ネイティブ      | 62aa4e04-7d5f-4648-bd2f-e97c10d12ed7   |
-| mixFullScreenバナー 320*50| cbef286b-24fc-4718-aed5-ac8c2fc5dfaa   |
-| mixFullScreenバナー 300*250| c1796c98-7a8a-46e1-bd9f-c65ea76b5bf4   |
+| mixFullScreenバナー 320 x 50| cbef286b-24fc-4718-aed5-ac8c2fc5dfaa   |
+| mixFullScreenバナー 300 x 250| c1796c98-7a8a-46e1-bd9f-c65ea76b5bf4   |
 | mixFullScreenネイティブ   | 1c365c2a-1a66-43dc-a21a-aed715bd8792   |
 | mixFullScreen インタースティシャル    | 97cf81f7-245d-4e90-84f1-62b76961a11c   |
 
@@ -117,11 +117,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | インタースティシャル     | a2bd034b-ac9e-4c5c-a067-ab53ffd97e11   |
 | ネイティブ         | 0e00d15a-961c-490b-ba57-ce6fa85573af   |
 | 動画リワード       | 02a7ed95-b3c2-48d9-aa8d-3890d57c4f2c   |
-| mixView  バナー 320*50| 89436cd4-13d9-4cce-a895-71607f4d9320   |
-| mixView  バナー 300*250| 290216ae-93dd-410f-9c62-382020083c3a   |
+| mixView  バナー 320 x 50| 89436cd4-13d9-4cce-a895-71607f4d9320   |
+| mixView  バナー 300 x 250| 290216ae-93dd-410f-9c62-382020083c3a   |
 | mixView  ネイティブ      | 94a93e62-dae2-4a3e-a534-54ea86413f0c   |
-| mixFullScreenバナー 320*50| 87fcdded-2ee0-40fd-87ab-4e28535d19c5   |
-| mixFullScreenバナー 300*250| 70b032d3-f3dc-4953-ab5c-5742d2de2d1e   |
+| mixFullScreenバナー 320 x 50| 87fcdded-2ee0-40fd-87ab-4e28535d19c5   |
+| mixFullScreenバナー 300 x 250| 70b032d3-f3dc-4953-ab5c-5742d2de2d1e   |
 | mixFullScreenネイティブ   | 2b318047-ba5a-4cb3-95f3-3518c2875ffe   |
 | mixFullScreen インタースティシャル     | 33b576f0-e34e-49e8-aa8f-6c079ca98cae   |
 
@@ -152,11 +152,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | インタースティシャル     | 44ef6305-0262-46cd-891a-0364a0057643   |
 | ネイティブ         | 12da2ed4-75b4-4861-b52f-86a7c1e74927   |
 | 動画リワード       | a0a73c47-9194-4351-8322-460c9d29f5da   |
-| mixView  バナー 320*50| 34070a5b-bd0c-4ec4-8584-49f100e4adef   |
-| mixView  バナー 300*250| 606a7e98-f591-4c5e-ab90-4d16db10cb4f   |
+| mixView  バナー 320 x 50| 34070a5b-bd0c-4ec4-8584-49f100e4adef   |
+| mixView  バナー 300 x 250| 606a7e98-f591-4c5e-ab90-4d16db10cb4f   |
 | mixView  ネイティブ      | bd1103d1-a579-4988-8f2b-5abfd02a3a06   |
-| mixFullScreenバナー 320*50| e303f544-5eb5-4057-8eba-a03e540889eb   |
-| mixFullScreenバナー 300*250| fb983b61-4a80-4270-8002-04558a0ee1c4   |
+| mixFullScreenバナー 320 x 50| e303f544-5eb5-4057-8eba-a03e540889eb   |
+| mixFullScreenバナー 300 x 250| fb983b61-4a80-4270-8002-04558a0ee1c4   |
 | mixFullScreenネイティブ   | 9deb0518-3505-4190-b03f-cffd161284f7   |
 | mixFullScreen インタースティシャル     | b0bf5992-ab9d-48a6-984a-fdb9f527b80c  |
 
@@ -167,8 +167,8 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | バナー 300 × 250  | 7ebe3b57-7b4f-42ff-aa31-5e7ac6696295   |
 | インタースティシャル     | b628489f-6f1c-4b4c-9ada-7d1d89418fe1   |
 | 動画リワード       | 71bd5399-23b0-41e7-8327-cfcf773db410   |
-| mixView  バナー 300*250| 4dd6f981-7139-4aa0-bb2d-e1a3f8048d97   |
-| mixFullScreenバナー 300*250| 74dda437-6e6f-4093-a288-171d0a6e3074  |
+| mixView  バナー 300 x 250| 4dd6f981-7139-4aa0-bb2d-e1a3f8048d97   |
+| mixFullScreenバナー 300 x 250| 74dda437-6e6f-4093-a288-171d0a6e3074  |
 | mixFullScreen インタースティシャル     | 84fb619d-59d0-4c40-8a63-1b03a8a79603  |
 
 ### [Flurry](./mediation_flurry.md)
@@ -188,10 +188,10 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | バナー 300 × 250  | 1bfc10aa-0d67-4da2-89e7-acc288e81998   |
 | インタースティシャル     | dbf26e30-6cf0-4ada-b6d5-65aa0a53fb0b   |
 | 動画リワード       | 71f3d9b4-143d-4f96-8223-dda0d11d4362   |
-| mixView  バナー 320*50| 6eb7168a-7309-41c3-a76e-01f3a6350b14   |
-| mixView  バナー 300*250| 81f20493-75ae-41b5-8c56-c3b13e4b3515  |
-| mixFullScreenバナー 320*50| 710204af-2101-4e02-b60d-a9b59d16fdd7  |
-| mixFullScreenバナー 300*250| ec0438c9-635c-4368-934c-d516720a8f4e  |
+| mixView  バナー 320 x 50| 6eb7168a-7309-41c3-a76e-01f3a6350b14   |
+| mixView  バナー 300 x 250| 81f20493-75ae-41b5-8c56-c3b13e4b3515  |
+| mixFullScreenバナー 320 x 50| 710204af-2101-4e02-b60d-a9b59d16fdd7  |
+| mixFullScreenバナー 300 x 250| ec0438c9-635c-4368-934c-d516720a8f4e  |
 | mixFullScreen インタースティシャル | 69bc9a61-a52a-41cc-a2cb-ba32206f93b8 |
 
 ### [i-mobile](./mediation_imobile.md)
@@ -202,11 +202,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | バナー 300 × 250  | b72e1caa-5d94-4887-a134-4618d52aa459   |
 | インタースティシャル     | 46c0936d-fa7d-40b0-bc4d-59eda44c9bc2   |
 | ネイティブ        | ac506365-ebf8-4f6b-b043-8dd73da89210   |
-| mixView  バナー 320*50| 32c60041-69e4-4166-b265-f2ac7edd7071 |
-| mixView  バナー 300*250| 40243724-e635-4a94-b640-d88642b7e40e |
+| mixView  バナー 320 x 50| 32c60041-69e4-4166-b265-f2ac7edd7071 |
+| mixView  バナー 300 x 250| 40243724-e635-4a94-b640-d88642b7e40e |
 | mixView  ネイティブ     | b920e30a-d2ef-4d01-b323-205e044b0e57 |
-| mixFullScreenバナー 320*50| f82fc910-2bbf-49eb-8d2e-f8d8fe55e67c  |
-| mixFullScreenバナー 300*250| 19c98957-e767-4718-84c5-614c41395891 |
+| mixFullScreenバナー 320 x 50| f82fc910-2bbf-49eb-8d2e-f8d8fe55e67c  |
+| mixFullScreenバナー 300 x 250| 19c98957-e767-4718-84c5-614c41395891 |
 | mixFullScreen ネイティブ   | 8fadda1a-8ebf-4cce-909b-c5e813010bd4 |
 | mixFullScreen インタースティシャル | 9b1a25b7-f87d-436c-b764-5852a9575df3 |
 
@@ -235,11 +235,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | インタースティシャル     | 94bcc9c9-ca60-4a06-a84d-e9c893a0b933   |
 | ネイティブ         | 10329cb4-6676-4a69-b20c-48736a953dbf   |
 | 動画リワード       | 7aba7997-967f-4d83-b7c4-dec97bf684cf   |
-| mixView  バナー 320*50| d5cdf029-bdbc-48fc-811b-82845af12035   |
-| mixView  バナー 300*250| f04fbc98-5a9c-4398-badf-cd8655b0c6a3   |
+| mixView  バナー 320 x 50| d5cdf029-bdbc-48fc-811b-82845af12035   |
+| mixView  バナー 300 x 250| f04fbc98-5a9c-4398-badf-cd8655b0c6a3   |
 | mixView  ネイティブ      | be11fc9a-d3f4-4abc-946f-189ac41df3d9   |
-| mixFullScreenバナー 320*50| 6dd950fa-e50b-43f4-b748-0d885950ab59  |
-| mixFullScreenバナー 300*250| b700e8bd-9423-4213-aa27-e8bbc9afa722  |
+| mixFullScreenバナー 320 x 50| 6dd950fa-e50b-43f4-b748-0d885950ab59  |
+| mixFullScreenバナー 300 x 250| b700e8bd-9423-4213-aa27-e8bbc9afa722  |
 | mixFullScreenネイティブ   | 8eeab8ae-6f91-4d8a-8f5b-4d84123bedbb   |
 | mixFullScreen インタースティシャル     | 112079e4-01db-435c-8308-ec2b35a8bf1e  |
 
@@ -252,11 +252,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | インタースティシャル     | ef9c77ea-2fa3-4efe-a107-52e771648e5c   |
 | ネイティブ         | f0accbea-1961-4a72-8962-5fcc91609637   |
 | 動画リワード       | 79108573-598c-42bc-808b-8569a2cada72   |
-| mixView  バナー 320*50| f587bcc0-e34d-42b7-9a6b-735038f8f469  |
-| mixView  バナー 300*250| 9534908a-c253-4481-bfbb-871bb553dfc6 |
+| mixView  バナー 320 x 50| f587bcc0-e34d-42b7-9a6b-735038f8f469  |
+| mixView  バナー 300 x 250| 9534908a-c253-4481-bfbb-871bb553dfc6 |
 | mixView  ネイティブ      | 78e0d33b-1fb9-4de4-b225-9f2161e0a387  |
-| mixFullScreenバナー 320*50| 76ce7ce9-9fd3-4665-b4b1-86c0f4d8b37f  |
-| mixFullScreenバナー 300*250| 64d06129-b09a-4a25-9e61-99f9a1f73bfb  |
+| mixFullScreenバナー 320 x 50| 76ce7ce9-9fd3-4665-b4b1-86c0f4d8b37f  |
+| mixFullScreenバナー 300 x 250| 64d06129-b09a-4a25-9e61-99f9a1f73bfb  |
 | mixFullScreenネイティブ   | 1c76ab44-16a2-4971-bb90-f1169ed8f422   |
 | mixFullScreen インタースティシャル    |5a5ed4b8-9127-49e5-b3a4-e09e74748814 |
 
@@ -276,11 +276,11 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | インタースティシャル      | 66123f13-5a77-4cee-ab21-3bfd27d8b84d   |
 | ネイティブ         | b3162881-30e7-4526-99f3-956f45167eb3   |
 | 動画リワード       | 1f1a5107-b710-4969-bb8a-f306a7fcf2b4   |
-| mixView  バナー 320*50| 52f4fd1d-fa4f-4d32-b039-ccd7ea388917  |
-| mixView  バナー 300*250| 57320377-8c57-4d46-9680-28d324197c47 |
+| mixView  バナー 320 x 50| 52f4fd1d-fa4f-4d32-b039-ccd7ea388917  |
+| mixView  バナー 300 x 250| 57320377-8c57-4d46-9680-28d324197c47 |
 | mixView  ネイティブ      | 1d0a86df-adf6-4b28-a582-2842600ef9fa  |
-| mixFullScreenバナー 320*50| fe865e71-9fbe-401b-9257-05109678cfe8  |
-| mixFullScreenバナー 300*250| e179ef4e-4c36-43a7-a09a-286653562f76 |
+| mixFullScreenバナー 320 x 50| fe865e71-9fbe-401b-9257-05109678cfe8  |
+| mixFullScreenバナー 300 x 250| e179ef4e-4c36-43a7-a09a-286653562f76 |
 | mixFullScreenネイティブ  | f48dd1a7-3ae5-483b-ba36-4f226eea8461 |
 | mixFullScreen インタースティシャル   | ef5478a7-be57-45b6-8fd1-fde71f7f5107 |
 
@@ -300,8 +300,8 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | インタースティシャル    | af65d340-1ae2-4f57-90cf-bf723bb78a34   |
 | ネイティブ        | b474e668-e8db-4353-9c5c-0ee7fe40905a   |
 | 動画リワード      | c6a9d2cd-aa6f-4125-9d5e-6ecbb04e6fbc   |
-| mixView  バナー 300*250| 8d60c382-029b-4d04-9c7b-8dc0f1f58ad9 |
+| mixView  バナー 300 x 250| 8d60c382-029b-4d04-9c7b-8dc0f1f58ad9 |
 | mixView  ネイティブ |11c30fe4-3423-4f9b-bea8-cafa669b7382 |
-| mixFullScreenバナー 300*250| a98f821f-7df7-491b-a11c-2a35e36c5c40 |
+| mixFullScreenバナー 300 x 250| a98f821f-7df7-491b-a11c-2a35e36c5c40 |
 | mixFullScreen ネイティブ |750cddb6-03d5-49f6-8695-204da4d85d7c |
 | mixFullScreen インタースティシャル  | 892ba842-29ed-4900-8ad4-ae6e5fa0fc3c |

@@ -1,9 +1,9 @@
 # AdLime SDK の導入
-AdLime は "AdLimeSdk" と "AdLimeSdk_All" の２種類の SDK を提供しています。これらの SDK の違いは主要なアドネットワークをデフォルトで提供しているかどうかです。
+AdLime は "AdLimeSdk" と "AdLimeSdk_All" の２種類の SDK を提供しています。これらの SDK の違いは主要な広告ネットワークをデフォルトで提供しているかどうかです。
 
-アドネットワークをカスタムに設定することを希望する場合は "AdLimeSdk" を導入することをおすすめします。"AdLimeSdk" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望のアドネットワークを追加してください。 
+広告ネットワークをカスタムに設定することを希望する場合は "AdLimeSdk" を導入することをおすすめします。"AdLimeSdk" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望の広告ネットワークを追加してください。 
 
-"AdLimeSdk_All" は AdLimeSdk と AdMob・DFP・FaceBook・Mopub・AppLovin・TikTok のアドネットワークを標準でサポートしています．これらのアドネットワークの導入を希望する場合は、この SDK を組み込むことも選択肢の一つです。"AdLimeSdk_All" の SDK を導入することで、各広告ネットワークごとに必要な SDK を追加する手順などをスキップすることが可能です。
+"AdLimeSdk_All" は AdLimeSdk と AdMob・DFP・FaceBook・Mopub・AppLovin・TikTok の広告ネットワークを標準でサポートしています．これらの広告ネットワークの導入を希望する場合は、この SDK を組み込むことも選択肢の一つです。"AdLimeSdk_All" の SDK を導入することで、各広告ネットワークごとに必要な SDK を追加する手順などをスキップすることが可能です。
 
 ## 前提条件
 - Xcode 9.2 以上のバージョンを使用
@@ -158,7 +158,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ## SDK の実装サンプル
 各広告の実装サンプルについて、[デモアプリ](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。
 
-## 次へのステップ
+## 次のステップ
 - 事前に導入予定の広告ネットワークが決定している場合は[メディエーション機能の導入](./mediation.md)を確認し、各広告ネットワークごとに必要な SDK の導入手順に従ってください。
 - 広告ネットワークを選択せず、広告を表示したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOS アプリに実装しましょう。
 

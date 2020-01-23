@@ -127,3 +127,6 @@ Info.plist を ソースコードとして開いて編集します。
 ```
 もしくは、Xcodeで直接編集できます。
 <img src="./../images/ios/mediation_admob_app_id_plist.png" height="80" />
+
+## 次のステップ
+AdLimeSdk-All を導入したら [AdLimeSdkの導入の続き](./init.md#Linker-Flags-の追加) へ戻り、残りの設定を続けましょう。
