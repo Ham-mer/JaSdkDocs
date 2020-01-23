@@ -50,10 +50,6 @@ dependencies {
 ## マニフェストファイルへの記述
 マニフェストファイル AndroidManifest.xml に必要な情報を記述します。
 ```java
-    <provider
-        android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-        android:authorities="${applicationId}.TTMultiProvider"
-        android:exported="false" />
     <meta-data
         android:name="applovin.sdk.key"
         android:value="${applovin_value}" />
