@@ -1,39 +1,210 @@
-# AdLimeAdLoader - MixFullScreenAd
-AdLimeAdLoaderで広告をロード、展示する時、 AdUnit IDによって広告をキャッシュする，なので、各画面で広告のロードはできる。<br>
-一つのAdUnit IDでは，AdLimeAdLoaderは一つの対象をキャッシュする。<br>
-[AdLimeAdLoader destroyAd:@"AdUnit ID"] で広告をデストロイすると，AdLimeAdLoaderで広告をロードする時は新な対象を作成する。
+# AdLimeAdLoader - MixViewAd  
 
-AdLimeAdLoader はMixFullScreenAdのキャッシュ、ロード、展示、デストロイをサポートする。
+AdLimeAdLoader は広告のキャッシュを管理、効率的に広告を表示する機能です。広告のキャッシュを管理することで、広告ロード回数を減らしたり、広告ロードのタイミングの効率化に望むことができます。
 
-### 広告のロード
+このガイドでは AdLimeAdLoader を用いた MixViewAd の実装方法について説明します。
+
+## AdLimeAdLoader による基本的な実装  
+
+AdLimeAdLoader は各広告枠 ID ごとに広告のキャッシュを識別しています。AdLimeAdLoader を使って広告のロードや表示をする場合は、広告枠 ID ごとに広告をリクエストする必要があります。また一つの広告枠 ID に一つの広告を管理するため、複数の広告を同時に表示する際は対応する数の広告枠 ID を発行してください。
+
+## AdLimeMixFullScreenAd オブジェクトの取得  
+
+AdLimeAdLoader を用いて広告を表示したり、広告のイベントを制御するなどのカスタマイズする必要がある場合は `AdLimeMixFullScreenAd` オブジェクトを取得する必要があります。`AdLimeMixFullScreenAd` を用いた実装方法は [MixFullScreenAd](./mixfullscreenad.md) を参考にしてください。
+
+:::: tabs
+
+::: tab Objective-C
+
 ```objectivec
-// イベント代理の設置
-[AdLimeAdLoader getMixFullScreenAd:@"MixFullScreen AdUnit ID"].delegate = self;
-// 広告のロード
-[AdLimeAdLoader loadMixFullScreenAd:@"MixFullScreen AdUnit ID" nativeAdLayout:self.layout];
+AdLimeMixFullScreenAd *mixFullScreenAd = [AdLimeAdLoader getMixFullScreenAd:@"広告枠 ID"];
 ```
 
-** NativeAdLayoutについて[NativeAdLayout](https://www.adlime.net/docs/zh/integration/ios/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認ください。**
+:::
 
-### 広告は用意できるかどうかの判断
-```objectivec
-BOOL isReady = [AdLimeAdLoader isMixFullScreenAdReady@"MixFullScreen AdUnit ID"];
+::: tab Swift
+
+```swift
+let mixFullScreenAd = AdLimeAdLoader.getMixFullScreenAd("広告枠 ID")
 ```
 
-### 広告の展示
+:::
+
+::::
+
+## 広告レイアウトの作成
+
+広告のロード時や広告を表示するときに広告のレイアウトを事前に設定しておきましょう。ネイティブレイアウトの詳細な設定方法は [AdLimeNativeAdLayout](./native.md#広告レイアウトの作成) で確認できます。
+
+広告レイアウトはネイティブ広告のロード時に設定できます。その設定方法は後の節で説明します。また `AdLimeMixFullScreenAd` オブジェクトを取得して、そのオブジェクトにネイティブ広告のレイアウトを設定することもできます。
+
+
+:::: tabs
+
+::: tab Objective-C
+
 ```objectivec
-[AdLimeAdLoader showMixFullScreenAd:@"MixFullScreen AdUnit ID" viewController:self];
+@import AdLimeSdk;
+@import UIKit;
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    ...
+    AdLimeMixFullScreenAd *mixFullScreenAd = [AdLimeAdLoader getMixFullScreenAd: @"広告枠 ID"];
+    AdLimeNativeAdLayout *layout = [AdLimeNativeAdLayout getLargeLayout1WithWidth:(CGFloat) width];
+    [mixFullScreenAd setNativeAdLayout:layout];
+}
+
+@end
 ```
 
-### 広告のデストロイ
-```objectivec
-[AdLimeAdLoader destroyAd:@"MixFullScreen AdUnit ID"];
+:::
+
+::: tab Swift
+
+```swift
+import AdLimeSdk
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ...
+        let mixFullScreenAd = AdLimeAdLoader.getMixFullScreenAd("広告枠 ID")
+        mixFullScreenAd.setNativeAdLayout(AdLimeNativeAdLayout.getLargeLayout1(withWidth: width))
+    }
+}
 ```
 
-### MixFullScreenAd 対象の取得
-AdLimeAdLoaderで広告対象を取得できる。<br>
-この対象で広告をロード、展示、上記のAdlimeAdloaderで提供される方法ではない<br>
-[MixFullScreenAd]を参考(./mixfullscreenad.md)。
+:::
+
+::::
+
+
+ネイティブ広告のレイアウトの設定は基本的に 1 回実行すれば十分です。画面が回転するなどでフレームサイズが変更される場合はレイアウトを再読み込みする必要があります。また広告ロード時と広告表示時でフレームサイズが変更される場合にもレイアウトを再読み込みする必要があります。
+
+## 広告のロード  
+
+次に、広告をロードしてみましょう。`AdLimeAdLoader`クラスの`load` を実行してください。またこのときにネイティブ広告のレイアウトを設定できます。
+
+:::: tabs
+
+::: tab Objective-C
+
 ```objectivec
-[AdLimeAdLoader getMixFullScreenAd:@"MixFullScreen AdUnit ID"];
+AdLimeNativeAdLayout *layout = [AdLimeNativeAdLayout getLargeLayout1WithWidth:(CGFloat) width];
+[AdLimeAdLoader loadMixFullScreenAd:@"広告枠 ID" nativeAdLayout:layout];
 ```
+
+:::
+
+::: tab Swift
+
+```swift
+AdLimeAdLoader.loadMixFullScreenAd("広告枠 ID", nativeAdLayout: AdLimeNativeAdLayout.getLargeLayout1(withWidth: width))
+```
+
+:::
+
+::::
+
+## 広告の表示  
+
+広告をロードしたら広告を表示してみましょう。広告を表示する前に広告がロード済みかどうかを `AdLimeAdLoader` の `isMixFullScreenAdReady` メソッドで確認してから `showMixFullScreenAd` メソッドで表示します。
+
+:::: tabs
+
+::: tab Objective-C
+
+```objectivec
+if([AdLimeAdLoader isMixFullScreenAdReady:@"広告枠 ID"]) {
+    [AdLimeAdLoader showMixFullScreenAd:@"広告枠 ID" viewController:self];
+} else {
+    NSLog(@"Ad wasn't ready");
+}
+```
+
+:::
+
+::: tab Swift
+
+```swift
+if(AdLimeAdLoader.isMixFullScreenAdReady("広告枠 ID")){
+    AdLimeAdLoader.showMixFullScreenAd("広告枠 ID", viewController: self)
+} else {
+    print("Ad wasn't ready")
+}
+```
+
+:::
+
+::::
+
+## 広告のイベント  
+
+`AdLimeMixFullScreenAdDelegate` を設定することで、広告のロード完了のタイミングやユーザーがアプリを閉じたタイミングなどの広告のライフサイクルイベントを取得することができます。
+
+### MixFullScreenAd イベントを登録する  
+
+MixFullScreenAd のライフサイクルイベントを取得するためには `AdLimeMixFullScreenAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getMixFullScreenAd` メソッドで `AdLimeMixFullScreenAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadMixFullScreenAd` メソッド呼び出し前、及び `showMixFullScreenAd` 前に実行する必要があります。
+
+:::: tabs
+
+::: tab Objective-C
+
+```objectivec
+@import AdLimeSdk;
+@import UIKit;
+
+@interface ViewController () <AdLimeMixFullScreenAdDelegate>
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    ...
+
+    AdLimeMixFullScreenAd *mixFullScreenAd = [AdLimeAdLoader getMixFullScreenAd:@"広告枠 ID"];
+    mixFullScreenAd.delegate = self;
+}
+
+@end
+```
+
+:::
+
+::: tab Swift
+
+```swift
+import AdLimeSdk
+import UIKit
+
+class ViewController: UIViewController, AdLimeMixViewAdDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ...
+        self.mixFullScreenAd.delegate = self
+    }
+}
+```
+
+:::
+
+::::
+
+
+### MixFullScreenAd イベントを実装する
+広告イベントの制御は `AdLimeMixViewAdDelegate` を用いて実現できます。実装方法は[MixFullScreenAd イベントを実装する](./mixfullscreenad.md#MixFullScreenAd-イベントを実装する)を確認してください
+
+
+

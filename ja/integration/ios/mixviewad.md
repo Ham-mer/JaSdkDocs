@@ -7,7 +7,7 @@ MixViewAd とはバナー広告やネイティブ広告などの別種の広告�
 - AdLime SDK が導入済みであること
 
 ## MixViewAdの作成
-広告を表示するまでのサイクルは `AdLimeMixViewAd` オブジェクトを用いて広告をリクエストし、その後広告を表示するためのViewを取得することです。広告を表示するための最初のステップとして AdUnit ID を設定した `MixViewAd` を生成します。
+広告を表示するまでのサイクルは `AdLimeMixViewAd` オブジェクトを用いて広告をリクエストし、その後広告を表示するためのViewを取得することです。広告を表示するための最初のステップとして 広告枠 ID を設定した `MixViewAd` を生成します。
 
 :::: tabs
 
@@ -28,7 +28,7 @@ MixViewAd とはバナー広告やネイティブ広告などの別種の広告�
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.mixViewAd = [[AdLimeMixViewAd alloc] initWithAdUnitId:@"AdUnit_ID" rootViewController:self];
+    self.mixViewAd = [[AdLimeMixViewAd alloc] initWithAdUnitId:@"広告枠 ID" rootViewController:self];
 }
 
 @end
@@ -47,7 +47,7 @@ class ViewController: UIViewControllerd {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mixViewAd = AdLimeMixViewAd.init(adUnitId: "AdUnit_ID"), rootViewController: self)
+        self.mixViewAd = AdLimeMixViewAd.init(adUnitId: "広告枠 ID"), rootViewController: self)
     }
 }
 ```
@@ -58,7 +58,7 @@ class ViewController: UIViewControllerd {
 
 ## ネイティブ広告のレイアウト
 `AdLimeMixViewAd` オブジェクトを生成したら広告をロードする前にネイティブ広告のレイアウトを事前に設定しておきましょう。ネイティブ広告のレイアウトは AdLime SDK の `AdLimeNativeAdLayout` によって管理しています。また、ネイティブ広告のレイアウトはカスタムで設定できます<br>
-**`AdLimeNativeAdLayout` の情報について[AdLimeNativeAdLayout](https://www.adlime.net/docs/ja/integration/ios/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できます。**
+**`AdLimeNativeAdLayout` の情報について[AdLimeNativeAdLayout](./native.md#広告レイアウトの作成))で確認できます。**
 
 :::: tabs
 
@@ -109,14 +109,14 @@ self.mixViewAd.load()
 
 
 ## 広告の表示
-広告をロード完了したら広告を表示してみましょう。`AdLimeMixViewAd` の `getView` メソッドで、ロードした広告の UIView が取得できます。ここでは広告を表示する前に広告がロード済みかどうかを`isReady`メソッドを用いて確認しています。<br>
+広告をロード完了したら広告を表示してみましょう。`AdLimeMixViewAd` の `getView` メソッドで、ロードした広告の UIView が取得できます。また広告を表示する前に広告がロード済みかどうかを`isReady`メソッドを用いて確認できます。<br>
 
 :::: tabs
 
 ::: tab Objective-C
 
 ```objectivec
-if([self.mixViewAd isReady]) {
+- (void)adLimeMixViewAdDidReceiveAd:(AdLimeMixViewAd *)mixViewAd {
     UIView *adView = [mixViewAd getAdView:layout];
     [self.view addSubview:adView];
 }
@@ -127,7 +127,7 @@ if([self.mixViewAd isReady]) {
 ::: tab Swift
 
 ```swift
-if(self.mixViewAd.isReady()) {
+func adLimeMixViewAdDidReceive(_ mixViewAd: AdLimeMixViewAd!) {
     let mixView = mixViewAd.getView()
     self.view.addSubview(mixView)
 }
@@ -151,6 +151,7 @@ MixViewAd のライフサイクルイベントを取得するためには `AdLim
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController () <AdLimeMixViewAdDelegate>
 
@@ -202,30 +203,26 @@ class ViewController: UIViewController, AdLimeMixViewAdDelegate {
 ::: tab Objective-C
 
 ```objectivec
-/// A MixView ad has loaded, and can be displayed.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 - (void)adLimeMixViewAdDidReceiveAd:(AdLimeMixViewAd *)mixViewAd {
     NSLog(@"AdLimeMixViewAdDidReceiveAd");
 }
 
-/// The MixView ad request failed, and a new request can be sent.
+/// 広告のロード失敗を通知するデリゲートメソッド 
 - (void)adLimeMixViewAd:(AdLimeMixViewAd *)mixViewAd didFailToReceiveAdWithError:(AdLimeAdError *)adError {
     NSLog(@"AdLimeMixViewAd:didFailToReceiveAdWithError, errorCode is %d, errorMessage is %@", adError.getCode, adError.description);
 }
 
-/// The MixView ad was shown.
+/// タップ可能な広告を表示されたことを通知するデリゲートメソッド
 - (void)adLimeMixViewAdWillPresentScreen:(AdLimeMixViewAd *)mixViewAd {
     NSLog(@"AdLimeMixViewAdWillPresentScreen");
 }
 
-/// The MixView ad will cause the application to become inactive and open a new application.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 - (void)adLimeMixViewAdWillLeaveApplication:(AdLimeMixViewAd *)mixViewAd {
     NSLog(@"AdLimeMixViewAdWillLeaveApplication");
 }
 
-/// The MixView ad did dismiss a full screen view.
-- (void)adLimeMixViewAdDidDismissScreen:(AdLimeMixViewAd *)mixViewAd {
-    NSLog(@"AdLimeMixViewAdDidDismissScreen");
-}
 ```
 
 :::
@@ -233,26 +230,24 @@ class ViewController: UIViewController, AdLimeMixViewAdDelegate {
 ::: tab Swift
 
 ```swift
-/// A MixView ad has loaded, and can be displayed.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 func adLimeMixViewAdDidReceive(_ mixViewAd: AdLimeMixViewAd!) {
     print("AdLimeMixViewAdDidReceiveAd")
 }
-/// The MixView ad request failed, and a new request can be sent.
+
+/// 広告のロード失敗を通知するデリゲートメソッド
 func adLimeMixViewAd(_ mixViewAd: AdLimeMixViewAd!, didFailToReceiveAdWithError adError: AdLimeAdError!) {
     print("adLimeMixView:didFailToReceiveAdWithError, errorCode is \(adError.getCode().rawValue), errorMessage is \(adError.description)")
 }
-/// The MixView ad was shown.
+
+/// タップ可能な広告を表示されたことを通知するデリゲートメソッド
 func adLimeMixViewAdWillPresentScreen(_ mixViewAd: AdLimeMixViewAd!) {
     print("AdLimeMixViewAdWillPresentScreen")
 }
 
-/// The MixView ad will cause the application to become inactive and open a new application.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 func adLimeMixViewAdWillLeaveApplication(_ mixViewAd: AdLimeMixViewAd!) {
     print("AdLimeMixViewAdWillLeaveApplication")
-}
-/// The MixView ad did dismiss a full screen view.
-func adLimeMixViewAdDidDismissScreen(_ mixViewAd: AdLimeMixViewAd!) {
-    print("AdLimeMixViewAdDidDismissScreen")
 }
 ```
 
@@ -261,26 +256,13 @@ func adLimeMixViewAdDidDismissScreen(_ mixViewAd: AdLimeMixViewAd!) {
 ::::
 
 
-### エラー情報
-広告のロードに失敗した場合は、`AdLimeMixViewAdDelegate` の `adLimeMixViewAd:didFailToReceiveAdWithError` が呼び出されます。 `adError.getCode` 、`adError.description` を用いてエラーコードとエラー情報を取得できます。
+### 広告ロードエラーについて  
 
-エラーコードは `AdLimeAdErrorCode` に定義される：
-|定義                           |説明     |
-|:-----------------------------|:--------|
-|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
-|ADLIME_ADERROR_INVALID_REQUEST | 無効リクエスト |
-|ADLIME_ADERROR_NETWORK_ERROR   | ネットエラー |
-|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない      |
-|ADLIME_ADERROR_TIMEOUT         | タイムアウト |
+広告のロードに失敗した場合は、`AdLimeMixViewAdDelegate` の `adLimeMixViewAd:didFailToReceiveAdWithError` が呼び出されます。 `adError.getCode` 、`adError.description` を用いてエラーコードとエラーメッセージを取得できます。
 
+#### エラーコードとエラーメッセージについて
 
-エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ## 広告レイアウト作成作成の遅延
 
@@ -318,3 +300,6 @@ func adLimeMixViewAdDidReceive(_ mixViewAd: AdLimeMixViewAd!) {
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
 また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeAdLoader](./adloader.md)で実現が可能です。
 
+## 次へのステップ
+- 他の広告フォーマットを追加で利用したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOSアプリに実装しましょう。
+- 広告が正しく表示できるか確認したい場合は[iOSの広告表示テスト](./test.md)に従い、App ID と各アドネットワークに対応する広告フォーマットの広告枠 ID を設定して広告を表示してみましょう。

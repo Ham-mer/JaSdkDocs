@@ -6,7 +6,7 @@
 - AdLime SDK が導入済みであること
 
 ## 動画リワード広告の作成
-広告を表示するまでのサイクルは `AdLimeRewardedVideoAd` オブジェクトを用いて広告をリクエストし、広告を表示することです。広告を表示するための最初のステップとして AdUnit ID を設定した `AdLimeRewardedVideoAd` を生成します。
+広告を表示するまでのサイクルは `AdLimeRewardedVideoAd` オブジェクトを用いて広告をリクエストし、広告を表示することです。広告を表示するための最初のステップとして 広告枠 ID を設定した `AdLimeRewardedVideoAd` を生成します。
 
 :::: tabs
 
@@ -14,6 +14,7 @@
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController ()
 
@@ -26,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.rewardedVideoAd = [[AdLimeRewardedVideoAd alloc] initWithAdUnitId:@"AdUnit_ID"];
+    self.rewardedVideoAd = [[AdLimeRewardedVideoAd alloc] initWithAdUnitId:@"広告枠 ID"];
 }
 
 @end
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rewardedVideoAd = AdLimeRewardedVideoAd.init(adUnitId: "AdUnit_ID")
+        self.rewardedVideoAd = AdLimeRewardedVideoAd.init(adUnitId: "広告枠 ID")
     }
 }
 ```
@@ -150,6 +151,7 @@ class ViewController: UIViewController {
 
 ```objectivec
 @import AdLimeSdk;
+@import UIKit;
 
 @interface ViewController () <AdLimeRewardedVideoAdDelegate>
 
@@ -175,6 +177,8 @@ class ViewController: UIViewController {
 
 ```swift
 import AdLimeSdk
+import UIKit
+
 class ViewController: UIViewController, AdLimeRewardedVideoAdDelegate {
     var rewardedVideoAd: AdLimeRewardedVideoAd!
 
@@ -199,49 +203,49 @@ class ViewController: UIViewController, AdLimeRewardedVideoAdDelegate {
 ::: tab Objective-C
 
 ```objectivec
-/// Tells the delegate an ad request succeeded.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideoDidReceiveAd:(AdLimeRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"adLimeRewardedVideoDidReceiveAd");
 }
 
-/// Tells the delegate an ad request failed.
+/// 広告のロード失敗を通知するデリゲートメソッド
 - (void)adLimeRewardedVideo:(AdLimeRewardedVideoAd *)rewardedVideoAd didFailToReceiveAdWithError:(AdLimeAdError *)adError {
     NSLog(@"adLimeRewardedVideo:didFailToReceiveAdWithError, errorCode is %d, errorMessage is %@",
         adError.getCode, adError.description);
 }
 
-/// Tells the delegate that the rewarded ad was presented.
+/// 動画リワード広告が表示されたことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideoDidOpen:(AdLimeRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"adLimeRewardedVideoDidOpen");
 }
 
-/// Tells the delegate that the rewarded ad was dismissed.
+/// 動画リワード広告が閉じられたことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideoDidClose:(AdLimeRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"adLimeRewardedVideoDidClose");
 }
 
-/// Tells the delegate that the rewarded video was began play.
+/// 動画が開始したことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideoDidStart:(AdLimeRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"adLimeRewardedVideoDidStart");
 }
 
-/// Tells the delegate that the rewarded video was finished play.
+/// 動画を最後まで視聴したことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideoDidComplete:(AdLimeRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"adLimeRewardedVideoDidComplete");
 }
 
-/// Tells the delegate that the user earned a reward.
+/// ユーザーがリワード（報酬）を獲得したことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideo:(AdLimeRewardedVideoAd *)rewardedVideoAd didReward:(AdLimeRewardItem *)item {
     NSLog(@"adLimeRewardedVideo:didReward, rewardItem type is %@, amount is %d",
         item.rewardType, item.rewardAmount);
 }
 
-/// Tells the delegate that the user failed to earned a reward.
+/// ユーザーがリワード（報酬）の獲得に失敗したことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideoDidFailedToReward:(AdLimeRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"adLimeRewardedVideoDidFailedToReward");
 }
 
-/// Tells the delegate that a user click will open another app (such as the App Store), backgrounding the current app.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 - (void)adLimeRewardedVideoWillLeaveApplication:(AdLimeRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"adLimeRewardedVideoWillLeaveApplication");
 }
@@ -252,37 +256,37 @@ class ViewController: UIViewController, AdLimeRewardedVideoAdDelegate {
 ::: tab Swift
 
 ```swift
-/// Tells the delegate an ad request succeeded.
+/// 広告が正しくロードされたことを通知するデリゲートメソッド
 func adLimeRewardedVideoDidReceive(_ rewardedVideoAd: AdLimeRewardedVideoAd!) {
     print("adLimeRewardedVideoDidReceiveAd")
 }
 
-/// Tells the delegate an ad request failed.
+/// 広告のロード失敗を通知するデリゲートメソッド
 func adLimeRewardedVideo(_ rewardedVideoAd: AdLimeRewardedVideoAd!, didFailToReceiveAdWithError adError: AdLimeAdError!) {
     print("adLimeRewardedVideo:didFailToReceiveAdWithError, errorCode is \(adError.getCode().rawValue), errorMessage is \(adError.description)")
 }
 
-/// Tells the delegate that the rewarded ad was presented.
+/// 動画リワード広告が表示されたことを通知するデリゲートメソッド
 func adLimeRewardedVideoDidOpen(_ rewardedVideoAd: AdLimeRewardedVideoAd!) {
     print("adLimeRewardedVideoDidOpen")
 }
 
-/// Tells the delegate that the rewarded ad was dismissed.
+/// 動画リワード広告が閉じられたことを通知するデリゲートメソッド
 func adLimeRewardedVideoDidClose(_ rewardedVideoAd: AdLimeRewardedVideoAd!) {
     print("adLimeRewardedVideoDidClose")
 }
 
-/// Tells the delegate that the rewarded video was began play.
+/// 動画が開始したことを通知するデリゲートメソッド
 func adLimeRewardedVideoDidStart(_ rewardedVideoAd: AdLimeRewardedVideoAd!) {
     print("adLimeRewardedVideoDidStart")
 }
 
-/// Tells the delegate that the rewarded video was finished play.
+/// 動画を最後まで視聴したことを通知するデリゲートメソッド
 func adLimeRewardedVideoDidComplete(_ rewardedVideoAd: AdLimeRewardedVideoAd!) {
     print("adLimeRewardedVideoDidComplete");
 }
 
-/// Tells the delegate that the user earned a reward.
+/// ユーザーがリワード（報酬）を獲得したことを通知するデリゲートメソッド
 func adLimeRewardedVideo(_ rewardedVideoAd: AdLimeRewardedVideoAd!, didReward item: AdLimeRewardItem!) {
     if let item = item {
         print("リワード付与完了しました, リワードのタイプ： \(String(describing: item.rewardType)), リワードの量： \(item.rewardAmount) \n")
@@ -291,12 +295,12 @@ func adLimeRewardedVideo(_ rewardedVideoAd: AdLimeRewardedVideoAd!, didReward it
     }
 }
 
-/// Tells the delegate that the user failed to earned a reward.
+/// ユーザーがリワード（報酬）の獲得に失敗したことを通知するデリゲートメソッド
 func adLimeRewardedVideoDidFailed(toReward rewardedVideoAd: AdLimeRewardedVideoAd!) {
     print("adLimeRewardedVideoDidFailedToReward")
 }
 
-/// Tells the delegate that a user click will open another app (such as the App Store), backgrounding the current app.
+/// ユーザーが広告をタップして外部リンク（App Storeなど）へ遷移したことを通知するデリゲートメソッド
 func adLimeRewardedVideoWillLeaveApplication(_ rewardedVideoAd: AdLimeRewardedVideoAd!) {
     print("adLimeRewardedVideoWillLeaveApplication")
 }
@@ -307,27 +311,13 @@ func adLimeRewardedVideoWillLeaveApplication(_ rewardedVideoAd: AdLimeRewardedVi
 ::::
 
 
-### エラー情報
+### 広告ロードエラーについて
 
-広告のロードに失敗した場合は、`AdLimeRewardedVideoAdDelegate` の  `adLimeRewardedVideo:didFailToReceiveAdWithError:` が呼び出されます。 `adError.getCode`、`adError.description` を用いてエラーコードとエラー情報を取得できます。
+広告のロードに失敗した場合は、`AdLimeRewardedVideoAdDelegate` の  `adLimeRewardedVideo:didFailToReceiveAdWithError:` が呼び出されます。 `adError.getCode`、`adError.description` を用いてエラーコードとエラーメッセージを取得できます。
 
-AdLimeAdErrorCode エラーコード一覧
-|定義                           |説明    |
-|:-----------------------------|:--------|
-|ADLIME_ADERROR_INTERNAL_ERROR  | 内部エラー |
-|ADLIME_ADERROR_INVALID_REQUEST | リクエストが無効 |
-|ADLIME_ADERROR_NETWORK_ERROR   | ネットワークエラー |
-|ADLIME_ADERROR_NO_FILL         | 配信できる広告がない    |
-|ADLIME_ADERROR_TIMEOUT         | リクエスト タイムアウト |
+#### エラーコードとエラーメッセージについて
 
-エラーには 広告ユニットID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
-
-```
-ErrorCode is [3], Message is [No Fill]
-AdUnit is ...
-Network is ...
-LineItem is ...
-```
+[AdLime SDK のエラー](./error.md#エラーコードとエラーメッセージ)を確認してください。
 
 ### リワード情報
 
@@ -369,3 +359,7 @@ func adLimeRewardedVideoDidClose(_ rewardedVideoAd: AdLimeRewardedVideoAd!) {
 ## プリロードとキャッシュ
 事前に広告をロードをして、表示までの待ち時間を極力抑えましょう。<br>
 また広告をプリロードする・しないに関わらず、広告をキャッシュすることをおすすめします。広告枠では、各広告ネットワークの広告がロードされますが、広告枠の1つのインスタンスを繰り返し使用することで、高いインプレッションを得られ、不要なリクエストも抑えることができます。これらは、[AdLimeAdLoader](./adloader.md)で実現が可能です。
+
+## 次へのステップ
+- 他の広告フォーマットを追加で利用したい場合は[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOSアプリに実装しましょう。
+- 広告が正しく表示できるか確認したい場合は[iOSの広告表示テスト](./test.md)に従い、App ID と各アドネットワークに対応する広告フォーマットの広告枠 ID を設定して広告を表示してみましょう。
