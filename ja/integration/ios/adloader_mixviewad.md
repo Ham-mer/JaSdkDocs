@@ -87,8 +87,7 @@ class ViewController: UIViewController {
 
 ::::
 
-
-ネイティブ広告のレイアウトの設定は基本的に 1 回実行すれば十分です。画面が回転するなどでフレームサイズが変更される場合はレイアウトを再読み込みする必要があります。また広告ロード時と広告表示時でフレームサイズが変更される場合にもレイアウトを再読み込みする必要があります。
+ネイティブ広告のレイアウトの設定は基本的に 1 回実行すれば十分です。サイズが変更になるなどレイアウトが変更される場合は再読込する必要があります。
 
 ## 広告のロード  
 
@@ -157,7 +156,7 @@ if(AdLimeAdLoader.isMixViewAdReady("広告枠 ID")) {
 
 ### MixViewAd イベントを登録する  
 
-MixViewAd のライフサイクルイベントを取得するためには `AdLimeMixViewAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getMixViewAd` メソッドで `AdLimeMixViewAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadMixViewAd` メソッド呼び出し前、及び広告を表示する前に実行する必要があります。
+MixViewAd のライフサイクルイベントを取得するためには `AdLimeMixViewAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getMixViewAd` メソッドで `AdLimeMixViewAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadMixViewAd` メソッド呼び出し前、または広告を表示する前に実行する必要があります。
 
 :::: tabs
 

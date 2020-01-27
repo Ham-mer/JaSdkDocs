@@ -94,7 +94,7 @@ if(AdLimeAdLoader.isRewardedVideoAdReady("広告枠 ID")){
 
 ### 動画リワード広告イベントを登録する  
 
-動画リワード広告のライフサイクルイベントを取得するためには `AdLimeRewardedVideoAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getRewardedVideoAd` メソッドで `AdLimeRewardedVideoAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadRewardedVideoAd` メソッド及び `showRewardedVideoAd` メソッドを呼び出す前に実行する必要があります。
+動画リワード広告のライフサイクルイベントを取得するためには `AdLimeRewardedVideoAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getRewardedVideoAd` メソッドで `AdLimeRewardedVideoAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadRewardedVideoAd` メソッドまたは `showRewardedVideoAd` メソッドを呼び出す前に実行する必要があります。
 
 :::: tabs
 

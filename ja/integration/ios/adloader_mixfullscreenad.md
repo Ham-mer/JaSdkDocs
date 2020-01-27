@@ -36,7 +36,7 @@ let mixFullScreenAd = AdLimeAdLoader.getMixFullScreenAd("広告枠 ID")
 
 広告のロード時や広告を表示するときに広告のレイアウトを事前に設定しておきましょう。ネイティブレイアウトの詳細な設定方法は [AdLimeNativeAdLayout](./native.md#広告レイアウトの作成) で確認できます。
 
-広告レイアウトはネイティブ広告のロード時に設定できます。その設定方法は後の節で説明します。また `AdLimeMixFullScreenAd` オブジェクトを取得して、そのオブジェクトにネイティブ広告のレイアウトを設定することもできます。
+広告レイアウトはネイティブ広告のロード時または広告の表示時に設定できます。その設定方法は後の節で説明します。また `AdLimeMixFullScreenAd` オブジェクトを取得して、そのオブジェクトにネイティブ広告のレイアウトを設定することもできます。
 
 
 :::: tabs
@@ -88,7 +88,7 @@ class ViewController: UIViewController {
 ::::
 
 
-ネイティブ広告のレイアウトの設定は基本的に 1 回実行すれば十分です。画面が回転するなどでフレームサイズが変更される場合はレイアウトを再読み込みする必要があります。また広告ロード時と広告表示時でフレームサイズが変更される場合にもレイアウトを再読み込みする必要があります。
+ネイティブ広告のレイアウトの設定は基本的に 1 回実行すれば十分です。サイズが変更になるなどレイアウトが変更される場合は再読込する必要があります。
 
 ## 広告のロード  
 
@@ -153,7 +153,7 @@ if(AdLimeAdLoader.isMixFullScreenAdReady("広告枠 ID")){
 
 ### MixFullScreenAd イベントを登録する  
 
-MixFullScreenAd のライフサイクルイベントを取得するためには `AdLimeMixFullScreenAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getMixFullScreenAd` メソッドで `AdLimeMixFullScreenAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadMixFullScreenAd` メソッド呼び出し前、及び `showMixFullScreenAd` 前に実行する必要があります。
+MixFullScreenAd のライフサイクルイベントを取得するためには `AdLimeMixFullScreenAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getMixFullScreenAd` メソッドで `AdLimeMixFullScreenAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadMixFullScreenAd` メソッド呼び出し前、または `showMixFullScreenAd` 前に実行する必要があります。
 
 :::: tabs
 

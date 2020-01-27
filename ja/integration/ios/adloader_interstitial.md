@@ -94,7 +94,7 @@ if(AdLimeAdLoader.isInterstitialAdReady("広告枠 ID")){
 
 ### インタースティシャル広告イベントを登録する  
 
-インタースティシャル広告のライフサイクルイベントを取得するためには `AdLimeInterstitialAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getInterstitialAd` メソッドで `AdLimeInterstitialAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadInterstitialAd` メソッド及び `showInterstitialAd` メソッドを呼び出す前に実行する必要があります。
+インタースティシャル広告のライフサイクルイベントを取得するためには `AdLimeInterstitialAdDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getInterstitialAd` メソッドで `AdLimeInterstitialAd` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadInterstitialAd` メソッドまたは `showInterstitialAd` メソッドを呼び出す前に実行する必要があります。
 
 :::: tabs
 

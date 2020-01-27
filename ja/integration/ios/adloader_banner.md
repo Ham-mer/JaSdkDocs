@@ -96,7 +96,7 @@ if(AdLimeAdLoader.isBannerReady("広告枠 ID")) {
 
 ### バナー広告イベントを登録する  
 
-バナー広告のライフサイクルイベントを取得するためには `AdLimeBannerViewDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getBannerAdView` メソッドで `AdLimeBannerView` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadBanner` メソッド呼び出し前、及び広告を表示する前に実行する必要があります。
+バナー広告のライフサイクルイベントを取得するためには `AdLimeBannerViewDelegate` を継承します。 AdLimeAdLoader では 広告枠 ID ごとに広告を管理するため `getBannerAdView` メソッドで `AdLimeBannerView` オブジェクトを取得し、そのオブジェクトに継承します。この処理は `loadBanner` メソッド呼び出し前、または広告を表示する前に実行する必要があります。
 
 :::: tabs
 
