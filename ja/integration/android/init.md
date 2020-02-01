@@ -36,7 +36,7 @@ allprojects {
 アプリケーションレベルの build.gradle に、下記の依存関係を追加します。
 ```
 dependencies {
-    implementation 'com.access_company.adlime:adlime:1.9.28'
+    implementation 'com.access_company.adlime:adlime:1.9.29'
 }
 ```
 

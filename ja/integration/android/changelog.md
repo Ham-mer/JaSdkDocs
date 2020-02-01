@@ -2,6 +2,7 @@
 
 | バージョン| 日付     | 内容                                      |
 | :----- | :-------- | :--------------------------------------- |
+| 1.9.29 | 2020/1/30  | - ネイティブ広告展示のコールバックのタイミングを改善します<br>-KotlinでNativeAdLayout.Builder()を使えないという問題を解決します|
 | 1.9.28 | 2020/1/19  | - `setLogEnable` などを含めて、AdLime クラスのスタティックメソッドをインスタンスメソッドに変更<br>- `initialize(Context context, AdLimeConfiguration config)` を非推奨にして、 代わりに `init(Context context, String appId)`を推奨とする ※[初期化](./init.md)を参照<br>- InterstitialAd と RewardedVideoAd の表示は、 `show()` または `show(Actitivity)` を推奨<br>- AdLimeLoader にある `AdListener` メソッドを非推奨 ※[AdLimeLoader](./adloader.md)を参照|
 | 1.9.24 | 2020/1/6   | okhttp のライブリーを削除して、広告のリクエスト処理を最適化|
 | 1.9.18 | 2019/11/27 | - CreativeAds 動画リワードのサイズの調整<br> - CreativeAds 動画リワードの再生が完了後に、広告をクリックし外部ブラウザに遷移して、再びアプリに戻るとクラッシュする問題の対応<br>- MixViewAd、MixFullScreenAd の追加|

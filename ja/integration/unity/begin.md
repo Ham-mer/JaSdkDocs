@@ -47,7 +47,7 @@ Dependencies.xml に、以下の依存関係を追加してください。
   <!-- Android -->
   <androidPackages>
     <!-- AdLimeSdk -->
-    <androidPackage spec="com.access_company.adlime:adlime:1.9.28">
+    <androidPackage spec="com.access_company.adlime:adlime:1.9.29">
         <repositories>
             <repository>https://dl.bintray.com/adlime/AdLime</repository>
         </repositories>
@@ -62,7 +62,7 @@ Dependencies.xml に、以下の依存関係を追加してください。
   <!-- iOS -->
   <iosPods>
     <!-- AdLimeSdk -->
-    <iosPod name="AdLimeSdk" version="~> 1.5.1">
+    <iosPod name="AdLimeSdk" version="~> 1.6.6">
         <sources>
             <source>https://github.com/CocoaPods/Specs</source>
         </sources>
