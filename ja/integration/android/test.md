@@ -190,6 +190,16 @@ AndroidManifest.xml に SDK key を設定してください。
 | インターステーシャル     | 53810164-bcd2-4eed-945f-91c97e97bd9e   |
 | ネイティブ         | 256dbe9d-de6d-472e-9401-24a4c3840d30   |
 
+### [Imobile](./mediation_imobile.md)
+
+| 広告タイプ         | 広告枠 ID                              |
+|:----------------:|:--------------------------------------:|
+| バナー 320 × 50     | 8c7b02a2-f9ba-43c5-afcf-c3ef256d6af1   |
+| バナー 320 × 100     | 30facee8-622a-4162-9668-6fddecdeeab6   |
+| バナー 300 × 250    | d6e455e1-48c4-4b0b-a33f-09c13a2ead0e  |
+| インターステーシャル     | 5eea5825-bc9d-4020-8e07-cfb0f62491ac  |
+| ネイティブ         | f9304209-9280-4c59-84a1-37c1ae16bc97   |
+
 ### [InMobi](./mediation_inmobi.md)
 
 | 広告タイプ         | 広告枠 ID                              |
