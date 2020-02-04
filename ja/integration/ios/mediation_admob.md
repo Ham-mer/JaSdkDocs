@@ -27,7 +27,7 @@ SDK を 直接ダウンロードして解凍し、フレームワークを Xcode
 - GoogleAppMeasurement.framework
 - GoogleUtilities.framework
 - nanopb.framework
-- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.52.0.0.zip)
+- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.52.0.2.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -93,13 +93,14 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | AdMob バージョン    | アダプタ バージョン |
 |:-----------------|:----------------|
-|7.52.0            |7.52.0.0         |
+|7.52.0            |7.52.0.2         |
 |7.50.0            |7.50.0.0         |
 |7.42.2            |7.42.2.6         |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                              |
 |-----------------|------------|----------------------------------|
+|7.52.0.2         |2020/2/3    |画面が縦から横になると、広告のサイズは自動調整できない問題を解決します  |
 |7.52.0.0         |2019/11/7   |AdMob SDK 7.52.0 に対応  |
 |7.50.0.0         |2019/10/10  |AdMob SDK 7.50.0 に対応  |
 |7.42.2.6         |2019/8/4    |NativeAdLayout インタラクティブエリアのカスタマイズに対応|
