@@ -25,7 +25,7 @@ pod install --repo-update
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [libFlurry_10.0.2.a](https://github.com/flurry/Flurry-iOS-SDK)
 - libFlurryAds_1.3.0.a
-- [AdLimeMediation_Flurry.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Flurry/10.0.2.1.zip)
+- [AdLimeMediation_Flurry.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Flurry/10.0.2.2.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -93,12 +93,13 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Flurry バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
-| 10.0.2           | 10.0.2.1        |
+| 10.0.2           | 10.0.2.2        |
 | 10.0.0           | 10.0.0.1        |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
+| 10.0.2.2        | 2020/2/5   | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 10.0.2.1        | 2019/12/20 | ネイティブ広告のイベント最適化        |
 | 10.0.2.0        | 2019/10/10 | Flurry 10.0.2  に対応          |
 | 10.0.0.1        | 2019/9/19  | Flurry 10.0.0  に対応          |

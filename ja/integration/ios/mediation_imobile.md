@@ -22,7 +22,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [ImobileSdkAds.framework](https://sppartner.i-mobile.co.jp/downloads/sdk/imobile_for_SP_app_iOS_SDK_2.0.31.zip)
-- [AdLimeMediation_Imobile.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Imobile/2.0.31.0.zip)
+- [AdLimeMediation_Imobile.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Imobile/2.0.31.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -84,9 +84,10 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | i-mobile　バージョン| アダプタ　バージョン |
 |:----------------- |:------------------|
-| 2.0.31            | 2.0.31.0          |
+| 2.0.31            | 2.0.31.1          |
 
 ### バージョン履歴
 | バージョン        | 日付        | 更新内容                           |
 |-----------------|-------------|----------------------------------|
-| 2.0.31.0        | 2020/01.08   | i-mobile Ads SDK 2.0.31 に対応|
+| 2.0.31.1        | 2020/2/5    | テストモードをサポートします，[初期化](./init.md)を参考してください|
+| 2.0.31.0        | 2020/01.08  | 2.0.31 に対応|

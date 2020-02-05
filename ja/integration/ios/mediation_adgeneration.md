@@ -24,7 +24,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [ADG.framework](https://github.com/AdGeneration/ADG-iOS-SDK/releases/download/2.16.4/ADG.framework.zip)
-- [AdLimeMediation_AdGeneration.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AdGeneration/2.16.4.2.zip)
+- [AdLimeMediation_AdGeneration.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AdGeneration/2.16.4.3.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -85,12 +85,13 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | AdGeneration バージョン    | アダプタ バージョン |
 |:-----------------|:----------------|
-|2.16.4            |2.16.4.2         |
+|2.16.4            |2.16.4.3         |
 |2.15.2            |2.15.2.0         |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                       |
 |-----------------|------------|------------------------------|
+| 2.16.4.3        | 2020/2/5   | テストモードをサポートします，[初期化](./init.md)を参考してください |
 | 2.16.4.2        | 2019/11/27 | ネイティブ広告のボタンをクリックされないバグを修正2 |
 | 2.16.4.1        | 2019/11/21 | ネイティブ広告のボタンをクリックされないバグを修正 |
 | 2.16.4.0        | 2019/11/7  | AdGenertaion 2.16.4 に対応 |

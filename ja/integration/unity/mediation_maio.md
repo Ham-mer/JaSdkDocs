@@ -65,7 +65,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     iOS プロジェクトで、 CocoaPods から SDK が ダウンロードできない場合は、 SDK を直接ダウンロードして解凍し、フレームワークを Assets/Plugins/iOS に入れてください。
     
     [Maio.framework](https://github.com/imobile-maio/maio-iOS-SDK/releases/download/v1.4.8/Maio.framework.zip)<br>
-    [AdLimeMediation_Maio.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Maio/1.4.8.0.zip)
+    [AdLimeMediation_Maio.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Maio/1.4.8.1.zip)
 
 ### 依存関係の設定
 - Android

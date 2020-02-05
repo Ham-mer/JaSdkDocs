@@ -22,7 +22,7 @@ pod install --repo-update
 ### 手動ダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [AppLovinSDK.framework](https://dash.applovin.com/docs/sdk/download?type=ios-main)  **（要ログイン）**
-- [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.9.4.0.zip)
+- [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.11.0.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -98,12 +98,14 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | AppLovin バージョン | アダプタ バージョン |
 |:------------------|:-----------------|
+| 6.11.0            | 6.11.0.1         |
 | 6.9.4             | 6.9.4.0          |
 | 6.8.0             | 6.8.0.1          |
 
 ### バージョン履歴
 | バージョン | 日付       | 更新内容                              |
 |----------|-----------|----------------------------------|
+| 6.11.0.1 | 2020/2/5  | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 6.9.4.0  | 2019/10/10| AppLovin SDK 6.9.4 に対応|
 | 6.8.0.1  | 2019/8/6  | NativeAdLayout インタラクティブエリアのカスタマイズに対応|
 | 6.8.0.0  | 2019/6/30 | AppLovin SDK 6.8.0 に対応|

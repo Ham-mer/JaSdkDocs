@@ -22,7 +22,7 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [AdLimeMediation_DUAdPlatform.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_DUAdPlatform/1.1.4.0.zip)
+- [AdLimeMediation_DUAdPlatform.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_DUAdPlatform/1.1.4.2.zip)
 - DUModuleSDK.framework
 - DUMRAID.bundle
 
@@ -68,9 +68,10 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | DU Ad Platform バージョン | アダプタ バージョン |
 |:------------------------|:----------------|
-| 1.1.4                   | 1.1.4.0         |
+| 1.1.4                   | 1.1.4.2         |
 
 ### バージョン履歴
 | バージョン | 日付       | 更新内容                              |
 |----------|------------|-----------------------------------|
-| 1.1.4.0  | 2019/10/29  | DU Ad Platform SDK 1.1.4 に対応|
+| 1.1.4.2  | 2020/2/5   | 調整モード、テストモードの設定をサポートします，[初期化](./init.md)を参考してください|
+| 1.1.4.0  | 2019/10/29 | DU Ad Platform SDK 1.1.4 に対応|

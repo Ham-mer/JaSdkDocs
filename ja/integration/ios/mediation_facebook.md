@@ -23,7 +23,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)
-- [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.0.zip)
+- [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -154,13 +154,14 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Facebook バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
-| 5.6.0            | 5.6.0.0         |
+| 5.6.0            | 5.6.0.1         |
 | 5.5.1            | 5.5.1.0         |
 | 5.4.0            | 5.4.0.4         |
 
 ### バージョン履歴
 | バージョン | 日付       | 更新内容                              |
 |----------|------------|-----------------------------------|
+| 5.6.0.1  | 2020/2/5   | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 5.6.0.0  | 2019/10/10 | Facebook Audience Network SDK 5.6.0 に対応|
 | 5.5.1.0  | 2019/10/10 | Facebook Audience Network SDK 5.5.1 に対応|
 | 5.4.0.4  | 2019/8/6   | NativeAdLayout インタラクティブエリアのカスタマイズに対応|

@@ -64,7 +64,7 @@ AdLime SDK で Facebook Audience Network を使用するために、 Facebook Au
     SDK を 直接ダウンロードして解凍し、下記のフレームワークを Assets/Plugins/iOS に入れてください。
     
     [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)<br>
-    [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.0.zip)
+    [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.1.zip)
 
 ### 依存関係の設定
 - Android

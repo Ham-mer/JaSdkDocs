@@ -23,7 +23,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [AdColony.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/AdColony/AdColony_4.1.2.zip)
-- [AdLimeMediation_AdColony.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AdColony/4.1.2.1.zip)
+- [AdLimeMediation_AdColony.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AdColony/4.1.2.2.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -84,13 +84,14 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | AdColony バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
-| 4.1.2            | 4.1.2.1         |
+| 4.1.2            | 4.1.2.2         |
 | 4.1.1            | 4.1.1.0         |
 | 3.3.8.1          | 3.3.8.1.1       |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
+| 4.1.2.2         | 2020/2/5   | 調整モード、テストモードの設定をサポートします，[初期化](./init.md)を参考してください|
 | 4.1.2.1         | 2019/11/18 | バナー広告をサポートする        |
 | 4.1.2.0         | 2019/11/7  | AdColony 4.1.2  に対応        |
 | 4.1.1.0         | 2019/10/10 | AdColony 4.1.1  に対応        |

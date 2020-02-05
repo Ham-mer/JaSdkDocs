@@ -27,7 +27,7 @@ SDK を 直接ダウンロードして解凍し、フレームワークを Xcode
 - IASDKResources.bundle
 - IASDKMRAID.framework
 - IASDKVideo.framework
-- [AdLimeMediation_Fyber.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Fyber/7.5.0.0.zip)
+- [AdLimeMediation_Fyber.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Fyber/7.5.0.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -83,11 +83,12 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Fyber バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
-| 7.5.0            | 7.5.0.0         |
+| 7.5.0            | 7.5.0.1         |
 | 7.4.1            | 7.4.1.0         |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-| 7.5.0.0         | 2019/12/18 | 1、Fyber 7.5.0  に対応             |
-| 7.4.1.0         | 2019/10/21 | 1、Fyber 7.4.1  に対応             |
+| 7.5.0.1         | 2020/2/5   | 調整モードをサポートします，[初期化](./init.md)を参考してください|
+| 7.5.0.0         | 2019/12/18 | 7.5.0 に対応             |
+| 7.4.1.0         | 2019/10/21 | 7.4.1 に対応             |

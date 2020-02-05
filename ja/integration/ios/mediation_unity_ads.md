@@ -24,7 +24,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [UnityAds.framework](https://github.com/Unity-Technologies/unity-ads-ios/releases/download/3.3.0/UnityAds.framework.zip)
-- [AdLimeMediation_UnityAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_UnityAds/3.3.0.0.zip)
+- [AdLimeMediation_UnityAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_UnityAds/3.3.0.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -71,12 +71,13 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Unity Ads バージョン| Adapter バージョン |
 |:-----------------|:----------------|
-|3.3.0             |3.3.0.0          |
+|3.3.0             |3.3.0.1          |
 |3.1.0             |3.1.0.2          |
 
 ### バージョン履歴
 | バージョン         | 日付       | 更新内容                             |
 |-----------------|------------|----------------------------------|
+| 3.3.0.1         | 2020/2/5    | 調整モード、テストモードの設定をサポートします，[初期化](./init.md)を参考してください|
 | 3.3.0.0         | 2019/10/10  | Unity Ads SDK 3.3.0 に対応|
 | 3.1.0.2         | 2019/8/4    | 不要なヘッダーファイルの削除|
 | 3.1.0.1         | 2019/7/15   | 動画リワード広告のイベント最適化|

@@ -23,7 +23,7 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [AdLimeMediation_Five.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Five/20191016.1.zip)
+- [AdLimeMediation_Five.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Five/20191016.2.zip)
 - FiveAd.framework
 
 ### Carthage
@@ -82,10 +82,11 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Five バージョン    | アダプタ バージョン |
 |:-----------------|:----------------|
-|520191016         |20191016.1        |
+|520191016         |20191016.2        |
 
 ### バージョン履歴
 | バージョン | 日付       | 更新内容                           |
 |----------|------------|----------------------------------|
+| 20191016.2| 2020/2/5   | テストモードをサポートします，[初期化](./init.md)を参考してください|
 | 20191016.1| 2019/11/27 | インタースティシャ広告の表示バグの修正 | 
 | 20191016.0| 2019/10/30 | Five SDK 20191016 に対応     | 

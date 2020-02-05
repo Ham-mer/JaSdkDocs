@@ -27,7 +27,7 @@ CocoaPods を初めてご利用の場合、 CocoaPods の[公式ドキュメン�
 ### 手動ダウンロード
 SDK フレームワークを直接ダウンロードして解凍し、下記のフレームワークを Xcode プロジェクトに導入してください。
 
-- [AdLimeSdk.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeSdk/1.6.6.zip)
+- [AdLimeSdk.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeSdk/1.6.7.zip)
 - AdLimeSdk.bundle
 
 ドラッグ & ドロップ完了後、Build Phases > Copy Bundle Resources に AdLimeSdk.bundle が含まれていることを確認してください。
@@ -108,6 +108,11 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
      // デバッグログを表示する場合は以下を設定してください
     [AdLime setLogEnable: YES];
 
+    // Network 調整モード
+    // [AdLime setNetworkDebugMode:YES];
+    // Network テストモード
+    // [AdLime setNetworkTestMode:YES];
+
     // Facebookをテスト環境で利用する場合は以下を設定してください
     // [FBAdSettings addTestDevice: [FBAdSettings testDeviceHash]];
 
@@ -139,6 +144,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // デバッグログを表示する場合は以下を設定してください
         AdLime.setLogEnable(true)
 
+        // Network 調整モード
+        // AdLime.setNetworkDebugMode(true)
+        // Network テストモード
+        // AdLime.setNetworkTestMode(true)
+
         // Facebookをテスト環境で利用する場合は以下を設定してください
         // FBAdSettings.addTestDevice(FBAdSettings.testDeviceHash())
 
@@ -154,6 +164,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 :::: 
 
+
+**各ネットワークは調整モードとテストモードをサポートできるかどかは[ネットワークを調整モードとテストモードに設定する](./debug_test_mode.md)で確認してください。。**
 
 ## SDK の実装サンプル
 各広告の実装サンプルについて、[デモアプリ](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。

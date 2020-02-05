@@ -22,7 +22,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [AmazonAd.framework](https://app-craft-internal.ams3.digitaloceanspaces.com/Frameworks/AmazonAdSDK/AmazonMobileAds-iOS-v2.2.17.0.zip)
-- [AdLimeMediation_Amazon.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Amazon/AdLimeMediation_Amazon_2.2.17.1.zip)
+- [AdLimeMediation_Amazon.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Amazon/2.2.17.3.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -68,10 +68,11 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Amazon バージョン   | アダプタ バージョン |
 |:-----------------|:----------------|
-| 2.2.17           | 2.2.17.1        |
+| 2.2.17           | 2.2.17.3        |
 
 ### バージョン履歴
 | バージョン         | 日付       | 更新内容                             |
 |-----------------|------------|----------------------------------|
+| 2.2.17.3        | 2020/2/5   | テストモードをサポートします，[初期化](./init.md)を参考してください|
 | 2.2.17.1        | 2019/8/3   | 不要なヘッダーファイルの削除|
 | 2.2.17.0        | 2019/6/30  | Amazon SDK 2.2.17 に対応|

@@ -60,7 +60,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     iOS プロジェクトで、 CocoaPods から SDK が ダウンロードできない場合は、 SDK を直接ダウンロードして解凍し、下記のフレームワークを Assets/Plugins/iOS に入れてください。
     
     [UnityAds.framework](https://github.com/Unity-Technologies/unity-ads-ios/releases/download/3.3.0/UnityAds.framework.zip)<br>
-    [AdLimeMediation_UnityAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_UnityAds/3.3.0.0.zip)
+    [AdLimeMediation_UnityAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_UnityAds/3.3.0.1.zip)
 
 ### 依存関係の設定
 - Android

@@ -23,7 +23,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [VungleSDK.framework](hhttps://cdn-lb.vungle.com/sdks/ios/vungle645.zip)
-- [AdLimeMediation_Vungle.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Vungle/6.4.5.1.zip)
+- [AdLimeMediation_Vungle.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Vungle/6.4.5.3.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -100,12 +100,13 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Vungle バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
-| 6.4.5            | 6.4.5.1         |
+| 6.4.5            | 6.4.5.3         |
 | 6.3.2            | 6.3.2.0         |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
+| 6.4.5.3         | 2020/2/5   | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 6.4.5.1         | 2019/11/7  | - MRECタイプのバナー広告が利用可能になります<br>- In-Feed広告がネイティブ広告として表示される場合、フレームを設定できるようになります。       |
-| 6.4.5.0         | 2019/10/10  | Vungle SDK v6.4.5 に対応       |
-| 6.3.2.0         | 2019/9/20   | Vungle SDK v6.3.2 に対応      |
+| 6.4.5.0         | 2019/10/10 | Vungle SDK v6.4.5 に対応       |
+| 6.3.2.0         | 2019/9/20  | Vungle SDK v6.3.2 に対応      |
