@@ -28,27 +28,27 @@ AdLime で利用可能な広告ネットワーク一覧
 
 | No  |  ネットワーク                 | バナー | インターステーシャル  | 動画リワード | ネイティブ | 最新バージョン |
 |:---:|:-------------------------------------:|:------:|:----:|:--------:|:------:|:--------:|
-| 1   | [AdColony](./mediation_adcolony.md)        | ◯      | ◯    | ◯        |       | 4.1.2    |
-| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |         | ◯      | 2.16.4   |
+| 1   | [AdColony](./mediation_adcolony.md)        | ◯      | ◯    | ◯        |        | 4.1.2    |
+| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.16.4   |
 | 3   | [AdMob](./mediation_admob.md)              | ◯      | ◯    | ◯        | ◯      | 7.52.0   |
 | 4   | [Amazon](./mediation_amazon.md)            | ◯      | ◯    |          |        | 2.2.17   |
-| 5   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        |     ◯   | 6.9.4    |
+| 5   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        |     ◯  | 6.11.0   |
 | 6   | [Chartboost](./mediation_chartboost.md)    | ◯      | ◯    | ◯        |        | 8.0.3    |
 | 7   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 3.2.0    |
 | 8   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.52.0   |
 | 9   | [Display.IO](./mediation_display_io.md)    | ◯      | ◯    |    ◯     |        | 2.8.0    |
-| 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯ | ◯    |         | ◯       | 1.1.4    |
+| 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯ | ◯    |          | ◯      | 1.1.4    |
 | 11  | [Facebook](./mediation_facebook.md)        | ◯      | ◯    | ◯        | ◯      | 5.6.0    |
 | 12  | [Five](./mediation_five.md)                | ◯      | ◯    | ◯        |        | 20191016 |
 | 13  | [Flurry](./mediation_flurry.md)            | ◯      | ◯    | ◯        | ◯      | 10.0.2   |
 | 14  | [Fyber](./mediation_fyber.md)              | ◯      | ◯    | ◯        |        | 7.4.1    |
-| 15  | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯       | 2.0.31 |
+| 15  | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯      | 2.0.31   |
 | 16  | [IronSource](./mediation_ironsource.md)    | ◯      | ◯    | ◯        |        | 6.10.0.0 |
 | 17  | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.4.8    |
 | 18  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.10.0   |
 | 19  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.3.0    |
 | 20  | [Tapjoy](./mediation_tapjoy.md)            |        | ◯    | ◯        |        | 12.3.4   |
-| 21  | [TikTok](./mediation_tiktok.md)            | ◯      | ◯    | ◯        | ◯      | 2.5.1.5  |
+| 21  | [TikTok](./mediation_tiktok.md)            | ◯      | ◯    | ◯        | ◯      | 2.7.5.2  |
 | 22  | [Unity Ads](./mediation_unity_ads.md)      | ◯      | ◯    | ◯        |        | 3.3.0    |
 | 23  | [Vungle](./mediation_vungle.md)            | ◯      | ◯    | ◯        | ◯      | 6.4.5    |
 

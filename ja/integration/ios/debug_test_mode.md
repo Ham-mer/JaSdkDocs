@@ -3,6 +3,66 @@ AdLimeのメディエーション機能で、簡単に数多くのネットワ�
 
 設置方法は[初期化](./init.md)のsetNetworkDebugMode と setNetworkTestModeを参考してください。
 
+:::: tabs
+
+::: tab Objective-C
+
+```objectivec
+
+@import AdLimeSdk;
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    ...
+    [AdLime initWithAppId:@"YOUR APP ID"];
+    ...
+
+    // Network 調整モード
+    // [AdLime setNetworkDebugMode:YES];
+    // Network テストモード
+    // [AdLime setNetworkTestMode:YES];
+    
+    return YES;
+}
+
+@end
+```
+
+:::
+
+::: tab Swift
+
+```swift
+
+import AdLimeSdk
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        ...
+        AdLime.initWithAppId("YOUR APP ID")
+        ...
+
+        // Network 調整モード
+        // AdLime.setNetworkDebugMode(true)
+        // Network テストモード
+        // AdLime.setNetworkTestMode(true)
+
+        return true
+    }
+    ...
+
+}
+
+```
+
+:::
+
+::::
+
 すべてのネットワークはテストモードをサポートするわけはないです。下記のリストではAdlimeがネットワークごとにどこまでサポートできるかを説明します。
 
 テストモードをサポートしないネットワークは[テスト広告枠](./test.md)でテストできます。
@@ -13,13 +73,13 @@ AdLimeのメディエーション機能で、簡単に数多くのネットワ�
 | 2   | [AdGeneration](./mediation_adgeneration.md)|         | ◯       |
 | 3   | [AdMob](./mediation_admob.md)              |         |         |
 | 4   | [Amazon](./mediation_amazon.md)            |         | ◯       |
-| 5   | [AppLovin](./mediation_applovin.md)        | ◯       | Applovinの管理画面で設定できるのは |
+| 5   | [AppLovin](./mediation_applovin.md)        | ◯       | Applovinの管理画面で設定できるのは|
 | 6   | [Chartboost](./mediation_chartboost.md)    | ◯       |         |
 | 7   | [Criteo](./mediation_criteo.md)            |         |         |
 | 8   | [DFP](./mediation_dfp.md)                  |         |         |
 | 9   | [Display.IO](./mediation_display_io.md)    |         |         |
 | 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯  | ◯       |
-| 11  | [Facebook](./mediation_facebook.md)        | ◯       |         |
+| 11  | [Facebook](./mediation_facebook.md)        | ◯       | ◯       |
 | 12  | [Five](./mediation_five.md)                |         | ◯       |
 | 13  | [Flurry](./mediation_flurry.md)            | ◯       |         |
 | 14  | [Fyber](./mediation_fyber.md)              | ◯       |         |

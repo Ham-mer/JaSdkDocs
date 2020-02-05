@@ -23,7 +23,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)
-- [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.1.zip)
+- [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.2.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -50,65 +50,6 @@ Facebook 広告が配信されるには以下のような条件を満たす必�
 1. Facebookアプリが端末にインストールしてあり、ログイン済みである。
 1. 端末側で広告ターゲッティングの制限をしない。  
     - "設定" -> "プライバシー" -> "広告" で "追跡型広告を制限"をオフにする。
-
-
-### テストデバイス登録をしてください
-Facebook 広告は各デバイス、各 Facebook アカウントごとに発行されるデバイス ID によって Facebook アカウントを識別しています。テスト環境のアプリに広告を配信する場合にはデバイス ID を登録する必要があります。下記の手順によってテストデバイス登録することが可能です。
-
-:::: tabs
-
-::: tab Objective-C
-
-```objectivec
-
-@import AdLimeSdk;
-@import FBAudienceNetwork;
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AdLime initWithAppId:@"YOUR APP ID"];
-    // デバッグログ表示設定
-    [AdLime setLogEnable: YES];
-    ...
-    [FBAdSettings addTestDevice: [FBAdSettings testDeviceHash]];
-
-    return YES;
-}
-
-@end
-```
-
-:::
-
-::: tab Swift
-
-```swift
-
-import AdLimeSdk
-import FBAudienceNetwork
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        AdLime.initWithAppId("YOUR APP ID")
-        // デバッグログ表示設定
-        AdLime.setLogEnable(true)
-        ...
-        FBAdSettings.addTestDevice(FBAdSettings.testDeviceHash())
-        return true
-    }
-    ...
-
-}
-
-```
-
-:::
-
-::::
 
 ### 広告が配信されない場合には
 アプリ起動時に `AdLime` の `setLogEnable` を `YES` にしてデバッグログ表示設定をしてください。デバッグログを確認し、エラーメッセージを確認してください。
@@ -154,14 +95,14 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Facebook バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
-| 5.6.0            | 5.6.0.1         |
+| 5.6.0            | 5.6.0.2         |
 | 5.5.1            | 5.5.1.0         |
 | 5.4.0            | 5.4.0.4         |
 
 ### バージョン履歴
 | バージョン | 日付       | 更新内容                              |
 |----------|------------|-----------------------------------|
-| 5.6.0.1  | 2020/2/5   | 調整モードをサポートします，[初期化](./init.md)を参考してください|
+| 5.6.0.2  | 2020/2/5   | 調整モード、テストモードの設定をサポートします，[初期化](./init.md)を参考してください|
 | 5.6.0.0  | 2019/10/10 | Facebook Audience Network SDK 5.6.0 に対応|
 | 5.5.1.0  | 2019/10/10 | Facebook Audience Network SDK 5.5.1 に対応|
 | 5.4.0.4  | 2019/8/6   | NativeAdLayout インタラクティブエリアのカスタマイズに対応|

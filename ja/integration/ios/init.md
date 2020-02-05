@@ -93,8 +93,6 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
 ```objectivec
 
 @import AdLimeSdk;
-// Facebookをテスト環境で利用する場合
-// @import FBAudienceNetwork;
 
 @implementation AppDelegate
 
@@ -112,10 +110,7 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
     // [AdLime setNetworkDebugMode:YES];
     // Network テストモード
     // [AdLime setNetworkTestMode:YES];
-
-    // Facebookをテスト環境で利用する場合は以下を設定してください
-    // [FBAdSettings addTestDevice: [FBAdSettings testDeviceHash]];
-
+    
     return YES;
 }
 
@@ -129,8 +124,6 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
 ```swift
 
 import AdLimeSdk
-// Facebookをテスト環境で利用する場合
-// import FBAudienceNetwork
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -149,9 +142,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Network テストモード
         // AdLime.setNetworkTestMode(true)
 
-        // Facebookをテスト環境で利用する場合は以下を設定してください
-        // FBAdSettings.addTestDevice(FBAdSettings.testDeviceHash())
-
         return true
     }
     ...
@@ -162,7 +152,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 :::
 
-:::: 
+::::
 
 
 **各ネットワークは調整モードとテストモードをサポートできるかどかは[ネットワークを調整モードとテストモードに設定する](./debug_test_mode.md)で確認してください。。**
