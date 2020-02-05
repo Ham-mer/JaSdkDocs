@@ -31,6 +31,6 @@ AdLime で利用可能なアドネットワーク一覧
 | 5   | [Facebook](./mediation_facebook.md)   | Y      | Y    | Y        | 5.6.0       | 5.6.0     |
 | 6   | [Maio](./mediation_maio.md)           |        | Y    | Y        | 1.1.10      | 1.4.8     |
 | 7   | [MoPub](./mediation_mopub.md)         | Y      | Y    | Y        | 5.8.0       | 5.10.0    |
-| 8   | [Nend](./mediation_nend.md)           | Y      | Y    | Y        | 5.1.1       | 5.3.0     |
+| 8   | [Nend](./mediation_nend.md)           | Y      | Y    | Y        | 5.4.1       | 5.3.0     |
 | 9   | [Tiktok](./mediation_tiktok.md)       | Y      | Y    | Y        | 2.5.3.2     | 2.5.1.5   |
 | 10  | [Unity Ads](./mediation_unity_ads.md) | Y      | Y    | Y        | 3.0.0       | 3.3.0     |

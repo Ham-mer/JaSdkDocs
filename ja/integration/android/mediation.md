@@ -48,7 +48,7 @@ AdLime で利用可能なアドネットワーク一覧
 | 17  | [IronSource](./mediation_ironsource.md)  | ◯      | ◯            | ◯        |        | 6.8.0.1        |
 | 18  | [Maio](./mediation_maio.md)              |        | ◯            | ◯        |        | 1.1.10         | 
 | 19  | [MoPub](./mediation_mopub.md)            | ◯      | ◯            | ◯        | ◯      | 5.8.0          |
-| 20  | [Nend](./mediation_nend.md)              | ◯      | ◯            | ◯        | ◯      | 5.1.1          | 
+| 20  | [Nend](./mediation_nend.md)              | ◯      | ◯            | ◯        | ◯      | 5.4.1          | 
 | 21  | [Pangle](./mediation_pangle.md)          |        | ◯            | ◯        |        | 2.1.3.0        |
 | 22  | [Tapjoy](./mediation_tapjoy.md)          |        | ◯            | ◯        |        | 12.2.0         | 
 | 23  | [Unity Ads](./mediation_unity_ads.md)    | ◯      | ◯            | ◯        |        | 3.0.0          | 

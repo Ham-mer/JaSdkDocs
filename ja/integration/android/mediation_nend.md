@@ -23,8 +23,8 @@ allprojects {
 ```java
 dependencies {
     // Nend  
-    implementation "com.access_company.adlime:mediation_nend:5.1.1.6"
-    implementation "net.nend.android:nend-sdk:5.1.1"
+    implementation "com.access_company.adlime:mediation_nend:5.4.1.1"
+    implementation "net.nend.android:nend-sdk:5.4.1"
 }
 ```
 
@@ -57,6 +57,7 @@ dependencies {
 ### リリースバージョン
 | Nend バージョン | アダプタ バージョン |
 |:--------------|:------------------|
+| 5.4.1    | 5.4.1.1       |
 | 5.1.1    | 5.1.1.6       |
 | 5.1.1    | 5.1.1.5       |
 | 5.1.1    | 5.1.1.4       |
@@ -64,6 +65,7 @@ dependencies {
 ### バージョン履歴
 | バージョン    | 日付        | 更新内容                      |
 |-------------|-------------|------------------------------------|
+| 5.4.1.1     | 2020/2/5    | 5.4.1 に対応|
 | 5.1.1.6     | 2019/10/23  | 内部ロジックの改善 |
-| 5.1.1.5     | 2019/8/16  | ネイティブ広告のクリックエリアのカスタマイズに対応|
+| 5.1.1.5     | 2019/8/16   | ネイティブ広告のクリックエリアのカスタマイズに対応|
 | 5.1.1.4     | 2019/7/16   | バナー表示の最適化                |

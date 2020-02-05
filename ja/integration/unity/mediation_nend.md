@@ -21,12 +21,12 @@ Dependencies.xml に、依存関係を追加してください。
     <androidPackages>
 
         <!-- Nend -->
-        <androidPackage spec="com.access_company.adlime:mediation_nend:5.1.1.4">
+        <androidPackage spec="com.access_company.adlime:mediation_nend:5.4.1.1">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="net.nend.android:nend-sdk:5.1.1">
+        <androidPackage spec="net.nend.android:nend-sdk:5.4.1">
             <repositories>
                 <repository>http://fan-adn.github.io/nendSDK-Android-lib/library</repository>
             </repositories>
@@ -125,6 +125,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - Android
     | Nend バージョン     | アダプタ バージョン  |
     |:-----------------|:------------------|
+    | 5.4.1            | 5.4.1.1           |
     | 5.1.1            | 5.1.1.4           |
 
 - iOS
@@ -137,6 +138,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - Android
     | アダプタ バージョン | 日付       | 更新内容                         |
     |-----------------|------------|--------------------------------------|
+    | 5.4.1.1         | 2020/2/5    | 5.4.1 に対応|
     | 5.1.1.4         | 2019-7-16  | バナー表示の最適化                  |
     | 5.1.1.2         | 2019-6-29  | バナーのサイズアダブティブを削除   |
     | 5.1.1.1         | 2019-6-21  | Nend SDK 5.1.1 に対応      |
