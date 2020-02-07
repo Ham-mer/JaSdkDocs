@@ -31,12 +31,12 @@ AdLime で利用可能なアドネットワーク一覧
 |:---:| :--------------------------------------: | :----: | :----------: | :------: | :----: |:-------------: |
 | 1   | [AdColony](./mediation_adcolony.md)      |        | ◯            | ◯        |        | 3.3.7          | 
 | 2   | [AdGeneration](./mediation_adgeneration.md)| ◯    | ◯            |          | ◯      | 2.15.1         | 
-| 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 17.2.1         | 
+| 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 18.3.0         | 
 | 4   | [Amazon](./mediation_amazon.md)          | ◯      | ◯            |          |        | 5.9.0          | 
 | 5   | [AppLovin](./mediation_applovin.md)      | ◯      | ◯            | ◯        | ◯      | 9.9.2          | 
 | 6   | [Chartboost](./mediation_chartboost.md)  |        | ◯            | ◯        |        | 7.3.1          |
 | 7   | [Criteo](./mediation_criteo.md)          | ◯      | ◯            |          |        | 3.1.0          |
-| 8   | [DFP](./mediation_dfp.md)                | ◯      | ◯            | ◯        | ◯      | 17.2.1         |
+| 8   | [DFP](./mediation_dfp.md)                | ◯      | ◯            | ◯        | ◯      | 18.3.0         |
 | 9   | [Display.IO](./mediation_display_io.md)  | ◯      | ◯            |          |        | 2.0.1.0        | 
 | 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯  | ◯         |          | ◯      | 1.2.2          | 
 | 11  | [Facebook](./mediation_facebook.md)      | ◯      | ◯            | ◯        | ◯      | 5.6.0          | 

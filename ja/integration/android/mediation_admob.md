@@ -12,8 +12,8 @@
 ```java
 dependencies {
     // AdMob
-   implementation "com.access_company.adlime:mediation_admob:15.0.1.10"
-   implementation "com.google.android.gms:play-services-ads:15.0.1"
+   implementation "com.access_company.adlime:mediation_admob:18.3.0.0"
+   implementation "com.google.android.gms:play-services-ads:18.3.0"
 }
 ```
 
@@ -49,6 +49,7 @@ ADMOB_APP_ID に AdMob のコンソール画面で登録したアプリの App I
 ### リリースバージョン
 | AdMob バージョン  | アダプタ バージョン|
 |:---------------|:--------------|
+| 18.3.0         | 18.3.0.0      |
 | 17.2.1         | 17.2.1.6      |
 | 17.1.2         | 17.1.2.12     |
 | 15.0.1         | 15.0.1.10     |
@@ -56,6 +57,7 @@ ADMOB_APP_ID に AdMob のコンソール画面で登録したアプリの App I
 ### バージョン履歴
 | バージョン   | 日付       | 更新情報                   |
 |------------|------------|---------------------------------|
+| 18.3.0.0   | 2020/2/7   |AdMob SDK 18.3.0 に対応，AndroidXに移します。|
 | 17.2.1.6   | 2019/11/26 |内部ロジックの改善|
 | 17.2.1.5   | 2019/10/31 |ネイティブ広告とフィードリスト広告で、Interactive エリアを設定した場合に、MediaViewLayout を追加しないと画像が表示されない問題を修正|
 | 17.2.1.2   | 2019/10/2  |ネイティブ広告はクリックエリアのカスタムをサポート|

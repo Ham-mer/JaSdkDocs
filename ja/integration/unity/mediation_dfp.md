@@ -21,12 +21,12 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- DFP -->
-        <androidPackage spec="com.access_company.adlime:mediation_admob:15.0.1.10">
+        <androidPackage spec="com.access_company.adlime:mediation_admob:18.3.0.0">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="com.google.android.gms:play-services-ads:15.0.1">
+        <androidPackage spec="com.google.android.gms:play-services-ads:18.3.0">
             <repositories>
                 <repository>https://maven.google.com/</repository>
             </repositories>
@@ -121,6 +121,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - Android
     | DFP バージョン     | アダプター バージョン|
     |:-----------------|:------------------|
+    |18.3.0            |18.3.0.0           |
     |17.2.1            |17.2.1.6           |
     |17.1.2            |17.1.2.12          |
     |15.0.1            |15.0.1.10          |
@@ -135,6 +136,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - Android
     | アダプター バージョン| 日付       | 内容                              |
     |------------------|------------|----------------------------------|
+    | 18.3.0.0   | 2020/2/7   |AdMob SDK 18.3.0 に対応，AndroidXに移します。|
     | 17.2.1.6   | 2019-11-26 |内部ロジックを改善|
     | 17.2.1.5   | 2019-10-31 |ネイティブ広告とフィードリスト広告では、InteractiveAreは設置される場合にMediaViewLayoutを追加されないと画像が展示されないという問題を解決する|
     | 17.2.1.2   | 2019-10-2  |ネイティブ広告はクリックエリアのカスタムをサポート|
