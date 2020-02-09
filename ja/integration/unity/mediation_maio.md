@@ -50,7 +50,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
         <iosPods>
         
             <!-- Maio -->
-            <iosPod name="AdLimeMediation_Maio" version="~> 1.4.8.0">
+            <iosPod name="AdLimeMediation_Maio" version="~> 1.5.3.0">
                 <sources>
                     <source>https://github.com/CocoaPods/Specs</source>
                 </sources>
@@ -64,8 +64,8 @@ Dependencies.xml に、下記の依存関係を追加してください。
 
     iOS プロジェクトで、 CocoaPods から SDK が ダウンロードできない場合は、 SDK を直接ダウンロードして解凍し、フレームワークを Assets/Plugins/iOS に入れてください。
     
-    [Maio.framework](https://github.com/imobile-maio/maio-iOS-SDK/releases/download/v1.4.8/Maio.framework.zip)<br>
-    [AdLimeMediation_Maio.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Maio/1.4.8.1.zip)
+    [Maio.framework](https://github.com/imobile-maio/maio-iOS-SDK/releases/download/v1.5.3/Maio.framework.zip)<br>
+    [AdLimeMediation_Maio.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Maio/1.5.3.0.zip)
 
 ### 依存関係の設定
 - Android
@@ -105,6 +105,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - iOS
     | Maioバージョン     | Adapterバージョン |
     |:-----------------|:----------------|
+    | 1.5.3            | 1.5.3.0         |
     | 1.4.8            | 1.4.8.0         |
     | 1.4.6            | 1.4.6.2         |
 
@@ -119,7 +120,8 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - iOS
     | Adapterバージョン | 日付       | 更新内容                    |
     |-----------------|------------|----------------------------------|
-    | 1.4.8.0         | 2019-10-14  | Maio SDK 1.4.8 に対応   |
+    | 1.5.3.0         | 2020-2-9   | - Maio SDK 1.5.3 に対応<br>- ios13では広告は展示できない問題を解決します|
+    | 1.4.8.0         | 2019-10-14 | Maio SDK 1.4.8 に対応   |
     | 1.4.6.2         | 2019-8-6   | 不要なヘッダーファイルの削除|
     | 1.4.6.1         | 2019-7-15  | 動画リワード広告のイベント最適化             |
     | 1.4.6.0         | 2019-6-30  | Maio SDK 1.4.6 に対応   |

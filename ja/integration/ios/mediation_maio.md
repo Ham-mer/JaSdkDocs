@@ -23,12 +23,12 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、下記のフレームワークを Xcode プロジェクトにインポートしてください。
-- [Maio.framework](https://github.com/imobile-maio/maio-iOS-SDK/releases/download/v1.4.8/Maio.framework.zip)
-- [AdLimeMediation_Maio.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Maio/1.4.8.1.zip)
+- [Maio.framework](https://github.com/imobile-maio/maio-iOS-SDK/releases/download/v1.5.3/Maio.framework.zip)
+- [AdLimeMediation_Maio.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Maio/1.5.3.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [Maio.framework](https://github.com/imobile-maio/maio-iOS-SDK/releases/download/v1.4.8/Maio.framework.zip)
+- [Maio.framework](https://github.com/imobile-maio/maio-iOS-SDK/releases/download/v1.5.3/Maio.framework.zip)
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -64,14 +64,16 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ## バージョン情報
 
 ### リリースバージョン
-| Maio バージョン     | アダプタ バージョン |
+| Maio バージョン    | アダプタ バージョン |
 |:-----------------|:----------------|
+| 1.5.3            | 1.5.3.0         |
 | 1.4.8            | 1.4.8.1         |
 | 1.4.6            | 1.4.6.2         |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
+| 1.5.3.0         | 2020/2/9   | - Maio SDK 1.5.3 に対応<br>- ios13では広告は展示できない問題を解決します|
 | 1.4.8.1         | 2020/2/5   | テストモードをサポートします，[初期化](./init.md)を参考してください|
 | 1.4.8.0         | 2019/10/10 | Maio SDK 1.4.8 に対応          |
 | 1.4.6.2         | 2019/8/6   | 不要なヘッダーファイルの削除|
