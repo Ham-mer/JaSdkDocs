@@ -108,7 +108,7 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
 
     // Network 調整モード
     // [AdLime setNetworkDebugMode:YES];
-    // Network テストモード
+    // Network テストモード，公開時に閉じる必要があります
     // [AdLime setNetworkTestMode:YES];
     
     return YES;
@@ -139,7 +139,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Network 調整モード
         // AdLime.setNetworkDebugMode(true)
-        // Network テストモード
+        // Network テストモード，公開時に閉じる必要があります
         // AdLime.setNetworkTestMode(true)
 
         return true

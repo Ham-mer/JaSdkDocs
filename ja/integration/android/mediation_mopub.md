@@ -18,7 +18,7 @@ android {
 
 dependencies {
     // MoPub
-    implementation "com.access_company.adlime:mediation_mopub:5.8.0.1"
+    implementation "com.access_company.adlime:mediation_mopub:5.8.0.2"
     implementation "com.google.android.gms:play-services-basement:16.1.0"
     implementation("com.mopub:mopub-sdk:5.8.0@aar") {
         transitive = true
@@ -54,13 +54,14 @@ dependencies {
 ### リリースバージョン
 | MoPub バージョン  | アダプタ バージョン |
 |:----------------|:-----------------|
-| 5.8.0           | 5.8.0.1          |
+| 5.8.0           | 5.8.0.2          |
 | 5.7.1           | 5.7.1.3          |
 | 5.7.1           | 5.7.1.0          |
 
 ### バージョン履歴
 | バージョン  | 日付       | 更新内容                   |
 |-----------|------------|-------------------------------|
+| 5.8.0.2   | 2020/2/10  | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 5.8.0.1   | 2019/11/24 | 動画リワードのコールバック時の問題を修正 |
 | 5.8.0.0   | 2019/11/5  | MoPub SDK 5.8.0 に対応 |
 | 5.7.1.3   | 2019/10/5  | SDKの最適化 |

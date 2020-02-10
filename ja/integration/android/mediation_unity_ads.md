@@ -10,7 +10,7 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_unity:3.1.0.1"
+    implementation "com.access_company.adlime:mediation_unity:3.1.0.2"
     implementation "com.access_company.adlime:unity-ads:3.1.0"
 }
 ```
@@ -42,11 +42,12 @@ dependencies {
 ### リリースバージョン
 | Unity Ads バージョン | アダプタ バージョン |
 |:-------------------|:------------------|
-| 3.1.0         | 3.1.0.1       |
+| 3.1.0         | 3.1.0.2       |
 | 3.1.0         | 3.1.0.0       |
 
 ### バージョン履歴
 | バージョン  | 日付       | 更新内容      |
 |-----------|------------|---------------------|
+| 3.1.0.2   | 2020/2/10  | 調整モード、テストモードの設定をサポートします，[初期化](./init.md)を参考してください|
 | 3.1.0.1   | 2019/9/8   | SDKの最適化|
 | 3.1.0.0   | 2019/7/19  | Unity Ads SDK 3.1.0 に対応|

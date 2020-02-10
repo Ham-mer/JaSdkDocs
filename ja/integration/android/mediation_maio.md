@@ -23,7 +23,7 @@ allprojects {
 ```java
 dependencies {
     // Maio
-    implementation "com.access_company.adlime:mediation_maio:1.1.10.0"
+    implementation "com.access_company.adlime:mediation_maio:1.1.10.1"
     implementation ("com.maio:android-sdk:1.1.10@aar")
     implementation "com.google.android.gms:play-services-ads:17.2.1"
 }
@@ -51,7 +51,7 @@ dependencies {
 ### リリースバージョン
 | Maio バージョン | アダプタ バージョン |
 |:--------------|:-----------------|
-| 1.1.10        | 1.1.10.0         |
+| 1.1.10        | 1.1.10.1         |
 | 1.1.9         | 1.1.9.1          |
 | 1.1.9         | 1.1.9.0          |
 | 1.1.8         | 1.1.8.1          |
@@ -59,6 +59,7 @@ dependencies {
 ### バージョン履歴
 |  バージョン  | 日付        | 更新内容       |
 |------------|-------------|---------------------|
+| 1.1.10.1   | 2020/2/10   | テストモードをサポートします，[初期化](./init.md)を参考してください |
 | 1.1.10.0   | 2019/11/4   | Maio SDK 1.1.10 に対応|
 | 1.1.9.1    | 2019/10/23  | 内部のロジックを改善する |
 | 1.1.9.0    | 2019/7/18   | Maio SDK 1.1.9 に対応 |

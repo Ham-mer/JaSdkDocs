@@ -10,7 +10,7 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_fyber:7.2.1.0"
+    implementation "com.access_company.adlime:mediation_fyber:7.2.1.1"
     implementation "com.access_company.adlime:ia-mraid-kit-release:7.2.1"
     implementation "com.access_company.adlime:ia-native-kit-release:7.2.1"
     implementation "com.access_company.adlime:ia-sdk-core-release:7.2.1"
@@ -45,13 +45,11 @@ dependencies {
 ### リリースバージョン
 | Fyber バージョン | アダプタ バージョン|
 |:-----------------|:--------------|
-| 7.2.1           |   7.2.1.0    |
+| 7.2.1           |   7.2.1.1    |
 | 7.1.7           |   7.1.7.2    |
-
-
-
 
 ### バージョン履歴
 | バージョン           | 日付              | 更新内容              |
 |-----------------|--------------------|---------------------|
+|   7.2.1.1     | 2020/2/10     |調整モードをサポートします，[初期化](./init.md)を参考してください|
 |   7.2.1.0     | 2019/4/8      |Fyber SDK 7.2.1 に対応。広告のレンダリングの改善| 

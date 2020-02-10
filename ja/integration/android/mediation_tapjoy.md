@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // Tapjoy
-    implementation "com.access_company.adlime:mediation_tapjoy:12.2.0.1"
+    implementation "com.access_company.adlime:mediation_tapjoy:12.2.0.2"
     implementation "com.tapjoy:tapjoy-android-sdk:12.2.0@aar"
     implementation "com.google.android.gms:play-services-ads:17.1.2"
 }
@@ -38,9 +38,10 @@ dependencies {
 ### リリースバージョン
 | Tapjoy バージョン | アダプタ バージョン|
 |:-----------------|:--------------|
-|  12.2.0          |  12.2.0.0     |
+|  12.2.0          |  12.2.0.2     |
 
 ### バージョン履歴
 | バージョン  | 日付        | 更新内容                 |
 |-----------------|--------------------|---------------------|
-|  12.2.0.0         |2019/3/3      |Tapjoy に対応   | 
+|  12.2.0.2       |2020/2/10     |調整モードをサポートします，[初期化](./init.md)を参考してください|
+|  12.2.0.0       |2019/3/3      |Tapjoy に対応   | 

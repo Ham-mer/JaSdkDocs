@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // DU Ad Platform
-    implementation "com.access_company.adlime:mediation_duadplatform:1.2.2.2"
+    implementation "com.access_company.adlime:mediation_duadplatform:1.2.2.3"
     // AdLime のみを使用する場合、duadplatform_hw 、もしくは duadplatform_cw をインポートする
     implementation "com.access_company.adlime:duadplatform_cw:1.2.2"
     // implementation "com.access_company.adlime:duadplatform_hw:1.2.2"
@@ -48,14 +48,12 @@ dependencies {
 ### リリースバージョン
 | DU Ad Platform バージョン | アダプタ バージョン|
 |:-----------------|:--------------|
-| 1.2.2              | 1.2.2.2       |
+| 1.2.2              | 1.2.2.3       |
 | 1.2.2              | 1.2.2.1       |
-
-
-
 
 ### バージョン履歴
 | バージョン            | 日付              | 更新内容              |
 |-----------------|--------------------|---------------------|
-| 1.2.2.2    |  2019/8/19     |ネイティブ広告のクリックエリアのカスタマイズに対応|
+| 1.2.2.3    |  2020/2/10    |テストモードをサポートします，[初期化](./init.md)を参考してください |
+| 1.2.2.2    |  2019/8/19    |ネイティブ広告のクリックエリアのカスタマイズに対応|
 | 1.2.2.1    |  2019/5/4     |AndroidManifest.xml 設定の簡素化  |

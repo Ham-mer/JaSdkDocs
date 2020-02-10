@@ -21,7 +21,7 @@ AdLime SDK で Amazon 広告ネットワークを使用するために、Amazon 
     <androidPackages>
 
         <!-- Amazon -->
-        <androidPackage spec="com.access_company.adlime:mediation_amazon:5.9.0.2">
+        <androidPackage spec="com.access_company.adlime:mediation_amazon:5.9.0.3">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>

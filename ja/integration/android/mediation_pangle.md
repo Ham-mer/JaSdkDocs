@@ -9,7 +9,7 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_pangle:2.1.3.0.0"
+    implementation "com.access_company.adlime:mediation_pangle:2.1.3.0.2"
     implementation "com.access_company.adlime:pangle_open_ad_sdk:2.1.3.0"
 }
 ```
@@ -18,7 +18,11 @@ dependencies {
 ```java
 <!-- 追加，同意を貰って位置情報を取得すると、Pangle はこの権限を基づいて精確にターゲットできる告 -->
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+<application android:networkSecurityConfig="@xml/pangle_network_security_config"/>
 ```
+
+すでに application タグに android:networkSecurityConfig が存在する場合は、 pangle_network_security_config.xml の内容を、指定されている XML ファイルに統合してください。
 
 **Pangle SDKは上記の権限を強制取得ではない、取得しなくても広告をリクエストできる。上記の権限を取得してから Pangle はもっと精確にターゲットしてユーザ体験改善してecpmを高める。**
 
@@ -43,9 +47,10 @@ dependencies {
 ### リリースバージョン
 | Pangle バージョン  | アダプタ バージョン|
 |:-----------------|:-----------------|
-|2.1.3.0     |2.1.3.0.0      |
+|2.1.3.0     |2.1.3.0.2      |
 
 ### 更新履歴
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|--------------------------------------|
+| 2.1.3.0.2  | 2020/2/10  | - android:networkSecurityConfig設置の追加<br>- 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 2.1.3.0.0  | 2020-1-19  | Pangle SDK 2.1.3.0 に対応|

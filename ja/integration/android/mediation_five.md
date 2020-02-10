@@ -12,7 +12,7 @@
 ```java
 dependencies {
     // Five
-    implementation "com.access_company.adlime:mediation_five:20191029.1"
+    implementation "com.access_company.adlime:mediation_five:20191029.2"
     implementation "com.google.android.gms:play-services-ads-identifier:16.0.0"
 }
 ```
@@ -45,9 +45,10 @@ android:hardwareAccelerated="true"
 ### リリースバージョン
 | Five バージョン  | アダプタ バージョン|
 |:----------------|:------------------|
-| 20191029        | 20191029.1        |
+| 20191029        | 20191029.2        |
 
 ### バージョン履歴
 | バージョン   | 日付       | 更新情報                      |
 |-------------|------------|---------------------------------|
+| 20191029.2  | 2020/2/10  | テストモードをサポートします，[初期化](./init.md)を参考してください |
 | 20191029.1  | 2019/10/31 | Five SDK 20191029 に対応 |

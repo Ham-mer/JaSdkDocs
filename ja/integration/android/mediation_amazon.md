@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // Amazon
-    implementation "com.access_company.adlime:mediation_amazon:5.9.0.2"
+    implementation "com.access_company.adlime:mediation_amazon:5.9.0.3"
     implementation "com.google.android.gms:play-services-ads:17.2.1"
 }
 ```
@@ -38,10 +38,11 @@ dependencies {
 ### リリースバージョン
 | Amazon バージョン | アダプタ バージョン|
 |:---------------|:----------------|
-| 5.9.0          | 5.9.0.2         |
+| 5.9.0          | 5.9.0.3         |
 
 ### バージョン履歴
 | バージョン   | 日付       | 更新内容       |
 |:-----------|:-----------|:--------------------|
+| 5.9.0.3    | 2020/2/10  | テストモードをサポートします，[初期化](./init.md)を参考してください |
 | 5.9.0.2    | 2019/7/18  | バナーサイズ 728 × 90 のサポート|
 | 5.9.0.1    | 2019/3/5   | 広告の読み込みが失敗する場合、コールバックされないバグ修正|

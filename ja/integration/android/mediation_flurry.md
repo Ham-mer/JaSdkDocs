@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // Flurry
-    implementation "com.access_company.adlime:mediation_flurry:11.4.0.1"
+    implementation "com.access_company.adlime:mediation_flurry:11.4.0.2"
     implementation "com.flurry.android:analytics:11.4.0@aar"
     implementation "com.flurry.android:ads:11.4.0@aar"
     // 推奨
@@ -48,12 +48,10 @@ dependencies {
 ### リリースバージョン
 | Flurry バージョン| アダプタ バージョン|
 |:-----------------|:--------------|
-| 11.4.0          |   11.4.0.0    |
-
-
-
+| 11.4.0          |   11.4.0.2    |
 
 ### バージョン履歴
 | バージョン            | 日付            | 更新内容              |
 |-----------------|--------------------|---------------------|
+| 11.4.0.2        |   2020/2/10        | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 11.4.0.0        |   2019/2/20        | Flurry に対応 | 

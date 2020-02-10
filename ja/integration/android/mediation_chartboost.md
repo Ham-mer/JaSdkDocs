@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // Chartboost
-    implementation "com.access_company.adlime:mediation_chartboost:7.3.1.6"
+    implementation "com.access_company.adlime:mediation_chartboost:7.3.1.8"
     implementation "com.google.android.gms:play-services-base:16.1.0"
     implementation "com.google.android.gms:play-services-ads-identifier:16.0.0"
 }
@@ -40,11 +40,12 @@ dependencies {
 ### リリースバージョン
 | Chartboost バージョン | アダプタ バージョン|
 |:-----------------|:--------------|
-| 7.3.1           | 7.3.1.5      |
+| 7.3.1           | 7.3.1.8      |
 
 ### バージョン履歴
 | バージョン  | 日付          | 更新内容                |
 |-----------------|--------------------|---------------------|
+| 7.3.1.8 |  2020/2/10 |調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 7.3.1.5 |  2019/3/11 |非 Host Activity ライフサイクルのコールバックによって広告が表示されない不具合の修正 | 
 | 7.3.1.4 |  2019/3/11 |Activity の不完全なライフサイクルによって広告が表示されない不具合の修正 |
 | 7.3.1.3 |  2019/3/5 |インタースティシャル・動画リワード広告が表示されない際に、コールバックが呼び出されない問題の修正 | 

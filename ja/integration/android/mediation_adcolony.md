@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // AdColony
-    implementation "com.access_company.adlime:mediation_adcolony:3.3.7.4"
+    implementation "com.access_company.adlime:mediation_adcolony:3.3.7.5"
     implementation "com.google.android.gms:play-services-ads-identifier:16.0.0"
     implementation "com.google.android.gms:play-services-ads:17.1.2"
 }
@@ -35,9 +35,10 @@ dependencies {
 ### リリースバージョン
 | AdColony バージョン | アダプタ バージョン|
 |:----------------|:-------------|
-|3.3.7             |3.3.7.3        |
+|3.3.7             |3.3.7.5        |
 
 ### バージョン履歴
 | バージョン  | 日付        | 更新情報            |
 |:---------|:------------|:--------------------|
+|3.3.7.5    |2020/2/10  |テストモードをサポートします，[初期化](./init.md)を参考してください |
 |3.3.7.3    |2019/2/22  |初期化する際に、Activity の代わりに Application を使用 |

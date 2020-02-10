@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // InMobi
-    implementation "com.access_company.adlime:mediation_inmobi:7.2.2.4"
+    implementation "com.access_company.adlime:mediation_inmobi:7.2.2.7"
     implementation "com.inmobi.monetization:inmobi-ads:7.2.2"
     implementation "com.google.android.gms:play-services-base:16.1.0"
     implementation "com.google.android.gms:play-services-ads:17.1.2"
@@ -46,14 +46,12 @@ dependencies {
 ### リリースバージョン
 | InMobi バージョン | アダプタ バージョン|
 |:-----------------|:--------------|
-| 7.2.2           |   7.2.2.4    |
-| 7.2.2           |   7.2.2.3    |
-
-
+| 7.2.2           |   7.2.2.7    |
 
 
 ### バージョン履歴
 | バージョン        | 日付               | 更新内容                |
 |-----------------|--------------------|---------------------|
+| 7.2.2.7	      | 2020/2/10          | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 7.2.2.4	      | 2019/8/19	       | ネイティブ広告のクリックエリアのカスタマイズに対応|
 | 7.2.2.3         | 2019/3/20          | 初回リリース  |  

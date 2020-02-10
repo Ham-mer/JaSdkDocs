@@ -21,7 +21,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- Unity Ads -->
-        <androidPackage spec="com.access_company.adlime:mediation_unity:3.1.0.0">
+        <androidPackage spec="com.access_company.adlime:mediation_unity:3.1.0.2">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
