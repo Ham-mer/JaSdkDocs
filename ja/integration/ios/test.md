@@ -151,6 +151,7 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | バナー 300 × 250    | 8f90397e-9882-4af4-8e32-1e6319e9f3be   |
 | インタースティシャル     | 44ef6305-0262-46cd-891a-0364a0057643   |
 | ネイティブ         | 12da2ed4-75b4-4861-b52f-86a7c1e74927   |
+| ネイティブバナー広告 | 28fce0a5-ad80-4a16-8d6a-c4b6a0cec275   |
 | 動画リワード       | a0a73c47-9194-4351-8322-460c9d29f5da   |
 | mixView  バナー 320 x 50| 34070a5b-bd0c-4ec4-8584-49f100e4adef   |
 | mixView  バナー 300 x 250| 606a7e98-f591-4c5e-ab90-4d16db10cb4f   |

@@ -64,6 +64,9 @@ NativeAd で広告を受け取った後、各要素に割り当てます。 AdLi
 | setRatingTextViewId  | TextView  | アプリストアでの評価レート（例：4.5）                    | O                                              |
 | setStoreId           | TextView  | アプリストア（例：Google Play）          | O                                              |
 | setPriceId           | TextView  | アプリストアの価格（例：無料）                 | O                                              |  
+
+**Facebook NativeにはMediaViewは必要です。Facebook NativeBannerにはIconLayoutは必要です。**
+
 ### レイアウトをカストマイズする
 
 NativeAdLayaout メソッドを使用して、各要素の設定を行い、ビューグループをカスタマイズすることが可能です。

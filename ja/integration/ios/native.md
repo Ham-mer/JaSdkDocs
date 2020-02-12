@@ -80,6 +80,8 @@ class ViewController: UIViewController {
 
 ratingCallback は、アプリストアでのアプリ評価レビューのカスタマイズを行えます。
 
+**Facebook NativeにはMediaViewは必要です。Facebook NativeBannerにはIconLayoutは必要です。**
+
 ```objectivec
 typedef void (^ratingCallback)(double rating);
 ```
