@@ -45,7 +45,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
         <iosPods>
         
             <!-- DFP -->
-            <iosPod name="AdLimeMediation_GoogleAds" version="~> 7.52.0.2">
+            <iosPod name="AdLimeMediation_GoogleAds" version="~> 7.55.0.1">
                 <sources>
                     <source>https://github.com/CocoaPods/Specs</source>
                 </sources>
@@ -63,7 +63,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     GoogleAppMeasurement.framework<br>
     GoogleUtilities.framework<br>
     nanopb.framework<br>
-    [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.52.0.2.zip)
+    [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.55.0.1.zip)
 
 ### 依存関係の設定
 - Android
@@ -128,9 +128,10 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 
 - iOS
     | DFP バージョン     | アダプター バージョン|
+    |7.55.0            |7.55.0.1         |
     |7.52.0            |7.52.0.2         |
     |7.50.0            |7.50.0.0         |
-    |7.42.2            |7.42.2.6           |
+    |7.42.2            |7.42.2.6         |
 
 ### バージョン履歴
 - Android
@@ -151,6 +152,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - iOS
     | アダプター バージョン| 日付      | 内容                              |
     |-----------------|------------|----------------------------------|
+    |7.55.0.1         |2020/2/14   |- AdMob SDK 7.55.0 に対応<br>- 新たな動画リワードAPIでパラレロードをサポートします |
     |7.52.0.2         |2020/2/3    |画面が縦から横になると、広告のサイズは自動調整できない問題を解決します  |
     |7.52.0.0         |2019-11-7   |AdMob SDK 7.52.0 に対応 |
     |7.50.0.0         |2019-10-14  |DFP SDK 7.50.0 に対応 |

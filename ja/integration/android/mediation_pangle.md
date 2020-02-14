@@ -22,7 +22,7 @@ dependencies {
 <application android:networkSecurityConfig="@xml/pangle_network_security_config"/>
 ```
 
-すでに application タグに android:networkSecurityConfig が存在する場合は、 pangle_network_security_config.xml の内容を、指定されている XML ファイルに統合してください。
+すでに application タグに android:networkSecurityConfig が存在する場合は、pangle_network_security_config.xml の内容を、指定されている XML ファイルに統合してください。
 
 **Pangle SDKは上記の権限を強制取得ではない、取得しなくても広告をリクエストできる。上記の権限を取得してから Pangle はもっと精確にターゲットしてユーザ体験改善してecpmを高める。**
 
