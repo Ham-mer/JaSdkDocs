@@ -9,8 +9,8 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_pangle:2.1.3.0.2"
-    implementation "com.access_company.adlime:pangle_open_ad_sdk:2.1.3.0"
+    implementation "com.access_company.adlime:mediation_pangle:2.1.5.0.0"
+    implementation "com.access_company.adlime:pangle_open_ad_sdk:2.1.5.0"
 }
 ```
 
@@ -47,10 +47,12 @@ dependencies {
 ### リリースバージョン
 | Pangle バージョン  | アダプタ バージョン|
 |:-----------------|:-----------------|
-|2.1.3.0     |2.1.3.0.2      |
+|2.1.5.0           |2.1.5.0.0         |
+|2.1.3.0           |2.1.3.0.2         |
 
 ### 更新履歴
 |バージョン   | 日付        | 更新内容                        |
-|------------|------------|--------------------------------------|
-| 2.1.3.0.2  | 2020/2/10  | - android:networkSecurityConfig設置の追加<br>- 調整モードをサポートします，[初期化](./init.md)を参考してください|
-| 2.1.3.0.0  | 2020-1-19  | Pangle SDK 2.1.3.0 に対応|
+|------------|------------|-------------------------------|
+| 2.1.5.0.0  | 2020/2/17  | - Pangle SDK 2.1.5.0 に対応<br>- pangle_network_security_config.xml の内容を更新します<br>- GDRPをサポートします |
+| 2.1.3.0.2  | 2020/2/10  | - android:networkSecurityConfig設置の追加<br>- 調整モードをサポートします，[初期化](./init.md)を参考してください |
+| 2.1.3.0.0  | 2020/1/19  | Pangle SDK 2.1.3.0 に対応 |
