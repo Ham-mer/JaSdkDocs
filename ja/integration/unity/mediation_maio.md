@@ -21,12 +21,12 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- Maio -->
-        <androidPackage spec="com.access_company.adlime:mediation_maio:1.1.10.1">
+        <androidPackage spec="com.access_company.adlime:mediation_maio:1.1.11.0">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="com.maio:android-sdk:1.1.10@aar">
+        <androidPackage spec="com.maio:android-sdk:1.1.11@aar">
             <repositories>
                 <repository>https://imobile-maio.github.io/maven</repository>
             </repositories>

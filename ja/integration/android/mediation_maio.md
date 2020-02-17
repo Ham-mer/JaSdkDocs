@@ -23,8 +23,8 @@ allprojects {
 ```java
 dependencies {
     // Maio
-    implementation "com.access_company.adlime:mediation_maio:1.1.10.1"
-    implementation ("com.maio:android-sdk:1.1.10@aar")
+    implementation "com.access_company.adlime:mediation_maio:1.1.11.0"
+    implementation ("com.maio:android-sdk:1.1.11@aar")
     implementation "com.google.android.gms:play-services-ads:17.2.1"
 }
 ```
@@ -51,6 +51,7 @@ dependencies {
 ### リリースバージョン
 | Maio バージョン | アダプタ バージョン |
 |:--------------|:-----------------|
+| 1.1.11        | 1.1.11.0         |
 | 1.1.10        | 1.1.10.1         |
 | 1.1.9         | 1.1.9.1          |
 | 1.1.9         | 1.1.9.0          |
@@ -59,6 +60,7 @@ dependencies {
 ### バージョン履歴
 |  バージョン  | 日付        | 更新内容       |
 |------------|-------------|---------------------|
+| 1.1.11.0   | 2020/2/17   | - Maio SDK 1.1.11 に対応<br>- プレイアブル広告で遊べない場合にキャンセルボタンは押せない問題を解決します|
 | 1.1.10.1   | 2020/2/10   | テストモードをサポートします，[初期化](./init.md)を参考してください |
 | 1.1.10.0   | 2019/11/4   | Maio SDK 1.1.10 に対応|
 | 1.1.9.1    | 2019/10/23  | 内部のロジックを改善する |
