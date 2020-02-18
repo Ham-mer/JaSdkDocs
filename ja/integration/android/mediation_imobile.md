@@ -11,9 +11,20 @@
 ```java
 dependencies {
     // Imobile
-    implementation "com.access_company.adlime:mediation_imobile:2.0.20.1"
-    implementation "com.google.android.gms:play-services-ads:17.1.2"
+    implementation "com.access_company.adlime:mediation_imobile:2.0.20.2"
+    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
 }
+```
+
+## AndroidManifest の設定
+AndroidManifestでmeta-dataを設置して調整モードの設置はできます。
+
+```java
+<application >
+
+    <!-- 調整モード開始，android:valueを trueに設定します -->
+    <meta-data android:name="i-mobile_DebugLogging" android:value="false" />
+</application>
 ```
 
 ## 広告フォーマット
@@ -30,7 +41,7 @@ dependencies {
 | Imobile | ◯     | ◯      |  ◯       |       |       |      |
 
 ### 設定情報
-下記の Imobile の情報が必要になります。  
+下記の Imobile の情報が必要になります。 
 - Publish ID
 - Media ID
 - Spot ID
@@ -43,13 +54,10 @@ Imobileの広告は初期化される時にコンテクストの導入は必要�
 ### リリースバージョン
 | Imobile バージョン | アダプタ バージョン|
 |:-----------------|:--------------|
-| 2.0.20      | 2.0.20.1     |
-
-
-
-
+| 2.0.20           | 2.0.20.2     |
 
 ### バージョン履歴
-| バージョン        | 日付               | 更新内容                |
-|-----------------|--------------------|---------------------|
-| 2.0.20.1  | 2020-2-1                | 初回リリース  |  
+| バージョン        | 日付             | 更新内容             |
+|-----------------|------------------|---------------------|
+| 2.0.20.2        | 2020-2-18        | バナー広告とネイティブ広告のコールバックは違うという問題を解決します |
+| 2.0.20.1        | 2020-2-1         | 初回リリース  |
