@@ -23,14 +23,12 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.10.0/mopub-framework-5.10.0.zip)
-- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.10.0.5.zip)
-
-mopub-framework-5.10.0/MoPubSDKFramework/universal フォルダ配下にフレームワークがあります。
+- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.11.0/mopub-framework-5.11.0.zip)
+- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.11.0.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.10.0/mopub-framework-5.10.0.zip)
+- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.11.0/mopub-framework-5.11.0.zip)
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -73,7 +71,7 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 ### バナーサイズ
 |ネットワーク |320 × 50  |300 × 250   |320 × 100  |468 × 60  |728 × 90  |スマート    |
 |:-------:|:------:|:--------:|:-------:|:------:|:------:|:-------:|
-|MoPub    |◯       |◯         |         |        |◯       |         |
+|MoPub    |◯       |◯         |◯        |◯       |◯       |         |
 
 ## テスト広告の表示
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#MoPub) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
@@ -91,6 +89,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | MoPub バージョン    | アダプタ バージョン |
 |:-----------------|:----------------|
+|5.11.0            |5.11.0.0         |
 |5.10.0            |5.10.0.5         |
 |5.9.0             |5.9.0.0          |
 |5.6.0             |5.6.0.3          |
@@ -98,6 +97,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### バージョン履歴
 | バージョン | 日付       | 更新内容                           |
 |----------|------------|----------------------------------|
+| 5.11.0.0 | 2020/2/18  | - MoPub SDK 5.11.0 に対応<br>- ネイティブ広告はsponsoredをサポートします。AdPrivacyのアイコンをクリックして広告の展示に関する問題を解決します。|
 | 5.10.0.5 | 2020/2/5   | 調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 5.10.0.3 | 2020/1/22  | 広告イベントのコールバックロジックの改善｜
 | 5.10.0.1 | 2019/11/19 | MoPub SDK 5.10.0 バナー に対応     | 

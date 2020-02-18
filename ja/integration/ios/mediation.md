@@ -45,7 +45,7 @@ AdLime で利用可能な広告ネットワーク一覧
 | 15  | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯      | 2.0.31   |
 | 16  | [IronSource](./mediation_ironsource.md)    | ◯      | ◯    | ◯        |        | 6.10.0.0 |
 | 17  | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.5.3    |
-| 18  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.10.0   |
+| 18  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.11.0   |
 | 19  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.3.0    |
 | 20  | [Tapjoy](./mediation_tapjoy.md)            |        | ◯    | ◯        |        | 12.3.4   |
 | 21  | [TikTok](./mediation_tiktok.md)            | ◯      | ◯    | ◯        | ◯      | 2.7.5.2  |

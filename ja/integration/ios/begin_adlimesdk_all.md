@@ -27,8 +27,8 @@ SDK フレームワークを直接ダウンロードして解凍し、下記の�
 - [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.11.3.0.zip)
 - [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)
 - [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.2.zip)
-- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.10.0/mopub-framework-5.10.0.zip)
-- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.10.0.5.zip)
+- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.11.0/mopub-framework-5.11.0.zip)
+- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.11.0.0.zip)
 - [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.7.5.2.zip)
 - BUAdSDK.bundle
 - [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.7.5.2.5.zip)
@@ -77,7 +77,7 @@ SDK フレームワークを直接ダウンロードして解凍し、下記の�
 - nanopb.framework
 - [AppLovinSDK.framework](https://dash.applovin.com/docs/sdk/download?type=ios-main)
 - [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)
-- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.9.0/mopub-framework-5.10.0.zip)
+- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.11.0/mopub-framework-5.11.0.zip)
 - [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.7.5.2.zip)
 - BUAdSDK.bundle
 

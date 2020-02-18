@@ -33,7 +33,9 @@ dependencies {
     implementation "com.access_company.adlime:mediation_mopub:5.11.0.0"
     implementation("com.mopub:mopub-sdk:5.11.0@aar") {
         transitive = true
+        exclude module: 'moat-mobile-app-kit'
     }
+    implementation "com.access_company.adlime:mopub-moat-mobile-app-kit:2.4.5"
     implementation "com.google.android.gms:play-services-ads-identifier:16.0.0"
     implementation "com.google.android.gms:play-services-base:16.1.0"
 }
@@ -63,7 +65,7 @@ dependencies {
 ### バナーサイズ
 |ネットワーク |320 × 50 |300 × 250 |320 × 100 |468 × 60 |728 × 90  |スマート |
 |:------:|:-----:|:------:|:------:|:-----:|:------:|:----:|
-| MoPub  | ◯     | ◯      |        |       | ◯      |      |
+| MoPub  | ◯     | ◯      | ◯      | ◯     | ◯      |      |
 
 ### 設定情報
 下記の MoPub の情報が必要となります。  
