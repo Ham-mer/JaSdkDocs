@@ -59,8 +59,8 @@ Dependencies.xml に、依存関係を追加してください。
 
     iOS プロジェクトで、 CocoaPods から SDK が ダウンロードできない場合は、 SDK を直接ダウンロードして解凍し、下記のフレームワークを Assets/Plugins/iOS に入れてください。
     
-    [NendAd.embeddedframework](https://github.com/fan-ADN/nendSDK-iOS-pub/releases/download/5.3.0/nendSDK_iOS.zip)<br>
-    [AdLimeMediation_Nend.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Nend/5.3.0.1.zip)
+    [NendAd.embeddedframework](https://github.com/fan-ADN/nendSDK-iOS-pub/releases/download/5.4.0/nendSDK_iOS.zip)<br>
+    [AdLimeMediation_Nend.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Nend/5.4.0.1.zip)
 
 ### 依存関係の解析
 - Android
