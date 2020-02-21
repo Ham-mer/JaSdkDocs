@@ -21,13 +21,13 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.7.5.2.zip)
+- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.8.0.1.zip)
 - BUAdSDK.bundle
-- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.7.5.2.5.zip)
+- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.8.0.1.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.7.5.2.zip)
+- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.8.0.1.zip)
 - BUAdSDK.bundle
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
@@ -64,49 +64,17 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 ### 広告フォーマット
 |ネットワーク|バナー   |インタースティシャル        |動画リワード |ネイティブ |
 |:-----:|:----:|:----------:|:------:|:----:|
-|Tiktok |◯     | ◯          |◯       |◯     |
-
-### バナーサイズ
-|ネットワーク  |320 × 50  |300 × 250   |320 × 100  |468 × 60  |728 × 90  |スマート    |
-|:-------:|:------:|:--------:|:-------:|:------:|:------:|:-------:|
-|Tiktok   |        |◯         |◯        |        |◯       |         |
+|Tiktok |      | ◯          |◯       |◯     |
 
 ## テスト広告の表示
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#TikTok) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
-
-## 広告枠の設置
-AdLime を使って Tiktok の広告枠を配置する前に、 Tiktok の管理画面上で広告枠を作成し、その広告枠の情報が必要になります。
-- App ID
-- Code ID
-
-AdLime の管理画面を開き、左側の「ネットワーク」メニューをクリックして、 Tiktok を有効にしてください。
-
-最後に、左側の「アプリ」メニューをクリックし、 Tiktok 広告を表示する広告枠で、「広告のソース追加」をクリックし、 Tiktok 広告を追加してください。
-
-**Tiktok にはネイティブが2種類があります，ネイティブ広告枠を追加する場合に Native Mode Mode を入力してください**
-| Native Mode        | 値   | 説明        |
-|:-------------------|:--------|:-----------|
-|Native Banner       |0        |ネイティブ　バナー   |
-|Express Banner      |1        |エクスプレス　バナー  |
-|Native Interstitial |1        |ネイティブ　インタースティシャル |
-
-**Tiktok にはインタースティシャルが2種類があります，インタースティシャルを追加する場合に Interstitial Mode を入力してください**
-| Interstitial Mode     | 値     | 説明       |
-|:----------------------|:--------|:-----------|
-|Interstitial           |0        |インタースティシャル |
-|FullScreenVideo        |1        |フルスクリーン      |
-
-**Tiktok においてフルスクリーンと動画リワードは縦・横画面があります。設定する場合に、 Orientation を指定してください**
-| Orientation     | 値 | 説明        |
-|:----------------|:--------|:-----------|
-|Vertical         |1        |縦        |
-|Horizontal       |2        |横         |
 
 ## バージョン情報
 
 ### リリースバージョン
 | Tiktok　バージョン  | アダプタ　バージョン |
 |:----------------- |:----------------|
+| 2.8.0.1            | 2.8.0.1.0        |
 | 2.7.5.2            | 2.7.5.2.5        |
 | 2.5.1.5            | 2.5.1.5.1        |
 | 2.5.1.2            | 2.5.1.2.0        |
@@ -116,6 +84,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                              |
 |-----------------|------------|----------------------------------|
+| 2.8.0.1.0       | 2020/2/21   | 2.8.0.1 に対応|
 | 2.7.5.2.5       | 2020/2/5    | 2.7.5.2 に対応<br>調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 2.5.1.5.1       | 2019/12/8   | 2.5.1.5バージョンに適応してカスタマイズモデルのフールスクリングと動画リワードをサポートする|
 | 2.5.1.2.0       | 2019/11/7   | Tiktok Ads SDK 2.5.1.2 に対応|

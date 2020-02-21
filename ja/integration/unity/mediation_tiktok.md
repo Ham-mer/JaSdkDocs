@@ -55,7 +55,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
         <iosPods>
         
             <!-- TikTok -->
-            <iosPod name="AdLimeMediation_TikTok" version="~> 2.5.1.2.0">
+            <iosPod name="AdLimeMediation_TikTok" version="~> 2.8.0.1.0">
                 <sources>
                     <source>https://github.com/CocoaPods/Specs</source>
                 </sources>
