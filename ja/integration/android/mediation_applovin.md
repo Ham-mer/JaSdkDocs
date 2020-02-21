@@ -27,6 +27,15 @@ dependencies {
 
 ## NetworkConfig の設定
 
+## グローバル構成
+### AppLovinGlobalConfig
+
+```java
+AppLovinGlobalConfig.Builder()
+                    .setMuted(true)
+                    .build();
+```
+
 ### バナー広告
 - AppLovinBannerConfig<br>
 バナー広告の配置，広告をwindowから離れる時に自動デストロイかどうか。デストロイされないと黙認される。
@@ -37,6 +46,15 @@ dependencies {
                         .setAutoDestroy(false)
                         .build();
     ```
+
+## ネイティブ
+### AppLovinNativeConfig
+
+```java
+AppLovinNativeConfig.Builder()
+                    .setMuted(true)
+                    .build();
+```
 
 ## 広告フォーマット
 
