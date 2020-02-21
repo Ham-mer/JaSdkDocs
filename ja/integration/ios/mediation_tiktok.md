@@ -21,13 +21,13 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.8.0.1.zip)
+- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.7.5.2.zip)
 - BUAdSDK.bundle
-- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.8.0.1.0.zip)
+- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.7.5.2.5.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.8.0.1.zip)
+- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.7.5.2.zip)
 - BUAdSDK.bundle
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
@@ -106,18 +106,16 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 
 ### リリースバージョン
 | Tiktok　バージョン  | アダプタ　バージョン |
-|:----------------- |:-----------------|
-| 2.8.0.1           | 2.8.0.1.0        |
-| 2.7.5.2           | 2.7.5.2.5        |
-| 2.5.1.5           | 2.5.1.5.1        |
-| 2.5.1.2           | 2.5.1.2.0        |
-| 2.4.6.3           | 2.4.6.3.1        |
-| 2.1.0.1           | 2.1.0.1.5        |
+|:----------------- |:----------------|
+| 2.7.5.2            | 2.7.5.2.5        |
+| 2.5.1.5            | 2.5.1.5.1        |
+| 2.5.1.2            | 2.5.1.2.0        |
+| 2.4.6.3            | 2.4.6.3.1        |
+| 2.1.0.1            | 2.1.0.1.5        |
 
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                              |
 |-----------------|------------|----------------------------------|
-| 2.8.0.1.0       | 2020/02/21 | Tiktok Ads SDK 2.8.0.1 に対応|
 | 2.7.5.2.5       | 2020/2/5    | 2.7.5.2 に対応<br>調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 2.5.1.5.1       | 2019/12/8   | 2.5.1.5バージョンに適応してカスタマイズモデルのフールスクリングと動画リワードをサポートする|
 | 2.5.1.2.0       | 2019/11/7   | Tiktok Ads SDK 2.5.1.2 に対応|

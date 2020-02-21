@@ -27,14 +27,14 @@ dependencies {
 
 ## NetworkConfig の設定
 
-## グローバル構成
-### AppLovinGlobalConfig
+### グローバル構成
+- AppLovinGlobalConfig
 
-```java
-AppLovinGlobalConfig.Builder()
-                    .setMuted(true)
-                    .build();
-```
+    ```java
+    AppLovinGlobalConfig.Builder()
+                        .setMuted(true)
+                        .build();
+    ```
 
 ### バナー広告
 - AppLovinBannerConfig<br>
@@ -47,14 +47,14 @@ AppLovinGlobalConfig.Builder()
                         .build();
     ```
 
-## ネイティブ
-### AppLovinNativeConfig
+### ネイティブ
+- AppLovinNativeConfig
 
-```java
-AppLovinNativeConfig.Builder()
-                    .setMuted(true)
-                    .build();
-```
+    ```java
+    AppLovinNativeConfig.Builder()
+                        .setMuted(true)
+                        .build();
+    ```
 
 ## 広告フォーマット
 
