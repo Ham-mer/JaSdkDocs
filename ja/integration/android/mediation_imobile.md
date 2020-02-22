@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // Imobile
-    implementation "com.access_company.adlime:mediation_imobile:2.0.20.2"
+    implementation "com.access_company.adlime:mediation_imobile:2.0.20.5"
     implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
 }
 ```
@@ -40,24 +40,14 @@ AndroidManifestでmeta-dataを設置して調整モードの設置はできま�
 |:------:|:-----:|:------:|:------:|:-----:|:-----:|:----:|
 | Imobile | ◯     | ◯      |  ◯       |       |       |      |
 
-### 設定情報
-下記の Imobile の情報が必要になります。 
-- Publish ID
-- Media ID
-- Spot ID
-
 ### 注意
 Imobileの広告は初期化される時にコンテクストの導入は必要です。
 
 ## バージョン情報
 
-### リリースバージョン
-| Imobile バージョン | アダプタ バージョン|
-|:-----------------|:--------------|
-| 2.0.20           | 2.0.20.2     |
-
-### バージョン履歴
+### 2.0.20
 | バージョン        | 日付             | 更新内容             |
 |-----------------|------------------|---------------------|
+| 2.0.20.5        | 2020-2-21        | コンテナビューアーからロードされるバナー広告を削除してもう一回追加するとバナーはないという問題を解決します|
 | 2.0.20.2        | 2020-2-18        | バナー広告とネイティブ広告のコールバックは違うという問題を解決します |
 | 2.0.20.1        | 2020-2-1         | 初回リリース  |

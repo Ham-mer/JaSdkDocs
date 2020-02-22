@@ -43,7 +43,7 @@ AdLime で利用可能なアドネットワーク一覧
 | 12  | [Five](./mediation_five.md)              | ◯      | ◯            | ◯        |        | 20191029       |
 | 13  | [Flurry](./mediation_flurry.md)          | ◯      | ◯            | ◯        | ◯      | 11.4.0         | 
 | 14  | [Fyber](./mediation_fyber.md)            | ◯      | ◯            |          | ◯      | 7.2.1          | 
-| 15  | [Imobile](./mediation_imobile.md)        | ◯      | ◯            |          | ◯      | 2.0.20         | 
+| 15  | [i-mobile](./mediation_imobile.md)       | ◯      | ◯            |          | ◯      | 2.0.20         | 
 | 16  | [InMobi](./mediation_inmobi.md)          | ◯      | ◯            | ◯        | ◯      | 7.2.2          |
 | 17  | [IronSource](./mediation_ironsource.md)  | ◯      | ◯            | ◯        |        | 6.8.0.1        |
 | 18  | [Maio](./mediation_maio.md)              |        | ◯            | ◯        |        | 1.1.10         | 
