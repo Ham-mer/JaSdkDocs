@@ -1,9 +1,5 @@
 # AdLime SDK の導入
-AdLime は "AdLimeSdk" と "AdLimeSdk_All" の２種類の SDK を提供しています。これらの SDK の違いは主要な広告ネットワークをデフォルトで提供しているかどうかです。
-
-広告ネットワークをカスタムに設定することを希望する場合は "AdLimeSdk" を導入することをおすすめします。"AdLimeSdk" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望の広告ネットワークを追加してください。 
-
-"AdLimeSdk_All" は AdLimeSdk と AdMob・DFP・FaceBook・Mopub・AppLovin・TikTok の広告ネットワークを標準でサポートしています．これらの広告ネットワークの導入を希望する場合は、この SDK を組み込むことも選択肢の一つです。"AdLimeSdk_All" の SDK を導入することで、各広告ネットワークごとに必要な SDK を追加する手順などをスキップすることが可能です。
+"AdLimeSdk" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望の広告ネットワークを追加してください。 
 
 ## 前提条件
 - Xcode 9.2 以上のバージョンを使用
@@ -45,14 +41,10 @@ carthage update
 
 Carthage フォルダを確認して、AdLimeSdk.frameworkとAdLimeSdk.bundleをXcodeプロジェクトに追加してください。ドラッグ & ドロップ完了後、Build Phases > Copy Bundle Resources に AdLimeSdk.bundle が含まれていることを確認してください。
 
-## AdLimeSdk-All
-[AdLimeSdk-All の導入方法](./begin_adlimesdk_all.md)を参照してください。
-
 ## Linker Flags の追加
 プロジェクトのBuild Settingsで、以下のように [Other Linker Flags] に -ObjC を追加します。
 
 <img src="./../images/ios/begin_objc.png" height="140"/>
-
 
 ## App Transport Security
 iOS 9 では、App Transport Security（ATS）というプライバシー機能が導入されました。この機能は新しいアプリでデフォルトで有効になり、安全な接続を要求します。

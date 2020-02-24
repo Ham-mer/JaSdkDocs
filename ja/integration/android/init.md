@@ -1,20 +1,12 @@
 ﻿# AdLime SDK の導入
-AdLime は "AdLime SDK" と "AdLime ALL SDK" の2種類の SDK を提供しています。これらの SDK の違いは主要なアドネットワークをデフォルトで提供しているかどうかです。
-
 広告ネットワークをカスタムに設定することを希望する場合は "AdLime SDK" を導入することをおすすめします。"AdLime SDK" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望のアドネットワークを追加してください。 
 
-
-"AdLime SDK" は AdLimeSdk と AdMob・DFP・FaceBook・Mopub・AppLovin・TikTok の広告ネットワークを標準でサポートしています。これらのアドネットワークの導入を希望する場合は、この SDK を組み込むことも選択肢の一つです。"AdLimeSdk_All" の SDK を導入することで、各広告ネットワークごとに必要な SDK を追加する手順などををスキップすることが可能です。
-
-
 アプリに AdLime SDK をインストールするには、アプリレベルの build.gradle に依存関係を記述します。このリポジトリを使うには、アプリのプロジェクトレベルの build.gradle ファイルで、このリポジトリを参照する必要があります。ファイルを開き、 allprojects セクションを見つけ、以下を参考にリポジトリを指定します。
-
 
 ## 前提条件
 1. Android Studio 1.0 以上
 2. Android API レベル 14 以上
 3. AdLime アカウントを作成し、アプリが登録済み
-
 
 ## AdLime SDK のリポジトリを指定
 プロジェクトレベルの build.gradle ファイルに、AdLime のリポジトリを指定します。
@@ -39,23 +31,6 @@ dependencies {
     implementation 'com.access_company.adlime:adlime:1.9.29'
 }
 ```
-
-## AdLime All SDK の導入
-アプリケーションレベルの build.gradle に、下記の依存関係を追加します。
-```
-dependencies {
-    implementation 'com.access_company.adlime:adlime_all:1.7.9'
-}
-```
-## マニフェストファイルへの記述
-マニフェストファイル AndroidManifest.xml に必要な情報を記述します。
-```java
-    <meta-data
-        android:name="applovin.sdk.key"
-        android:value="${applovin_value}" />
-```
-${applovin_value} は Applovin の SDK key です。今回は下記の値を設定します。 **"qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR1136
-N8uhTlthKc"**
 
 作業完了後に、Gradle の同期を行います。
 
