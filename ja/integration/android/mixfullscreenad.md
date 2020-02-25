@@ -93,9 +93,7 @@ mMixFullScreenAd.loadAd()
 
 ```java
 if (mMixFullScreenAd.isReady()) {
-    // 引数に true を設定すると、バックキーで広告を閉じる。
-    // 引数を設定しない場合は、バックキーで広告は閉じない。
-    mMixFullScreenAd.show(true);
+    mMixFullScreenAd.show();
 }
 ```
 
@@ -105,15 +103,15 @@ if (mMixFullScreenAd.isReady()) {
 
 ```kotlin
 if (mMixFullScreenAd.isReady) {
-    // 引数に true を設定すると、バックキーで広告を閉じる。
-    // 引数を設定しない場合は、バックキーで広告は閉じない。
-    mMixFullScreenAd.show(true)
+    mMixFullScreenAd.show()
 }
 ```
 
 :::
 
 ::::
+
+MixFullScreenAdは展示されると、backボタンをクリックするのは無効と黙認される。mMixFullScreenAd.setBackPressEnable(bool enable) を使える。
 
 ## 広告イベント
 AdListener を用いて、広告のロード完了のタイミングや、ユーザーがアプリを閉じたタイミングなどの、広告のライフサイクルで発生する様々なイベントを取得することができます。

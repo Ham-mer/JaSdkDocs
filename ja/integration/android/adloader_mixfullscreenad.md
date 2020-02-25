@@ -56,7 +56,7 @@ boolean isReady = AdLimeLoader.isMixFullScreenAdReady("MixFullScreen AdUnit ID")
 AdLimeLoader.showMixFullScreenAd("MixFullScreen AdUnit ID");
 ```
 
-MixFullScreenAdは展示されると、backボタンをクリックするのは無効と黙認される。 showMixFullScreenAd(String adUnitId, boolean enableBack) を使える。
+MixFullScreenAdは展示されると、backボタンをクリックするのは無効と黙認される。getMixFullScreenAd(Context context, String adUnitId).setBackPressEnable(bool enable) を使える。
 
 ### 広告のデストロイ
 ```java
