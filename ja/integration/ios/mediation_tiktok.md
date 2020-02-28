@@ -19,8 +19,6 @@ pod 'AdLimeMediation_TikTok'
 pod install --repo-update
 ```
 
-AdLimeMediation_TikTok　2.7.5.2.0から、Bytedance-UnionADのクラスは大きくてpod installの前にGIT-LFSをインストールしてください。https://github.com/git-lfs/git-lfs で確認をお願いします。もしGit-LFSをインストールしてもエラーが出る場合に、PODのキャッシュをクリアしてPOD INSTALLをお願いします。
-
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.8.0.1.zip)

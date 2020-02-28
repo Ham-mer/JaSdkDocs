@@ -21,7 +21,7 @@ Dependencies.xml に、依存関係を追加してください。
     <androidPackages>
 
         <!-- Nend -->
-        <androidPackage spec="com.access_company.adlime:mediation_nend:5.4.2.0">
+        <androidPackage spec="com.access_company.adlime:mediation_nend:5.4.2.1">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
