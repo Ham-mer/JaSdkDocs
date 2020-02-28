@@ -21,7 +21,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- AppLovin -->
-        <androidPackage spec="com.access_company.adlime:mediation_applovin:9.11.2.0">
+        <androidPackage spec="com.access_company.adlime:mediation_applovin:9.11.2.1">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>

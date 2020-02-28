@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // AppLovin
-    implementation "com.access_company.adlime:mediation_applovin:9.11.2.0"
+    implementation "com.access_company.adlime:mediation_applovin:9.11.2.1"
     implementation "com.applovin:applovin-sdk:9.11.2"
     implementation "com.google.android.gms:play-services-ads:17.2.1"
 }
@@ -78,7 +78,7 @@ dependencies {
 ### リリースバージョン
 | AppLovin バージョン | アダプタ バージョン|
 |:-----------------|:----------------|
-|9.11.2            |9.11.2.0         |
+|9.11.2            |9.11.2.1         |
 |9.10.3            |9.10.3.1         |
 |9.9.2             |9.9.2.1          |
 |9.7.2             |9.7.2.1          |
@@ -87,7 +87,8 @@ dependencies {
 ### バージョン履歴
 | バージョン | 日付      | 更新内容                      |
 |:---------|:----------|:----------------------------|
-|9.11.2.0  |2020/2/17  | - AppLovin SDK 9.11.2 に対応<br>- バナー広告のサイズはタブレットに適応します。|
+|9.11.2.1  |2020/2/26  | 広告ページに戻ると動画は黒くなり問題を修正します |
+|9.11.2.0  |2020/2/17  | - AppLovin SDK 9.11.2 に対応<br>- バナー広告のサイズはタブレットに適応します|
 |9.10.3.1  |2020/2/10  | - AppLovin SDK 9.10.3 に対応<br>- 調整モードをサポートします，[初期化](./init.md)を参考してください|
 |9.9.2.1   |2019/10/24 | AppLovinBannerConfigの追加|
 |9.0.2.0   |2019/10/23 | AppLovin SDK 9.9.2 に対応|
