@@ -274,11 +274,8 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 |:----------------:|:--------------------------------------:|
 | インタースティシャル      | 66123f13-5a77-4cee-ab21-3bfd27d8b84d   |
 | 動画リワード       | 1f1a5107-b710-4969-bb8a-f306a7fcf2b4   |
-| mixView  バナー 320 x 50| 52f4fd1d-fa4f-4d32-b039-ccd7ea388917  |
-| mixView  バナー 300 x 250| 57320377-8c57-4d46-9680-28d324197c47 |
+| ネイティブ         | b3162881-30e7-4526-99f3-956f45167eb3   |
 | mixView  ネイティブ      | 1d0a86df-adf6-4b28-a582-2842600ef9fa  |
-| mixFullScreenバナー 320 x 50| fe865e71-9fbe-401b-9257-05109678cfe8  |
-| mixFullScreenバナー 300 x 250| e179ef4e-4c36-43a7-a09a-286653562f76  |
 | mixFullScreenネイティブ  | f48dd1a7-3ae5-483b-ba36-4f226eea8461 |
 | mixFullScreen インタースティシャル   | ef5478a7-be57-45b6-8fd1-fde71f7f5107 |
 

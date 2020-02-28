@@ -23,7 +23,7 @@ pod install --repo-update
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.8.0.1.zip)
 - BUAdSDK.bundle
-- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.8.0.1.0.zip)
+- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.8.0.1.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -74,7 +74,7 @@ SDK を導入し、広告を実装したら広告が正しく表示されるか�
 ### リリースバージョン
 | Tiktok　バージョン  | アダプタ　バージョン |
 |:----------------- |:----------------|
-| 2.8.0.1            | 2.8.0.1.0        |
+| 2.8.0.1            | 2.8.0.1.1        |
 | 2.7.5.2            | 2.7.5.2.5        |
 | 2.5.1.5            | 2.5.1.5.1        |
 | 2.5.1.2            | 2.5.1.2.0        |
@@ -84,6 +84,7 @@ SDK を導入し、広告を実装したら広告が正しく表示されるか�
 ### バージョン履歴
 | バージョン        | 日付       | 更新内容                              |
 |-----------------|------------|----------------------------------|
+| 2.8.0.1.1       | 2020/2/28   | ネイティブ広告ロード失敗の問題を解決します|
 | 2.8.0.1.0       | 2020/2/21   | 2.8.0.1 に対応|
 | 2.7.5.2.5       | 2020/2/5    | 2.7.5.2 に対応<br>調整モードをサポートします，[初期化](./init.md)を参考してください|
 | 2.5.1.5.1       | 2019/12/8   | 2.5.1.5バージョンに適応してカスタマイズモデルのフールスクリングと動画リワードをサポートする|
