@@ -22,7 +22,7 @@ pod install --repo-update
 ### 手動ダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [AppLovinSDK.framework](https://dash.applovin.com/docs/sdk/download?type=ios-main)  **（要ログイン）**
-- [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.11.4.0.zip)
+- [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.11.4.1.zip)
 - AdLimeMediation_AppLovin_Resources.bundle
 
 ### Carthage
@@ -101,6 +101,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### 6.11.4
 | バージョン | 日付       | 更新内容                          |
 |----------|-----------|----------------------------------|
+| 6.11.4.1 | 2020/3/2  | 広告ページにスワイプされない時に、ネイティブ広告は再生される問題を解決します|
 | 6.11.4.0 | 2020/2/24 | - AppLovin SDK 6.11.4 に対応<br>- AdLimeMediation_AppLovin_Resources.bundleを追加します<br>- [NetworkConfig 設置](./mediation/config/networkconfig_applovin.md)を追加します|
 
 ### 6.11.3

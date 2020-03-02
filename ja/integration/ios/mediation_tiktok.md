@@ -9,6 +9,8 @@
 AdLime SDK で Tiktok 広告ネットワークを使用するためには、 Tiktok SDK と、それに対応した AdLime SDK を導入してください。
 
 ### CocoaPods（推奨）
+**TikTok　2.7.5.2 から、Bytedance-UnionADのクラスは大きくてpod installの前にGIT-LFSをインストールしてください。https://github.com/git-lfs/git-lfs で確認をお願いします。もしGit-LFSをインストールしてもエラーが出る場合に、PODのキャッシュをクリアしてPOD INSTALLをお願いします。**
+
 CocoaPods を使用すると導入が簡単です。プロジェクトの Podfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
 pod 'AdLimeMediation_TikTok'
