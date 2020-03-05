@@ -28,7 +28,7 @@ AdLime で利用可能なアドネットワーク一覧
 | 2   | [Amazon](./mediation_amazon.md)       | Y      | Y    |          | 5.9.0       | 2.2.17    |
 | 3   | [AppLovin](./mediation_applovin.md)   | Y      | Y    | Y        | 9.9.2       | 6.9.4     |
 | 4   | [DFP](./mediation_dfp.md)             | Y      | Y    | Y        | 18.3.0      | 7.52.0    |
-| 5   | [Facebook](./mediation_facebook.md)   | Y      | Y    | Y        | 5.6.0       | 5.6.0     |
+| 5   | [Facebook](./mediation_facebook.md)   | Y      | Y    | Y        | 5.7.1       | 5.6.0     |
 | 6   | [Maio](./mediation_maio.md)           |        | Y    | Y        | 1.1.10      | 1.5.3     |
 | 7   | [MoPub](./mediation_mopub.md)         | Y      | Y    | Y        | 5.11.0      | 5.11.0    |
 | 8   | [Nend](./mediation_nend.md)           | Y      | Y    | Y        | 5.4.1       | 5.3.0     |

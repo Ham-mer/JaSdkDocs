@@ -11,8 +11,8 @@
 ```java
 dependencies {
     // Facebook
-    implementation "com.access_company.adlime:mediation_facebook:5.6.1.1"
-    implementation "com.facebook.android:audience-network-sdk:5.6.1"
+    implementation "com.access_company.adlime:mediation_facebook:5.7.1.0"
+    implementation "com.facebook.android:audience-network-sdk:5.7.1"
     implementation "com.android.support:support-annotations:28.0.0"
 }
 ```
@@ -45,6 +45,7 @@ dependencies {
 ### リリースバージョン
 | Facebook バージョン | アダプタ バージョン|
 |:-----------------|:--------------|
+|5.7.1         |   5.7.1.0     |
 |5.6.1         |   5.6.1.1     |
 |5.6.0         |   5.6.0.4     |
 |5.5.0         |   5.5.0.1     |
@@ -53,6 +54,7 @@ dependencies {
 ### バージョン履歴
 | バージョン        | 日付         | 更新内容                    |
 |-----------------|--------------|----------------------------------|
+|5.7.1.0          |2020/3/5    | - Facebook SDK 5.7.1 に対応<br>- プリロードされるバナー広告はクリックされない問題を解決します|
 |5.6.1.1          |2020/2/10   | - Facebook SDK 5.6.1 に対応<br>- 調整モード、テストモードの設定をサポートします，[初期化](./init.md)を参考してください|
 |5.6.0.4          |2019/11/26  |HeaderBidding をサポート|
 |5.6.0.0          |2019/11/13  |Facebook SDK 5.6.0 に対応              |
