@@ -21,7 +21,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- DFP -->
-        <androidPackage spec="com.access_company.adlime:mediation_admob:18.3.0.0">
+        <androidPackage spec="com.access_company.adlime:mediation_admob:18.3.0.3">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>

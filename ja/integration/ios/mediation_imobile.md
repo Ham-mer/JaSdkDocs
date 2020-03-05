@@ -6,7 +6,7 @@
 - ターゲットバージョン iOS 8.0 以上
 
 ## SDK の導入
-AdLime SDK で Imobile 広告ネットワークを使用するためには、 i-mobile SDK と、それに対応した AdLime SDK を導入してください。
+AdLime SDK で i-mobile 広告ネットワークを使用するためには、 i-mobile SDK と、それに対応した AdLime SDK を導入してください。
 
 ### CocoaPods（推奨）
 CocoaPods を使用すると導入が簡単です。プロジェクトの Podfile を開き、下記のコードをアプリのターゲットに追加してください。
@@ -22,7 +22,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [ImobileSdkAds.framework](https://sppartner.i-mobile.co.jp/downloads/sdk/imobile_for_SP_app_iOS_SDK_2.0.31.zip)
-- [AdLimeMediation_Imobile.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Imobile/2.0.31.2.zip)
+- [AdLimeMediation_Imobile.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Imobile/2.0.31.3.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -64,7 +64,7 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#i-mobile) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
 
 ## 広告枠の設置
-AdLime を使って Imobile の広告枠を配置する前に、 i-mobile の管理画面上で広告枠を作成し、その広告枠の情報が必要になります。
+AdLime を使って i-mobile の広告枠を配置する前に、 i-mobile の管理画面上で広告枠を作成し、その広告枠の情報が必要になります。
 - Publish ID
 - Media ID
 - Spot ID
@@ -84,11 +84,12 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | i-mobile　バージョン| アダプタ　バージョン |
 |:----------------- |:------------------|
-| 2.0.31            | 2.0.31.2          |
+| 2.0.31            | 2.0.31.3          |
 
 ### バージョン履歴
 | バージョン        | 日付        | 更新内容                           |
 |-----------------|-------------|----------------------------------|
+| 2.0.31.3        | 2020/3/4    | ある場合にロードされるバナー広告とネイティブ広告は展示されない問題を解決します|
 | 2.0.31.2        | 2020/2/28   | ネイティブ広告は反応ボタンを展示しない問題を解決します|
 | 2.0.31.1        | 2020/2/5    | テストモードをサポートします，[初期化](./init.md)を参考してください|
 | 2.0.31.0        | 2020/01.08  | 2.0.31 に対応|

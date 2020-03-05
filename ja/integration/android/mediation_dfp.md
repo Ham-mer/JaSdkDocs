@@ -11,10 +11,13 @@
 ```java
 dependencies {
     // DFP
-    implementation "com.access_company.adlime:mediation_admob:18.3.0.0"
+    implementation "com.access_company.adlime:mediation_admob:18.3.0.3"
     implementation "com.google.android.gms:play-services-ads:18.3.0"
 }
 ```
+
+## NetworkConfig 設置
+DFPをカスタマイズで設置します。[DFP NetworkConfig](./mediation/config/networkconfig_dfp.md) を参考してください。
 
 ## 広告フォーマット
 
@@ -38,7 +41,7 @@ dependencies {
 ### リリースバージョン
 | DFP バージョン | アダプタ バージョン|
 |:-------------|:----------------|
-| 18.3.0       | 18.3.0.0        |
+| 18.3.0       | 18.3.0.3        |
 | 17.2.1       | 17.2.1.6        |
 | 17.1.2       | 17.1.2.11       |
 | 15.0.1       | 15.0.1.9        |
@@ -46,6 +49,7 @@ dependencies {
 ### バージョン履歴
 | バージョン   | 日付        | 更新内容                   |
 |------------|------------|--------------------------------- |
+| 18.3.0.3   | 2020/3/4   |バナー広告はAdaptive Bannerをサポートします。[DFPBannerConfig](./mediation/config/networkconfig_dfp.md) で広告のサイズを設定できます。[Adaptive Banner 紹介](https://developers.google.com/ad-manager/mobile-ads-sdk/android/banner/adaptive)で確認をお願いします|
 | 18.3.0.0   | 2020/2/7   |AdMob SDK 18.3.0 に対応，AndroidXに移します。|
 | 17.2.1.6   | 2019-11-26 |内部ロジックを改善|
 | 17.2.1.5   | 2019/10/31 |ネイティブ広告とフィードリスト広告で、Interactive エリアを設定した場合に、MediaViewLayout を追加しないと画像が表示されない問題を修正|
