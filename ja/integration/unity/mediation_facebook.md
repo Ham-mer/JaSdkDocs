@@ -49,8 +49,8 @@ AdLime SDK で Facebook Audience Network を使用するために、 Facebook Au
         <!-- iOS -->
         <iosPods>
         
-            <!-- DFP -->
-            <iosPod name="AdLimeMediation_Facebook" version="~> 5.6.0.0">
+            <!-- Facebook -->
+            <iosPod name="AdLimeMediation_Facebook" version="~> 5.7.1.0">
                 <sources>
                     <source>https://github.com/CocoaPods/Specs</source>
                 </sources>
@@ -63,8 +63,8 @@ AdLime SDK で Facebook Audience Network を使用するために、 Facebook Au
 
     SDK を 直接ダウンロードして解凍し、下記のフレームワークを Assets/Plugins/iOS に入れてください。
     
-    [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)<br>
-    [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.2.zip)
+    [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.7.1.zip)<br>
+    [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.7.1.0.zip)
 
 ### 依存関係の設定
 - Android

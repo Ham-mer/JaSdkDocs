@@ -22,12 +22,12 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)
-- [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.6.0.2.zip)
+- [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.7.1.zip)
+- [AdLimeMediation_Facebook.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Facebook/5.7.1.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.6.0.zip)
+- [FBAudienceNetwork.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/FBAudienceNetwork/FBAudienceNetwork_5.7.1.zip)
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -95,6 +95,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### リリースバージョン
 | Facebook バージョン | アダプタ バージョン |
 |:-----------------|:----------------|
+| 5.7.0            | 5.7.1.0         |
 | 5.6.0            | 5.6.0.2         |
 | 5.5.1            | 5.5.1.0         |
 | 5.4.0            | 5.4.0.4         |
@@ -102,6 +103,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### バージョン履歴
 | バージョン | 日付       | 更新内容                              |
 |----------|------------|-----------------------------------|
+| 5.7.1.0  | 2020/3/6   | - Facebook Audience Network SDK 5.7.1 に対応<br>- プリロードされるバナー広告はクリックされない問題を解決します|
 | 5.6.0.2  | 2020/2/5   | 調整モード、テストモードの設定をサポートします，[初期化](./init.md)を参考してください|
 | 5.6.0.0  | 2019/10/10 | Facebook Audience Network SDK 5.6.0 に対応|
 | 5.5.1.0  | 2019/10/10 | Facebook Audience Network SDK 5.5.1 に対応|
