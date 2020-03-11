@@ -42,6 +42,13 @@ AdLime では、複数の広告ネットワークを管理、配信する[メデ
 
 ### [AdMob](./mediation_admob.md)
 
+AdMob 17.0.0 以降のバージョンにおいて、meta-data を設定する必要があります。
+```java
+<meta-data
+    android:name="com.google.android.gms.ads.APPLICATION_ID"
+    android:value="ca-app-pub-3940256099942544~3347511713"/>
+```
+
 | 広告タイプ         | 広告枠 ID                              |
 |:----------------:|:--------------------------------------:|
 | バナー 320 × 50     | ea6fe45b-c7a9-4dcd-aab8-89d8fdb4a93c   |

@@ -43,6 +43,12 @@ AdLime では、複数の広告ネットワークを管理、配信する[メデ
 
 ### [AdMob](mediation_admob.md)
 
+Info.plist を ソースコードとして開いて編集します。
+```objectivec
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-3940256099942544~1458002511</string>
+```
+
 | 広告タイプ         | 広告枠 ID                              |
 |:----------------:|:--------------------------------------:|
 | バナー 320 × 50     | 4c237306-12c5-4630-8abf-21f81013e4a9   |

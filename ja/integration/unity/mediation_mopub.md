@@ -50,7 +50,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
         <iosPods>
         
             <!-- MoPub -->
-            <iosPod name="AdLimeMediation_MoPub" version="~> 5.11.0.0">
+            <iosPod name="AdLimeMediation_MoPub" version="~> 5.11.0.1">
                 <sources>
                     <source>https://github.com/CocoaPods/Specs</source>
                 </sources>
@@ -65,7 +65,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     iOS プロジェクトで、 CocoaPods から SDK が ダウンロードできない場合は、 SDK を直接ダウンロードして解凍し、下記のフレームワークを Assets/Plugins/iOS に入れてください。
     
     [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.11.0/mopub-framework-5.11.0.zip)<br>
-    [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.11.0.0.zip)
+    [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.11.0.1.zip)
 
 ### 依存関係の解析
 - Android
@@ -142,7 +142,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 - iOS
     | MoPub バージョン  | アダプタ バージョン |
     |:---------------|:----------------|
-    | 5.11.0         | 5.11.0.0        |
+    | 5.11.0         | 5.11.0.1        |
     | 5.10.0         | 5.10.0.3        |
     | 5.9.0          | 5.9.0.0         |
     | 5.6.0          | 5.6.0.3         |
