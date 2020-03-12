@@ -11,7 +11,7 @@
 ```java
 dependencies {
     // i-mobile
-    implementation "com.access_company.adlime:mediation_imobile:2.0.20.6"
+    implementation "com.access_company.adlime:mediation_imobile:2.0.20.7"
     implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
 }
 ```
@@ -48,6 +48,7 @@ i-mobileの広告は初期化される時にコンテクストの導入は必要
 ### 2.0.20
 | バージョン        | 日付             | 更新内容             |
 |-----------------|------------------|---------------------|
+| 2.0.20.7        | 2020-3-12        | [setNetworkTestMode()](./mediation/mediation_debug_test_mode.md)は設置されっるとモードは有効にならない問題を解決しました|
 | 2.0.20.6        | 2020-3-4         | Bug fix|
 | 2.0.20.5        | 2020-2-21        | コンテナビューアーからロードされるバナー広告を削除してもう一回追加するとバナーはないという問題を解決します|
 | 2.0.20.2        | 2020-2-18        | バナー広告とネイティブ広告のコールバックは違うという問題を解決します |
