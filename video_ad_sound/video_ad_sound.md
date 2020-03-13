@@ -29,9 +29,7 @@ Network：AdMob、AppLovin、Criteo、Facebook、Five、i-mobile、Maio、MoPub�
 
     For example Five:
 
-    <div class="clearfix cust-image-text"><img src="./five_sound_webconfig.png"  width="500px"  align=left />
-    </div>
-
+    <img src="./five_sound_webconfig.png" width="500px"/>
 
 **バナー**
 | 番号 | ×etwork          | ビデオ          | 音       | ユーザさんのコントロール | 開発者のコントロール    |
