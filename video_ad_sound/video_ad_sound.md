@@ -11,6 +11,7 @@ Network：AdMob、AppLovin、Criteo、Facebook、Five、i-mobile、Maio、MoPub�
 **開発者のコントロール**
 
 - Api
+
     Some Network has Api to set video sound of Ads.
 
     For example AdMob:
