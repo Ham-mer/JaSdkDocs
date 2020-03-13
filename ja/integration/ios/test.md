@@ -162,6 +162,7 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | mixView  バナー 320 x 50| 34070a5b-bd0c-4ec4-8584-49f100e4adef   |
 | mixView  バナー 300 x 250| 606a7e98-f591-4c5e-ab90-4d16db10cb4f   |
 | mixView  ネイティブ      | bd1103d1-a579-4988-8f2b-5abfd02a3a06   |
+| mixView ネイティブバナー広告 | 2d93e7c1-f274-4e41-b250-b06b08a1fb88   |
 | mixFullScreenバナー 320 x 50| e303f544-5eb5-4057-8eba-a03e540889eb   |
 | mixFullScreenバナー 300 x 250| fb983b61-4a80-4270-8002-04558a0ee1c4   |
 | mixFullScreenネイティブ   | 9deb0518-3505-4190-b03f-cffd161284f7   |
