@@ -40,10 +40,9 @@ AdLimeAdErrorCode エラーコード一覧
 エラーには 広告枠 ID(AdUnit)、広告ネットワーク名(Network)、広告のプロパティ(LineItem)が含まれます。
 
 ```
-ErrorCode is [3], Message is [No Fill]
+ErrorCode is [3], Message is [No Fill].
 AdUnit is ...
-Network is ...
-LineItem is ...
+LineItem Error is[...]
+AdUnit Load Failed Spent Time ...
 ```
-
 

@@ -41,7 +41,54 @@ val container = findViewById(R.id.banner_container)
 // コンテナに BannerAdView を追加する
 container.addView(mBannerAdView)
 ```
+:::
 
+::::
+
+
+### バナーのサイズを設定します
+AdLime管理画面ではバナー広告枠を新規登録する時にバナーのサイズを設定してください。BannerAdViewは設定されるサイズを使います。<br>もし、画面の横縦または端末の種類でバナーのサイズを設定したい場合に、BannerAdViewのsetAdSize(BannerAdSize adSize)でバナーのサイズを設定します。
+
+:::: tabs
+
+::: tab Java
+- 画面の横縦でサイズを設定します
+    ```java
+    if (ScreenUtil.isScreenPortrait(this)) {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_320_100);
+    } else {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_320_50);
+    }
+    ```
+
+- 端末の種類でサイズを設定します
+    ```java
+    if (ScreenUtil.isTablet(this)) {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_728_90);
+    } else {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_320_50);
+    }
+    ```
+:::
+
+::: tab Kotlin
+- 画面の横縦でサイズを設定します
+    ```kotlin
+    if (ScreenUtil.isScreenPortrait(this)) {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_320_100)
+    } else {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_320_50)
+    }
+    ```
+
+- 端末の種類でサイズを設定します
+    ```kotlin
+    if (ScreenUtil.isTablet(this)) {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_728_90)
+    } else {
+        mBannerAdView.setAdSize(BannerAdSize.BANNER_320_50)
+    }
+    ```
 :::
 
 ::::

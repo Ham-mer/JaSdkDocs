@@ -2,6 +2,7 @@
 
 | バージョン    | 日付          | 内容                                  |
 | ----------- | ------------- | ------------------------------------ |
+| 1.7.6       | 2020/3/21     | - BannerAdViewに[setAdSize:](./banner.md) は追加されます<br>- [AdLimeRewardedVideoAd](./rewarded.md)にgetRewardItemは追加されます。広告はロードされるとリワードの内容は取れます<br>- SDKは初期化される時にログにはAppIdは取れます<br>- 広告配置の取ることをスピードアップします<br>- 広告ロード失敗する時に返したパラメーター[AdLimeAdError](./error.md)にLineItemのエラー情報を追加されます|
 | 1.7.0       | 2020/2/20     | - ネイティブ広告のレイアウトは横画面をサポートします<br>- Bug Fix |
 | 1.6.7       | 2020/2/5      | AdLimeは新たな方法（setNetworkDebugMode、setNetworkTestMode）を追加します。この方法でネットワークを調整モード、テストモードに設定できます。[初期化](./init.md)を参考してください。（ネットワークに対応するアダプターも更新する必要があります）|
 | 1.6.6       | 2020/1/31     | AdlimerAdLoaderとMixFullScreenAdの連携を改善します|

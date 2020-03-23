@@ -67,6 +67,58 @@ class ViewController: UIViewController {
 
 ::::
 
+### バナーのサイズを設定します
+AdLime管理画面ではバナー広告枠を新規登録する時にバナーのサイズを設定してください。AdLimeBannerViewは設定されるサイズを使います。<br>もし、画面の横縦または端末の種類でバナーのサイズを設定したい場合に、AdLimeBannerViewのsetAdSize:でバナーのサイズを設定します。
+
+:::: tabs
+
+::: tab Objective-C
+
+- 画面の横縦でサイズを設定します
+    ```objectivec
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        [self.bannerView setAdSize:AdLimeBannerAdSize_320_100];
+    }else {
+        [self.bannerView setAdSize:AdLimeBannerAdSize_320_50];
+    }
+    ```
+
+- 端末の種類でサイズを設定します
+    ```objectivec
+    if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        [self.bannerView setAdSize:AdLimeBannerAdSize_320_50];
+    } else {
+        [self.bannerView setAdSize:AdLimeBannerAdSize_728_90];
+    }
+    ```
+
+:::
+
+::: tab Swift
+
+- 画面の横縦でサイズを設定します
+    ```swift
+    UIInterfaceOrientation orientation = UIApplication.sharedApplication.statusBarOrientation
+    if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        self.bannerView.setAdSize(AdLimeBannerAdSize_320_100)
+    } else {
+        self.bannerView.setAdSize(AdLimeBannerAdSize_320_50)
+    }
+    ```
+
+- 端末の種類でサイズを設定します
+    ```swift
+    if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        self.bannerView.setAdSize(AdLimeBannerAdSize_320_50)
+    } else {
+        self.bannerView.setAdSize(AdLimeBannerAdSize_728_90)
+    }
+    ```
+
+:::
+
+::::
 
 ## 広告のロード
 `AdLimeBannerView` オブジェクトを生成したら次に広告をロードしてみましょう。 `AdLimeBannerView` クラス の `loadAd` を実行してださい。

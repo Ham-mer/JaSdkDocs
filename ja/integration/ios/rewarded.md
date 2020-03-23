@@ -56,7 +56,6 @@ class ViewController: UIViewController {
 ::::
 
 
-
 ## 広告のロード
 `AdLimeRewardedVideoAd` オブジェクトを生成したら広告をロードしてみましょう。広告ロード完了のタイミングは後に紹介する `AdLimeRewardedVideoAdDelegate` の `adLimeRewardedVideoDidReceiveAd` を用いることで取得できます。
 
@@ -93,7 +92,7 @@ override func viewDidLoad() {
 ## 広告の表示
 動画リワード広告を表示する前に、広告のコンテンツを視聴して報酬を受け取るかどうか、明確な選択肢をユーザーに提示する必要があります。動画リワード広告は、必ずユーザーの許可を受けてから表示しなければなりません。
 
-動画広告を表示する前に広告がロード済みかどうかを `isReady` メソッドで確認してから `AdLimeRewardedVideoAd` の `show` で表示します。
+動画広告を表示する前に広告がロード済みかどうかを `isReady` メソッドで確認してから `AdLimeRewardedVideoAd` の `show` で表示します。展示する前に、getRewardItem でリワードの内容を取ってユーザーさんにお知らせします。参考コードは下記通りです：
 
 :::: tabs
 
@@ -106,6 +105,10 @@ override func viewDidLoad() {
         ...
 
         if([rewardedVideoAd isReady]) {
+            // 広告を展示する前に、Dialogでリワードの内容をユーザーさんにお知らせることができます
+            // AdLimeRewardItem *rewardItem = [self.rewardedVideoAd getRewardItem];
+            // NSLog(@"RewardItem: %@", rewardItem);
+
             [self.rewardedVideoAd showFromViewController:self];
         } else {
             NSLog(@"Ad wasn't ready");
@@ -123,6 +126,10 @@ override func viewDidLoad() {
 class ViewController: UIViewController {
     @IBAction func doSomething(sender: Any) {
         if(self.rewardedVideoAd.isReady()) {
+            // 広告を展示する前に、Dialogでリワードの内容をユーザーさんにお知らせることができます
+            // var rewardItem: AdLimeRewardItem! = self.rewardedVideoAd.getRewardItem()
+            // NSLog(@"RewardItem: %@", rewardItem);
+
             self.rewardVideoAd.show(from: self)
         } else {
             print("Ad wasn't ready")

@@ -67,7 +67,7 @@ mRewardedVideoAd.loadAd()
 
 動画リワード広告を表示する前に、広告のコンテンツを視聴して報酬を受け取るかどうか、明確な選択肢をユーザーに提示する必要があります。動画リワード広告は、必ずユーザーの許可を受けてから表示しなければなりません。
 
-動画を表示するには、RewardedVideoAd オブジェクトの `isReady()` メソッド で広告の読み込みが完了したかどうかを確認して、`show()` メソッドを呼び出します。
+動画を表示するには、RewardedVideoAd オブジェクトの `isReady()` メソッド で広告の読み込みが完了したかどうかを確認して、`show()` メソッドを呼び出します。展示する前に、getRewardItem() でリワードの内容を取ってユーザーさんにお知らせします。参考コードは下記通りです。
 
 :::: tabs
 
@@ -75,6 +75,9 @@ mRewardedVideoAd.loadAd()
 
 ```java
 if (mRewardedVideoAd.isReady()) {
+    // 広告を展示する前に、Dialogでリワードの内容をユーザーさんにお知らせることができます
+    // RewardedVideoAd.RewardItem rewardItem = mRewardedVideoAd.getRewardItem();
+    // LogUtil.d(TAG, "RewardItem: " + rewardItem);
     // 広告を表示
     mRewardedVideoAd.show(activity);
 }
@@ -85,6 +88,9 @@ if (mRewardedVideoAd.isReady()) {
 
 ```kotlin
 if (mRewardedVideoAd.isReady()) {
+    // 広告を展示する前に、Dialogでリワードの内容をユーザーさんにお知らせることができます
+    // RewardedVideoAd.RewardItem rewardItem = mRewardedVideoAd.getRewardItem()
+    // LogUtil.d(TAG, "RewardItem: " + rewardItem)
     // 広告を表示
     mRewardedVideoAd.show(activity)
 }
