@@ -23,7 +23,7 @@ allprojects {
 ```java
 dependencies {
     // Nend  
-    implementation "com.access_company.adlime:mediation_nend:5.4.2.1"
+    implementation "com.access_company.adlime:mediation_nend:5.4.2.3"
     implementation "net.nend.android:nend-sdk:5.4.2"
 }
 ```
@@ -52,6 +52,7 @@ dependencies {
 ### 5.4.2
 | バージョン    | 日付        | 更新内容                      |
 |-------------|-------------|------------------------------|
+| 5.4.2.3     | 2020/3/25   | ある場合にネイティブ広告は展示されない問題を解決します |
 | 5.4.2.1     | 2020/2/28   | ある場合にネイティブ広告は展示されない問題を解決します |
 | 5.4.2.0     | 2020/2/17   | - 5.4.2 に対応<br>- ある場合に、ネイティブ広告はクリックされると潰れる問題を解決しました |
 
