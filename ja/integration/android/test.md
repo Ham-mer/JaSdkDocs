@@ -291,8 +291,11 @@ AndroidManifest.xml に SDK key を設定してください。
 
 | 広告タイプ         | 広告枠 ID                              |
 |:----------------:|:--------------------------------------:|
-| インターステーシャル     | 2207389f-5fe4-4dca-9a8c-85c8897991fe   |
-| 動画リワード       | 3871e42d-0e5d-4bec-bfe9-de7d4ec7d6fb   | 
+| ネイティブ         | e554d99d-69e3-4156-aaae-2bf743c0f301 |
+| インターステーシャル | 2207389f-5fe4-4dca-9a8c-85c8897991fe   |
+| 動画リワード       | 3871e42d-0e5d-4bec-bfe9-de7d4ec7d6fb   |
+| mixView ネイティブ | 63b508cc-2fe9-43a9-a81e-557b6a1a92e9 |
+| mixFullScreen ネイティブ   | 07b744ff-9bd6-4dd9-a5bc-b8464a55b025 |
 
 ### [Tapjoy](./mediation_tapjoy.md)
 

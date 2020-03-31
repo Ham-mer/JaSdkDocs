@@ -9,7 +9,7 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_pangle:2.9.0.1.0"
+    implementation "com.access_company.adlime:mediation_pangle:2.9.0.1.2"
     implementation "com.access_company.adlime:pangle_open_ad_sdk:2.9.0.1"
 }
 ```
@@ -47,7 +47,7 @@ dependencies {
 ### 2.9.0.1
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|-------------------------------|
-| 2.9.0.1.0  | 2020/3/30  | - Pangle SDK 2.9.0.1 に対応<br>- ネイティブ広告をサポートします |
+| 2.9.0.1.2  | 2020/3/31  | - Pangle SDK 2.9.0.1 に対応<br>- ネイティブ広告をサポートします |
 
 ### 2.1.5.0
 |バージョン   | 日付        | 更新内容                        |
