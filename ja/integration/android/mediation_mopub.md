@@ -30,7 +30,7 @@ android {
 
 dependencies {
     // MoPub
-    implementation "com.access_company.adlime:mediation_mopub:5.11.1.3"
+    implementation "com.access_company.adlime:mediation_mopub:5.11.1.5"
     implementation("com.mopub:mopub-sdk:5.11.1@aar") {
         transitive = true
         exclude module: 'moat-mobile-app-kit'
@@ -76,7 +76,7 @@ dependencies {
 ### 5.11.1
 | バージョン  | 日付       | 更新内容                        |
 |-----------|------------|-------------------------------|
-| 5.11.1.3  | 2020/3/20  | ある場合にネイティブ広告の展示コールバックはない問題を解決します|
+| 5.11.1.5  | 2020/3/31  | ある場合にネイティブ広告の展示コールバックはない問題を解決します|
 | 5.11.1.1  | 2020/3/12  | - MoPub SDK 5.11.1 に対応<br>- ネイティブ広告のボタンは押せない問題を解決します|
 
 ### 5.11.0
