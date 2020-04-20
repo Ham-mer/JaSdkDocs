@@ -21,12 +21,12 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- AdMob -->
-        <androidPackage spec="com.access_company.adlime:mediation_admob:18.3.0.3">
+        <androidPackage spec="com.access_company.adlime:mediation_admob:19.0.1.0">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="com.google.android.gms:play-services-ads:18.3.0">
+        <androidPackage spec="com.google.android.gms:play-services-ads:19.0.1">
             <repositories>
                 <repository>https://maven.google.com/</repository>
             </repositories>
@@ -112,7 +112,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
 |AdMob  |Y     | Y          |Y       |
 
 ### バナーサイズ
-|ネットワーク  |320 × 50  |300 × 250   |320 × 100  |468 × 60  |728 × 90  |スマート    |
+|ネットワーク  |320×50  |300×250   |320×100  |468×60  |728×90  |スマート    |
 |:-------:|:------:|:--------:|:-------:|:------:|:------:|:-------:|
 |AdMob    |Y       |Y         |Y        |Y       |Y       |Y        |
 
