@@ -63,7 +63,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     GoogleAppMeasurement.framework<br>
     GoogleUtilities.framework<br>
     nanopb.framework<br>
-    [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.55.0.1.zip)
+    [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.58.0.0.zip)
 
 ### 依存関係の設定
 - Android

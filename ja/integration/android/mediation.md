@@ -31,7 +31,7 @@ AdLime で利用可能なアドネットワーク一覧
 |:---:| :--------------------------------------: | :----: | :----------: | :------: | :----: |:-------------: |
 | 1   | [AdColony](./mediation_adcolony.md)      |        | ◯            | ◯        |        | 3.3.7          | 
 | 2   | [AdGeneration](./mediation_adgeneration.md)| ◯    | ◯            |          | ◯      | 2.15.1         | 
-| 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 18.3.0         | 
+| 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 19.0.1         | 
 | 4   | [Amazon](./mediation_amazon.md)          | ◯      | ◯            |          |        | 5.9.0          | 
 | 5   | [AppLovin](./mediation_applovin.md)      | ◯      | ◯            | ◯        | ◯      | 9.11.2         | 
 | 6   | [Chartboost](./mediation_chartboost.md)  |        | ◯            | ◯        |        | 7.3.1          |
