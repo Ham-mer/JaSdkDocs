@@ -2,7 +2,7 @@
 "AdLimeSdk" を導入後は[メディエーション](./mediation.md)のガイドを参考にしてご希望の広告ネットワークを追加してください。 
 
 ## 前提条件
-- Xcode 9.2 以上のバージョンを使用
+- Xcode 11.0 以上のバージョンを使用
 - ターゲットバージョンを iOS 8.0 以上に設定
 - AdLime アカウントを作成し、アプリが登録済み
 
@@ -23,7 +23,7 @@ CocoaPods を初めてご利用の場合、 CocoaPods の[公式ドキュメン�
 ### 手動ダウンロード
 SDK フレームワークを直接ダウンロードして解凍し、下記のフレームワークを Xcode プロジェクトに導入してください。
 
-- [AdLimeSdk.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeSdk/1.8.0.zip)
+- [AdLimeSdk.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeSdk/1.8.1.zip)
 - AdLimeSdk.bundle
 
 ドラッグ & ドロップ完了後、Build Phases > Copy Bundle Resources に AdLimeSdk.bundle が含まれていることを確認してください。

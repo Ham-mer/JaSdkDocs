@@ -35,7 +35,7 @@ AdLime で利用可能な広告ネットワーク一覧
 | 5   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        |     ◯  | 6.11.4   |
 | 6   | [Chartboost](./mediation_chartboost.md)    | ◯      | ◯    | ◯        |        | 8.0.3    |
 | 7   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 3.2.0    |
-| 8   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.52.0   |
+| 8   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
 | 9   | [Display.IO](./mediation_display_io.md)    | ◯      | ◯    |    ◯     |        | 2.8.0    |
 | 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯ | ◯    |          | ◯      | 1.1.4    |
 | 11  | [Facebook](./mediation_facebook.md)        | ◯      | ◯    | ◯        | ◯      | 5.7.1    |

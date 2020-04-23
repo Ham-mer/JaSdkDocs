@@ -8,7 +8,7 @@
     - Android Studio 1.0 以降
     - Android API レベル 14 以上
 - iOS
-    - Xcode 9.2 以降
+    - Xcode 11.0 以降
     - ターゲットバージョン iOS 8.0 以上
 - AdLime アカウントを作成して、アプリが登録済み
 

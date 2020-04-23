@@ -26,7 +26,7 @@ SDK を 直接ダウンロードして解凍し、フレームワークを Xcode
 - GoogleAppMeasurement.framework
 - GoogleUtilities.framework
 - nanopb.framework
-- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.58.0.0.zip)
+- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.58.0.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -69,14 +69,14 @@ DFPをカスタマイズで設置します。[DFP NetworkConfig](./mediation/con
 ## 利用可能なフォーマット
 
 ### 広告タイプ
-|ネットワーク|バナー |インタースティシャル |動画リワード |ネイティブ  |
-|:-----:|:----:|:----------:|:------:|:----:|
-|DFP  |◯     | ◯          |◯       |◯     |
+|ネットワーク |バナー |インタラクション |動画リワード |ネイティブ |
+|:---------:|:----:|:------------:|:---------:|:--------:|
+| DFP       | ◯    | ◯            | ◯         | ◯        |
 
 ### バナーサイズ
-|ネットワーク  |320×50  |300×250   |320×100  |468×60  |728×90  |SMART    |
-|:-------:|:------:|:--------:|:-------:|:------:|:------:|:-------:|
-|DFP    |◯       |◯         |◯        |◯       |◯       |◯        |
+|ネットワーク | 320×50 | 300×250 | 320×100 | 468×60 | 728×90 |
+|:---------:|:------:|:-------:|:-------:|:------:|:------:|
+| DFP       | ◯      | ◯       | ◯       | ◯      | ◯      |
 
 ## テスト広告の表示
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#DFP) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
@@ -95,12 +95,13 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### 7.58.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-| 7.58.0.0        |2020/4/20   |- DFP SDK 7.58.0 に対応，Xcode のバージョンは 11.0 以上でなければいけません<br><br>AdLimeNativeAd などの setMuted: で動画のおとの調整はできます。<br>[AdLimeSdk](./init.md)到を 1.8.0 以降のバージョンまでアップデートする必要があります|
+| 7.58.0.1        |2020/4/23   | Xcode 11.0バージョンに対応できます |
+| 7.58.0.0        |2020/4/20   |- DFP SDK 7.58.0 に対応，Xcode のバージョンは 11.0 以上でなければいけません<br><br>AdLimeNativeAd などの setMuted: で動画のおとの調整はできます。<br>[AdLimeSdk](./init.md)到を 1.8.0 以降のバージョンまでアップデートする必要があります |
 
 ### 7.56.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-| 7.56.0.1        |2020/3/4    |バナー広告はAdaptive Bannerをサポートします。[AdLimeDFPBannerConfig](./mediation/config/networkconfig_dfp.md) で広告のサイズを設定できます。[Adaptive Banner 紹介](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner/adaptive)で確認をお願いします|
+| 7.56.0.1        |2020/3/4    |バナー広告はAdaptive Bannerをサポートします。[AdLimeDFPBannerConfig](./mediation/config/networkconfig_dfp.md) で広告のサイズを設定できます。[Adaptive Banner 紹介](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner/adaptive)で確認をお願いします |
 
 ### 7.55.0
 | バージョン        | 日付       | 更新内容                           |
@@ -116,7 +117,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### 7.50.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-|7.50.0.0         |2019/10/10  |DFP SDK 7.50.0 に対応  |
+|7.50.0.0         |2019/10/10  |DFP SDK 7.50.0 に対応 |
 
 ### 7.42.2
 | バージョン        | 日付       | 更新内容                           |
