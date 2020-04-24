@@ -48,7 +48,7 @@ AdLime で利用可能な広告ネットワーク一覧
 | 18  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.11.0   |
 | 19  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.4.1    |
 | 20  | [Tapjoy](./mediation_tapjoy.md)            |        | ◯    | ◯        |        | 12.3.4   |
-| 21  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 2.8.0.1  |
+| 21  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 2.9.0.7  |
 | 22  | [Unity Ads](./mediation_unity_ads.md)      | ◯      | ◯    | ◯        |        | 3.3.0    |
 | 23  | [Vungle](./mediation_vungle.md)            | ◯      | ◯    | ◯        | ◯      | 6.4.5    |
 
