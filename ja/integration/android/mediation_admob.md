@@ -12,8 +12,8 @@
 ```java
 dependencies {
     // AdMob
-   implementation "com.access_company.adlime:mediation_admob:19.0.1.0"
-   implementation "com.google.android.gms:play-services-ads:19.0.1"
+   implementation "com.access_company.adlime:mediation_admob:19.1.0.0"
+   implementation "com.google.android.gms:play-services-ads:19.1.0"
 }
 ```
 
@@ -42,6 +42,11 @@ AdMobをカスタマイズで設置します。[AdMob NetworkConfig](./mediation
 | AdMob     | ◯      | ◯       | ◯       | ◯      | ◯      |
 
 ## バージョン情報
+
+### 19.1.0
+| バージョン   | 日付       | 更新情報                          |
+|------------|------------|---------------------------------|
+| 19.1.0.0   | 2020/4/27  |AdMob SDK 19.0.1 に対応|
 
 ### 19.0.1
 | バージョン   | 日付       | 更新情報                          |

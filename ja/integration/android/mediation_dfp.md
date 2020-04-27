@@ -11,8 +11,8 @@
 ```java
 dependencies {
     // DFP
-    implementation "com.access_company.adlime:mediation_admob:19.0.1.0"
-    implementation "com.google.android.gms:play-services-ads:19.0.1"
+    implementation "com.access_company.adlime:mediation_admob:19.1.0.0"
+    implementation "com.google.android.gms:play-services-ads:19.1.0"
 }
 ```
 
@@ -32,6 +32,10 @@ DFPをカスタマイズで設置します。[DFP NetworkConfig](./mediation/con
 | DFP       | ◯      | ◯       | ◯       | ◯      | ◯      |
 
 ## バージョン情報
+### 19.1.0
+| バージョン   | 日付       | 更新情報                          |
+|------------|------------|---------------------------------|
+| 19.1.0.0   | 2020/4/27  |DFP SDK 19.0.1 に対応|
 
 ### 19.0.1
 | バージョン   | 日付       | 更新情報                          |

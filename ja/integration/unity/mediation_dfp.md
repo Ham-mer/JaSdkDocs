@@ -21,12 +21,12 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- DFP -->
-        <androidPackage spec="com.access_company.adlime:mediation_admob:19.0.1.0">
+        <androidPackage spec="com.access_company.adlime:mediation_admob:19.1.0.0">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="com.google.android.gms:play-services-ads:19.0.1">
+        <androidPackage spec="com.google.android.gms:play-services-ads:19.1.0">
             <repositories>
                 <repository>https://maven.google.com/</repository>
             </repositories>

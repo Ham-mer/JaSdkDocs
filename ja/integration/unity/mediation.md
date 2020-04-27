@@ -24,7 +24,7 @@ AdLime で利用可能なアドネットワーク一覧
 
 | No  | ネットワーク                               | バナー |インターステーシャル|動画リワード| Android 版 | iOS 版   |
 |:---:|:-------------------------------------:|:------:|:----:|:--------:|:-----------:|:---------:|
-| 1   | [AdMob](./mediation_admob.md)         | Y      | Y    | Y        | 18.3.0      | 7.58.0    |
+| 1   | [AdMob](./mediation_admob.md)         | Y      | Y    | Y        | 19.1.0      | 7.58.0    |
 | 2   | [Amazon](./mediation_amazon.md)       | Y      | Y    |          | 5.9.0       | 2.2.17    |
 | 3   | [AppLovin](./mediation_applovin.md)   | Y      | Y    | Y        | 9.9.2       | 6.9.4     |
 | 4   | [DFP](./mediation_dfp.md)             | Y      | Y    | Y        | 18.3.0      | 7.58.0    |
