@@ -73,10 +73,10 @@ protected void onCreate(Bundle savedInstanceState) {
     AdLime.getDefault().setLogEnable(true);
     AdLime.getDefault().setTestMode(true)
 
-    // Network 調整モード
-    // AdLime.getDefault().setNetworkDebugMode(true);
-    // Network テストモード，公開時に閉じる必要があります
+    // Network テストモード、アプリ公開時にはfalse にする必要があります
     // AdLime.getDefault().setNetworkTestMode(true);
+    // Network デバッグモード
+    // AdLime.getDefault().setNetworkDebugMode(true);
     ...
 }
 ...
@@ -116,10 +116,10 @@ protected void onCreate(Bundle savedInstanceState) {
     AdLime.getDefault().setLogEnable(true)
     AdLime.getDefault().setTestMode(true)
 
-    // Network 調整モード
-    // AdLime.getDefault().setNetworkDebugMode(true)
-    // Network テストモード，公開時に閉じる必要があります
+    // Network テストモード、アプリ公開時には false にする必要があります
     // AdLime.getDefault().setNetworkTestMode(true)
+    // Network デバッグモード
+    // AdLime.getDefault().setNetworkDebugMode(true)
     ...
 ```
 
@@ -127,7 +127,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ::::
 
-**各ネットワークは調整モードとテストモードをサポートできるかどかは[ネットワークを調整モードとテストモードに設定する](./debug_test_mode.md)で確認してください。。**
+**各広告ネットワークがテストモードとデバッグモードをサポートするかは[テストモードとデバッグモードの設定](./test_debug_mode.md)で確認してください。。**
 
 **メディエーション時に Chartboost を使用する場合、Chartboost の広告を表示するすべての Activity に、下記のコードを追加する必要があります。**
 

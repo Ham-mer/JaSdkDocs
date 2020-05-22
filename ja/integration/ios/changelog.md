@@ -2,13 +2,13 @@
 
 | バージョン    | 日付          | 内容                                  |
 | ----------- | ------------- | ------------------------------------ |
-| 1.8.2       | 2020/5/20     | コードのロジックを最適化して、アプリ起動時に起こったクラッシュ問題を修正してみます|
-| 1.8.1       | 2020/4/23     | Xcode 11.0バージョンに対応できます|
-| 1.8.0       | 2020/4/20     | Marketplaceを削除します|
-| 1.7.9       | 2020/4/3      | クラッシュを修正します|
-| 1.7.6       | 2020/3/21     | - BannerAdViewに[setAdSize:](./banner.md) は追加されます<br>- [AdLimeRewardedVideoAd](./rewarded.md)にgetRewardItemは追加されます。広告はロードされるとリワードの内容は取れます<br>- SDKは初期化される時にログにはAppIdは取れます<br>- 広告配置の取ることをスピードアップします<br>- 広告ロード失敗する時に返したパラメーター[AdLimeAdError](./error.md)にLineItemのエラー情報を追加されます|
-| 1.7.0       | 2020/2/20     | - ネイティブ広告のレイアウトは横画面をサポートします<br>- Bug Fix |
-| 1.6.7       | 2020/2/5      | AdLimeは新たな方法（setNetworkDebugMode、setNetworkTestMode）を追加します。この方法でネットワークを調整モード、テストモードに設定できます。[初期化](./init.md)を参考してください。（ネットワークに対応するアダプターも更新する必要があります）|
+| 1.8.2       | 2020/5/20     | アプリ起動時におけるロジックの修正 |
+| 1.8.1       | 2020/4/23     | Xcode 11.0バージョンに対応 |
+| 1.8.0       | 2020/4/20     | Marketplaceの削除 |
+| 1.7.9       | 2020/4/3      | クラッシュの修正 |
+| 1.7.6       | 2020/3/21     | - BannerAdViewに[setAdSize:](./banner.md) を追加 <br>- [AdLimeRewardedVideoAd](./rewarded.md)にgetRewardItemを追加。付与されたリワードの内容の詳細を表示 <br>- SDK 初期化時にログには AppId を表示<br>- 広告配置取得にかかる時間の短縮化 <br>- 広告ロード失敗時に返すパラメータ [AdLimeAdError](./error.md) の LineItem にエラー情報を追加|
+| 1.7.0       | 2020/2/20     | - ネイティブ広告の横画面用レイアウトの作成 <br>- Bug Fix |
+| 1.6.7       | 2020/2/5      | AdLimeは新たな方法（setNetworkDebugMode、setNetworkTestMode）を追加します。この方法によりテストモード、デバッグモードを設定できます。[初期化](./init.md)を参考してください。（ネットワークに対応するアダプターも更新する必要があります）|
 | 1.6.6       | 2020/1/31     | AdlimerAdLoaderとMixFullScreenAdの連携を改善します|
 | 1.6.5       | 2020/1/21     | AdLimeAdLoader API の軽微な仕様修正。広告イベントの取得方法を変更。[AdLimeAdLoader](./adloader.md)を参考してください|
 | 1.6.2       | 2020/1/14     | 広告のキャッシュ管理クラス [AdLimeAdLoader](./adloader.md) をサポート |
