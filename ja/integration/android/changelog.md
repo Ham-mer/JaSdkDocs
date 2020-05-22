@@ -2,10 +2,10 @@
 
 | バージョン| 日付      | 内容                                      |
 | :----- | :--------- | :--------------------------------------- |
-| 1.10.3 | 2020/4/20  | Marketplaceを削除 |
+| 1.10.3 | 2020/4/20  | Marketplace を削除 |
 | 1.9.55 | 2020/4/3   | バナーとネイティブ広告が表示されない場合にアプリの挙動が重くなる問題を修正 |
-| 1.9.49 | 2020/3/20  | - BannerAdViewに [setAdSize(BannerAdSize adSize)](./banner.md) を追加 <br> - [AdLimeRewardedVideoAd](./rewarded.md)に `getRewardItem()` を追加。付与されたリワードの内容の詳細を表示 <br>- SDK 初期化時にログには AppId を表示<br>- 広告配置取得にかかる時間の短縮化 |
-| 1.9.36 | 2020/2/25  | - ネイティブ広告のビルトインレイアウトの横画面対応 <br>- インタースティシャ広告と動画リワード広告で自動にコールバックを停止する問題を修正 <br>- Bug Fix|
+| 1.9.49 | 2020/3/20  | - BannerAdViewに [setAdSize(BannerAdSize adSize)](./banner.md) を追加 <br> - [AdLimeRewardedVideoAd](./rewarded.md)に `getRewardItem()` を追加。付与されたリワードの内容の詳細を表示 <br>- SDK 初期化時、ログに AppId を表示<br>- 広告配置取得の時間短縮 |
+| 1.9.36 | 2020/2/25  | - ネイティブ広告のビルトインレイアウトの横画面対応 <br>- インタースティシャ広告と動画リワード広告でコールバックが呼ばれない問題を修正 <br>- Bug Fix|
 | 1.9.29 | 2020/1/30  | - ネイティブ広告展示のコールバックのタイミングを改善 <br>-Kotlinで`NativeAdLayout.Builder()`が使えない問題を修正 |
 | 1.9.28 | 2020/1/19  | - `setLogEnable` などを含めて、AdLime クラスのスタティックメソッドをインスタンスメソッドに変更<br>- `initialize(Context context, AdLimeConfiguration config)` を非推奨にして、 代わりに `init(Context context, String appId)`を推奨とする ※[初期化](./init.md)を参照<br>- InterstitialAd と RewardedVideoAd の表示は、 `show()` または `show(Actitivity)` を推奨<br>- AdLimeLoader にある `AdListener` メソッドを非推奨 ※[AdLimeLoader](./adloader.md)を参照|
 | 1.9.24 | 2020/1/6   | okhttp のライブリーを削除して、広告のリクエスト処理を最適化|

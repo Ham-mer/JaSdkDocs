@@ -96,12 +96,12 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### 7.58.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-| 7.58.0.1        |2020/4/23   | - AdMob SDK 7.58.0 に対応（Xcode 11.0以上必須） <br> - AdLimeNativeAd 等で `setMuted:` を提供する。広告の音をミュートにするかどうかを選択可能 <br>- [AdLimeSdk](./init.md)を 1.8.0 以上のバージョンまでアップデートする必要があります。 |
+| 7.58.0.1        |2020/4/23   | - AdMob SDK 7.58.0 に対応（Xcode 11.0以上必須） <br> - AdLimeNativeAd 等で `setMuted:` を提供する。広告の音をミュートにするかどうかを選択可能 <br>- [AdLimeSdk](./init.md)を 1.8.0 以上のバージョンまでアップデートが必要 |
 
 ### 7.56.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-| 7.56.0.1        |2020/3/4    | バナー広告はAdaptive Bannerをサポートします。[AdLimeAdMobBannerConfig](./mediation/config/networkconfig_admob.md) で広告のサイズを設定できます。ドキュメントは [Adaptive Banner 紹介](https://developers.google.com/admob/ios/banner/adaptive) 参照 |
+| 7.56.0.1        |2020/3/4    | アダプティブ バナーをサポート。[AdLimeAdMobBannerConfig](./mediation/config/networkconfig_admob.md) で広告のサイズを設定できます。ドキュメントは [Adaptive Banner 紹介](https://developers.google.com/admob/ios/banner/adaptive) 参照 |
 
 ### 7.55.0
 | バージョン        | 日付       | 更新内容                           |

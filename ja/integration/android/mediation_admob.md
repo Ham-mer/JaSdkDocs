@@ -51,13 +51,13 @@ AdMobをカスタマイズで設置します。[AdMob NetworkConfig](./mediation
 ### 19.0.1
 | バージョン   | 日付       | 更新情報                          |
 |------------|------------|---------------------------------|
-| 19.0.1.0   | 2020/4/20  | - AdMob SDK 19.0.1 に対応（Android APIレベル 16以上必須）。<br> NativeAd 等で `setMuted()` を提供する。広告の音をミュートにするかどうかを選択可能。<br>[ - AdLimeSdk](./init.md)を 1.10.3 以上のバージョンまでアップデートする必要があります。|
+| 19.0.1.0   | 2020/4/20  | - AdMob SDK 19.0.1 に対応（Android APIレベル 16以上必須）。<br> ネイティブ広告などで `setMuted()` API により広告の音声を消音に設定可能。<br>[ - AdLimeSdk](./init.md)を 1.10.3 以上のバージョンにアップデートが必要|
 
 ### 18.3.0
 | バージョン   | 日付       | 更新情報                          |
 |------------|------------|---------------------------------|
-| 18.3.0.3   | 2020/3/4   | バナー広告はAdaptive Bannerをサポートします。[AdLimeAdMobBannerConfig](./mediation/config/networkconfig_admob.md) で広告のサイズを設定できます。ドキュメントは [Adaptive Banner 紹介](https://developers.google.com/admob/android/banner/adaptive) 参照|
-| 18.3.0.0   | 2020/2/7   |AdMob SDK 18.3.0 に対応。AndroidXに移行 |
+| 18.3.0.3   | 2020/3/4   | バナー広告はアダプティブ バナーをサポート。[AdLimeAdMobBannerConfig](./mediation/config/networkconfig_admob.md) で広告のサイズを設定が可能。ドキュメントは [Adaptive Banner 紹介](https://developers.google.com/admob/android/banner/adaptive) 参照|
+| 18.3.0.0   | 2020/2/7   |AdMob SDK 18.3.0 に対応。AndroidX に移行 |
 
 ### 17.2.1
 | バージョン   | 日付       | 更新情報                          |
