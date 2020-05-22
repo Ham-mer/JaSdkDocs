@@ -127,7 +127,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ::::
 
-**各広告ネットワークがテストモードとデバッグモードをサポートするかは[テストモードとデバッグモードの設定](./test_debug_mode.md)で確認してください。。**
+**各広告ネットワークがテストモードとデバッグモードをサポートするかは[テストモードとデバッグモードの設定](./test_debug_mode.md)で確認してください。**
 
 **メディエーション時に Chartboost を使用する場合、Chartboost の広告を表示するすべての Activity に、下記のコードを追加する必要があります。**
 

@@ -147,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ::::
 
 
-**各広告ネットワークがテストモードとデバッグモードをサポートするかは [テストモードとデバッグモードの設定](./test_debug_mode.md) で確認してください。。**
+**各広告ネットワークがテストモードとデバッグモードをサポートするかは [テストモードとデバッグモードの設定](./test_debug_mode.md) で確認してください。**
 
 ## SDK の実装サンプル
 各広告の実装サンプルについて、[デモアプリ](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。
