@@ -96,18 +96,17 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### 7.58.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-| 7.58.0.1        |2020/4/23   | Xcode 11.0バージョンに対応できます |
-| 7.58.0.0        |2020/4/20   |- AdMob SDK 7.58.0 に対応，Xcode のバージョンは 11.0 以上でなければいけません<br><br>- AdLimeNativeAd などの setMuted: で動画のおとの調整はできます。<br><br>- [AdLimeSdk](./init.md)到を 1.8.0 以降のバージョンまでアップデートする必要があります |
+| 7.58.0.1        |2020/4/23   | - AdMob SDK 7.58.0 に対応（Xcode 11.0以上必須） <br> - AdLimeNativeAd 等で `setMuted:` を提供する。広告の音をミュートにするかどうかを選択可能 <br>- [AdLimeSdk](./init.md)を 1.8.0 以上のバージョンまでアップデートが必要 |
 
 ### 7.56.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-| 7.56.0.1        |2020/3/4    |バナー広告はAdaptive Bannerをサポートします。[AdLimeAdMobBannerConfig](./mediation/config/networkconfig_admob.md) で広告のサイズを設定できます。[Adaptive Banner 紹介](https://developers.google.com/admob/ios/banner/adaptive)で確認をお願いします |
+| 7.56.0.1        |2020/3/4    | アダプティブ バナーをサポート。[AdLimeAdMobBannerConfig](./mediation/config/networkconfig_admob.md) で広告のサイズを設定できます。ドキュメントは [Adaptive Banner 紹介](https://developers.google.com/admob/ios/banner/adaptive) 参照 |
 
 ### 7.55.0
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|
-|7.55.0.1         |2020/2/14   |- AdMob SDK 7.55.0 に対応<br><br>- 新たな動画リワードAPIでパラレロードをサポートします |
+|7.55.0.1         |2020/2/14   |- AdMob SDK 7.55.0 に対応<br>- 新たな動画リワードAPIでパラレルロードをサポート |
 
 ### 7.52.0
 | バージョン        | 日付       | 更新内容                           |

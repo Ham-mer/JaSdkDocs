@@ -98,10 +98,10 @@ AppDelegated の initWithAppId メソッドを呼び出す方法を下記に示�
      // デバッグログを表示する場合は以下を設定してください
     [AdLime setLogEnable: YES];
 
-    // Network 調整モード
-    // [AdLime setNetworkDebugMode:YES];
-    // Network テストモード，公開時に閉じる必要があります
+    // Network テストモード、アプリ公開時には false にする必要があります
     // [AdLime setNetworkTestMode:YES];
+    // Network デバッグモード
+    // [AdLime setNetworkDebugMode:YES];
     
     return YES;
 }
@@ -129,10 +129,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // デバッグログを表示する場合は以下を設定してください
         AdLime.setLogEnable(true)
 
-        // Network 調整モード
-        // AdLime.setNetworkDebugMode(true)
-        // Network テストモード，公開時に閉じる必要があります
+        // Network テストモード、アプリ公開時には false にする必要があります
         // AdLime.setNetworkTestMode(true)
+        // Network デバッグモード
+        // AdLime.setNetworkDebugMode(true)
 
         return true
     }
@@ -147,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ::::
 
 
-**各ネットワークは調整モードとテストモードをサポートできるかどかは[ネットワークを調整モードとテストモードに設定する](./debug_test_mode.md)で確認してください。。**
+**各広告ネットワークがテストモードとデバッグモードをサポートするかは [テストモードとデバッグモードの設定](./test_debug_mode.md) で確認してください。**
 
 ## SDK の実装サンプル
 各広告の実装サンプルについて、[デモアプリ](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。
