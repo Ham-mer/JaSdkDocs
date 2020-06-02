@@ -33,7 +33,7 @@ Network：AdMob、AppLovin、Criteo、Facebook、Five、i-mobile、Maio、MoPub�
     <img src="./five_sound_webconfig.png" width="500px"/>
 
 **バナー**
-| 番号 | ×etwork          | ビデオ          | 音       | ユーザさんのコントロール | 開発者のコントロール    |
+| 番号 | Network          | ビデオ          | 音       | ユーザさんのコントロール | 開発者のコントロール |
 |:---:|:----------------:|:--------------:|:--------:|:--------:|:-------------:|
 | 1   | AdMob            | ◯ (web config) | mute     | ◯        | ◯ (Api)       |
 | 2   | AppLovin         | ×              | ×        | ×        | ×             |
@@ -45,42 +45,41 @@ Network：AdMob、AppLovin、Criteo、Facebook、Five、i-mobile、Maio、MoPub�
 | 8   | Nend             | ×              | ×        | ×        | ×             |
 
 **インタースティシャ**
-| 番号 | ×etwork          | ビデオ        | 音       | ユーザさんのコントロール | 開発者のコントロール    |
-|:---:|:----------------:|:--------------:|:------------:|:--------:|:-------------:|
-| 1   | AdMob            | ◯ (web config) | unknown      | ◯        | ◯ (Api)       |
-| 2   | AppLovin         | ◯              | sound        | x        | ◯ (Api)       |
-| 3   | Criteo           | ×              | ×            | ×        | ×             |
-| 4   | Facebook         | ◯              | mute (>=5.7.0)<br>sound (<5.7.0)| ◯        | ×             |
-| 5   | Five             | ◯              | sound        | ◯        | ◯ (web config)|
-| 6   | i-mobile         | ×              | ×            | ×        | ×             |
-| 7   | Maio             | ◯              | sound        | ◯        | ×             |
-| 8   | MoPub            | ◯              | unknown      | ×        | ×             |
-| 9   | Nend             | ◯              | mute         | ◯        | ◯ (Api)       |
-| 10  | Pangle           | ◯              | sound        | ◯        | ×             |
-| 11  | TikTok           | ◯              | sound        | ◯        | ×             |
+| 番号 | Network          | ビデオ          | 音           | ユーザさんのコントロール | 開発者のコントロール | 音楽に対する影響(Android) |音楽に対する影響(iOS) |
+|:---:|:----------------:|:--------------:|:------------:|:--------:|:-------------:|:----------------------:|:-------------------:|
+| 1   | AdMob            | ◯ (web config) | unknown      | ◯        | ◯ (Api)       | 音楽が一時停止           | 音楽が一時停止         |
+| 2   | AppLovin         | ◯              | sound        | x        | ◯ (Api)       | 音楽が一時停止           | 音声が同時に出る       |
+| 3   | Criteo           | ×              | ×            | ×        | ×             | -                      | -                   |
+| 4   | Facebook         | ◯              | mute (>=5.7.0)<br>sound (<5.7.0)| ◯ | × | 音声が同時に出る          | 音声が同時に出る      |
+| 5   | Five             | ◯              | sound        | ◯        | ◯ (web config)| リクエスト失敗           | 音声が同時に出る       |
+| 6   | i-mobile         | ×              | ×            | ×        | ×             | -                      | -                   |
+| 7   | Maio             | ◯              | sound        | ◯        | ×             | 音楽が一時停止           | 音声が同時に出る       |
+| 8   | MoPub            | ◯              | unknown      | ×        | ×             | 音が流れるような広告をリクエストできない | 音が流れるような広告をリクエストできない |
+| 9   | Nend             | ◯              | mute         | ◯        | ◯ (Api)       | 音声が同時に出る          | 音声が同時に出る       |
+| 10  | Pangle           | ◯              | sound        | ◯        | ×             | 音声が同時に出る          | 音声が同時に出る       |
+| 11  | TikTok           | ◯              | sound        | ◯        | ×             | 音声が同時に出る          | 音声が同時に出る       |
 
 **ネイティブ**
-| 番号 | ×etwork          | ビデオ        | 音             | ユーザさんのコントロール             | 開発者のコントロール    |
-|:---:|:----------------:|:--------------:|:------------------:|:------------------:|:--------------:|
-| 1   | AdMob            | ◯ (web config) | mute               | ◯                  | ◯ (Api)        |
-| 2   | AppLovin         | ◯              | mute               | ×                  | ◯ (Api)        |
-| 3   | Facebook         | ◯              | mute (normal)<br>sound (fullscreen) | x                  | ×              |
-| 4   | i-mobile         | ×              | ×                  | ×                  | ×              |
-| 5   | MoPub            | ◯              | mute (normal)<br>sound (fullscreen) | ◯ (normal)<br>× (fullscreen) | ◯ (Api)        |
-| 6   | Nend             | ◯              | mute (normal)<br>sound (fullscreen) | × (normal)<br>◯ (fullscreen)     | × (normal)<br>◯ (fullscreen: Api) |
-| 7   | TikTok           | ◯              | mute (normal)<br>sound (fullscreen) | x                  | ×              |
+| 番号 | Network          | ビデオ          | 音                 | ユーザさんのコントロール | 開発者のコントロール | 音楽に対する影響(Android) | 音楽に対する影響(iOS) |
+|:---:|:----------------:|:--------------:|:------------------:|:------------------:|:--------------:|:----------------------:|:-------------------:|
+| 1   | AdMob            | ◯ (web config) | mute               | ◯                  | ◯ (Api)        | 音声が同時に出る         | 音声が同時に出る        |
+| 2   | AppLovin         | ◯              | mute               | ×                  | ◯ (Api)        | 音声が同時に出る         | 音声が同時に出る        |
+| 3   | Facebook         | ◯              | mute (normal)<br>sound (fullscreen) | x | ×              | フルスクリーンではない場合、影響はないが、フルスクリーンの場合、音楽が一時停止 | 音声が同時に出る |
+| 4   | i-mobile         | ×              | ×                  | ×                  | ×              | -                      | -                   |
+| 5   | Nend             | ◯              | mute (normal)<br>sound (fullscreen) | × (normal)<br>◯ (fullscreen) | × (normal)<br>◯ (fullscreen: Api) | フルスクリーンではない場合、影響はないが、フルスクリーンの場合、音楽が一時停止 | 音声が同時に出る |
+| 6   | TikTok           | ◯              | mute (normal)<br>sound (fullscreen) | x | ×              | 音声が同時に出る          | 音声が同時に出る        |
 
 sound (fullscreen)：ネイティブ広告は音なくて再生されますが、ユーザさんがクリックするとフルスクリーンで再生すると音が出ます。
 
 **動画リワード**
-| 番号 | ×etwork          | 音        | ユーザさんのコントロール | 開発者のコントロール    |
-|:---:|:----------------:|:-------------:|:--------:|:--------------:|
-| 1   | AdMob            | sound         | ◯        | ◯              |
-| 2   | AppLovin         | sound         | ×        | ◯              |
-| 3   | Facebook         | mute (>=5.7.0)<br>sound (<5.7.0) | ◯        | ×              |
-| 4   | Five             | sound         | ◯        | ◯ (web config) |
-| 5   | Maio             | sound         | ◯        | ×              |
-| 6   | MoPub            | sound         | x        | ×              |
-| 7   | Nend             | sound         | x        | ×              |
-| 8   | Pangle           | sound         | ◯        | ×              |
-| 9   | TikTok           | sound         | ◯        | ×              |
+| 番号 | Network          | 音            | ユーザさんのコントロール | 開発者のコントロール | 音楽に対する影響(Android) | 音楽に対する影響(iOS) |
+|:---:|:----------------:|:-------------:|:--------:|:--------------:|:----------------------:|:-------------------:|
+| 1   | AdMob            | sound         | ◯        | ◯              | 音楽が一時停止           | 音楽が一時停止         |
+| 2   | AppLovin         | sound         | ×        | ◯              | 音楽が一時停止           | 音楽が一時停止         |
+| 3   | Facebook         | mute (>=5.7.0)<br>sound (<5.7.0) | ◯ | ×  | 音声が同時に出る          | 音声が同時に出る      |
+| 4   | Five             | sound         | ◯        | ◯ (web config) | リクエスト失敗           | リクエスト失敗         |
+| 5   | Maio             | sound         | ◯        | ×              | 音楽が一時停止           | 音声が同時に出る       |
+| 6   | MoPub            | sound         | x        | ×              | 音が流れるような広告をリクエストできない | 音が流れるような広告をリクエストできない |
+| 7   | Nend             | sound         | x        | ×              | 音声が同時に出る          | 音声が同時に出る      |
+| 8   | Pangle           | sound         | ◯        | ×              | 音声が同時に出る          | 音声が同時に出る      |
+| 9   | TikTok           | sound         | ◯        | ×              | 音声が同時に出る          | 音声が同時に出る      |
