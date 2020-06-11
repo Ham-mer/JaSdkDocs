@@ -23,14 +23,14 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.9.0.7.zip)
+- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.0.0.2.zip)
 - BUFoundation.framework
 - BUAdSDK.bundle
-- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/2.9.0.7.0.zip)
+- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/3.0.0.2.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/Networks/BUAdSDK/BUAdSDK_2.9.0.7.zip)
+- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.0.0.2.zip)
 - BUFoundation.framework
 - BUAdSDK.bundle
 
@@ -74,6 +74,10 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#TikTok) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
 
 ## バージョン情報
+### 3.0.0.2
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 3.0.0.2.0       | 2020/6/11  | - BUAdSDK v3.0.0.2 に対応：Bug fix。|
 
 ### 2.9.0.7
 | バージョン        | 日付       | 更新内容                           |
