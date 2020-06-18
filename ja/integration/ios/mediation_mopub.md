@@ -23,12 +23,12 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.11.0/mopub-framework-5.11.0.zip)
-- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.11.0.2.zip)
+- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.13.0/mopub-framework-5.13.0.zip)
+- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.13.0.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.11.0/mopub-framework-5.11.0.zip)
+- [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.13.0/mopub-framework-5.13.0.zip)
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -85,6 +85,10 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 最後に、左側の「アプリ」メニューをクリックし、 Mobup 広告を表示する広告枠で、「広告のソース追加」をクリックし、 Mobup 広告を追加してください。
 
 ## バージョン情報
+### 5.13.0
+| バージョン | 日付       | 更新内容                           |
+|----------|------------|----------------------------------|
+| 5.13.0.0 | 2020/6/18  | - MoPub SDK 5.13.0 に対応：moat dependencyを削除します，Bug Fix|
 
 ### 5.11.0
 | バージョン | 日付       | 更新内容                           |
