@@ -21,7 +21,7 @@ Dependencies.xml に、下記の依存関係を追加してください。
     <androidPackages>
 
         <!-- MoPub -->
-        <androidPackage spec="com.access_company.adlime:mediation_mopub:5.8.0.2">
+        <androidPackage spec="com.access_company.adlime:mediation_mopub:5.13.0.0">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>

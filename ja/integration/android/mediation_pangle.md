@@ -9,8 +9,8 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_pangle:2.9.0.1.2"
-    implementation "com.access_company.adlime:pangle_open_ad_sdk:2.9.0.1"
+    implementation "com.access_company.adlime:mediation_pangle:2.9.0.3.0"
+    implementation "com.access_company.adlime:pangle_open_ad_sdk:2.9.0.3"
 }
 ```
 
@@ -25,6 +25,9 @@ dependencies {
 すでに application タグに android:networkSecurityConfig が存在する場合は、pangle_network_security_config.xml の内容を、指定されている XML ファイルに統合してください。
 
 **Pangle SDKは上記の権限を強制取得ではない、取得しなくても広告をリクエストできる。上記の権限を取得してから Pangle はもっと精確にターゲットしてユーザ体験改善してecpmを高める。**
+
+## リソース難読化
+アプリがリソースに対して難読化を行う際（例えば、andResGuardを使う時）、Pangleのリソースに難読化を行わないでください。リソースが見つからない場合、クラッシュが発生するかもしれません。詳しくは[Pangle リソースリスト](./mediation/config/pangle_whitelist.md)をご参照ください。
 
 ## 注意
 - 動画リワード広告を使用する場合、RewardedVideoAd コンストラクトの引数に、Activity 型を指定するか、もしくは show(activity) で広告を表示すること
@@ -43,19 +46,23 @@ dependencies {
 - Code ID
 
 ## バージョン情報
+### 2.9.0.3
+|バージョン   | 日付        | 更新内容                        |
+|------------|------------|-------------------------------|
+| 2.9.0.3.0  | 2020/6/18  | - Pangle SDK 2.9.0.3 に対応：Bug修正<br><br>[リソース難読化](#リソース難読化)の配置を追加します|
 
 ### 2.9.0.1
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|-------------------------------|
-| 2.9.0.1.2  | 2020/3/31  | - Pangle SDK 2.9.0.1 に対応 <br>- ネイティブ広告をサポート  |
+| 2.9.0.1.2  | 2020/3/31  | - Pangle SDK 2.9.0.1 に対応<br>- ネイティブ広告をサポート|
 
 ### 2.1.5.0
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|-------------------------------|
-| 2.1.5.0.0  | 2020/2/17  | - Pangle SDK 2.1.5.0 に対応 <br>- pangle_network_security_config.xml の内容を更新 <br>- GDRPをサポート  |
+| 2.1.5.0.0  | 2020/2/17  | - Pangle SDK 2.1.5.0 に対応<br>- pangle_network_security_config.xml の内容を更新 <br>- GDRPをサポート|
 
 ### 2.1.3.0
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|-------------------------------|
-| 2.1.3.0.2  | 2020/2/10  | - android:networkSecurityConfig 設置の追加 <br>- デバッグモードをサポート。[初期化](./init.md)を参考してください |
+| 2.1.3.0.2  | 2020/2/10  | - android:networkSecurityConfig 設置の追加<br>- デバッグモードをサポート。[初期化](./init.md)を参考してください|
 | 2.1.3.0.0  | 2020/1/19  | Pangle SDK 2.1.3.0 に対応 |

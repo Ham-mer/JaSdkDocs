@@ -30,12 +30,10 @@ android {
 
 dependencies {
     // MoPub
-    implementation "com.access_company.adlime:mediation_mopub:5.11.1.5"
-    implementation("com.mopub:mopub-sdk:5.11.1@aar") {
+    implementation "com.access_company.adlime:mediation_mopub:5.13.0.0"
+    implementation("com.mopub:mopub-sdk:5.13.0@aar") {
         transitive = true
-        exclude module: 'moat-mobile-app-kit'
     }
-    implementation "com.access_company.adlime:mopub-moat-mobile-app-kit:2.4.5"
     implementation "com.google.android.gms:play-services-ads-identifier:16.0.0"
     implementation "com.google.android.gms:play-services-base:16.1.0"
 }
@@ -72,6 +70,10 @@ dependencies {
 - AdUnit ID
 
 ## バージョン情報
+### 5.13.0
+| バージョン  | 日付       | 更新内容                        |
+|-----------|------------|-------------------------------|
+| 5.13.0.0  | 2020/6/18  | - MoPub SDK 5.13.0 に対応：moat dependencyを削除します；フルスクリーンの動画広告にスキップボタンを追加します|
 
 ### 5.11.1
 | バージョン  | 日付       | 更新内容                        |
