@@ -3,7 +3,7 @@
 - [DFP 開発者ガイド](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start)
 
 ## 前提条件
-- ターゲットバージョン iOS 8.0 以上
+- ターゲットバージョン iOS 9.2 以上
 
 ## SDKの導入
 AdLime SDK で DFP を使用するために、 DFP SDK と、それに対応した AdLime SDKを導入してください。

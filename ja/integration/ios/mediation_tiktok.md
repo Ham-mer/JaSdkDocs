@@ -3,7 +3,7 @@
 - [Tiktok 開発者ガイド](https://ad.oceanengine.com/union/media/union/download)
 
 ## 前提条件
-- ターゲットバージョン iOS 8.0 以上
+- ターゲットバージョン iOS 9.0 以上
 
 ## SDK の導入
 AdLime SDK で Tiktok 広告ネットワークを使用するためには、 Tiktok SDK と、それに対応した AdLime SDK を導入してください。

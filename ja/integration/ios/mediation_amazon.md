@@ -3,7 +3,7 @@
 - [Amazon 開発者ガイド](https://developer.amazon.com/apps-and-games/mobile-ads)
 
 ## 前提条件
-- ターゲットバージョン iOS 10.0 以上
+- ターゲットバージョン iOS 9.0 以上
 
 ## SDK の導入
 AdLime SDK で Amazon 広告ネットワークを使用するために、Amazon SDK と、それに対応した AdLime SDK を導入してください。

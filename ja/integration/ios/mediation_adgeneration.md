@@ -1,10 +1,10 @@
 # AdGeneration ドキュメント
 
 - [AdGeneration Webサイト](https://supership.jp/business/adgeneration/)
-- [AdGeneration 開発者ガイド](https://developers.google.cn/AdGeneration/ios/quick-start)
+- [AdGeneration 開発者ガイド](https://github.com/AdGeneration/SDK/wiki)
 
 ## 前提条件
-- ターゲットバージョン iOS 8.0 以上
+- ターゲットバージョン iOS 9.0 以上
 
 ## SDK の導入
 AdLime SDK で AdGeneration を使用するためには、AdGeneration SDK と、それに対応した AdLime SDK を導入してください。

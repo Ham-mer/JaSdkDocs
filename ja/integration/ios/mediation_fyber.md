@@ -3,7 +3,7 @@
 - [Fyber 開発者ガイド](https://marketplace-supply.fyber.com/docs/new-vamp-ios)
 
 ## 前提条件
-- ターゲットバージョンを iOS 8.0 以上に設定していること
+- ターゲットバージョンを iOS 9.0 以上に設定していること
 
 ## SDK の導入
 AdLime SDK で Fyber を使用するためには、Fyber SDK と、それに対応した AdLime SDK を導入してください。

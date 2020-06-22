@@ -3,7 +3,7 @@
 - [MoPub 開発者ガイド](https://developers.mopub.com/publishers/ios/get-started/)
 
 ## 前提条件
-- ターゲットバージョン iOS 9.0 以上
+- ターゲットバージョン iOS 10.0 以上
 
 ## SDKの導入
 
