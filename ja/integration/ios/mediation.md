@@ -29,10 +29,10 @@ AdLime で利用可能な広告ネットワーク一覧
 | No  |  ネットワーク                 | バナー | インターステーシャル  | 動画リワード | ネイティブ | 最新バージョン |
 |:---:|:-------------------------------------:|:------:|:----:|:--------:|:------:|:--------:|
 | 1   | [AdColony](./mediation_adcolony.md)        | ◯      | ◯    | ◯        |        | 4.1.2    |
-| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.16.4   |
+| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.18.0   |
 | 3   | [AdMob](./mediation_admob.md)              | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
 | 4   | [Amazon](./mediation_amazon.md)            | ◯      | ◯    |          |        | 2.2.17   |
-| 5   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        |     ◯  | 6.11.4   |
+| 5   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        |     ◯  | 6.12.8   |
 | 6   | [Chartboost](./mediation_chartboost.md)    | ◯      | ◯    | ◯        |        | 8.0.3    |
 | 7   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 3.2.0    |
 | 8   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.58.0   |

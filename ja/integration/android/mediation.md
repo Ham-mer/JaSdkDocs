@@ -30,7 +30,7 @@ AdLime で利用可能なアドネットワーク一覧
 | 番号 | ネットワーク | バナー  | インタースティシャル | リワード | ネイティブ | 最新バージョン | 
 |:---:| :--------------------------------------: | :----: | :----------: | :------: | :----: |:-------------: |
 | 1   | [AdColony](./mediation_adcolony.md)      |        | ◯            | ◯        |        | 3.3.7          | 
-| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯    | ◯            |          | ◯      | 2.15.1         | 
+| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯    | ◯            |          | ◯      | 2.18.0         | 
 | 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 19.1.0         | 
 | 4   | [Amazon](./mediation_amazon.md)          | ◯      | ◯            |          |        | 5.9.0          | 
 | 5   | [AppLovin](./mediation_applovin.md)      | ◯      | ◯            | ◯        | ◯      | 9.11.2         | 

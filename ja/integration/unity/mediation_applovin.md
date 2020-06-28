@@ -64,8 +64,8 @@ Dependencies.xml に、下記の依存関係を追加してください。
 
     iOS プロジェクトで、 CocoaPods から SDK が ダウンロードできない場合は、 SDK を直接ダウンロードして解凍し、下記のフレームワークを Assets/Plugins/iOS に入れてください。
     
-    [AppLovinSDK.framework](https://dash.applovin.com/docs/sdk/download?type=ios-main)<br>
-    [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.11.4.1.zip)
+    [AppLovinSDK.framework](https://bintray.com/applovin/iOS/download_file?file_path=applovin-ios-sdk-6.12.8.zip)<br>
+    [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.12.8.1.zip)
 
 ### 依存関係の設定
 - Android

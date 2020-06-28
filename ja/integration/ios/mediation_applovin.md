@@ -21,13 +21,13 @@ pod install --repo-update
 
 ### 手動ダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [AppLovinSDK.framework](https://dash.applovin.com/docs/sdk/download?type=ios-main)  **（要ログイン）**
-- [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.11.4.1.zip)
+- [AppLovinSDK.framework](https://bintray.com/applovin/iOS/download_file?file_path=applovin-ios-sdk-6.12.8.zip)  **（要ログイン）**
+- [AdLimeMediation_AppLovin.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_AppLovin/6.12.8.1.zip)
 - AdLimeMediation_AppLovin_Resources.bundle
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [AppLovinSDK.framework](https://dash.applovin.com/docs/sdk/download?type=ios-main)
+- [AppLovinSDK.framework](https://bintray.com/applovin/iOS/download_file?file_path=applovin-ios-sdk-6.12.8.zip)
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -69,9 +69,6 @@ Info.plist を ソースコードとして開いて編集します。
 
 <img src="./../images/ios/mediation_applovin_sdk_key_plist.png" height="120"/>
 
-## NetworkConfig 設置
-AppLovinをカスタマイズで設置します。[AppLovin NetworkConfig](./mediation/config/networkconfig_applovin.md) を参考してください。
-
 ## サポートできる広告フォーマット
 
 ### 広告フォーマット
@@ -98,6 +95,11 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 <img src="./../images/ios/mediation_applovin_add_lineitem.png" width="600" />
 
 ## バージョン情報
+### 6.12.8
+| バージョン | 日付       | 更新内容                          |
+|----------|-----------|----------------------------------|
+| 6.12.8.1 | 2020/6/27 | AppLovin SDK 6.12.8 に対応：バグの修正とパフォーマンスの向上<br><br>AdLimeAppLovinGlobalConfig、AdLimeAppLovinNativeConfig：muted属性を削除します。AdLimeNativeAd などのオブジェクトにおける setMuted: メソッドによって動画の音声を設定してください|
+
 ### 6.11.4
 | バージョン | 日付       | 更新内容                          |
 |----------|-----------|----------------------------------|

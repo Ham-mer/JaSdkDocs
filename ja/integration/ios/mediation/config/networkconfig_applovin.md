@@ -1,23 +1,23 @@
 # AppLovin NetworkConfig
 
 ## 全体配置
-### TXADAppLovinGlobalConfig
+### AdLimeAppLovinGlobalConfig
 
 ```objectivec
-@import TaurusXAdMediation_AppLovin;
+@import AdLimeMediation_AppLovin;
 
-TXADAppLovinGlobalConfig *appLovinGlobalConfig = [[TXADAppLovinGlobalConfig alloc] init];
+AdLimeAppLovinGlobalConfig *appLovinGlobalConfig = [[AdLimeAppLovinGlobalConfig alloc] init];
 // 広告の音はについて、黙認としては on にされます
 appLovinGlobalConfig.muted = NO;
 ```
 
 ## ネイティブ
-### TXADAppLovinNativeConfig
+### AdLimeAppLovinNativeConfig
 
 ```objectivec
-@import TaurusXAdMediation_AppLovin;
+@import AdLimeMediation_AppLovin;
 
-TXADAppLovinNativeConfig *appLovinNativeConfig = [[TXADAppLovinNativeConfig alloc] init];
-// 広告の音はについて、黙認としては off にされます。TXADAppLovinNativeConfig はTXADAppLovinGlobalConfigの設置をカバーします
+AdLimeAppLovinNativeConfig *appLovinNativeConfig = [[AdLimeAppLovinNativeConfig alloc] init];
+// 広告の音はについて、黙認としては off にされます。AdLimeAppLovinNativeConfig はAdLimeAppLovinGlobalConfigの設置をカバーします
 appLovinNativeConfig.muted = YES;
 ```
