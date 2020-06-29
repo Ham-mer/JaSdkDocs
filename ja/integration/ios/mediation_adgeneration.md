@@ -55,6 +55,8 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 - SafariServices.framework
 - WebKit.framework 
 
+## 注意事項
+AdGenerationのバナー広告を利用する時、UIViewControllerのdeallocメソッドでAdLimeBannerViewのdestroyメソッドを呼び出してください。
 
 ## 利用可能な広告フォーマット
 
