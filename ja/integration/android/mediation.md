@@ -40,7 +40,7 @@ AdLime で利用可能なアドネットワーク一覧
 | 9   | [Display.IO](./mediation_display_io.md)  | ◯      | ◯            |          |        | 2.0.1.0        | 
 | 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯  | ◯         |          | ◯      | 1.2.2          | 
 | 11  | [Facebook](./mediation_facebook.md)      | ◯      | ◯            | ◯        | ◯      | 5.7.1          | 
-| 12  | [Five](./mediation_five.md)              | ◯      | ◯            | ◯        |        | 20200423       |
+| 12  | [Five](./mediation_five.md)              | ◯      | ◯            | ◯        |        | 20200610       |
 | 13  | [Flurry](./mediation_flurry.md)          | ◯      | ◯            | ◯        | ◯      | 11.4.0         | 
 | 14  | [Fyber](./mediation_fyber.md)            | ◯      | ◯            |          | ◯      | 7.2.1          | 
 | 15  | [i-mobile](./mediation_imobile.md)       | ◯      | ◯            |          | ◯      | 2.0.20         | 

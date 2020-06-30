@@ -12,7 +12,7 @@
 ```java
 dependencies {
     // Five
-    implementation "com.access_company.adlime:mediation_five:20200423.0"
+    implementation "com.access_company.adlime:mediation_five:20200610.0"
     implementation "com.google.android.gms:play-services-ads-identifier:16.0.0"
 }
 ```
@@ -39,6 +39,10 @@ dependencies {
 
 
 ## バージョン情報
+### 20200610
+| バージョン    | 日付       | 更新情報                          |
+|-------------|------------|---------------------------------|
+| 20200610.0  | 2020/6/30  | - Five SDK 20200610 に対応：初期化のスピードを上げ、動畫の再生を改善します|
 
 ### 20200423
 | バージョン    | 日付       | 更新情報                          |
