@@ -24,14 +24,6 @@
 ## 広告ネットワークのテスト
 AdLime では、複数の広告ネットワークを管理、配信する[メディエーション機能](./mediation.md)を提供しています。このガイドでは各広告ネットワークが正しく表示されるかを正しくテストするために、広告枠 ID を提供しています。導入予定のSDKを確認、それぞれの導入手順に従い必要な SDK を追加してください。その後に各広告ネットワークの広告枠 ID を設定して、広告が正しく表示されるか確認しましょう。
 
-### [AdColony](./mediation_adcolony.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320×50   | d54e608b-e2d7-44ae-aa88-9515d6f8ea9d   |
-| インタースティシャル     | bbbffc33-7840-42e4-ab7f-68318385d371   |
-| 動画リワード       | cb9e32b5-d21b-443e-a70b-3fd6015e1671   |
-
 ### [AdGeneration](./mediation_adgeneration.md)
 
 | 広告タイプ         | 広告枠 ID                              |
@@ -67,14 +59,6 @@ Info.plist を ソースコードとして開いて編集します。
 | MixFullScreen ネイティブ 動画   | 03815840-0e79-4b20-a6ef-abf45bd33135  |
 | MixFullScreen インタースティシャル | 241017d9-cae2-426b-8fe1-f4ad82d7b8b0   |
 
-### [Amazon](./mediation_amazon.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320×50     | 6d258892-8436-47cb-829f-08be71ce31c6   |
-| バナー 300×250    | 2ecda899-0b1c-424c-a373-2cf15704d3bf   |
-| インタースティシャル     | 5c860bb3-9952-4ffd-89de-c8f4845736cf   |
-
 ### [AppLovin](./mediation_applovin.md)
 
 info.plist に SDK key を追加してください：<br>
@@ -95,14 +79,6 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | MixFullScreenバナー 300x250| c1796c98-7a8a-46e1-bd9f-c65ea76b5bf4   |
 | MixFullScreen ネイティブ   | 1c365c2a-1a66-43dc-a21a-aed715bd8792   |
 | MixFullScreen インタースティシャル    | 97cf81f7-245d-4e90-84f1-62b76961a11c   |
-
-### [Chartboost](./mediation_chartboost.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320×50   | b667c1c4-d2fd-413e-a0be-214bdb78fc43   |
-| インタースティシャル     | dcf40d6e-af32-4710-a808-1083d1125384   |
-| 動画リワード       | d81961ef-9c56-4d0c-a8b7-40ec9da79219   |
 
 ### [Criteo](./mediation_criteo.md)
 
@@ -136,22 +112,6 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | MixFullScreen ネイティブ 静止画 | 2b318047-ba5a-4cb3-95f3-3518c2875ffe   |
 | MixFullScreen ネイティブ 動画   | 9a4366da-76f2-4221-8da1-32e599c0a87a|
 | MixFullScreen インタースティシャル | 33b576f0-e34e-49e8-aa8f-6c079ca98cae   |
-
-### [Display.IO](./mediation_display_io.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 300×250  | 887e7451-370b-4803-93c1-e419071a208b   |
-| インタースティシャル     | 489a37c7-4075-4dce-a3dd-10b754966a37   |
-| 動画リワード       | fb0364fc-1072-4e30-abdf-8991ef86a5ee   |
-
-### [DU Ad Platform](./mediation_du_ad_platform.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320×50   | 953906c1-862a-429d-925a-c6c5cc794a5f   |
-| インタースティシャル     | f92574ad-85c2-47b0-902d-4be949d8e71e   |
-| ネイティブ         | 2dc28770-a7c8-42b4-bbba-cc82adcd49e8   |
 
 ### [Facebook](./mediation_facebook.md)
 
@@ -189,29 +149,6 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | MixFullScreenバナー 300x250| 74dda437-6e6f-4093-a288-171d0a6e3074  |
 | MixFullScreen インタースティシャル     | 84fb619d-59d0-4c40-8a63-1b03a8a79603  |
 
-### [Flurry](./mediation_flurry.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320×50     | de69e1d0-4382-484a-bfe3-6937f44dc1d9   |
-| インタースティシャル     | f6356310-64dd-430c-93ec-49fc9fe75321   |
-| ネイティブ         | 430c4b28-5908-4177-8e01-84caa255d687   |
-| 動画リワード       | e895a41a-5245-4357-8a27-fcc6f4c9868f   |
-
-### [Fyber](./mediation_fyber.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320×50   | 365f6f63-9b57-4379-a930-1fa8479d1781   |
-| バナー 300×250  | 1bfc10aa-0d67-4da2-89e7-acc288e81998   |
-| インタースティシャル     | dbf26e30-6cf0-4ada-b6d5-65aa0a53fb0b   |
-| 動画リワード       | 71f3d9b4-143d-4f96-8223-dda0d11d4362   |
-| MixView バナー 320x50| 6eb7168a-7309-41c3-a76e-01f3a6350b14   |
-| MixView バナー 300x250| 81f20493-75ae-41b5-8c56-c3b13e4b3515  |
-| MixFullScreenバナー 320x50| 710204af-2101-4e02-b60d-a9b59d16fdd7  |
-| MixFullScreenバナー 300x250| ec0438c9-635c-4368-934c-d516720a8f4e  |
-| MixFullScreen インタースティシャル | 69bc9a61-a52a-41cc-a2cb-ba32206f93b8 |
-
 ### [i-mobile](./mediation_imobile.md)
 
 | 広告タイプ         | 広告枠 ID                              |
@@ -227,15 +164,6 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | MixFullScreenバナー 300x250| 19c98957-e767-4718-84c5-614c41395891 |
 | MixFullScreen ネイティブ 静止画 | 8fadda1a-8ebf-4cce-909b-c5e813010bd4 |
 | MixFullScreen インタースティシャル | 9b1a25b7-f87d-436c-b764-5852a9575df3 |
-
-### [IronSource](./mediation_ironsource.md)
-
-| 広告タイプ          | 広告枠 ID                              |
-|:-----------------:|:--------------------------------------:|
-| バナー 320×50      | b0260b4c-4eda-47f9-b770-7b7d28ebb8e9   |
-| バナー 300×250    | 1337e3e0-23e9-4849-983b-a4260956d21b   |
-| インタースティシャル      | c962295d-f7aa-4b5f-ba22-b46731839985   |
-| 動画リワード        | ef262b1e-6a0f-47f0-9b6b-3a1f2adf06ff   |
 
 ### [Maio](./mediation_maio.md)
 
@@ -285,13 +213,6 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | MixFullScreen インターステーシャル 全画面 | b27d935e-c56a-458c-b2bf-4ff84c2087c3 |
 | MixFullScreen インターステーシャル 動画 | f7bdf9d2-c6ce-464c-ad96-affbfa4cd374 |
 
-### [Tapjoy](./mediation_tapjoy.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| インタースティシャル     | dacdf765-61e7-4f3b-b21c-c1ec0d81fef2   |
-| 動画リワード       | bf9e8efe-eda0-4ec4-9f7f-8543062d9d7e   |
-
 ### [TikTok](./mediation_tiktok.md)
 
 | 広告タイプ         | 広告枠 ID                              |
@@ -302,25 +223,3 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | MixView ネイティブ      | 1d0a86df-adf6-4b28-a582-2842600ef9fa  |
 | MixFullScreen ネイティブ  | f48dd1a7-3ae5-483b-ba36-4f226eea8461 |
 | MixFullScreen インタースティシャル   | ef5478a7-be57-45b6-8fd1-fde71f7f5107 |
-
-### [Unity Ads](./mediation_unity_ads.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 320×50   | 60769db1-6d78-4d92-9875-44cea0d75bdc   |
-| インタースティシャル     | f6122590-1b63-4255-b2f6-537282877009   |
-| 動画リワード       | c3c312ba-992e-49e2-9d56-f5cab030e550   |
-
-### [Vungle](./mediation_vungle.md)
-
-| 広告タイプ         | 広告枠 ID                              |
-|:----------------:|:--------------------------------------:|
-| バナー 300×250  | 8a9ecfba-6e7c-4ce2-bdda-18fdd0e518ea   |
-| インタースティシャル    | af65d340-1ae2-4f57-90cf-bf723bb78a34   |
-| ネイティブ        | b474e668-e8db-4353-9c5c-0ee7fe40905a   |
-| 動画リワード      | c6a9d2cd-aa6f-4125-9d5e-6ecbb04e6fbc   |
-| MixView バナー 300x250| 8d60c382-029b-4d04-9c7b-8dc0f1f58ad9 |
-| MixView ネイティブ |11c30fe4-3423-4f9b-bea8-cafa669b7382 |
-| MixFullScreenバナー 300x250| a98f821f-7df7-491b-a11c-2a35e36c5c40 |
-| MixFullScreen ネイティブ |750cddb6-03d5-49f6-8695-204da4d85d7c |
-| MixFullScreen インタースティシャル  | 892ba842-29ed-4900-8ad4-ae6e5fa0fc3c |

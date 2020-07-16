@@ -57,27 +57,15 @@ AdLime は一部の広告ネットワークで、テストモードとデバッ�
 
 | 序号 | ネットワーク                                 | テストモード | デバッグモード|
 |:---:|:------------------------------------------:|:-------:|:-------:|
-| 1   | [AdColony](./mediation_adcolony.md)        | ◯        |         |
-| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯        |         |
-| 3   | [AdMob](./mediation_admob.md)              |         |         |
-| 4   | [Amazon](./mediation_amazon.md)            | ◯       |         |
-| 5   | [AppLovin](./mediation_applovin.md)        | 管理画面により設定可能       | ◯ |
-| 6   | [Chartboost](./mediation_chartboost.md)    |         | ◯       |
-| 7   | [Criteo](./mediation_criteo.md)            |         |         |
-| 8   | [DFP](./mediation_dfp.md)                  |         |         |
-| 9   | [Display.IO](./mediation_display_io.md)    |         |         |
-| 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯       |         |
-| 11  | [Facebook](./mediation_facebook.md)        | ◯       | ◯       |
-| 12  | [Five](./mediation_five.md)                | ◯       |         |
-| 13  | [Flurry](./mediation_flurry.md)            |         | ◯        |
-| 14  | [Fyber](./mediation_fyber.md)              |         | ◯        |
-| 15  | [i-mobile](./mediation_imobile.md)         |         |         |
-| 16  | [InMobi](./mediation_inmobi.md)            |         | ◯        |
-| 17  | [IronSource](./mediation_ironsource.md)    |         |         |
-| 18  | [Maio](./mediation_maio.md)                | ◯        |         |
-| 19  | [MoPub](./mediation_mopub.md)              |         | ◯        |
-| 20  | [Nend](./mediation_nend.md)                |         | ◯        |
-| 21  | [Pangle](./mediation_pangle.md)            |         | ◯        |
-| 22  | [Tapjoy](./mediation_tapjoy.md)            |         | ◯        |
-| 23  | [Unity Ads](./mediation_unity_ads.md)      | ◯       | ◯       |
-| 24  | [Vungle](./mediation_vungle.md)            |         |         |
+| 1   | [AdGeneration](./mediation_adgeneration.md)| ◯       |         |
+| 2   | [AdMob](./mediation_admob.md)              |         |         |
+| 3   | [AppLovin](./mediation_applovin.md)        | 管理画面により設定可能 | ◯ |
+| 4   | [Criteo](./mediation_criteo.md)            |         |         |
+| 5   | [DFP](./mediation_dfp.md)                  |         |         |
+| 6   | [Facebook](./mediation_facebook.md)        | ◯       | ◯       |
+| 7   | [Five](./mediation_five.md)                | ◯       |         |
+| 8   | [i-mobile](./mediation_imobile.md)         |         |         |
+| 9   | [Maio](./mediation_maio.md)                | ◯       |         |
+| 10  | [MoPub](./mediation_mopub.md)              |         | ◯       |
+| 11  | [Nend](./mediation_nend.md)                |         | ◯       |
+| 12  | [Pangle](./mediation_pangle.md)            |         | ◯       |

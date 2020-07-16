@@ -28,31 +28,19 @@ AdLime で利用可能な広告ネットワーク一覧
 
 | No  |  ネットワーク                 | バナー | インターステーシャル  | 動画リワード | ネイティブ | 最新バージョン |
 |:---:|:-------------------------------------:|:------:|:----:|:--------:|:------:|:--------:|
-| 1   | [AdColony](./mediation_adcolony.md)        | ◯      | ◯    | ◯        |        | 4.1.2    |
-| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.18.0   |
-| 3   | [AdMob](./mediation_admob.md)              | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
-| 4   | [Amazon](./mediation_amazon.md)            | ◯      | ◯    |          |        | 2.2.17   |
-| 5   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        |     ◯  | 6.12.8   |
-| 6   | [Chartboost](./mediation_chartboost.md)    | ◯      | ◯    | ◯        |        | 8.0.3    |
-| 7   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 3.2.0    |
-| 8   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
-| 9   | [Display.IO](./mediation_display_io.md)    | ◯      | ◯    |    ◯     |        | 2.8.0    |
-| 10  | [DU Ad Platform](./mediation_du_ad_platform.md) | ◯ | ◯    |          | ◯      | 1.1.4    |
-| 11  | [Facebook](./mediation_facebook.md)        | ◯      | ◯    | ◯        | ◯      | 5.7.1    |
-| 12  | [Five](./mediation_five.md)                | ◯      | ◯    | ◯        |        | 20200625 |
-| 13  | [Flurry](./mediation_flurry.md)            | ◯      | ◯    | ◯        | ◯      | 10.0.2   |
-| 14  | [Fyber](./mediation_fyber.md)              | ◯      | ◯    | ◯        |        | 7.4.1    |
-| 15  | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯      | 2.0.31   |
-| 16  | [IronSource](./mediation_ironsource.md)    | ◯      | ◯    | ◯        |        | 6.10.0.0 |
-| 17  | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.5.3    |
-| 18  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.13.0   |
-| 19  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.4.1    |
-| 20  | [Tapjoy](./mediation_tapjoy.md)            |        | ◯    | ◯        |        | 12.3.4   |
-| 21  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 3.0.0.2  |
-| 22  | [Unity Ads](./mediation_unity_ads.md)      | ◯      | ◯    | ◯        |        | 3.3.0    |
-| 23  | [Vungle](./mediation_vungle.md)            | ◯      | ◯    | ◯        | ◯      | 6.4.5    |
+| 1   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.18.0   |
+| 2   | [AdMob](./mediation_admob.md)              | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
+| 3   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        | ◯      | 6.12.8   |
+| 4   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 6.12.8   |
+| 5   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
+| 6   | [Facebook](./mediation_facebook.md)        | ◯      | ◯    | ◯        | ◯      | 5.7.1    |
+| 7   | [Five](./mediation_five.md)                | ◯      | ◯    | ◯        |        | 20200625 |
+| 8   | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯      | 2.0.31   |
+| 9   | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.5.3    |
+| 10  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.13.0   |
+| 11  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.4.1    |
+| 12  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 3.0.0.2  |
 
 
 ## 次のステップ
 - 必要な SDK を導入したら、[広告フォーマットの選択](./adformat.md)に従い、ご希望の広告フォーマットを選択し、iOSアプリに実装しましょう
-
