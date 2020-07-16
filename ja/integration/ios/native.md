@@ -3,6 +3,8 @@
 
 このガイドでは、ネイティブ広告を iOS アプリに表示する方法と、その過程で考慮すべき重要なポイントについて説明します。
 
+**<u>複合型広告枠を用いることでより効果的に広告収益を高めることができます。詳細は [MixViewAd](./mixviewad.md) をご確認ください。</u>**
+
 ## 前提条件
 - AdLime SDK が導入済みであること
 
@@ -80,11 +82,11 @@ class ViewController: UIViewController {
 
 ratingCallback は、アプリストアでのアプリ評価レビューのカスタマイズを行えます。
 
-**Facebook NativeにはMediaViewは必要です。Facebook NativeBannerにはIconLayoutは必要です。**
-
 ```objectivec
 typedef void (^ratingCallback)(double rating);
 ```
+
+**<font color="Gray">Facebook を利用する場合には Facebook の広告フォーマットごとにレイアウトで必要な要素が異なることに注意してください。 Facebook のネイティブ広告を利用する場合には MediaView が必須です。また、ネイティブバナー広告を用いる場合には MediaView を除き IconView を設定してください。</font>**
 
 ### カスタムレイアウトを生成する 
 

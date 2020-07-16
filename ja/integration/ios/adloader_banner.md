@@ -148,6 +148,6 @@ class ViewController: UIViewController, AdLimeBannerViewDelegate {
 
 
 ### バナー広告イベントを実装する
-広告イベントの制御は `AdLimeBannerViewDelegate` を用いて実現できます。実装方法は[バナー広告イベントを実装する](./banner.md#バナー広告イベントを実装する)を確認してください
+広告イベントの制御は `AdLimeBannerViewDelegate` を用いて実現できます。実装方法は[バナー広告イベントを実装する](./banner.md#バナー広告イベントを実装する)を確認してください。
 
 

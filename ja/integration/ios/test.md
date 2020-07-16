@@ -35,7 +35,7 @@ AdLime では、複数の広告ネットワークを管理、配信する[メデ
 
 ### [AdMob](mediation_admob.md)
 
-Info.plist を ソースコードとして開いて編集します。
+Info.plist を ソースコードとして開いて編集します。[AdMob ドキュメント](https://developers.google.com/admob/ios/quick-start?hl=ja#update_your_infoplist)参照。
 ```objectivec
 <key>GADApplicationIdentifier</key>
 <string>ca-app-pub-3940256099942544~1458002511</string>

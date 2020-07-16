@@ -1,73 +1,197 @@
-# AdLimeLoader - ネイティブ広告
-AdLimeLoaderで広告をロードして展示する場合に、 AdUnit IDによって広告をキャッシュして各ページで広告をロードまたは展示する。<br>
-同じAdUnit IDの場合に，AdLimeLoaderはインスタンスを一つしかキャッシュしない。<br>
-AdLimeLoader.destroyAd()で広告をデストロイすると、  AdLimeLoaderで広告を再ロードする時新たなインスタンスを作成する。
+# AdLimeLoader - ネイティブ広告  
 
-AdLimeLoaderはネイティブ広告のキャッシュ、ロード、展示、デストロイをサポートする。
+AdLimeLoader は広告のキャッシュを管理、効率的に広告を表示する機能です。広告のキャッシュを管理することで、広告ロード回数を減らしたり、広告ロードのタイミングの効率化に望むことができます。
 
-### 広告をロード
-```java
-// ロード結果をモニターします
-AdLimeLoader.getNativeAd(this, "Native AdUnit ID").setAdListener(new SimpleAdListener() {
-            @Override
-            public void onAdLoaded() {
-                // 広告のロード完了
-            }
+このガイドでは AdLimeLoader を用いたネイティブ広告の実装方法について説明します。
 
-            @Override
-            public void onAdFailedToLoad(AdError adError) {
-                // 広告の読み込み失敗
-                Log.d(TAG, "on BannerAd FailedToLoad err:" + adError.toString());
-            }
+## AdLimeLoader による基本的な実装  
 
-            @Override
-            public void onAdClicked() {
-                // 広告をクリック
-                Log.d(TAG, "on BannerAd Clicked");
-            }
+AdLimeLoader は各広告枠 ID ごとに広告のキャッシュを識別しています。AdLimeLoader を使って広告のロードや表示をする場合は、広告枠 ID ごとに広告をリクエストする必要があります。また一つの広告枠 ID に一つの広告を管理するため、複数の広告を同時に表示する際は対応する数の広告枠 ID を発行してください。
 
-            @Override
-            public void onAdShown() {
-                // 広告を表示
-                Log.d(TAG, "on BannerAd Shown");
-            }
+## NativeAd オブジェクトの取得  
 
-            @Override
-            public void onAdClosed() {
-                // 広告を閉じる
-                Log.d(TAG, "on BannerAd Closed");
-            }
-        });
-// 広告をロード
-AdLimeLoader.loadNativeAd(context, "Native AdUnit ID", nativeAdLayout);
-```
+AdLimeLoader を用いて広告を表示したり、広告のイベントを制御するなどのカスタマイズする必要がある場合は `NativeAd` オブジェクトを取得する必要があります。`NativeAd` を用いた実装方法は [ネイティブ広告](./native.md) を参考にしてください。
 
-広告をロードする時にNativeAdLayoutないのloadNativeAd()を調達するが、広告を展示する時に NativeAdLayoutがあるshowNativeAd()を調達する。
+:::: tabs
 
-**NativeAdLayoutに関する情報は [NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できる。**
-
-### 広告は準備完了かどうかの判断
-```java
-boolean isReady = AdLimeLoader.isNativeAdReady("Native AdUnit ID");
-```
-
-### 広告の展示
-ネイティブ広告はViewGroupで展示される。
+::: tab Java
 
 ```java
-viewGroup.removeAllViews();
-AdLimeLoader.showNativeAd("Native AdUnit ID", viewGroup);
+NativeAd mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID");
 ```
 
-### 広告のデストロイ
-```java
-AdLimeLoader.destroyAd("Native AdUnit ID");
+:::
+
+::: tab Kotlin
+
+```kotlin
+val mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID")
 ```
 
-### ネイティブ広告のインスタンスの取得
-AdLimeLoaderでキャッシュされる広告のインスタンスを取得できる。<br>
-これを使って広告をロードまた展示する、上記のADLimeLoaderで提供される方法ではない。<br>
-参考[ネイティブ広告](./native.md)。
+:::
+
+::::
+
+## 広告レイアウトの作成
+
+広告のロード時や広告を表示するときに広告のレイアウトを事前に設定しておきましょう。ネイティブレイアウトの詳細な設定方法は[NativeAdLayout](./native.md#広告レイアウトの作成)で確認できます。
+
+広告レイアウトはネイティブ広告のロード時に設定できます。その設定方法は後の節で説明します。また `NativeAd` オブジェクトを取得して、そのオブジェクトにネイティブレイアウトを設定することもできます。
+
+:::: tabs
+
+::: tab Java
+
 ```java
-NativeAd nativeAd = AdLimeLoader.getNativeAd(context, "Native AdUnit ID");
+NativeAd mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID");
+mNativeAd.setNativeAdLayout(NativeAdLayout.getLargeLayout1());
 ```
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+val mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID")
+mNativeAd.setNativeAdLayout(NativeAdLayout.getLargeLayout1())
+```
+
+:::
+
+::::
+
+ネイティブ広告のレイアウトの設定は基本的に 1 回実行すれば十分です。サイズが変更になるなどレイアウトが変更される場合は再読込する必要があります。
+
+## 広告のロード  
+
+まず、広告をロードしてみましょう。`AdLimeLoader`クラスの`loadBanner` を実行してください。またこのときにネイティブ広告のレイアウトを設定できます。
+
+:::: tabs
+
+::: tab Java
+
+```java
+AdLimeLoader.loadNativeAd(context, "広告枠 ID", NativeAdLayout.getLargeLayout1());
+```
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+AdLimeLoader.loadNativeAd(context, "広告枠 ID", NativeAdLayout.getLargeLayout1())
+```
+
+:::
+
+::::
+
+## 広告の表示  
+
+広告をロードしたら広告を表示してみましょう。広告を表示する前に広告がロード済みかどうかを `AdLimeLoader` の `isNativeAdReady` メソッドで確認してから表示します。広告を表示する場合は `NativeAd` オブジェクトを `getNativeAd` メソッドで取得して表示しましょう。
+
+:::: tabs
+
+::: tab Java
+
+```java
+if(AdLimeLoader.isNativeAdReady("広告枠 ID")) {
+    NativeAd mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID");
+    View adView = mNativeAd.getAdView();
+    container.addView(adView);
+} else {
+    Log.d(TAG, "Ad isn't ready");
+}
+```
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+if(AdLimeLoader.isNativeAdReady("広告枠 ID")){
+    val mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID")
+    val adView = mNativeAd.adView
+    mContainer.addView(adView)
+} else {
+    println("Ad isn't ready")
+}
+```
+
+:::
+
+::::
+
+## 広告のイベント  
+
+AdListener を設定することで、広告のロード完了のタイミングやユーザーがアプリを閉じたタイミングなどの広告のライフサイクルイベントを取得することができます。
+
+### ネイティブ広告イベントを登録する  
+
+ネイティブ広告のイベントを取得するには、`SimpleAdListener` インスタンスを作成し、`setAdListener()` で登録します。AdLimeLoader では 広告枠 ID ごとに広告を管理するため `getNativeAd` メソッドで `NativeAd` オブジェクトを取得し、そのオブジェクトにイベントを登録します。この処理は `loadNativeAd` メソッド呼び出し前、または広告を表示する前に実行する必要があります。
+
+:::: tabs
+
+::: tab Java
+
+```java
+NativeAd mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID");
+mNativeAd.setAdListener(new SimpleAdListener() {
+    @Override
+    public void onAdLoaded() {
+        // 広告のロード完了
+        Log.d(TAG, "on NativeAd Loaded");
+    }
+
+    @Override
+    public void onAdFailedToLoad(AdError adError) {
+        // 広告の読み込み失敗
+        Log.d(TAG, "on NativeAd FailedToLoad err:" + adError.toString());
+    }
+
+    @Override
+    public void onAdClicked() {
+        // 広告をクリック
+        Log.d(TAG, "on NativeAd Clicked");
+    }
+
+    @Override
+    public void onAdShown() {
+        // 広告を表示
+        Log.d(TAG, "on NativeAd Shown");
+    }
+});
+```
+
+:::
+
+::: tab Kotlin
+
+```kotlin
+val mNativeAd = AdLimeLoader.getNativeAd(context, "広告枠 ID")
+mNativeAd.adListener = object: SimpleAdListener() {
+    override fun onAdLoaded() {
+        // 広告のロード完了
+        println("on NativeAd Loaded")
+    }
+
+    override fun onAdFailedToLoad(adError: AdError?) {
+        //  広告の読み込み失敗、エラー詳細は adError から取得
+        println("onAdFailedToLoad: " + adError.toString())
+    }
+
+    override fun onAdShown() {
+        //  広告を表示
+        println("on NativeAd Shown")
+    }
+
+    override fun onAdClicked() {
+        //  広告をクリック
+        println("on NativeAd Clicked")
+    }
+}
+```
+
+:::
+
+::::

@@ -1,9 +1,11 @@
 # インタースティシャル広告
 
-インタースティシャル広告とは、アプリ上にオーバーレイで表示されるフルスクリーン広告です。一般的にアプリの画面が切り替わるタイミング（アクティビティが切り替わるタイミングやゲームのステージが変わる合間）で表示されます。アプリにインタースティシャル広告が表示される場合、ユーザーは広告をタップしてリンク先 URL に移動するか、広告を閉じてアプリに戻るかを選ぶことができます。
+インタースティシャル広告とは、アプリ上を覆うようにポップアップで表示されるフルスクリーン広告です。一般的にアプリの画面が切り替わるタイミング（アクティビティが切り替わるタイミングやゲームのステージが変わる合間）で用いられます。
 
+このガイドは、インタースティシャル広告を Android アプリに実装する方法について説明します。
 
-このガイドは、インタースティシャル広告を Android アプリに実装方法について説明します。
+**<u>複合型広告枠を用いることでより効果的に広告収益を高めることができます。詳細は [MixFullScreenAd](./mixfullscreenad.md) をご確認ください。</u>**
+
 
 ## 前提条件
 
@@ -34,7 +36,7 @@ mInterstitialAd.setAdUnitId(interstitialId);
 val interstitialId = "46dca932-2a10-4702-89fc-e5e87e00b09c"
 // InterstitialAd を作成
 val mInterstitialAd = InterstitialAd(this)
-mInterstitialAd.setAdUnitId(interstitialId)
+mInterstitialAd.adUnitId = interstitialId
 ```
 
 :::
@@ -101,7 +103,7 @@ if (mInterstitialAd.isReady) {
 広告の動作をより細かくカスタマイズするには、広告のライフサイクルで発生するイベント（読み込み、開始、終了など）を追加することができ、 AdListener クラスを使い、これらのイベントを受け取ることができます。
 
 ### InterstitialAd イベントを登録する
-InterstitialAd のイベントを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+InterstitialAd のイベントを取得するには、`SimpleAdListener` インスタンスを作成し、`setAdListener()` で登録します。
 
 :::: tabs
 
@@ -112,30 +114,31 @@ mInterstitialAd.setAdListener(new SimpleAdListener() {
     @Override
     public void onAdLoaded() {
         // 広告のロード完了
+        Log.d(TAG, "on InterstitialAd Loaded");
     }
 
     @Override
     public void onAdFailedToLoad(AdError adError) {
         // 広告の読み込み失敗、エラー詳細は adError から取得
-        Log.d(TAG, "on BannerAd FailedToLoad err:" + adError.toString());
+        Log.d(TAG, "on InterstitialAd FailedToLoad err:" + adError.toString());
     }
 
     @Override
     public void onAdShown() {
         // 広告を表示
-        Log.d(TAG, "on BannerAd Shown");
+        Log.d(TAG, "on InterstitialAd Shown");
     }
 
     @Override
     public void onAdClicked() {
         // 広告をクリック
-        Log.d(TAG, "on BannerAd Clicked");
+        Log.d(TAG, "on InterstitialAd Clicked");
     }
 
     @Override
     public void onAdClosed() {
         // 広告を閉じる
-        Log.d(TAG, "on BannerAd Closed");
+        Log.d(TAG, "on InterstitialAd Closed");
     }
 });
 ```
@@ -145,32 +148,32 @@ mInterstitialAd.setAdListener(new SimpleAdListener() {
 ::: tab Kotlin
 
 ```kotlin
-mInterstitialAd.setAdListener(object: SimpleAdListener() {
+mInterstitialAd.adListener = object: SimpleAdListener() {
     override fun onAdLoaded() {
         // 広告のロード完了
-        print("on InterstitialAd Loaded")
+        println("on InterstitialAd Loaded")
     }
 
     override fun onAdFailedToLoad(adError: AdError?) {
         //  広告の読み込み失敗、エラー詳細は adError から取得
-        print("onAdFailedToLoad: " + adError.toString())
+        println("onAdFailedToLoad: " + adError.toString())
     }
 
     override fun onAdShown() {
         //  広告を表示
-        print("on InterstitialAd Shown")
+        println("on InterstitialAd Shown")
     }
 
     override fun onAdClicked() {
         //  広告をクリック
-        print("on InterstitialAd Clicked")
+        println("on InterstitialAd Clicked")
     }
 
     override fun onAdClosed() {
         //  広告を閉じる
-        print("on InterstitialAd Closed")
+        println("on InterstitialAd Closed")
     }
-})
+}
 ```
 
 :::

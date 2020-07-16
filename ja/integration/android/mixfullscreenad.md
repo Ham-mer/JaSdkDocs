@@ -15,7 +15,7 @@ MixFullScreenAd は[バナー広告](./banner.md)と[ネイティブ広告](./na
 
 ```java
 MixFullScreenAd mMixFullScreenAd = new MixFullScreenAd(context);
-mMixFullScreenAd.setAdUnitId("AdUnit_ID");
+mMixFullScreenAd.setAdUnitId("広告枠 ID");
 ```
 
 :::
@@ -24,7 +24,7 @@ mMixFullScreenAd.setAdUnitId("AdUnit_ID");
 
 ```kotlin
 val mMixFullScreenAd = MixFullScreenAd(this)
-mMixFullScreenAd.setAdUnitId("AdUnit_ID")
+mMixFullScreenAd.adUnitId = "広告枠 ID"
 ```
 
 :::
@@ -60,7 +60,7 @@ mMixFullScreenAd.setNativeAdLayout(NativeAdLayout.getFullLayout1())
 
 ::::
 
-** `NativeAdLayout` については、[NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90) で確認できます。**
+** `NativeAdLayout` については、[NativeAdLayout](./native.md#広告レイアウトの作成) で確認できます。**
 
 ## 広告のロード
 広告をロードするためには、MixFullScreenAd オブジェクトの loadAd() を使用します。
@@ -117,7 +117,7 @@ MixFullScreenAdは展示されると、backボタンをクリックするのは�
 AdListener を用いて、広告のロード完了のタイミングや、ユーザーがアプリを閉じたタイミングなどの、広告のライフサイクルで発生する様々なイベントを取得することができます。
 
 ### MixFullScreenAd イベントを登録する
-MixFullScreenAd のイベントを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+MixFullScreenAd のイベントを取得するには、`SimpleAdListener` インスタンスを作成し、`setAdListener()` で登録します。
 
 :::: tabs
 
@@ -128,27 +128,31 @@ mMixFullScreenAd.setAdListener(new SimpleAdListener() {
     @Override
     public void onAdLoaded() {
         // 広告のロード完了
+        Log.d(TAG, "on MixFullScreenAd Loaded");
     }
 
     @Override
     public void onAdFailedToLoad(AdError adError) {
         // 広告の読み込み失敗、エラー詳細は adError から取得
-        Log.d(TAG, "onAdFailedToLoad: " + adError.toString());
+        Log.d(TAG, "on MixFullScreenAd FailedToLoad err: " + adError.toString());
     }
 
     @Override
     public void onAdShown() {
         // 広告を表示
+        Log.d(TAG, "on MixFullScreenAd Shown");
     }
 
     @Override
     public void onAdClicked() {
         // 広告をクリック
+        Log.d(TAG, "on MixFullScreenAd Clicked")
     }
 
     @Override
     public void onAdClosed() {
         // 広告を閉じる
+        Log.d(TAG, "on MixFullScreenAd Closed");
     }
 });
 
@@ -160,28 +164,32 @@ mMixFullScreenAd.loadAd();
 ::: tab Kotlin
 
 ```kotlin
-mMixFullScreenAd.setAdListener(object: SimpleAdListener() {
+mMixFullScreenAd.adListener = object: SimpleAdListener() {
     override fun onAdLoaded() {
         // 広告のロード完了
+        println("on MixFullScreenAd Loaded")
     }
 
     override fun onAdFailedToLoad(adError: AdError?) {
         //  広告の読み込み失敗、エラー詳細は adError から取得
-        print("onAdFailedToLoad: " + adError.toString())
+        println("on MixFullScreenAd FailedToLoad err:: " + adError.toString())
     }
 
     override fun onAdShown() {
         //  広告を表示
+        println("on MixFullScreenAd Shown")
     }
 
     override fun onAdClicked() {
         //  広告をクリック
+        println("on MixFullScreenAd Clicked")
     }
 
     override fun onAdClosed() {
         //  広告を閉じる
+        println("on MixFullScreenAd Closed")
     }
-})
+}
 
 mMixFullScreenAd.loadAd()
 ```
