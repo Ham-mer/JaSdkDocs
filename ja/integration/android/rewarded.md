@@ -17,11 +17,21 @@
 ::: tab Java
 
 ```java
-// 広告ユニット ID の定義
-String rewardId = "5400f178-bffb-47bf-bb4d-54faad99adfd"
-// RewardedVideoAd を生成
-RewardedVideoAd mRewardedVideoAd = new RewardedVideoAd(context);
-mRewardedVideoAd.setAdUnitId(rewardId);
+import com.access_company.adlime.core.api.ad.RewardedVideoAd;
+
+public class MainActivity extends AppCompatActivity {
+    RewardedVideoAd mRewardedVideoAd;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // 広告ユニット ID の定義
+        String rewardId = "5400f178-bffb-47bf-bb4d-54faad99adfd"
+        // RewardedVideoAd を生成
+        mRewardedVideoAd = new RewardedVideoAd(context);
+        mRewardedVideoAd.setAdUnitId(rewardId);
+    }
+}
 ```
 
 :::
@@ -29,11 +39,20 @@ mRewardedVideoAd.setAdUnitId(rewardId);
 ::: tab Kotlin
 
 ```kotlin
-// 広告ユニット ID の定義
-val rewardId = "5400f178-bffb-47bf-bb4d-54faad99adfd"
-// RewardedVideoAd を生成
-val mRewardedVideoAd = RewardedVideoAd(this)
-mRewardedVideoAd.adUnitId = rewardId
+import com.access_company.adlime.core.api.ad.RewardedVideoAd
+
+class MainActivity : AppCompatActivity() {
+    lateinit var mRewardedVideoAd: RewardedVideoAd
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // 広告ユニット ID の定義
+        val rewardId = "5400f178-bffb-47bf-bb4d-54faad99adfd"
+        // RewardedVideoAd を生成
+        mRewardedVideoAd = RewardedVideoAd(this)
+        mRewardedVideoAd.adUnitId = rewardId
+    }
+}
 ```
 
 :::
@@ -176,50 +195,49 @@ mRewardedVideoAd.setAdListener(new SimpleRewardedVideoAdListener() {
 ::: tab Kotlin
 
 ```kotlin
-mRewardedVideoAd.adListener = object : SimpleAdListener() {
+mRewardedVideoAd.adListener = object : SimpleRewardedVideoAdListener() {
     override fun onAdLoaded() {
         // 動画のロード完了
-        print("onAdLoaded")
+        println("onAdLoaded")
+        mRewardedVideoAd.show(context)
     }
 
     override fun onAdShown() {
         //  広告を表示
-        print("onAdShown")
+        println("onAdShown")
     }
 
     override fun onAdClicked() {
         //  広告をクリック
-        print("onAdClicked")
+        println("onAdClicked")
     }
 
     override fun onAdClosed() {
         //  広告を閉じる
-        print("onAdClosed")
     }
 
     override fun onAdFailedToLoad(adError: AdError) {
         //  広告の読み込み失敗、エラー詳細は adError から取得
-        print("onAdFailedToLoad: " + adError.toString())
+        println("onAdFailedToLoad: " + adError.toString())
     }
 
     override fun onVideoStarted() {
         // 動画の再生開始
-        print("onVideoStarted")
+        println("onVideoStarted")
     }
 
     override fun onVideoCompleted() {
         // 動画の再生完了
-        print("onVideoCompleted")
+        println("onVideoCompleted")
     }
 
-    override fun onRewarded(RewardedVideoAd.RewardItem rewardItem) {
-        // リワードを獲得
-        print("onRewarded, " + rewardItem)
+    override fun onRewarded(rewardItem: RewardedVideoAd.RewardItem?) {
+        println("onRewarded, " + rewardItem.toString())
     }
 
     override fun onRewardFailed() {
         // リワード獲得失敗
-        print("onRewardFailed")
+        println("onRewardFailed")
     }
 }
 ```

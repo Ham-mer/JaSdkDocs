@@ -20,11 +20,21 @@
 ::: tab Java
 
 ```java
-// 広告ユニット ID の定義
-String interstitialId = "46dca932-2a10-4702-89fc-e5e87e00b09c";
-// InterstitialAd を作成
-InterstitialAd mInterstitialAd = new InterstitialAd(context);
-mInterstitialAd.setAdUnitId(interstitialId);
+import com.access_company.adlime.core.api.ad.InterstitialAd;
+
+public class MainActivity extends AppCompatActivity {
+    InterstitialAd mInterstitialAd;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // 広告ユニット ID の定義
+        String interstitialId = "46dca932-2a10-4702-89fc-e5e87e00b09c";
+        // InterstitialAd を作成
+        mInterstitialAd = new InterstitialAd(context);
+        mInterstitialAd.setAdUnitId(interstitialId);
+    }
+}
 ```
 
 :::
@@ -32,11 +42,20 @@ mInterstitialAd.setAdUnitId(interstitialId);
 ::: tab Kotlin
 
 ```kotlin
-// 広告ユニット ID の定義
-val interstitialId = "46dca932-2a10-4702-89fc-e5e87e00b09c"
-// InterstitialAd を作成
-val mInterstitialAd = InterstitialAd(this)
-mInterstitialAd.adUnitId = interstitialId
+import com.access_company.adlime.core.api.ad.InterstitialAd
+
+class MainActivity : AppCompatActivity() {
+    lateinit var mInterstitialAd: InterstitialAd
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // 広告ユニット ID の定義
+        val interstitialId = "46dca932-2a10-4702-89fc-e5e87e00b09c"
+        // InterstitialAd を作成
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = interstitialId
+    }
+}
 ```
 
 :::
