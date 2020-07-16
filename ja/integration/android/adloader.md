@@ -1,11 +1,14 @@
-# AdLimeLoader
-AdLimeLoaderで広告をロードして展示する場合に、 AdUnit IDによって広告をキャッシュして各ページで広告をロードまたは展示する。<br>
-同じAdUnit IDの場合に，AdLimeLoaderはインスタンスを一つしかキャッシュしない。<br>
-AdLimeLoader.destroyAd()で広告をデストロイすると、AdLimeLoaderで広告を再ロードする時新たなインスタンスを作成する。
+# AdLimeAdLoader
+AdLimeAdLoader は広告のキャッシュを効率的に管理する機能です。ロードした広告を表示しないことは広告の eCPM を下げる原因となります。AdLimeAdLoader は広告枠 ID をリクエストすることでロード済みの広告がキャッシュされているかを確認し、表示することができます。またアプリ開発者は AdLimeAdLoader を用いることで広告ロードのタイミングの効率化が可能になります。
 
+各広告フォーマットごとのマニュアルに従い AdLimeAdLoader を導入してみましょう。
+
+## 基本的な広告フォーマット
 - [バナー広告](./adloader_banner.md)
 - [インタースティシャル広告](./adloader_interstitial.md)
 - [ネイティブ広告](./adloader_native.md)
 - [動画リワード](./adloader_rewardedvideo.md)
+
+## 複合型広告枠
 - [MixViewAd](./adloader_mixviewad.md)
-- [MixViewFullScreenAd](./adloader_mixfullscreenad.md)
+- [MixFullScreenAd](./adloader_mixfullscreenad.md)

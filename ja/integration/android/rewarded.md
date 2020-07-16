@@ -1,6 +1,9 @@
 # 動画リワード広告
 
-動画リワード広告とは、ユーザーが動画を最後まで視聴することと引き換えに、アプリ内で報酬を獲得できる動画広告です。このガイドは、動画リワード広告を AdLime から Android アプリに導入する方法について説明します。
+動画リワード広告とは、アプリ内で使用可能な報酬をユーザーに付与する代わりに、動画広告を最後までフルスクリーン表示する広告です。ネイティブ広告やインタースティシャル広告など自動で再生する動画広告とは異なり、視聴を希望したユーザーにのみ動画広告を再生します。他の広告フォーマットに比べ広告効果が高いため、広告単価が高く、効果的に収益を得ることが可能です。
+
+
+このガイドでは 動画リワード広告 を Android のアプリに実装する方法を説明します。
 
 ## 前提条件
 - AdLime SDK が導入済みであること
@@ -30,7 +33,7 @@ mRewardedVideoAd.setAdUnitId(rewardId);
 val rewardId = "5400f178-bffb-47bf-bb4d-54faad99adfd"
 // RewardedVideoAd を生成
 val mRewardedVideoAd = RewardedVideoAd(this)
-mMixFullScreenAd.setAdUnitId(rewardId)
+mRewardedVideoAd.adUnitId = rewardId
 ```
 
 :::
@@ -104,7 +107,7 @@ if (mRewardedVideoAd.isReady()) {
 
 広告の動作をより細かくカスタマイズするには、広告のライフサイクルで発生する様々なイベント（読み込み、開始、終了など）を追加することができ、 RewardedVideoAdListener クラスを使い、これらのイベントを受け取ることができます。
 
-RewardedVideoAd のイベントを取得するには、 `RewardedVideoAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+RewardedVideoAd のイベントを取得するには、 `RewardedVideoAdListener` インスタンスを作成し、`setAdListener()` で登録します。
 
 :::: tabs
 
@@ -115,55 +118,55 @@ mRewardedVideoAd.setAdListener(new SimpleRewardedVideoAdListener() {
     @Override
     public void onAdLoaded() {
         // 動画のロード完了
-        LogUtil.d(TAG, "onAdLoaded");
+        Log.d(TAG, "onAdLoaded");
     }
 
     @Override
     public void onAdShown() {
         // 動画を表示
-        LogUtil.d(TAG, "onAdShown");
+        Log.d(TAG, "onAdShown");
     }
 
     @Override
     public void onAdClicked() {
         // 動画をクリック
-        LogUtil.d(TAG, "onAdClicked");
+        Log.d(TAG, "onAdClicked");
     }
 
     @Override
     public void onAdClosed() {
         // 動画を閉じる
-        LogUtil.d(TAG, "onAdClosed");
+        Log.d(TAG, "onAdClosed");
     }
 
     @Override
     public void onAdFailedToLoad(AdError adError) {
         // 動画の読み込み失敗
-        LogUtil.d(TAG, "onAdFailedToLoad, " + adError);
+        Log.d(TAG, "onAdFailedToLoad, " + adError);
     }
 
     @Override
     public void onVideoStarted() {
         // 動画の再生開始
-        LogUtil.d(TAG, "onVideoStarted");
+        Log.d(TAG, "onVideoStarted");
     }
 
     @Override
     public void onVideoCompleted() {
         // 動画の再生完了
-        LogUtil.d(TAG, "onVideoCompleted");
+        Log.d(TAG, "onVideoCompleted");
     }
 
     @Override
     public void onRewarded(RewardedVideoAd.RewardItem rewardItem) {
         // リワードを獲得
-        LogUtil.d(TAG, "onRewarded, " + rewardItem);
+        Log.d(TAG, "onRewarded, " + rewardItem);
     }
 
     @Override
     public void onRewardFailed() {
         // リワード獲得失敗
-        LogUtil.d(TAG, "onRewardFailed");
+        Log.d(TAG, "onRewardFailed");
     }
 });
 ```
@@ -173,51 +176,52 @@ mRewardedVideoAd.setAdListener(new SimpleRewardedVideoAdListener() {
 ::: tab Kotlin
 
 ```kotlin
-mRewardedVideoAd.setAdListener(object : SimpleAdListener() {
-            override fun onAdLoaded() {
-                // 動画のロード完了
-                print("onAdLoaded")
-            }
+mRewardedVideoAd.adListener = object : SimpleAdListener() {
+    override fun onAdLoaded() {
+        // 動画のロード完了
+        print("onAdLoaded")
+    }
 
-            override fun onAdShown() {
-                //  広告を表示
-                print("onAdShown")
-            }
+    override fun onAdShown() {
+        //  広告を表示
+        print("onAdShown")
+    }
 
-            override fun onAdClicked() {
-                //  広告をクリック
-                print("onAdClicked")
-            }
+    override fun onAdClicked() {
+        //  広告をクリック
+        print("onAdClicked")
+    }
 
-            override fun onAdClosed() {
-                //  広告を閉じる
-            }
+    override fun onAdClosed() {
+        //  広告を閉じる
+        print("onAdClosed")
+    }
 
-            override fun onAdFailedToLoad(adError: AdError) {
-                //  広告の読み込み失敗、エラー詳細は adError から取得
-                print("onAdFailedToLoad: " + adError.toString())
-            }
+    override fun onAdFailedToLoad(adError: AdError) {
+        //  広告の読み込み失敗、エラー詳細は adError から取得
+        print("onAdFailedToLoad: " + adError.toString())
+    }
 
-            override fun onVideoStarted() {
-                // 動画の再生開始
-                print("onVideoStarted")
-            }
+    override fun onVideoStarted() {
+        // 動画の再生開始
+        print("onVideoStarted")
+    }
 
-            override fun onVideoCompleted() {
-                // 動画の再生完了
-                print("onVideoCompleted")
-            }
+    override fun onVideoCompleted() {
+        // 動画の再生完了
+        print("onVideoCompleted")
+    }
 
-            override fun onRewarded(RewardedVideoAd.RewardItem rewardItem) {
-                // リワードを獲得
-                print("onRewarded, " + rewardItem)
-            }
+    override fun onRewarded(RewardedVideoAd.RewardItem rewardItem) {
+        // リワードを獲得
+        print("onRewarded, " + rewardItem)
+    }
 
-            override fun onRewardFailed() {
-                // リワード獲得失敗
-                print("onRewardFailed")
-            }
-        }
+    override fun onRewardFailed() {
+        // リワード獲得失敗
+        print("onRewardFailed")
+    }
+}
 ```
 
 :::

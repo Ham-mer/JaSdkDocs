@@ -1,6 +1,11 @@
 # ネイティブ広告
 
-ネイティブ広告は、プラットフォームに備わっている UI コンポーネントを通じて、ユーザーに表示される広告のクリエイティブです。作成済みのレイアウトに溶け込むように表示され、アプリの視覚デザインに合わせるフォーマットになり、ユーザーエクスペリエンスへの影響を最小限に抑えることができます。コーディングの観点からすれば、ネイティブ広告を読み込む時に広告のクリエイティブを含む NativeAd オブジェクトをアプリが受け取り、（SDKではなく）アプリ自身で広告を表示する仕組みになります。
+ネイティブ広告とは、広告のデザインをカスタマイズできるディスプレイ広告です。広告の配置やスタイルをカスタマイズできるため、コンテンツに溶け込んだ広告を表示することができます。広告のコンポーネントを受け取り、デフォルトもしくはカスタムのUIデザインを指定することによって広告を表示することが可能になります。
+
+このガイドでは、ネイティブ広告を iOS アプリに表示する方法と、その過程で考慮すべき重要なポイントについて説明します。
+
+**<u>複合型広告枠を用いることでより効果的に広告収益を高めることができます。詳細は [MixViewAd](./mixviewad.md) をご確認ください。</u>**
+
 
 ## 前提条件
 - AdLime SDK が導入済みであること
@@ -14,11 +19,22 @@
 ::: tab Java
 
 ```java
-// 広告ユニットID の定義
-String nativeId = "4202d9c4-c08c-4cc9-9810-678a1ae52811";
-// NativeAd を生成
-NativeAd mNativeAd = new NativeAd(context);
-mNativeAd.setAdUnitId(nativeId);
+import com.access_company.adlime.core.api.ad.nativead.NativeAd;
+
+public class MainActivity extends AppCompatActivity {
+    NativeAd mNativeAd;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // 広告ユニットID の定義
+        String nativeId = "4202d9c4-c08c-4cc9-9810-678a1ae52811";
+        // NativeAd を生成
+        mNativeAd = new NativeAd(this);
+        mNativeAd.setAdUnitId(nativeId);
+    }
+}
+
 ```
 
 :::
@@ -26,11 +42,20 @@ mNativeAd.setAdUnitId(nativeId);
 ::: tab Kotlin
 
 ```kotlin
-// 広告ユニットID の定義
-val nativeId = "4202d9c4-c08c-4cc9-9810-678a1ae52811"
-// NativeAd を生成
-val mNativeAd = NativeAd(this)
-mNativeAd.setAdUnitId(nativeId)
+import com.access_company.adlime.core.api.ad.nativead.NativeAd
+
+class MainActivity : AppCompatActivity() {
+    lateinit var mNativeAd: NativeAd
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // 広告ユニットID の定義
+        val nativeId = "4202d9c4-c08c-4cc9-9810-678a1ae52811"
+        // NativeAd を生成
+        mNativeAd = NativeAd(this)
+        mNativeAd.adUnitId = nativeId
+    }
+}
 ```
 
 :::
@@ -65,9 +90,9 @@ NativeAd で広告を受け取った後、各要素に割り当てます。 AdLi
 | setStoreId           | TextView  | アプリストア（例：Google Play）          | O                                              |
 | setPriceId           | TextView  | アプリストアの価格（例：無料）                 | O                                              |  
 
-**Facebook NativeにはMediaViewは必要です。Facebook NativeBannerにはIconLayoutは必要です。**
+**<font color="Gray">Facebook を利用する場合には Facebook の広告フォーマットごとにレイアウトで必要な要素が異なることに注意してください。 Facebook のネイティブ広告を利用する場合には MediaView が必須です。また、ネイティブバナー広告を用いる場合には MediaView を除き IconLayout を設定してください。</font>**
 
-### レイアウトをカストマイズする
+### レイアウトをカスタマイズする
 
 NativeAdLayaout メソッドを使用して、各要素の設定を行い、ビューグループをカスタマイズすることが可能です。
 以下のコードを参考にしてください。
@@ -77,11 +102,14 @@ NativeAdLayaout メソッドを使用して、各要素の設定を行い、ビ�
 ::: tab Java
 
 ```java
-// Sample one：customize
-NativeAdLayout layout = new NativeAdLayout.Builder()
-    // User customized control ID
+NativeAdLayout layout = NativeAdLayout.Builder()
     .setLayoutId(R.layout.layout_nativead)
-    .setTitleId(R.id.textview_title)
+    .setAdChoicesLayoutId(R.id.ad_choices)
+    .setMediaViewLayoutId(R.id.media)
+    .setIconLayoutId(R.id.icon)
+    .setTitleId(R.id.title)
+    .setBodyId(R.id.body)
+    .setCallToActionId(R.id.action_text)
     .build();
 mNativeAd.setNativeAdLayout(layout);
 ```
@@ -90,7 +118,16 @@ mNativeAd.setNativeAdLayout(layout);
 
 ::: tab Kotlin
 ```kotlin
-//  code
+val layout = NativeAdLayout.Builder()
+    .setLayoutId(R.layout.layout_nativead)
+    .setAdChoicesLayoutId(R.id.ad_choices)
+    .setMediaViewLayoutId(R.id.media)
+    .setIconLayoutId(R.id.icon)
+    .setTitleId(R.id.title)
+    .setBodyId(R.id.body)
+    .setCallToActionId(R.id.action_text)
+    .build()
+mMixViewAd?.setNativeAdLayout(layout)
 ```
 
 :::
@@ -239,7 +276,7 @@ mNativeAd.loadAd()
 
 広告の動作をより細かくカスタマイズするには、広告のライフサイクルで発生する様々なイベント（読み込み、開始、終了など）を追加することができ、AdListener クラスを使い、これらのイベントを受け取ることができます。
 
-NativeAd のイベントを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+NativeAd のイベントを取得するには、`SimpleAdListener` インスタンスを作成し、`setAdListener()` で登録します。
 
 :::: tabs
 
@@ -250,30 +287,31 @@ mNativeAd.setAdListener(new SimpleAdListener() {
     @Override
     public void onAdLoaded() {
         // 広告のロード完了
+        Log.d(TAG, "on NativeAd Loaded");
     }
 
     @Override
     public void onAdFailedToLoad(AdError adError) {
         // 広告の読み込み失敗
-        Log.d(TAG, "on BannerAd FailedToLoad err:" + adError.toString());
+        Log.d(TAG, "on NativeAd FailedToLoad err:" + adError.toString());
     }
 
     @Override
     public void onAdClicked() {
         // 広告をクリック
-        Log.d(TAG, "on BannerAd Clicked");
+        Log.d(TAG, "on NativeAd Clicked");
     }
 
     @Override
     public void onAdShown() {
         // 広告を表示
-        Log.d(TAG, "on BannerAd Shown");
+        Log.d(TAG, "on NativeAd Shown");
     }
 
     @Override
     public void onAdClosed() {
         // 広告を閉じる
-        Log.d(TAG, "on BannerAd Closed");
+        Log.d(TAG, "on NativeAd Closed");
     }
 });
 ```
@@ -283,31 +321,32 @@ mNativeAd.setAdListener(new SimpleAdListener() {
 ::: tab Kotlin
 
 ```kotlin
-mNativeAd.setAdListener(object: SimpleAdListener() {
+mNativeAd.adListener = object: SimpleAdListener() {
     override fun onAdLoaded() {
         // 広告のロード完了
+        println("on NativeAd Loaded")
     }
 
     override fun onAdFailedToLoad(adError: AdError?) {
         //  広告の読み込み失敗、エラー詳細は adError から取得
-        print("onAdFailedToLoad: " + adError.toString())
+        println("onAdFailedToLoad: " + adError.toString())
     }
 
     override fun onAdShown() {
         //  広告を表示
-        print("on NativeAd Shown")
+        println("on NativeAd Shown")
     }
 
     override fun onAdClicked() {
         //  広告をクリック
-        print("on NativeAd Clicked")
+        println("on NativeAd Clicked")
     }
 
     override fun onAdClosed() {
         //  広告を閉じる
-        print("on NativeAd Closed")
+        println("on NativeAd Closed")
     }
-})
+}
 ```
 
 :::
@@ -348,7 +387,7 @@ mNativeAd.loadAd();
 ::: tab Kotlin
 
 ```kotlin
-mNativeAd.setAdListener(object: SimpleAdListener() {
+mNativeAd.adListener = object: SimpleAdListener() {
     override fun onAdLoaded() {
         val view = mNativeAd.getAdView()
         if(view != null) {
@@ -356,7 +395,7 @@ mNativeAd.setAdListener(object: SimpleAdListener() {
             mNativeAdContainer.addView(view)
         }
     }
-})
+}
 
 mNativeAd.loadAd()
 ```

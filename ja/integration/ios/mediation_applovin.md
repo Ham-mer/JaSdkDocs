@@ -98,7 +98,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### 6.12.8
 | バージョン | 日付       | 更新内容                          |
 |----------|-----------|----------------------------------|
-| 6.12.8.1 | 2020/6/27 | AppLovin SDK 6.12.8 に対応：バグの修正とパフォーマンスの向上<br><br>AdLimeAppLovinGlobalConfig、AdLimeAppLovinNativeConfig：muted属性を削除します。AdLimeNativeAd などのオブジェクトにおける setMuted: メソッドによって動画の音声を設定してください|
+| 6.12.8.1 | 2020/6/27 | AppLovin SDK 6.12.8 に対応：バグの修正とパフォーマンスの向上<br><br>AdLimeAppLovinGlobalConfig、AdLimeAppLovinNativeConfig：muted 属性を削除します。AdLimeNativeAd  などのオブジェクトにおける setMuted: メソッドによって動画広告の音をミュート設定することが可能です。|
 
 ### 6.11.4
 | バージョン | 日付       | 更新内容                          |

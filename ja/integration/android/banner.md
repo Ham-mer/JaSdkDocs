@@ -1,8 +1,11 @@
 # バナー広告
 
-バナー広告とは、アプリのレイアウトにおいて特定の位置を占める矩形のイメージ広告またはテキスト広告です。この種の広告は、ユーザーがアプリを操作している間は画面に広告が残り、一定の時間が経過すると自動的に更新することが特徴です。モバイル広告を初めて掲載する場合は、まずバナー広告から始めることが最適です。
+バナー広告とは、アプリのレイアウトにおいて特定の位置を占める矩形のイメージまたはテキスト広告です。アプリのレイアウトの一部に簡単に組み込むことが可能です。モバイル広告を初めて掲載する場合には、まずバナー広告から始めてみましょう。
 
-このガイドでは、AdLime のバナー広告を Android アプリに組み込む方法について説明します。
+このガイドでは バナー広告 を Android のアプリに実装する方法を説明します。
+
+**<u>複合型広告枠を用いることでより効果的に広告収益を高めることができます。詳細は [MixViewAd](./mixviewad.md) をご確認ください。</u>**
+
 
 ## 前提条件
 - AdLime SDK が導入済みであること
@@ -16,30 +19,49 @@
 ::: tab Java
 
 ```java
-// 広告ユニットID の定義
-String bannerId = "47033ec3-5bf9-4865-a5d7-d1fbb9f7fbc8";
-// BannerAdView を作成
-BannerAdView mBannerAdView = new BannerAdView(context);
-mBannerAdView.setAdUnitId(bannerId);
-// バナーのコンテナを取得
-ViewGroup container = findViewById(R.id.banner_container);
-// コンテナに BannerAdView を追加する
-container.addView(mBannerAdView);
+import com.access_company.adlime.core.api.ad.BannerAdView;
+
+public class MainActivity extends AppCompatActivity {
+    BannerAdView mBannerAdView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // 広告ユニットID の定義
+        String bannerId = "47033ec3-5bf9-4865-a5d7-d1fbb9f7fbc8";
+        // BannerAdView を作成
+        mBannerAdView = new BannerAdView(context);
+        mBannerAdView.setAdUnitId(bannerId);
+        // バナーのコンテナを取得
+        ViewGroup container = findViewById(R.id.banner_container);
+        // コンテナに BannerAdView を追加する
+        container.addView(mBannerAdView);
+    }
+}
 ```
 :::
 
 ::: tab Kotlin
 
 ```kotlin
-// 広告ユニット ID の定義
-val bannerId = "47033ec3-5bf9-4865-a5d7-d1fbb9f7fbc8"
-// BannerAdView を生成
-val mBannerAdView = BannerAdView(this)
-mBannerAdView.setAdUnitId(bannerId)
-// バナーのコンテナを取得
-val container = findViewById(R.id.banner_container)
-// コンテナに BannerAdView を追加する
-container.addView(mBannerAdView)
+import com.access_company.adlime.core.api.ad.BannerAdView
+
+class MainActivity : AppCompatActivity() {
+    lateinit var mBannerAdView: BannerAdView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // 広告ユニット ID の定義
+        val bannerId = "47033ec3-5bf9-4865-a5d7-d1fbb9f7fbc8"
+        // BannerAdView を生成
+        mBannerAdView = BannerAdView(this)
+        mBannerAdView.adUnitId = bannerId
+        // バナーのコンテナを取得
+        val container = findViewById(R.id.banner_container)
+        // コンテナに BannerAdView を追加する
+        container.addView(mBannerAdView)
+    }
+}
 ```
 :::
 
@@ -162,7 +184,7 @@ mBannerAdView.loadAd()
 広告の動作をより細かくカスタマイズするには、広告のライフサイクルで発生するイベント（読み込み、開始、終了など）を追加することができ、AdListener クラスを使い、これらのイベントを受け取ることができます。
 
 ### BannerAdView イベントを登録する
-BannerAdView のイベントを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+BannerAdView のイベントを取得するには、`SimpleAdListener` インスタンスを作成し、`setAdListener()` で登録します。
 
 :::: tabs
 
@@ -206,7 +228,7 @@ mBannerAdView.setAdListener(new SimpleAdListener() {
 ::: tab Kotlin
 
 ```kotlin
-mNativeAd.setAdListener(object: SimpleAdListener() {
+mBannerAdView.adListener = object: SimpleAdListener() {
     override fun onAdLoaded() {
         // 広告のロード完了
         print("on BannerAd Loaded")
@@ -231,7 +253,7 @@ mNativeAd.setAdListener(object: SimpleAdListener() {
         //  広告を閉じる
         print("on BannerAd Closed")
     }
-})
+}
 ```
 
 :::

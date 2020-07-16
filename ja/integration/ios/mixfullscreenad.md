@@ -1,8 +1,7 @@
 #  MixFullScreenAd
 MixFullScreenAd はフルスクリーンで表示することができるインタースティシャル広告を拡張した機能です。また、インタースティシャル広告を表示するだけではなく、バナー広告やネイティブ広告なども同じ広告枠にフルスクリーン表示することができます。各ネットワークの提供する広告は、個別のフォーマットで独立した広告が提供されていました。この機能を実装することにより、1つの広告枠で表示できる広告の種類と数を増やし、より高い効率で収益を増やすことができます。
 
-現時点では MixViewAd は[バナー広告](./banner.md)と[ネイティブ広告](./native.md)と[インタースティシャル広告](./Interstitial.md)をサポートしています。
-このガイドでは MixFullScreenAd を iOS のアプリに実装する方法を説明します。
+MixFullScreenAd は[バナー広告](./banner.md)と[ネイティブ広告](./native.md)と[インタースティシャル広告](./Interstitial.md)をサポートしています。このガイドでは、MixFullScreenAd を iOS のアプリに実装する方法を紹介します
 
 ## 前提条件
 - AdLime SDKの導入
@@ -60,7 +59,7 @@ class ViewController: UIViewController {
 
 ## ネイティブ広告のレイアウト
 `AdLimeMixFullScreenAd` オブジェクトを生成したら広告をロードする前にネイティブ広告のレイアウトを事前に設定しておきましょう。ネイティブ広告のレイアウトは AdLime SDK の `AdLimeNativeAdLayout` によって管理しています。また、ネイティブ広告のレイアウトはカスタムで設定できます<br>
-**`AdLimeNativeAdLayout` の情報について[AdLimeNativeAdLayout](https://www.adlime.net/docs/ja/integration/ios/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できます。**
+**`AdLimeNativeAdLayout` の情報について[AdLimeNativeAdLayout](./native.md#広告レイアウトの作成)で確認できます。**
 
 :::: tabs
 

@@ -35,7 +35,7 @@ AdLime では、複数の広告ネットワークを管理、配信する[メデ
 
 ### [AdMob](./mediation_admob.md)
 
-AdMob 17.0.0 以降のバージョンにおいて、meta-data を設定する必要があります。
+AdMob 17.0.0 以降のバージョンにおいて、meta-data を設定する必要があります。[AdMob ドキュメント](https://developers.google.com/admob/android/quick-start?hl=ja#update_your_androidmanifestxml)参照。
 ```java
 <meta-data
     android:name="com.google.android.gms.ads.APPLICATION_ID"

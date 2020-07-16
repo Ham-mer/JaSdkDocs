@@ -1,5 +1,5 @@
 #  MixViewAd
-MixViewAd は、バナー広告とネイティブ広告とフィードリスト広告を、1つの広告枠で表示する機能です。各ネットワークの提供する広告は、個別のフォーマットで独立した広告が提供されていました。この機能を実装することにより、1つの広告枠で表示できる広告の種類と数を増やし、より高い効率で収益を増やすことができます。
+MixViewAd とはバナー広告やネイティブ広告などの別種の広告を単一の View で表示ができる機能です。各ネットワークの提供する広告は、個別のフォーマットで独立した広告が提供されていました。この機能を実装することにより、1つの広告枠で表示できる広告の種類と数を増やし、より高い効率で収益を増やすことができます。
 
 MixViewAd は[バナー広告](./banner.md)と[ネイティブ広告](./native.md)をサポートしています。このガイドでは、MixViewAd を Android のアプリに実装する方法を紹介します。
 
@@ -14,8 +14,18 @@ MixViewAd は[バナー広告](./banner.md)と[ネイティブ広告](./native.m
 ::: tab Java
 
 ```java
-MixViewAd mMixViewAd = new MixViewAd(context);
-mMixViewAd.setAdUnitId("AdUnit_ID");
+import com.access_company.adlime.core.api.ad.MixViewAd;
+
+public class MainActivity extends AppCompatActivity {
+    MixViewAd mMixViewAd;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mMixViewAd = new MixViewAd(this);
+        mMixViewAd.setAdUnitId("広告枠 ID");
+    }
+}
 ```
 
 :::
@@ -23,8 +33,18 @@ mMixViewAd.setAdUnitId("AdUnit_ID");
 ::: tab Kotlin
 
 ```kotlin
-val mMixViewAd = MixViewAd(this)
-mMixViewAd.setAdUnitId("AdUnit_ID")
+import com.access_company.adlime.core.api.ad.MixViewAd
+
+class MainActivity : AppCompatActivity() {
+    private var mContainer: FrameLayout? = null
+    lateinit var mMixViewAd: MixViewAd
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mMixViewAd = MixViewAd(this)
+        mMixViewAd.adUnitId = "広告枠 ID"
+    }
+}
 ```
 
 :::
@@ -100,7 +120,7 @@ mMixViewAd.loadAd()
 AdListener を用いて、広告のロード完了のタイミングや、ユーザーがアプリを閉じたタイミングなどの、広告のライフサイクルで発生する様々なイベントを取得することができます。
 
 ### MixViewAd イベントを登録する
-MixViewAd のイベントのサイクルを取得するには、`SimpleAdListener` クラスの各デリゲートを定義し、`setAdListener()` で登録します。
+MixViewAd のイベントのサイクルを取得するには、`SimpleAdListener` インスタンスを作成し、`setAdListener()` で登録します。
 
 :::: tabs
 
@@ -111,27 +131,31 @@ mMixViewAd.setAdListener(new SimpleAdListener() {
     @Override
     public void onAdLoaded() {
         // 広告のロード完了
+        Log.d(TAG, "on MixViewAd Loaded");
     }
 
     @Override
     public void onAdFailedToLoad(AdError adError) {
         // 広告の読み込み失敗、エラー詳細は adError から取得
-        Log.d(TAG, "onAdFailedToLoad: " + adError.toString());
+        Log.d(TAG, "on MixViewAd FailedToLoad err: " + adError.toString());
     }
 
     @Override
     public void onAdShown() {
         // 広告を表示
+        Log.d(TAG, "on MixViewAd Shown");
     }
 
     @Override
     public void onAdClicked() {
         // 広告をクリック
+        Log.d(TAG, "on MixViewAd Clicked");
     }
 
     @Override
     public void onAdClosed() {
         // 広告を閉じる
+        Log.d(TAG, "on MixViewAd Closed");
     }
 });
 
@@ -142,28 +166,32 @@ mMixViewAd.loadAd();
 ::: tab Kotlin
 
 ```kotlin
-mMixViewAd.setAdListener(object: SimpleAdListener() {
+mMixViewAd.adListener = object: SimpleAdListener() {
     override fun onAdLoaded() {
         // 広告のロード完了
+        println("on MixViewAd Loaded")
     }
 
     override fun onAdFailedToLoad(adError: AdError?) {
         //  広告の読み込み失敗、エラー詳細は adError から取得
-        print("onAdFailedToLoad: " + adError.toString())
+        println("on MixViewAd FailedToLoad err: " + adError.toString())
     }
 
     override fun onAdShown() {
         //  広告を表示
+        println("on MixViewAd Shown")
     }
 
     override fun onAdClicked() {
         //  広告をクリック
+        println("on MixViewAd Clicked")
     }
 
     override fun onAdClosed() {
         //  広告を閉じる
+        println("on MixViewAd Closed")
     }
-})
+}
 
 mMixViewAd.loadAd()
 ```
@@ -185,7 +213,7 @@ MixViewAd のネイティブ広告とフィードリスト広告のレイアウ�
 MixViewAd の `getAdView()` を使用して、広告の要素が配置された View を取得できます。View の構成は NativeAdLayout の各レイアウトと同じです。<br>
 この View を適切な箇所に追加することで、ネイティブ広告が表示できます。
 
-** `NativeAdLayout`については、[NativeAdLayout](https://www.adlime.net/docs/ja/integration/android/native.html#%E5%BA%83%E5%91%8A%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90)で確認できます。**
+** `NativeAdLayout`については、[NativeAdLayout](./native.md#広告レイアウトの作成)で確認できます。**
 
 :::: tabs
 
@@ -212,7 +240,7 @@ mMixViewAd.loadAd();
 ::: tab Kotlin
 
 ```kotlin
-mMixViewAd.setAdListener(object: SimpleAdListener() {
+mMixViewAd.adListener = object: SimpleAdListener() {
     override fun onAdLoaded() {
         val layout = NativeAdLayout.getLargeLayout1()
         val view = mMixViewAd.getAdView(layout)
@@ -221,7 +249,7 @@ mMixViewAd.setAdListener(object: SimpleAdListener() {
             mMixViewAdContainer.addView(view)
         }
     }
-})
+}
 
 mMixViewAd.loadAd()
 ```
@@ -263,15 +291,15 @@ mMixViewAd.loadAd();
 val layout = NativeAdLayout.getLargeLayout1()
 mMixViewAd.setNativeAdLayout(layout)
 
-mMixViewAd.setAdListener(object : SimpleAdListener() {
+mMixViewAd.adListener = object : SimpleAdListener() {
     override fun onAdLoaded() {
-        val view = mMixViewAd?.getAdView()
+        val view = mMixViewAd?.adView
         if (view != null) {
             mMixViewAdContainer.removeAllViews()
             mMixViewAdContainer.addView(view)
         }
     }
-})
+}
 
 mMixViewAd.loadAd()
 ```
