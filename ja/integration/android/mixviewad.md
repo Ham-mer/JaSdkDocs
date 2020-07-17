@@ -151,12 +151,6 @@ mMixViewAd.setAdListener(new SimpleAdListener() {
         // 広告をクリック
         Log.d(TAG, "on MixViewAd Clicked");
     }
-
-    @Override
-    public void onAdClosed() {
-        // 広告を閉じる
-        Log.d(TAG, "on MixViewAd Closed");
-    }
 });
 
 mMixViewAd.loadAd();
@@ -185,11 +179,6 @@ mMixViewAd.adListener = object: SimpleAdListener() {
     override fun onAdClicked() {
         //  広告をクリック
         println("on MixViewAd Clicked")
-    }
-
-    override fun onAdClosed() {
-        //  広告を閉じる
-        println("on MixViewAd Closed")
     }
 }
 

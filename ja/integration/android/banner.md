@@ -213,13 +213,7 @@ mBannerAdView.setAdListener(new SimpleAdListener() {
     public void onAdClicked() {
         // 広告をクリック
         Log.d(TAG, "on BannerAd Clicked");
-    }
-
-    @Override
-    public void onAdClosed() {
-        // 広告を閉じる
-        Log.d(TAG, "on BannerAd Closed");
-    }
+    } 
 });
 ```
 
@@ -247,11 +241,6 @@ mBannerAdView.adListener = object: SimpleAdListener() {
     override fun onAdClicked() {
         //  広告をクリック
         print("on BannerAd Clicked")
-    }
-
-    override fun onAdClosed() {
-        //  広告を閉じる
-        print("on BannerAd Closed")
     }
 }
 ```
