@@ -307,12 +307,6 @@ mNativeAd.setAdListener(new SimpleAdListener() {
         // 広告を表示
         Log.d(TAG, "on NativeAd Shown");
     }
-
-    @Override
-    public void onAdClosed() {
-        // 広告を閉じる
-        Log.d(TAG, "on NativeAd Closed");
-    }
 });
 ```
 
@@ -340,11 +334,6 @@ mNativeAd.adListener = object: SimpleAdListener() {
     override fun onAdClicked() {
         //  広告をクリック
         println("on NativeAd Clicked")
-    }
-
-    override fun onAdClosed() {
-        //  広告を閉じる
-        println("on NativeAd Closed")
     }
 }
 ```
