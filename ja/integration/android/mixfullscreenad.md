@@ -14,8 +14,18 @@ MixFullScreenAd は[バナー広告](./banner.md)と[ネイティブ広告](./na
 ::: tab Java
 
 ```java
-MixFullScreenAd mMixFullScreenAd = new MixFullScreenAd(context);
-mMixFullScreenAd.setAdUnitId("広告枠 ID");
+import com.access_company.adlime.core.api.ad.mixfull.MixFullScreenAd;
+
+public class MainActivity extends AppCompatActivity {
+    MixFullScreenAd mMixFullScreenAd;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mMixFullScreenAd = new MixFullScreenAd(context);
+        mMixFullScreenAd.setAdUnitId("広告枠 ID");
+    }
+}
 ```
 
 :::
@@ -23,8 +33,17 @@ mMixFullScreenAd.setAdUnitId("広告枠 ID");
 ::: tab Kotlin
 
 ```kotlin
-val mMixFullScreenAd = MixFullScreenAd(this)
-mMixFullScreenAd.adUnitId = "広告枠 ID"
+import com.access_company.adlime.core.api.ad.mixfull.MixFullScreenAd
+
+class MainActivity : AppCompatActivity() {
+    lateinit var mMixFullScreenAd: MixFullScreenAd
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mMixFullScreenAd = MixFullScreenAd(this)
+        mMixFullScreenAd.adUnitId = "広告枠 ID"
+    }
+}
 ```
 
 :::
