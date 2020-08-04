@@ -14,20 +14,32 @@ dependencies {
 }
 ```
 
-## AndroidManifest の設定
-```java
-<!-- 追加，同意を貰って位置情報を取得すると、Pangle はこの権限を基づいて精確にターゲットできる告 -->
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-<application android:networkSecurityConfig="@xml/pangle_network_security_config"/>
+## ネットワークセキュリティ構成ファイルを追加する
+res/xml ディレクトリに以下の記述で network_security_config.xml を追加する。
+
+```java
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
 ```
 
-すでに application タグに android:networkSecurityConfig が存在する場合は、pangle_network_security_config.xml の内容を、指定されている XML ファイルに統合してください。
 
-**Pangle SDKは上記の権限を強制取得ではない、取得しなくても広告をリクエストできる。上記の権限を取得してから Pangle はもっと精確にターゲットしてユーザ体験改善してecpmを高める。**
+## ネットワークセキュリティ構成ファイルを AndroidManifest に設定する
+```java
+<!-- ユーザーの同意によって位置情報を取得すると、広告のターゲティング精度が向上できる -->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+<application android:networkSecurityConfig="@xml/network_security_config"/>
+```
+
+すでに application タグに android:networkSecurityConfig が存在する場合は、network_security_config.xml の内容を、指定されている XML ファイルに統合してください。
+
+**Pangle SDK は位置情報を取得しなくても広告を表示可能。位置情報が取得可能な場合には、ターゲティング精確の高い広告配信ができる。**
 
 ## リソース難読化
-アプリがリソースに対して難読化を行う際（例えば、andResGuardを使う時）、Pangleのリソースに難読化を行わないでください。リソースが見つからない場合、クラッシュが発生するかもしれません。詳しくは[Pangle リソースリスト](./mediation/config/pangle_whitelist.md)をご参照ください。
+アプリがリソースに対して難読化を行う際（例えば、andResGuard を使う時）、Pangle のリソースに対して難読化を行わないでください。リソースが見つからない場合、アプリがクラッシュする可能性もあります。詳しくは[Pangle リソースリスト](./mediation/config/pangle_whitelist.md)をご参照ください。
 
 ## 注意
 - 動画リワード広告を使用する場合、RewardedVideoAd コンストラクトの引数に、Activity 型を指定するか、もしくは show(activity) で広告を表示すること
@@ -49,7 +61,7 @@ dependencies {
 ### 2.9.0.3
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|-------------------------------|
-| 2.9.0.3.0  | 2020/6/18  | - Pangle SDK 2.9.0.3 に対応：Bug修正<br><br>[リソース難読化](#リソース難読化)の配置を追加します|
+| 2.9.0.3.0  | 2020/6/18  | - Pangle SDK 2.9.0.3 に対応：バグの修正<br><br>[リソース難読化](#リソース難読化)を追加|
 
 ### 2.9.0.1
 |バージョン   | 日付        | 更新内容                        |
