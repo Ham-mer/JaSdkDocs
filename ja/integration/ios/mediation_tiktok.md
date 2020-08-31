@@ -23,14 +23,14 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.0.0.2.zip)
+- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.2.0.1.zip)
 - BUFoundation.framework
 - BUAdSDK.bundle
-- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/3.0.0.2.0.zip)
+- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/3.2.0.1.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.0.0.2.zip)
+- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.2.0.1.zip)
 - BUFoundation.framework
 - BUAdSDK.bundle
 
@@ -54,14 +54,19 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 - WebKit.framework
 - MediaPlayer.framework
 - CoreMedia.framework
+- CoreLocation.framework
 - AVFoundation.framework
 - CoreTelephony.framework
 - SystemConfiguration.framework
 - AdSupport.framework
 - CoreMotion.framework
+- Accelerate.framework
 - libresolv.9.tbd
 - libc++.tbd
 - libz.tbd
+- libsqlite3.tbd
+- libxml2.tbd
+- libbz2.tbd
 
 ## 利用可能な広告フォーマット
 
@@ -74,6 +79,16 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#TikTok) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
 
 ## バージョン情報
+### 3.2.0.1
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 3.2.0.1.0       | 2020/8/27  | - BUAdSDK v3.2.0.1 に対応：libxml2.tbdとlibbz2.tbdの依存ライブラリを追加します；Enable BitcodeがYESに設定される場合、アーカイブできないという問題を修正します|
+
+### 3.1.0.5
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 3.1.0.5.1       | 2020/7/28  | - BUAdSDK v3.1.0.5 に対応<br>- ネイティブ広告にてAdChoicesアイコンが表示されないというバグを修正します|
+
 ### 3.0.0.2
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|

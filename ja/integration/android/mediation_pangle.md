@@ -9,8 +9,8 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_pangle:2.9.0.3.0"
-    implementation "com.access_company.adlime:pangle_open_ad_sdk:2.9.0.3"
+    implementation "com.access_company.adlime:mediation_pangle:3.1.0.1.0"
+    implementation "com.access_company.adlime:pangle_open_ad_sdk:3.1.0.1"
 }
 ```
 
@@ -58,6 +58,11 @@ res/xml ディレクトリに以下の記述で network_security_config.xml を�
 - Code ID
 
 ## バージョン情報
+### 3.1.0.1
+|バージョン   | 日付        | 更新内容                        |
+|------------|------------|-------------------------------|
+| 3.1.0.1.0  | 2020/7/31  | - Pangle SDK 3.1.0.1 に対応：プライバシー機能の強化；Https 証明書の検証問題を修正する；GDPR コンプライアンスの強化，SDK 安定性の向上<br><br>- TikTokGlobalConfig：setCustomController() を削除します<br><br>- pangle_network_security_config.xml ファイルを更新します<br><br>- リソース難読化設定における [Pangle リソースリスト](./mediation/config/pangle_whitelist.md)を更新します|
+
 ### 2.9.0.3
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|-------------------------------|

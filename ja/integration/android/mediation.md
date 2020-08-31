@@ -27,20 +27,21 @@ AdLime で利用可能なアドネットワーク一覧
 
 **各ネットワークの広告フォーマット欄に ◯ の記載がある場合に、その広告フォーマットを使用可能**
 
-| 番号 | ネットワーク | バナー  | インタースティシャル | リワード | ネイティブ | 最新バージョン | 
+| 番号 | ネットワーク                            | バナー  | インタースティシャル | リワード | ネイティブ | 最新バージョン | 
 |:---:| :--------------------------------------: | :----: | :----------: | :------: | :----: |:-------------: |
-| 1   | [AdGeneration](./mediation_adgeneration.md)| ◯    | ◯            |          | ◯      | 2.18.0         | 
-| 2   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 19.1.0         | 
-| 3   | [AppLovin](./mediation_applovin.md)      | ◯      | ◯            | ◯        | ◯      | 9.11.2         |
-| 4   | [Criteo](./mediation_criteo.md)          | ◯      | ◯            |          |        | 3.1.0          |
-| 5   | [DFP](./mediation_dfp.md)                | ◯      | ◯            | ◯        | ◯      | 18.3.0         |
-| 6   | [Facebook](./mediation_facebook.md)      | ◯      | ◯            | ◯        | ◯      | 5.7.1          | 
-| 7   | [Five](./mediation_five.md)              | ◯      | ◯            | ◯        |        | 20200610       |
-| 8   | [i-mobile](./mediation_imobile.md)       | ◯      | ◯            |          | ◯      | 2.0.20         |
-| 9   | [Maio](./mediation_maio.md)              |        | ◯            | ◯        |        | 1.1.10         | 
-| 10  | [MoPub](./mediation_mopub.md)            | ◯      | ◯            | ◯        | ◯      | 5.13.0         |
-| 11  | [Nend](./mediation_nend.md)              | ◯      | ◯            | ◯        | ◯      | 5.4.2          | 
-| 12  | [Pangle](./mediation_pangle.md)          |        | ◯            | ◯        |        | 2.9.0.3        |
+| 1   | [AdLimeMarketplace](./mediation_marketplace.md)| ◯|              |          |        | 1.11.5         |
+| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯    | ◯            |          | ◯      | 2.18.1         |
+| 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 19.1.0         |
+| 4   | [AppLovin](./mediation_applovin.md)      | ◯      | ◯            | ◯        | ◯      | 9.11.2         |
+| 5   | [Criteo](./mediation_criteo.md)          | ◯      | ◯            |          |        | 3.1.0          |
+| 6   | [DFP](./mediation_dfp.md)                | ◯      | ◯            | ◯        | ◯      | 18.3.0         |
+| 7   | [Facebook](./mediation_facebook.md)      | ◯      | ◯            | ◯        | ◯      | 5.7.1          |
+| 8   | [Five](./mediation_five.md)              | ◯      | ◯            | ◯        |        | 20200610       |
+| 9   | [i-mobile](./mediation_imobile.md)       | ◯      | ◯            |          | ◯      | 2.0.20         |
+| 10  | [Maio](./mediation_maio.md)              |        | ◯            | ◯        |        | 1.1.10         |
+| 11  | [MoPub](./mediation_mopub.md)            | ◯      | ◯            | ◯        | ◯      | 5.13.0         |
+| 12  | [Nend](./mediation_nend.md)              | ◯      | ◯            | ◯        | ◯      | 5.4.2          |
+| 13  | [Pangle](./mediation_pangle.md)          |        | ◯            | ◯        |        | 3.1.0.1        |
 
 
 ## 次へのステップ

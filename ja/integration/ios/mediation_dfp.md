@@ -26,7 +26,9 @@ SDK を 直接ダウンロードして解凍し、フレームワークを Xcode
 - GoogleAppMeasurement.framework
 - GoogleUtilities.framework
 - nanopb.framework
-- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.58.0.1.zip)
+- PromisesObjC.xcframework
+- UserMessagingPlatform.framework
+- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.64.0.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -34,6 +36,8 @@ SDK を 直接ダウンロードして解凍し、フレームワークを Xcode
 - GoogleAppMeasurement.framework
 - GoogleUtilities.framework
 - nanopb.framework
+- PromisesObjC.xcframework
+- UserMessagingPlatform.framework
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -48,18 +52,26 @@ carthage update
 実行が完了したら、CarthageフォルダーのAdLimeMediation_GoogleAdsにあるAdLimeMediation_GoogleAds.frameworkをプロジェクトにインポートします。
 
 ## Info.plist の更新
-
-Info.plist ファイルに、 GADApplicationIdentifier キーを追加してください。この設定により、 Ad Manager アプリであることが明示されます。
+アプリのInfo.plistファイルに：
+- ブール値がYESとなるGADIsAdManagerAppキーを追加することによって、アプリがAd Managerアプリであることを証明します。
+- cstr6suwn9.skadnetworkのGoogle SKAdNetworkIdentifier値が含まれたSKAdNetworkItemsキーを追加してください。
 
 Info.plist を ソースコードとして開いて編集します。
 ```objectivec
 <key>GADIsAdManagerApp</key>
 <true/>
+<key>SKAdNetworkItems</key>
+    <array>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>cstr6suwn9.skadnetwork</string>
+        </dict>
+    </array>
 ```
 
 もしくは、プロパティリストエディタ で編集できます。
 
-<img src="./../images/ios/mediation_dfp_app_id_plist.png" height="80"/>
+<img src="./../images/ios/mediation_dfp_info_plist.png" height="160"/>
 
 **Google Mobile Ads SDK 7.42.0 以降のバージョンにおいて、上記を追加する必要があります。 Info.plist ファイルに GADApplicationIdentifier キーがない場合、アプリがクラッシュする可能性があります。その際、下記のメッセージが表示されます："The Google Mobile Ads SDK was initialized incorrectly."**
 
@@ -91,6 +103,15 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 最後に、左側の「アプリ」メニューをクリックし、 DFP 広告を表示する広告枠で、「広告のソース追加」をクリックし、DFP 広告を追加してください。
 
 ## バージョン情報
+### 7.64.0
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 7.64.0.0        |2020/8/24   | - DFP SDK 7.64.0 に対応：<br>- iOS 14に対応して、[App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency)および [SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork)をサポートします<br>- UserMessagingPlatform.frameworkを追加<br><br>- Info.plistにSKAdNetworkItems設定を追加します|
+
+### 7.62.0
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 7.62.0.0        |2020/7/21   | - DFP SDK 7.62.0 に対応<br>- バナー広告にてメモリリークが発生するバグを修正します|
 
 ### 7.58.0
 | バージョン        | 日付       | 更新内容                           |

@@ -23,8 +23,8 @@ allprojects {
 ```java
 dependencies {
   // AdGeneration
-  implementation "com.access_company.adlime:mediation_adgeneration:2.18.0.1"
-  implementation "com.socdm.d.adgeneration:adg:2.18.0"
+  implementation "com.access_company.adlime:mediation_adgeneration:2.18.1.0"
+  implementation "com.socdm.d.adgeneration:adg:2.18.1"
   implementation "com.google.android.gms:play-services-ads-identifier:16.0.0"
   implementation "com.google.android.gms:play-services-ads:17.1.2"
 }
@@ -57,6 +57,11 @@ dependencies {
 - Location ID  
 
 ## バージョン情報
+### 2.18.1
+| Adapter 版本 | 时间         | 内容                          |
+|-------------|-------------|-------------------------------|
+| 2.18.1.0    | 2020-7-25   | - AdGeneration SDK 2.18.1 に対応<br>- AdLimeLoader が使われる場合、ページを閉じったら、広告をロードすることができない、というバグを修正します|
+
 ### 2.18.0
 | バージョン    | 日付         | 更新内容                |
 |-------------|--------------|------------------------|

@@ -24,7 +24,7 @@ pod install --repo-update
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
 - [MoPubSDKFramework.framework](https://github.com/mopub/mopub-ios-sdk/releases/download/5.13.0/mopub-framework-5.13.0.zip)
-- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.13.0.0.zip)
+- [AdLimeMediation_MoPub.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_MoPub/5.13.0.1.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -88,6 +88,7 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 ### 5.13.0
 | バージョン | 日付       | 更新内容                           |
 |----------|------------|----------------------------------|
+| 5.13.0.1 | 2020/7/17  | バナー広告にてメモリリークが発生するバグを修正します|
 | 5.13.0.0 | 2020/6/18  | - MoPub SDK 5.13.0 に対応：moat dependencyを削除します。<br> - Bug Fix|
 
 ### 5.11.0

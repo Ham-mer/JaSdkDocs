@@ -28,18 +28,19 @@ AdLime で利用可能な広告ネットワーク一覧
 
 | No  |  ネットワーク                 | バナー | インターステーシャル  | 動画リワード | ネイティブ | 最新バージョン |
 |:---:|:-------------------------------------:|:------:|:----:|:--------:|:------:|:--------:|
-| 1   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.18.0   |
-| 2   | [AdMob](./mediation_admob.md)              | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
-| 3   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        | ◯      | 6.12.8   |
-| 4   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 6.12.8   |
-| 5   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.58.0   |
-| 6   | [Facebook](./mediation_facebook.md)        | ◯      | ◯    | ◯        | ◯      | 5.7.1    |
-| 7   | [Five](./mediation_five.md)                | ◯      | ◯    | ◯        |        | 20200625 |
-| 8   | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯      | 2.0.31   |
-| 9   | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.5.3    |
-| 10  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.13.0   |
-| 11  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.4.1    |
-| 12  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 3.0.0.2  |
+| 1   | [AdLimeMarketplace](./mediation_marketplace.md)| ◯  |      |          |        | 1.1.5    |
+| 2   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.18.0   |
+| 3   | [AdMob](./mediation_admob.md)              | ◯      | ◯    | ◯        | ◯      | 7.64.0   |
+| 4   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        | ◯      | 6.12.8   |
+| 5   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 6.12.8   |
+| 6   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.64.0   |
+| 7   | [Facebook](./mediation_facebook.md)        | ◯      | ◯    | ◯        | ◯      | 5.7.1    |
+| 8   | [Five](./mediation_five.md)                | ◯      | ◯    | ◯        |        | 20200824 |
+| 9   | [i-mobile](./mediation_imobile.md)         | ◯      | ◯    |          | ◯      | 2.0.31   |
+| 10  | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.5.3    |
+| 11  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.13.0   |
+| 12  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.4.1    |
+| 13  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 3.2.0.1  |
 
 
 ## 次のステップ

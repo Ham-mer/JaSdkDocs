@@ -23,10 +23,22 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [AdLimeMediation_Five.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Five/20200625.0.zip)
-- [FiveAd.framework](https://s3-ap-northeast-1.amazonaws.com/fivecdm-public/release-sdk/ios/20200625/FiveAd.framework-20200625.zip)
+- iOS SDK（20200625）
+    - [AdLimeMediation_Five.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Five/20200625.0.zip)
+    - [FiveAd.framework](https://s3-ap-northeast-1.amazonaws.com/fivecdm-public/release-sdk/ios/20200625/FiveAd.framework-20200625.zip)
+
+- iOS 14 Beta SDK（20200824）
+    - [AdLimeMediation_Five.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_Five/20200824.0.zip)
+    - [FiveAd.framework](https://s3-ap-northeast-1.amazonaws.com/fivecdm-public/release-sdk/ios/20200824/FiveAd.framework-20200824.zip)
 
 ### Carthage
+SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
+- iOS SDK（20200625）
+    - [FiveAd.framework](https://s3-ap-northeast-1.amazonaws.com/fivecdm-public/release-sdk/ios/20200625/FiveAd.framework-20200625.zip)
+
+- iOS 14 Beta SDK（20200824）
+    - [FiveAd.framework](https://s3-ap-northeast-1.amazonaws.com/fivecdm-public/release-sdk/ios/20200824/FiveAd.framework-20200824.zip)
+
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
 github "Ham-mer/AdLimeMediation_Five"
@@ -37,7 +49,7 @@ github "Ham-mer/AdLimeMediation_Five"
 carthage update
 ```
 
-完了後、Carthage フォルダの AdLimeMediation_Five > AdLimeMediation_Five.framework,FiveAd.framework をプロジェクトにインポートします。
+完了後、Carthage フォルダの AdLimeMediation_Five > AdLimeMediation_Five.framework をプロジェクトにインポートします。
 
 ## 他のフレームワークの追加
 Xcode上で、プロジェクトファイルを選択し、任意のターゲットの Build Phases > Link Binary With Libraries に以下の フレームワークを追加します。
@@ -50,6 +62,9 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 - AudioToolbox.framework
 - WebKit.framework
 - StoreKit.framework
+
+iOS 14 Beta SDK（20200824）
+- AppTrackingTransparency.framework
 
 ## 利用可能な広告フォーマット
 
@@ -66,16 +81,52 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 ## テスト広告の表示
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#Five) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
 
-## 広告枠の設置
-AdLime を使って Mobup の広告枠を配置する前に、 Five の管理画面上で広告枠を作成し、その広告枠の情報が必要になります。
-- App ID
-- Slot ID
-
-AdLime の管理画面を開き、左側の「ネットワーク」メニューをクリックして、 Five を有効にしてください。
-
-最後に、左側の「アプリ」メニューをクリックし、 Five 広告を表示する広告枠で、「広告のソース追加」をクリックし、 Five 広告を追加してください。
+## iOS 14 Beta SDK（20200824）Info.plist の更新
+Info.plist を ソースコードとして開いて編集します。
+```objectivec
+<key>SKAdNetworkItems</key>
+<array>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>VUTU7AKEUR.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>EH6M2BH4ZR.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>4mn522wn87.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>578prtvx9j.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>9T245VHMPL.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>22mmun2rn5.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>V72QYCH5UU.skadnetwork</string>
+    </dict>
+    <dict>
+        <key>SKAdNetworkIdentifier</key>
+        <string>7UG5ZH24HU.skadnetwork</string>
+    </dict>
+</array>
+```
 
 ## バージョン情報
+### 20200824（Beta for iOS 14）
+| バージョン | 日付        | 更新内容                           |
+|----------|-------------|----------------------------------|
+| 20200824.0 | 2020/8/28 | - Five SDK 20200824 に対応：AppTrackingTransparency.frameworkを追加して、Info.plist SKAdNetworkItems設定を追加します；テストには Xcode 12 Betaが必要であり、アプリは AppStore でのリリースができません|
+
 ### 20200625
 | バージョン | 日付        | 更新内容                           |
 |----------|-------------|----------------------------------|

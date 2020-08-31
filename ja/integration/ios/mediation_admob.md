@@ -4,7 +4,7 @@
 - [AdMob 開発者ガイド](https://developers.google.cn/admob/ios/quick-start)
 
 ## 前提条件
-- ターゲットバージョン iOS 8.0 以上
+- ターゲットバージョン iOS 9.0 以上
 
 ## SDK の導入
 AdLime SDK で AdMob を使用するためには、AdMob SDK と、それに対応した AdLime SDK を導入してください。
@@ -27,7 +27,9 @@ SDK を 直接ダウンロードして解凍し、フレームワークを Xcode
 - GoogleAppMeasurement.framework
 - GoogleUtilities.framework
 - nanopb.framework
-- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.58.0.1.zip)
+- PromisesObjC.xcframework
+- UserMessagingPlatform.framework
+- [AdLimeMediation_GoogleAds.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_GoogleAds/7.64.0.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
@@ -35,6 +37,8 @@ SDK を 直接ダウンロードして解凍し、フレームワークを Xcode
 - GoogleAppMeasurement.framework
 - GoogleUtilities.framework
 - nanopb.framework
+- PromisesObjC.xcframework
+- UserMessagingPlatform.framework
 
 プロジェクトの Cartfile を開き、下記のコードをアプリのターゲットに追加してください。
 ```objectivec
@@ -49,17 +53,26 @@ carthage update
 完了後、Carthage フォルダの AdLimeMediation_Admob > AdLimeMediation_Admob.framework をプロジェクトにインポートします。
 
 ## Info.plist の更新
-
-Info.plist ファイルに、 GADApplicationIdentifier キーと、 AdMob の管理画面で登録したアプリの ID を追加してください。
+アプリのInfo.plistファイルに：
+- Admob App IDの文字列値（AdMob UIから確認できる）が含まれたGADApplicationIdentifierキーを追加してください。
+- cstr6suwn9.skadnetworkのGoogle SKAdNetworkIdentifier値が含まれたSKAdNetworkItemsキーを追加してください。
 
 Info.plist を ソースコードとして開いて編集します。
 ```objectivec
 <key>GADApplicationIdentifier</key>
-<string>Your AdMob APP_ID</string>
+<string>YOUR AdMob APP_ID</string>
+<key>SKAdNetworkItems</key>
+    <array>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>cstr6suwn9.skadnetwork</string>
+        </dict>
+    </array>
 ```
+
 もしくは、プロパティリストエディタ で編集できます。
 
-<img src="./../images/ios/mediation_admob_app_id_plist.png" height="80" />
+<img src="./../images/ios/mediation_admob_info_plist.png" height="160" />
 
 **Google Mobile Ads SDK 7.42.0 以降のバージョンでは、上記を追加する必要があります。 Info.plist ファイルに GADApplicationIdentifier キーがない場合、アプリがクラッシュする可能性があります。その際、下記のメッセージが表示されます："The Google Mobile Ads SDK was initialized incorrectly."**
 
@@ -92,6 +105,15 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 最後に、左側の「アプリ」メニューをクリックし、AdMob を表示する広告枠で、「広告のソース追加」をクリックし、AdMob を追加してください。
 
 ## バージョン情報
+### 7.64.0
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 7.64.0.0        |2020/8/24   | - AdMob SDK 7.64.0 に対応：<br>- iOS 14に対応して、[App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency)および [SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork)をサポートします<br>- UserMessagingPlatform.frameworkを追加<br>-CocoaPodsユーザーにとって、最小デプロイメントターゲットは9.0です<br><br>- Info.plistにSKAdNetworkItems設定を追加します|
+
+### 7.62.0
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 7.62.0.0        |2020/7/21   | - AdMob SDK 7.62.0 に対応<br>- バナー広告にてメモリリークが発生するバグを修正します|
 
 ### 7.58.0
 | バージョン        | 日付       | 更新内容                           |
