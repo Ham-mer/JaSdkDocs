@@ -13,7 +13,8 @@ AdLime は複数の広告ネットワークを管理、配信するメディエ�
 ## AdLime のテスト
 iOS アプリに実装したら、最後に広告を表示させてみましょう。[広告表示テスト](./test.md)に従い、テスト広告を表示しましょう。他の広告ネットワーク SDK を導入していない場合は [AdLime のテスト](./test.md#AdLime-のテスト)の広告枠 ID を設定しましょう。
 
-## iOS 14+に備えてください
-iOS 14および以降のバージョンでは、アプリが[App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency)フレームワークを呼び出し、ダイアログボックスを表示させて、エンドユーザーによりトラッキングが許諾されるまで、IDFAは獲得できなくなります。ダイアログを表示しない場合、IDFAが完全に取り除かれることに伴い、広告の収益低下という羽目に陥るかもしれません。
+## iOS 14への準備
 
-[本ガイドは、iOS 14サポートに必要とする変更について概説します](./ios14.md)。
+iOS 14以降のバージョンでは [App Tracking Transparency (ATT)](https://developer.apple.com/documentation/apptrackingtransparency)により、広告のトラッキングが厳しく制限されます。ATT ではエンドユーザーに広告のトラッキングを選択させるダイアログを表示させる必要があり、ダイアログを表示しなかったり、拒否された場合にはトラッキングができなくなります。収益の大幅な減少が予想されるため、
+
+**収益の大幅な減少が予想されるため、[iOS 14 への準備手順](./ios14.md) を参考にして、ATT の設定と SKAdNetwork を設定してください。**

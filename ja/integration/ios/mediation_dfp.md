@@ -52,14 +52,29 @@ carthage update
 実行が完了したら、CarthageフォルダーのAdLimeMediation_GoogleAdsにあるAdLimeMediation_GoogleAds.frameworkをプロジェクトにインポートします。
 
 ## Info.plist の更新
-アプリのInfo.plistファイルに：
-- ブール値がYESとなるGADIsAdManagerAppキーを追加することによって、アプリがAd Managerアプリであることを証明します。
-- cstr6suwn9.skadnetworkのGoogle SKAdNetworkIdentifier値が含まれたSKAdNetworkItemsキーを追加してください。
+
+Info.plist ファイルに、 GADApplicationIdentifier キーを追加してください。この設定により、 Ad Manager アプリであることが明示されます。
 
 Info.plist を ソースコードとして開いて編集します。
 ```objectivec
 <key>GADIsAdManagerApp</key>
 <true/>
+```
+
+もしくは、プロパティリストエディタ で編集できます。
+
+<img src="./../images/ios/mediation_dfp_app_id_plist.png" height="80"/>
+
+**Google Mobile Ads SDK 7.42.0 以降のバージョンにおいて、上記を追加する必要があります。 Info.plist ファイルに GADApplicationIdentifier キーがない場合、アプリがクラッシュする可能性があります。その際、下記のメッセージが表示されます："The Google Mobile Ads SDK was initialized incorrectly."**
+
+## SKAdNetwork の準備（iOS 14 以上）
+
+iOS 14 以降では IDFA の取得が厳しく制限されるため、広告の効果測定が困難になります。Apple は代替の広告効果測定ツールとして、SKAdNetwork を提供します。SKAdNetwork により、広告のコンバージョンの測定が可能になります。このツールを設定することで、広告収益が増加する可能性があります。
+
+DFP のアドネットワーク事業者を登録するには Info.plist を開いて編集します。
+
+Info.plist を ソースコードとして開いて編集します。
+```objectivec
 <key>SKAdNetworkItems</key>
     <array>
         <dict>
@@ -71,9 +86,7 @@ Info.plist を ソースコードとして開いて編集します。
 
 もしくは、プロパティリストエディタ で編集できます。
 
-<img src="./../images/ios/mediation_dfp_info_plist.png" height="160"/>
-
-**Google Mobile Ads SDK 7.42.0 以降のバージョンにおいて、上記を追加する必要があります。 Info.plist ファイルに GADApplicationIdentifier キーがない場合、アプリがクラッシュする可能性があります。その際、下記のメッセージが表示されます："The Google Mobile Ads SDK was initialized incorrectly."**
+<img src="./../images/ios/mediation_dfp_skadnetwork_plist.png" height="120" />
 
 ## NetworkConfig 設置
 DFPをカスタマイズで設置します。[DFP NetworkConfig](./mediation/config/networkconfig_dfp.md) を参考してください。
@@ -104,43 +117,43 @@ AdLime の管理画面を開き、左側の「ネットワーク」メニュー�
 
 ## バージョン情報
 ### 7.64.0
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 | 7.64.0.0        |2020/8/24   | - DFP SDK 7.64.0 に対応：<br>- iOS 14に対応して、[App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency)および [SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork)をサポートします<br>- UserMessagingPlatform.frameworkを追加<br><br>- Info.plistにSKAdNetworkItems設定を追加します|
 
 ### 7.62.0
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 | 7.62.0.0        |2020/7/21   | - DFP SDK 7.62.0 に対応<br>- バナー広告にてメモリリークが発生するバグを修正します|
 
 ### 7.58.0
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 | 7.58.0.1        |2020/4/23   | - DFP SDK 7.58.0 に対応（Xcode 11.0以上必須）<br> - ネイティブ広告 などで `setMuted:` API により広告の音をミュートに設定可能になります。<br> - [AdLimeSdk](./init.md)を 1.8.0 以上のバージョンにアップデートが必要|
 
 ### 7.56.0
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 | 7.56.0.1        |2020/3/4    | アダプティブ バナーをサポート。[AdLimeDFPBannerConfig](./mediation/config/networkconfig_dfp.md) で広告のサイズを設定可能。ドキュメントは [Adaptive Banner 紹介](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner/adaptive)参照 |
 
 ### 7.55.0
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 |7.55.0.1         |2020/2/14   |- DFP SDK 7.55.0 に対応<br>- 新たな動画リワードAPIでパラレルロードをサポート |
 
 ### 7.52.0
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 |7.52.0.2         |2020/2/3    |画面が縦から横になると、広告のサイズは自動調整できない問題を修正 |
 |7.52.0.0         |2019/11/7   | DFP SDK 7.52.0 に対応 |
 
 ### 7.50.0
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 |7.50.0.0         |2019/10/10  | DFP SDK 7.50.0 に対応 |
 
 ### 7.42.2
-| バージョン        | 日付       | 更新内容                           |
+| バージョン        | 日付       | 更新情報                           |
 |-----------------|------------|----------------------------------|
 |7.42.2.6         |2019/8/4    |NativeAdLayout インタラクティブエリアのカスタマイズに対応 |
 |7.42.2.1         |2019/7/4    |広告イベントの最適化 |

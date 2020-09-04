@@ -149,6 +149,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 **各広告ネットワークがテストモードとデバッグモードをサポートするかは [テストモードとデバッグモードの設定](./test_debug_mode.md) で確認してください。**
 
+## iOS 14への準備
+
+iOS 14以降のバージョンでは [App Tracking Transparency (ATT)](https://developer.apple.com/documentation/apptrackingtransparency) により、広告のトラッキングが厳しく制限されます。ATT ではエンドユーザーに広告のトラッキングを選択させるダイアログを表示させる必要があり、ダイアログを表示しなかったり、拒否された場合にはトラッキングができなくなります。
+
+**収益の大幅な減少が予想されるため、[iOS 14 への準備手順](./ios14.md) を参考にして、ATT の設定と SKAdNetwork を設定してください。**
+
+
 ## SDK の実装サンプル
 各広告の実装サンプルについて、[デモアプリ](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。
 
