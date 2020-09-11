@@ -207,7 +207,7 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 |:----------------:|:--------------------------------------:|
 | バナー 320×50     | e1024c92-bf41-4892-a7f1-9971b675181b   |
 | バナー 300×250    | e41bda79-c924-42f9-89d4-21bfefccf261   |
-| インタースティシャル     | ef9c77ea-2fa3-4efe-a107-52e771648e5c   |
+| インタースティシャル ポップアップ| ef9c77ea-2fa3-4efe-a107-52e771648e5c   |
 | インターステーシャル 全画面 | 0ecca5a2-d3ee-470c-b5b9-b9f40b883bed |
 | インターステーシャル 動画 | b3d3ee4b-f0a3-40c0-95f1-a4373e14b61f |
 | ネイティブ 静止画   | f0accbea-1961-4a72-8962-5fcc91609637  |

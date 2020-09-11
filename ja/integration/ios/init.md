@@ -149,6 +149,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 **各広告ネットワークがテストモードとデバッグモードをサポートするかは [テストモードとデバッグモードの設定](./test_debug_mode.md) で確認してください。**
 
+## iOS 14への準備
+
+iOS 14以降のバージョンでは、プライバシーの保護の目的のもと、ユーザーの許可を得ない限りデベロッパーがユーザーを追跡したり、デバイスの広告識別子( IDFA )にアクセスができません。そこで [App Tracking Transparency (ATT)](https://developer.apple.com/documentation/apptrackingtransparency) フレームワークを使用して、ユーザーを追跡したり、デバイスの広告識別子にアクセスしたりする許可をユーザーにリクエストする実装を行います。
+
+**収益の大幅な減少を回避するためにも、[iOS 14 への準備手順](./ios14.md) を参考にして、ATT フレームワークを使用する実装と SKAdNetwork を設定してください。**
+
+
 ## SDK の実装サンプル
 各広告の実装サンプルについて、[デモアプリ](https://github.com/Ham-mer/AdLime-iOS-Demo)をご覧ください。
 
