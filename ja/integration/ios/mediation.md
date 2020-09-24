@@ -31,7 +31,7 @@ AdLime で利用可能な広告ネットワーク一覧
 | 1   | [AdLimeMarketplace](./mediation_marketplace.md)| ◯  |      |          |        | 1.1.5    |
 | 2   | [AdGeneration](./mediation_adgeneration.md)| ◯      | ◯    |          | ◯      | 2.18.0   |
 | 3   | [AdMob](./mediation_admob.md)              | ◯      | ◯    | ◯        | ◯      | 7.64.0   |
-| 4   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        | ◯      | 6.12.8   |
+| 4   | [AppLovin](./mediation_applovin.md)        | ◯      | ◯    | ◯        |       | 6.12.8   |
 | 5   | [Criteo](./mediation_criteo.md)            | ◯      | ◯    |          |        | 6.12.8   |
 | 6   | [DFP](./mediation_dfp.md)                  | ◯      | ◯    | ◯        | ◯      | 7.64.0   |
 | 7   | [Facebook](./mediation_facebook.md)        | ◯      | ◯    | ◯        | ◯      | 5.7.1    |
