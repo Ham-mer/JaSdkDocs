@@ -40,7 +40,7 @@ AdLime で利用可能な広告ネットワーク一覧
 | 10  | [Maio](./mediation_maio.md)                |        | ◯    | ◯        |        | 1.5.3    |
 | 11  | [MoPub](./mediation_mopub.md)              | ◯      | ◯    | ◯        | ◯      | 5.13.0   |
 | 12  | [Nend](./mediation_nend.md)                | ◯      | ◯    | ◯        | ◯      | 5.4.1    |
-| 13  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 3.2.0.1  |
+| 13  | [TikTok](./mediation_tiktok.md)            |        | ◯    | ◯        | ◯      | 3.2.5.1  |
 
 
 ## 次のステップ

@@ -23,14 +23,14 @@ pod install --repo-update
 
 ### 手動でダウンロード
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.2.0.1.zip)
+- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.2.5.1.zip)
 - BUFoundation.framework
 - BUAdSDK.bundle
-- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/3.2.0.1.0.zip)
+- [AdLimeMediation_TikTok.framework](https://github.com/Ham-mer/AdLime-iOS-Pub/raw/master/DownloadZip/AdLimeMediation_TikTok/3.2.5.1.0.zip)
 
 ### Carthage
 SDK を 直接ダウンロードして解凍し、フレームワークを Xcode プロジェクトにインポートしてください。
-- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.2.0.1.zip)
+- [BUAdSDK.framework](https://github.com/bytedance/Bytedance-UnionAD/archive/3.2.5.1.zip)
 - BUFoundation.framework
 - BUAdSDK.bundle
 
@@ -68,6 +68,28 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 - libxml2.tbd
 - libbz2.tbd
 
+## Info.plist の更新
+SKAdNetworkIdentifierキーが含まれたSKAdNetworkItemsキーを、Info.plistファイルに追加します。
+
+Info.plist を ソースコードとして開いて編集します。
+```objectivec
+<key>SKAdNetworkItems</key>
+    <array>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>238da6jt44.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>22mmun2rn5.skadnetwork</string>
+        </dict>
+    </array>
+```
+
+もしくは、プロパティリストエディタ で編集できます。
+
+<img src="./../images/ios/mediation_tiktok_info_plist.png" height="160" />
+
 ## 利用可能な広告フォーマット
 
 ### 広告フォーマット
@@ -79,6 +101,11 @@ Xcode上で、プロジェクトファイルを選択し、任意のターゲッ
 SDK を導入し、広告を実装したら広告が正しく表示されるかテストしましょう。[広告表示テスト](./test.md#TikTok) の App ID と広告枠 ID を設定して広告が正しく表示されるか確認してください。
 
 ## バージョン情報
+### 3.2.5.1
+| バージョン        | 日付       | 更新内容                           |
+|-----------------|------------|----------------------------------|
+| 3.2.5.1.0       | 2020/9/3   | - BUAdSDK v3.2.5.1 に対応：iOS 14に対応します。|
+
 ### 3.2.0.1
 | バージョン        | 日付       | 更新内容                           |
 |-----------------|------------|----------------------------------|

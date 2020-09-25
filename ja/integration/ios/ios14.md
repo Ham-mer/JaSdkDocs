@@ -42,6 +42,7 @@ ATT権限リクエストを表示するために、Info.plistをアップデー�
 - [AdMob](./mediation_admob.md)
 - [Google Ad Manager](./mediation_dfp.md)
 - [Five(Beta)](./mediation_five.md)
+- [TikTok](./mediation_tiktok.md)
 
 初めは熟考を重ねてから行動してください。新しいSKAdNetworkIdentifierを追加するには、アプリストアのレビューが必要とするからです。
 
