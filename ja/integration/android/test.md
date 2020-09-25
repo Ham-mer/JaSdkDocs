@@ -84,17 +84,13 @@ AndroidManifest.xml に SDK key を設定してください。
 | 広告タイプ         | 広告枠 ID                              |
 |:----------------:|:--------------------------------------:|
 | バナー 320x50     | 613c06f7-f48d-4c69-aba7-d453513d7007   |
-| バナー 300×250    | da369915-d1b6-4394-916f-b34090def98b   |
 | インターステーシャル     | 63d5dbd8-b9ab-4a7a-86d9-406826953da8   |
-| ネイティブ         | 5816ab14-be45-4fb4-a1c0-510d7395a1c5   |
 | 動画リワード       | b03099ed-ac2b-43d7-82ff-1a7b19d17de9   |
 | MixView バナー 320x50| 280037d0-c206-410b-8dda-06a9da3b09b1  |
-| MixView バナー 300×250| 378d85af-da2a-4e04-9d6d-35e574b7f596 |
-| MixView ネイティブ  | 82c85014-dd96-4660-9260-b03ccd27bb89   |
 | MixFullScreen バナー 320x50| 086f40e9-dcf7-44d8-ae0e-ae45dd080727   |
-| MixFullScreen バナー 300×250| 02d30bab-0c4a-4847-8d40-405125470953   |
-| MixFullScreen ネイティブ   | 7a824b84-f39c-4e06-a649-4290c1214374   |
 | MixFullScreen インターステーシャル    | 8bf8de24-972b-4c25-b8ec-38c48baabb6c   |  
+
+※ AppLovin テスト時に No Fill エラーが発生する可能性があります。No Fill エラーは配信できる広告がなくなったときに発生します。No Fill エラーが発生しても問題はありません。検証を試みたい場合には端末を切り替えたり、日を改めることで確認できることがあります。広告の表示ができない場合にはお手数ですが、[お問い合わせ](https://adlime.net/contact.html)よりご連絡ください。
 
 ### [Criteo](./mediation_criteo.md)
 

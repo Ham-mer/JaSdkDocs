@@ -80,17 +80,14 @@ Value：qTA2uuo2zUQLXHPGDPooTJLZprJIiR6HDcHEgaJq24ErXVwNTqt73MlOFEssXOL9Q1RIFDlR
 | 広告タイプ         | 広告枠 ID                              |
 |:----------------:|:--------------------------------------:|
 | バナー 320×50     | a6c9ecea-fee1-421c-9b8a-4e674e5e4d93   |
-| バナー 300×250    | a56dd5ae-e02c-4888-92bb-1e84906998a2   |
 | インタースティシャル     | 8404f9d7-5a95-4ac2-88cf-7c7965f328a0   |
-| ネイティブ         | 660053f8-e3e6-4643-b887-9a2341eddd0b   |
 | 動画リワード       | 1deae870-5aee-4423-b535-4e38e7ffbeb6   |
 | MixView バナー 320x50| 43875458-06e8-4007-b01b-99f0b3e01745   |
-| MixView バナー 300x250| 3ead904a-39b9-4bbf-8b47-36c37738d0d2   |
-| MixView ネイティブ      | 62aa4e04-7d5f-4648-bd2f-e97c10d12ed7   |
 | MixFullScreenバナー 320x50| cbef286b-24fc-4718-aed5-ac8c2fc5dfaa   |
-| MixFullScreenバナー 300x250| c1796c98-7a8a-46e1-bd9f-c65ea76b5bf4   |
-| MixFullScreen ネイティブ   | 1c365c2a-1a66-43dc-a21a-aed715bd8792   |
 | MixFullScreen インタースティシャル    | 97cf81f7-245d-4e90-84f1-62b76961a11c   |
+
+※ AppLovin テスト時に No Fill エラーが発生する可能性があります。No Fill エラーは配信できる広告がなくなったときに発生します。No Fill エラーが発生しても問題はありません。検証を試みたい場合には端末を切り替えたり、日を改めることで確認できることがあります。広告の表示ができない場合にはお手数ですが、[お問い合わせ](https://adlime.net/contact.html)よりご連絡ください。
+
 
 ### [Criteo](./mediation_criteo.md)
 
