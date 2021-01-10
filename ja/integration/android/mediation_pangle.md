@@ -9,8 +9,8 @@
 
 ```java
 dependencies {
-    implementation "com.access_company.adlime:mediation_pangle:3.1.0.1.0"
-    implementation "com.access_company.adlime:pangle_open_ad_sdk:3.1.0.1"
+    implementation "com.access_company.adlime:mediation_pangle:3.4.1.1.0.alpha"
+    implementation "com.bytedance.sdk:pangle-sdk:3.4.1.1"
 }
 ```
 
@@ -58,6 +58,11 @@ res/xml ディレクトリに以下の記述で network_security_config.xml を�
 - Code ID
 
 ## バージョン情報
+### 3.4.1.1
+|バージョン   | 日付        | 更新内容                        |
+|------------|------------|-------------------------------|
+| 3.4.1.1.0.alpha | 2021/1/10 | - Pangle SDK 3.4.1.1 に対応<br>- Android 11 と互換性があります|
+
 ### 3.1.0.1
 |バージョン   | 日付        | 更新内容                        |
 |------------|------------|-------------------------------|

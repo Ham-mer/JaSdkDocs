@@ -23,8 +23,8 @@ allprojects {
 ```java
 dependencies {
     // Nend  
-    implementation "com.access_company.adlime:mediation_nend:5.4.2.5"
-    implementation "net.nend.android:nend-sdk:5.4.2"
+    implementation "com.access_company.adlime:mediation_nend:7.0.1.0.alpha"
+    implementation "net.nend.android:nend-sdk:7.0.1"
 }
 ```
 
@@ -48,6 +48,11 @@ dependencies {
 ネイティブ広告では静止画と動画があります。動画広告を展示する時に、NativeAdLayoutには必ずMediaViewを設置します。そうしないと、展示とされないです。
 
 ## バージョン情報
+
+### 7.0.1
+| バージョン    | 日付        | 更新内容                      |
+|-------------|-------------|------------------------------|
+| 7.0.1.0.alpha | 2021/1/10 | - 7.0.1 に対応<br>- Android API レベル 19 以上<br> - Android 11 と互換性があります|
 
 ### 5.4.2
 | バージョン    | 日付        | 更新内容                      |

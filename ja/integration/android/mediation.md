@@ -31,10 +31,10 @@ AdLime で利用可能なアドネットワーク一覧
 |:---:| :--------------------------------------: | :----: | :----------: | :------: | :----: |:-------------: |
 | 1   | [AdLimeMarketplace](./mediation_marketplace.md)| ◯|              |          |        | 1.11.5         |
 | 2   | [AdGeneration](./mediation_adgeneration.md)| ◯    | ◯            |          | ◯      | 2.18.1         |
-| 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 19.1.0         |
+| 3   | [AdMob](./mediation_admob.md)            | ◯      | ◯            | ◯        | ◯      | 19.4.0         |
 | 4   | [AppLovin](./mediation_applovin.md)      | ◯      | ◯            | ◯        |        | 9.11.2         |
 | 5   | [Criteo](./mediation_criteo.md)          | ◯      | ◯            |          |        | 3.1.0          |
-| 6   | [DFP](./mediation_dfp.md)                | ◯      | ◯            | ◯        | ◯      | 18.3.0         |
+| 6   | [DFP](./mediation_dfp.md)                | ◯      | ◯            | ◯        | ◯      | 19.4.0         |
 | 7   | [Facebook](./mediation_facebook.md)      | ◯      | ◯            | ◯        | ◯      | 5.7.1          |
 | 8   | [Five](./mediation_five.md)              | ◯      | ◯            | ◯        |        | 20200610       |
 | 9   | [i-mobile](./mediation_imobile.md)       | ◯      | ◯            |          | ◯      | 2.0.20         |

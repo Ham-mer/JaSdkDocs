@@ -21,12 +21,12 @@ Dependencies.xml に、依存関係を追加してください。
     <androidPackages>
 
         <!-- Nend -->
-        <androidPackage spec="com.access_company.adlime:mediation_nend:5.4.2.5">
+        <androidPackage spec="com.access_company.adlime:mediation_nend:7.0.1.0.alpha">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="net.nend.android:nend-sdk:5.4.2">
+        <androidPackage spec="net.nend.android:nend-sdk:7.0.1">
             <repositories>
                 <repository>http://fan-adn.github.io/nendSDK-Android-lib/library</repository>
             </repositories>

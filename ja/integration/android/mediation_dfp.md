@@ -11,8 +11,8 @@
 ```java
 dependencies {
     // DFP
-    implementation "com.access_company.adlime:mediation_admob:19.1.0.0"
-    implementation "com.google.android.gms:play-services-ads:19.1.0"
+    implementation "com.access_company.adlime:mediation_admob:19.4.0.0"
+    implementation "com.google.android.gms:play-services-ads:19.4.0"
 }
 ```
 

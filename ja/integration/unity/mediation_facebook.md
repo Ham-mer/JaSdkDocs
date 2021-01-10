@@ -21,12 +21,12 @@ AdLime SDK で Facebook Audience Network を使用するために、 Facebook Au
     <androidPackages>
 
         <!-- Facebook -->
-        <androidPackage spec="com.access_company.adlime:mediation_facebook:5.7.1.0">
+        <androidPackage spec="com.access_company.adlime:mediation_facebook:6.2.0.0.alpha">
             <repositories>
                 <repository>https://dl.bintray.com/adlime/AdLime</repository>
             </repositories>
         </androidPackage>
-        <androidPackage spec="com.facebook.android:audience-network-sdk:5.7.1">
+        <androidPackage spec="com.facebook.android:audience-network-sdk:6.2.0">
             <repositories>
                 <repository>https://maven.google.com/</repository>
             </repositories>
